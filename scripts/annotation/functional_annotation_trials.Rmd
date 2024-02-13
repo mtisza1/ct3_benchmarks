@@ -1,0 +1,92 @@
+---
+title: "CT3 & others, compare annotation rate"
+output: html_notebook
+---
+
+load packages
+```{r}
+library(ggplot2)
+library(data.table)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(wesanderson)
+library(ggpubr)
+library(rprojroot)
+```
+
+set file paths
+```{r}
+phar_caudo100_tab <- sprintf(
+  "%s/data/annotation/gene_to_contig/phar_gv_caudo_1a.CDS.tsv",
+  find_rstudio_root_file())
+
+ct3_caudo100_tab <- sprintf(
+  "%s/data/annotation/gene_to_contig/ct3_100_caudo_1a.genes.tsv",
+  find_rstudio_root_file())
+```
+
+load tables
+```{r}
+ct3_caudo_dt <- fread(ct3_caudo100_tab,
+                      header = T, sep = "\t")
+phar_caudo_dt <- fread(phar_caudo100_tab,
+                       header = T, sep = "\t")
+
+```
+
+summarize tables
+```{r}
+sum_phar_caudo_dt <- phar_caudo_dt %>%
+  group_by(contig) %>%
+  summarize(gene_count = n(),
+            hypo_annotations = n_distinct(gene[annot == "hypothetical protein"])
+  ) %>%
+  mutate(tool = "pharokka",
+         settings = "-m -s -g prodigal-gv --meta_hmm")
+
+
+sum_ct3_caudo_dt <- ct3_caudo_dt %>%
+  filter(Evidence_source != "tRNAscan-SE") %>%
+  group_by(contig) %>%
+  summarize(gene_count = n(),
+            hypo_annotations = n_distinct(gene_name[evidence_description == "hypothetical protein"])) %>%
+  mutate(tool = "cenote-taker 3",
+         settings = "-am T --caller prodigal-gv")
+```
+
+
+combine and compare
+```{r}
+caudo100_comb_dt <- rbind(sum_phar_caudo_dt, sum_ct3_caudo_dt)
+```
+
+
+```{r}
+caudo100_annotp <- caudo100_comb_dt %>%
+  ggplot(aes(x = tool, y = 1 - (hypo_annotations/gene_count),
+             fill = tool)) +
+  geom_boxplot() + 
+  geom_point(color = "grey30") +
+  #scale_fill_manual(values = pal) + 
+  theme_bw() +
+  scale_y_continuous(labels = scales::percent) +
+  labs(y = "Percentage of genes with\nnon-hypothetical annotation",
+       x = "Annotation Tool") +
+  stat_compare_means(paired = T)
+
+caudo100_annotp
+
+#ggsave(prod100_annotp,
+#       file = "/Users/michaeltisza/mike_tisza/sandbox/annotation_analyses1/annot#_rate_2tools_prod100.pdf")
+```
+
+
+
+
+
+
+
+
+
+
