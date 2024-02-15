@@ -1,0 +1,159 @@
+contig	gene_start	gene_stop	gene_name	gene_orient	contig_length	dtr_seq	evidence_acession	evidence_description	Evidence_source	vscore_category	chunk_name	chunk_length	chunk_start	chunk_stop
+ct3_90_picobi_1a_1	3	764	ct3_90_picobi_1a_1_1	+	2494			hypothetical protein		hypothetical_protein	NaN		0	2494
+ct3_90_picobi_1a_1	783	2438	ct3_90_picobi_1a_1_2	+	2494		PDB:2VF1_A	capsid	hallmark_hmm	common_virus	NaN		0	2494
+ct3_90_picobi_1a_10	48	1643	ct3_90_picobi_1a_10_1	+	1689		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1689
+ct3_90_picobi_1a_11	44	1660	ct3_90_picobi_1a_11_1	+	1707		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1707
+ct3_90_picobi_1a_12	185	721	ct3_90_picobi_1a_12_1	+	2666			hypothetical protein		hypothetical_protein	NaN		0	2666
+ct3_90_picobi_1a_12	734	2581	ct3_90_picobi_1a_12_2	+	2666		PDB:2VF1_A	capsid	hallmark_hmm	common_virus	NaN		0	2666
+ct3_90_picobi_1a_13	75	1682	ct3_90_picobi_1a_13_1	+	1730		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1730
+ct3_90_picobi_1a_14	157	831	ct3_90_picobi_1a_14_1	+	2525			hypothetical protein		hypothetical_protein	NaN		0	2525
+ct3_90_picobi_1a_14	828	2486	ct3_90_picobi_1a_14_2	+	2525		PDB:2VF1_A	capsid	hallmark_hmm	common_virus	NaN		0	2525
+ct3_90_picobi_1a_15	94	1698	ct3_90_picobi_1a_15_1	+	1745		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1745
+ct3_90_picobi_1a_16	2	1528	ct3_90_picobi_1a_16_1	+	1537		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1537
+ct3_90_picobi_1a_17	17	1609	ct3_90_picobi_1a_17_1	+	3159			hypothetical protein		hypothetical_protein	NaN		0	3159
+ct3_90_picobi_1a_17	1635	3146	ct3_90_picobi_1a_17_2	+	3159		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	3159
+ct3_90_picobi_1a_18	47	160	ct3_90_picobi_1a_18_1	-	4744			hypothetical protein		hypothetical_protein	NaN		0	4744
+ct3_90_picobi_1a_18	338	451	ct3_90_picobi_1a_18_2	-	4744			hypothetical protein		hypothetical_protein	NaN		0	4744
+ct3_90_picobi_1a_18	493	1389	ct3_90_picobi_1a_18_3	+	4744			hypothetical protein		hypothetical_protein	NaN		0	4744
+ct3_90_picobi_1a_18	1408	3102	ct3_90_picobi_1a_18_4	+	4744		PDB:2VF1_A	capsid	hallmark_hmm	common_virus	NaN		0	4744
+ct3_90_picobi_1a_18	3139	4728	ct3_90_picobi_1a_18_5	+	4744		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	4744
+ct3_90_picobi_1a_19	44	190	ct3_90_picobi_1a_19_1	+	2378			hypothetical protein		hypothetical_protein	NaN		0	2378
+ct3_90_picobi_1a_19	183	629	ct3_90_picobi_1a_19_2	+	2378			hypothetical protein		hypothetical_protein	NaN		0	2378
+ct3_90_picobi_1a_19	641	2350	ct3_90_picobi_1a_19_3	+	2378		PDB:2VF1_A	capsid	hallmark_hmm	common_virus	NaN		0	2378
+ct3_90_picobi_1a_2	71	1669	ct3_90_picobi_1a_2_1	+	1704		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1704
+ct3_90_picobi_1a_20	184	837	ct3_90_picobi_1a_20_1	+	2536			hypothetical protein		hypothetical_protein	NaN		0	2536
+ct3_90_picobi_1a_20	849	2501	ct3_90_picobi_1a_20_2	+	2536		PDB:2VF1_A	capsid	hallmark_hmm	common_virus	NaN		0	2536
+ct3_90_picobi_1a_21	42	221	ct3_90_picobi_1a_21_1	+	2798			hypothetical protein		hypothetical_protein	NaN		0	2798
+ct3_90_picobi_1a_21	166	999	ct3_90_picobi_1a_21_2	+	2798			hypothetical protein		hypothetical_protein	NaN		0	2798
+ct3_90_picobi_1a_21	1019	2716	ct3_90_picobi_1a_21_3	+	2798		PDB:2VF1_A	capsid	hallmark_hmm	common_virus	NaN		0	2798
+ct3_90_picobi_1a_22	46	213	ct3_90_picobi_1a_22_1	+	1989			hypothetical protein		hypothetical_protein	NaN		0	1989
+ct3_90_picobi_1a_22	227	415	ct3_90_picobi_1a_22_2	+	1989			hypothetical protein		hypothetical_protein	NaN		0	1989
+ct3_90_picobi_1a_22	415	1944	ct3_90_picobi_1a_22_3	+	1989		PDB:2VF1_A	capsid	hallmark_hmm	common_virus	NaN		0	1989
+ct3_90_picobi_1a_23	53	193	ct3_90_picobi_1a_23_1	+	2489			hypothetical protein		hypothetical_protein	NaN		0	2489
+ct3_90_picobi_1a_23	196	783	ct3_90_picobi_1a_23_2	+	2489			hypothetical protein		hypothetical_protein	NaN		0	2489
+ct3_90_picobi_1a_23	822	2441	ct3_90_picobi_1a_23_3	+	2489		PDB:2VF1_A	capsid	hallmark_hmm	common_virus	NaN		0	2489
+ct3_90_picobi_1a_24	48	1646	ct3_90_picobi_1a_24_1	+	1677		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1677
+ct3_90_picobi_1a_25	53	1621	ct3_90_picobi_1a_25_1	+	1652		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1652
+ct3_90_picobi_1a_26	51	1619	ct3_90_picobi_1a_26_1	+	1667		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1667
+ct3_90_picobi_1a_27	47	1732	ct3_90_picobi_1a_27_1	+	1772		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1772
+ct3_90_picobi_1a_28	76	1596	ct3_90_picobi_1a_28_1	+	1616		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1616
+ct3_90_picobi_1a_29	49	1647	ct3_90_picobi_1a_29_1	+	1664		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1664
+ct3_90_picobi_1a_3	51	182	ct3_90_picobi_1a_3_1	+	2532			hypothetical protein		hypothetical_protein	NaN		0	2532
+ct3_90_picobi_1a_3	179	904	ct3_90_picobi_1a_3_2	+	2532			hypothetical protein		hypothetical_protein	NaN		0	2532
+ct3_90_picobi_1a_3	922	2502	ct3_90_picobi_1a_3_3	+	2532		PDB:2VF1_A	capsid	hallmark_hmm	common_virus	NaN		0	2532
+ct3_90_picobi_1a_30	47	1636	ct3_90_picobi_1a_30_1	+	1681		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1681
+ct3_90_picobi_1a_31	49	1632	ct3_90_picobi_1a_31_1	+	1678		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1678
+ct3_90_picobi_1a_32	49	1632	ct3_90_picobi_1a_32_1	+	1678		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1678
+ct3_90_picobi_1a_33	75	1685	ct3_90_picobi_1a_33_1	+	1734		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1734
+ct3_90_picobi_1a_34	49	1632	ct3_90_picobi_1a_34_1	+	1678		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1678
+ct3_90_picobi_1a_35	49	1632	ct3_90_picobi_1a_35_1	+	1678		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1678
+ct3_90_picobi_1a_36	49	1632	ct3_90_picobi_1a_36_1	+	1678		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1678
+ct3_90_picobi_1a_37	75	1685	ct3_90_picobi_1a_37_1	+	1734		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1734
+ct3_90_picobi_1a_38	49	1632	ct3_90_picobi_1a_38_1	+	1678		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1678
+ct3_90_picobi_1a_39	47	1636	ct3_90_picobi_1a_39_1	+	1681		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1681
+ct3_90_picobi_1a_4	45	1643	ct3_90_picobi_1a_4_1	+	1700		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1700
+ct3_90_picobi_1a_40	49	1632	ct3_90_picobi_1a_40_1	+	1678		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1678
+ct3_90_picobi_1a_41	49	1632	ct3_90_picobi_1a_41_1	+	1678		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1678
+ct3_90_picobi_1a_42	51	182	ct3_90_picobi_1a_42_1	+	2532			hypothetical protein		hypothetical_protein	NaN		0	2532
+ct3_90_picobi_1a_42	179	904	ct3_90_picobi_1a_42_2	+	2532			hypothetical protein		hypothetical_protein	NaN		0	2532
+ct3_90_picobi_1a_42	922	2502	ct3_90_picobi_1a_42_3	+	2532		PDB:2VF1_A	capsid	hallmark_hmm	common_virus	NaN		0	2532
+ct3_90_picobi_1a_43	45	1643	ct3_90_picobi_1a_43_1	+	1700		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1700
+ct3_90_picobi_1a_44	281	1192	ct3_90_picobi_1a_44_1	+	4579			hypothetical protein		hypothetical_protein	NaN		0	4579
+ct3_90_picobi_1a_44	1207	2928	ct3_90_picobi_1a_44_2	+	4579		PDB:2VF1_A	capsid	hallmark_hmm	common_virus	NaN		0	4579
+ct3_90_picobi_1a_44	2949	4544	ct3_90_picobi_1a_44_3	+	4579		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	4579
+ct3_90_picobi_1a_45	41	976	ct3_90_picobi_1a_45_1	+	4402			hypothetical protein		hypothetical_protein	NaN		0	4402
+ct3_90_picobi_1a_45	973	2796	ct3_90_picobi_1a_45_2	+	4402		PDB:2VF1_A	capsid	hallmark_hmm	common_virus	NaN		0	4402
+ct3_90_picobi_1a_45	2811	4385	ct3_90_picobi_1a_45_3	+	4402		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	4402
+ct3_90_picobi_1a_46	149	703	ct3_90_picobi_1a_46_1	+	4061			hypothetical protein		hypothetical_protein	NaN		0	4061
+ct3_90_picobi_1a_46	726	2414	ct3_90_picobi_1a_46_2	+	4061		PDB:2VF1_A	capsid	hallmark_hmm	common_virus	NaN		0	4061
+ct3_90_picobi_1a_46	2427	4022	ct3_90_picobi_1a_46_3	+	4061		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	4061
+ct3_90_picobi_1a_47	157	711	ct3_90_picobi_1a_47_1	+	4093			hypothetical protein		hypothetical_protein	NaN		0	4093
+ct3_90_picobi_1a_47	726	2441	ct3_90_picobi_1a_47_2	+	4093		PDB:2VF1_A	capsid	hallmark_hmm	common_virus	NaN		0	4093
+ct3_90_picobi_1a_47	2461	4053	ct3_90_picobi_1a_47_3	+	4093		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	4093
+ct3_90_picobi_1a_48	52	234	ct3_90_picobi_1a_48_1	+	2576			hypothetical protein		hypothetical_protein	NaN		0	2576
+ct3_90_picobi_1a_48	215	766	ct3_90_picobi_1a_48_2	+	2576			hypothetical protein		hypothetical_protein	NaN		0	2576
+ct3_90_picobi_1a_48	796	2511	ct3_90_picobi_1a_48_3	+	2576		PDB:2VF1_A	capsid	hallmark_hmm	common_virus	NaN		0	2576
+ct3_90_picobi_1a_49	47	1675	ct3_90_picobi_1a_49_1	+	1721		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1721
+ct3_90_picobi_1a_5	52	234	ct3_90_picobi_1a_5_1	+	2576			hypothetical protein		hypothetical_protein	NaN		0	2576
+ct3_90_picobi_1a_5	215	766	ct3_90_picobi_1a_5_2	+	2576			hypothetical protein		hypothetical_protein	NaN		0	2576
+ct3_90_picobi_1a_5	796	2511	ct3_90_picobi_1a_5_3	+	2576		PDB:2VF1_A	capsid	hallmark_hmm	common_virus	NaN		0	2576
+ct3_90_picobi_1a_50	111	821	ct3_90_picobi_1a_50_1	+	2472			hypothetical protein		hypothetical_protein	NaN		0	2472
+ct3_90_picobi_1a_50	845	2437	ct3_90_picobi_1a_50_2	+	2472		PDB:2VF1_A	capsid	hallmark_hmm	common_virus	NaN		0	2472
+ct3_90_picobi_1a_51	200	688	ct3_90_picobi_1a_51_1	+	2458			hypothetical protein		hypothetical_protein	NaN		0	2458
+ct3_90_picobi_1a_51	703	2430	ct3_90_picobi_1a_51_2	+	2458		PDB:2VF1_A	capsid	hallmark_hmm	common_virus	NaN		0	2458
+ct3_90_picobi_1a_52	170	847	ct3_90_picobi_1a_52_1	+	2519			hypothetical protein		hypothetical_protein	NaN		0	2519
+ct3_90_picobi_1a_52	850	2487	ct3_90_picobi_1a_52_2	+	2519		PDB:2VF1_A	capsid	hallmark_hmm	common_virus	NaN		0	2519
+ct3_90_picobi_1a_53	170	847	ct3_90_picobi_1a_53_1	+	2519			hypothetical protein		hypothetical_protein	NaN		0	2519
+ct3_90_picobi_1a_53	850	2487	ct3_90_picobi_1a_53_2	+	2519		PDB:2VF1_A	capsid	hallmark_hmm	common_virus	NaN		0	2519
+ct3_90_picobi_1a_54	166	510	ct3_90_picobi_1a_54_1	+	2158			hypothetical protein		hypothetical_protein	NaN		0	2158
+ct3_90_picobi_1a_54	537	2126	ct3_90_picobi_1a_54_2	+	2158		PDB:2VF1_A	capsid	hallmark_hmm	common_virus	NaN		0	2158
+ct3_90_picobi_1a_55	166	510	ct3_90_picobi_1a_55_1	+	2158			hypothetical protein		hypothetical_protein	NaN		0	2158
+ct3_90_picobi_1a_55	537	2126	ct3_90_picobi_1a_55_2	+	2158		PDB:2VF1_A	capsid	hallmark_hmm	common_virus	NaN		0	2158
+ct3_90_picobi_1a_56	166	510	ct3_90_picobi_1a_56_1	+	2158			hypothetical protein		hypothetical_protein	NaN		0	2158
+ct3_90_picobi_1a_56	537	2126	ct3_90_picobi_1a_56_2	+	2158		PDB:2VF1_A	capsid	hallmark_hmm	common_virus	NaN		0	2158
+ct3_90_picobi_1a_57	164	835	ct3_90_picobi_1a_57_1	+	2521			hypothetical protein		hypothetical_protein	NaN		0	2521
+ct3_90_picobi_1a_57	850	2502	ct3_90_picobi_1a_57_2	+	2521		PDB:2VF1_A	capsid	hallmark_hmm	common_virus	NaN		0	2521
+ct3_90_picobi_1a_58	165	836	ct3_90_picobi_1a_58_1	+	2522			hypothetical protein		hypothetical_protein	NaN		0	2522
+ct3_90_picobi_1a_58	851	2503	ct3_90_picobi_1a_58_2	+	2522		PDB:2VF1_A	capsid	hallmark_hmm	common_virus	NaN		0	2522
+ct3_90_picobi_1a_59	165	836	ct3_90_picobi_1a_59_1	+	2522			hypothetical protein		hypothetical_protein	NaN		0	2522
+ct3_90_picobi_1a_59	851	2503	ct3_90_picobi_1a_59_2	+	2522		PDB:2VF1_A	capsid	hallmark_hmm	common_virus	NaN		0	2522
+ct3_90_picobi_1a_6	47	1675	ct3_90_picobi_1a_6_1	+	1721		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1721
+ct3_90_picobi_1a_60	45	1643	ct3_90_picobi_1a_60_1	+	1687		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1687
+ct3_90_picobi_1a_61	46	1644	ct3_90_picobi_1a_61_1	+	1687		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1687
+ct3_90_picobi_1a_62	3	104	ct3_90_picobi_1a_62_1	+	1884			hypothetical protein		hypothetical_protein	NaN		0	1884
+ct3_90_picobi_1a_62	46	210	ct3_90_picobi_1a_62_2	+	1884			hypothetical protein		hypothetical_protein	NaN		0	1884
+ct3_90_picobi_1a_62	251	1846	ct3_90_picobi_1a_62_3	+	1884		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1884
+ct3_90_picobi_1a_63	167	1783	ct3_90_picobi_1a_63_1	+	1827		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1827
+ct3_90_picobi_1a_64	46	1644	ct3_90_picobi_1a_64_1	+	1687		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1687
+ct3_90_picobi_1a_65	167	1783	ct3_90_picobi_1a_65_1	+	1827		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1827
+ct3_90_picobi_1a_66	46	1635	ct3_90_picobi_1a_66_1	+	1679		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1679
+ct3_90_picobi_1a_67	1	168	ct3_90_picobi_1a_67_1	+	1943			hypothetical protein		hypothetical_protein	NaN		0	1943
+ct3_90_picobi_1a_67	296	1897	ct3_90_picobi_1a_67_2	+	1943		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1943
+ct3_90_picobi_1a_68	168	1772	ct3_90_picobi_1a_68_1	+	1818		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1818
+ct3_90_picobi_1a_69	46	1638	ct3_90_picobi_1a_69_1	+	1683		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1683
+ct3_90_picobi_1a_7	51	215	ct3_90_picobi_1a_7_1	+	2362			hypothetical protein		hypothetical_protein	NaN		0	2362
+ct3_90_picobi_1a_7	212	532	ct3_90_picobi_1a_7_2	+	2362			hypothetical protein		hypothetical_protein	NaN		0	2362
+ct3_90_picobi_1a_7	543	2315	ct3_90_picobi_1a_7_3	+	2362		PDB:2VF1_A	capsid	hallmark_hmm	common_virus	NaN		0	2362
+ct3_90_picobi_1a_70	48	212	ct3_90_picobi_1a_70_1	+	1886			hypothetical protein		hypothetical_protein	NaN		0	1886
+ct3_90_picobi_1a_70	253	1848	ct3_90_picobi_1a_70_2	+	1886		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1886
+ct3_90_picobi_1a_71	3	104	ct3_90_picobi_1a_71_1	+	1884			hypothetical protein		hypothetical_protein	NaN		0	1884
+ct3_90_picobi_1a_71	46	210	ct3_90_picobi_1a_71_2	+	1884			hypothetical protein		hypothetical_protein	NaN		0	1884
+ct3_90_picobi_1a_71	251	1846	ct3_90_picobi_1a_71_3	+	1884		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1884
+ct3_90_picobi_1a_72	46	1635	ct3_90_picobi_1a_72_1	+	1679		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1679
+ct3_90_picobi_1a_73	47	262	ct3_90_picobi_1a_73_1	+	1915			hypothetical protein		hypothetical_protein	NaN		0	1915
+ct3_90_picobi_1a_73	285	1874	ct3_90_picobi_1a_73_2	+	1915		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1915
+ct3_90_picobi_1a_74	1	192	ct3_90_picobi_1a_74_1	+	1799			hypothetical protein		hypothetical_protein	NaN		0	1799
+ct3_90_picobi_1a_74	182	1759	ct3_90_picobi_1a_74_2	+	1799		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1799
+ct3_90_picobi_1a_75	219	857	ct3_90_picobi_1a_75_1	+	4224			hypothetical protein		hypothetical_protein	NaN		0	4224
+ct3_90_picobi_1a_75	857	2527	ct3_90_picobi_1a_75_2	+	4224		PDB:2VF1_A	capsid	hallmark_hmm	common_virus	NaN		0	4224
+ct3_90_picobi_1a_75	2600	4117	ct3_90_picobi_1a_75_3	+	4224		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	4224
+ct3_90_picobi_1a_76	1	174	ct3_90_picobi_1a_76_1	+	1864			hypothetical protein		hypothetical_protein	NaN		0	1864
+ct3_90_picobi_1a_76	227	1813	ct3_90_picobi_1a_76_2	+	1864		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1864
+ct3_90_picobi_1a_77	1	195	ct3_90_picobi_1a_77_1	+	2274			hypothetical protein		hypothetical_protein	NaN		0	2274
+ct3_90_picobi_1a_77	176	631	ct3_90_picobi_1a_77_2	+	2274			hypothetical protein		hypothetical_protein	NaN		0	2274
+ct3_90_picobi_1a_77	648	2231	ct3_90_picobi_1a_77_3	+	2274		PDB:2VF1_A	capsid	hallmark_hmm	common_virus	NaN		0	2274
+ct3_90_picobi_1a_78	72	1700	ct3_90_picobi_1a_78_1	+	1730		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1730
+ct3_90_picobi_1a_79	329	997	ct3_90_picobi_1a_79_1	+	2734			hypothetical protein		hypothetical_protein	NaN		0	2734
+ct3_90_picobi_1a_79	1011	2621	ct3_90_picobi_1a_79_2	+	2734		PDB:2VF1_A	capsid	hallmark_hmm	common_virus	NaN		0	2734
+ct3_90_picobi_1a_8	89	577	ct3_90_picobi_1a_8_1	+	2347			hypothetical protein		hypothetical_protein	NaN		0	2347
+ct3_90_picobi_1a_8	592	2319	ct3_90_picobi_1a_8_2	+	2347		PDB:2VF1_A	capsid	hallmark_hmm	common_virus	NaN		0	2347
+ct3_90_picobi_1a_80	71	1669	ct3_90_picobi_1a_80_1	+	1704		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1704
+ct3_90_picobi_1a_81	3	764	ct3_90_picobi_1a_81_1	+	2494			hypothetical protein		hypothetical_protein	NaN		0	2494
+ct3_90_picobi_1a_81	783	2438	ct3_90_picobi_1a_81_2	+	2494		PDB:2VF1_A	capsid	hallmark_hmm	common_virus	NaN		0	2494
+ct3_90_picobi_1a_82	185	721	ct3_90_picobi_1a_82_1	+	2361			hypothetical protein		hypothetical_protein	NaN		0	2361
+ct3_90_picobi_1a_82	734	2359	ct3_90_picobi_1a_82_2	+	2361		PDB:2VF1_A	capsid	hallmark_hmm	common_virus	NaN		0	2361
+ct3_90_picobi_1a_83	185	721	ct3_90_picobi_1a_83_1	+	2666			hypothetical protein		hypothetical_protein	NaN		0	2666
+ct3_90_picobi_1a_83	734	2581	ct3_90_picobi_1a_83_2	+	2666		PDB:2VF1_A	capsid	hallmark_hmm	common_virus	NaN		0	2666
+ct3_90_picobi_1a_84	185	721	ct3_90_picobi_1a_84_1	+	2351			hypothetical protein		hypothetical_protein	NaN		0	2351
+ct3_90_picobi_1a_84	734	2350	ct3_90_picobi_1a_84_2	+	2351		PDB:2VF1_A	capsid	hallmark_hmm	common_virus	NaN		0	2351
+ct3_90_picobi_1a_85	195	794	ct3_90_picobi_1a_85_1	+	2524			hypothetical protein		hypothetical_protein	NaN		0	2524
+ct3_90_picobi_1a_85	822	2447	ct3_90_picobi_1a_85_2	+	2524		PDB:2VF1_A	capsid	hallmark_hmm	common_virus	NaN		0	2524
+ct3_90_picobi_1a_86	195	794	ct3_90_picobi_1a_86_1	+	2524			hypothetical protein		hypothetical_protein	NaN		0	2524
+ct3_90_picobi_1a_86	810	2447	ct3_90_picobi_1a_86_2	+	2524		PDB:2VF1_A	capsid	hallmark_hmm	common_virus	NaN		0	2524
+ct3_90_picobi_1a_87	195	794	ct3_90_picobi_1a_87_1	+	2524			hypothetical protein		hypothetical_protein	NaN		0	2524
+ct3_90_picobi_1a_87	822	2447	ct3_90_picobi_1a_87_2	+	2524		PDB:2VF1_A	capsid	hallmark_hmm	common_virus	NaN		0	2524
+ct3_90_picobi_1a_88	75	1682	ct3_90_picobi_1a_88_1	+	1730		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1730
+ct3_90_picobi_1a_89	89	577	ct3_90_picobi_1a_89_1	+	2347			hypothetical protein		hypothetical_protein	NaN		0	2347
+ct3_90_picobi_1a_89	592	2319	ct3_90_picobi_1a_89_2	+	2347		PDB:2VF1_A	capsid	hallmark_hmm	common_virus	NaN		0	2347
+ct3_90_picobi_1a_9	47	1645	ct3_90_picobi_1a_9_1	+	1688		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1688
+ct3_90_picobi_1a_90	47	1645	ct3_90_picobi_1a_90_1	+	1688		PDB:5I62_A	RNA-dependent-RNA-polymerase	rdrp_hall_hmm	common_virus	NaN		0	1688

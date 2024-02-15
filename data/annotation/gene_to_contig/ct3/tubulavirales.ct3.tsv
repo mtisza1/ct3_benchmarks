@@ -1,0 +1,1266 @@
+contig	gene_start	gene_stop	gene_name	gene_orient	contig_length	dtr_seq	evidence_acession	evidence_description	Evidence_source	vscore_category	chunk_name	chunk_length	chunk_start	chunk_stop
+ct3_100_tubula_1a_1	1	291	ct3_100_tubula_1a_1_1	+	8454			hypothetical protein		hypothetical_protein	NaN		0	8454
+ct3_100_tubula_1a_1	294	392	ct3_100_tubula_1a_1_2	+	8454		UniProtKB:G7P_BPIF1	minor-coat-protein	hallmark_hmm	common_virus	NaN		0	8454
+ct3_100_tubula_1a_1	389	487	ct3_100_tubula_1a_1_3	+	8454		UniProt:tr|R9TEZ3_9VIRU	Minor-coat-protein-	hallmark_hmm	common_virus	NaN		0	8454
+ct3_100_tubula_1a_1	484	708	ct3_100_tubula_1a_1_4	+	8454		CDD:PHA00025	major-coat-protein	hallmark_hmm	common_virus	NaN		0	8454
+ct3_100_tubula_1a_1	776	2158	ct3_100_tubula_1a_1_5	+	8454		CDD:pfam05357	Filamentous-Minor-Coat-Protein-	hallmark_hmm	common_virus	NaN		0	8454
+ct3_100_tubula_1a_1	2161	2502	ct3_100_tubula_1a_1_6	+	8454		CDD:PHA00094	minor-coat-protein	hallmark_hmm	common_virus	NaN		0	8454
+ct3_100_tubula_1a_1	2502	3563	ct3_100_tubula_1a_1_7	+	8454		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	8454
+ct3_100_tubula_1a_1	3544	4833	ct3_100_tubula_1a_1_8	+	8454		PDB:5WQ8_J	Type-II-secretion-system-protein	common_virus_hmm	common_virus	NaN		0	8454
+ct3_100_tubula_1a_1	4820	5008	ct3_100_tubula_1a_1_9	-	8454			hypothetical protein		hypothetical_protein	NaN		0	8454
+ct3_100_tubula_1a_1	5119	5310	ct3_100_tubula_1a_1_10	-	8454			hypothetical protein		hypothetical_protein	NaN		0	8454
+ct3_100_tubula_1a_1	6040	7086	ct3_100_tubula_1a_1_11	+	8454		PDB:5U30_A	endonuclease	common_virus_hmm	common_virus	NaN		0	8454
+ct3_100_tubula_1a_1	7316	7537	ct3_100_tubula_1a_1_12	+	8454		PFAM:PF05144.13	replication-protein	phrogs_hmm	hypothetical_protein	NaN		0	8454
+ct3_100_tubula_1a_1	7494	8432	ct3_100_tubula_1a_1_13	+	8454		PFAM:PF05144.13	Phage-replication-protein	rep_hall_hmm	common_virus	NaN		0	8454
+ct3_100_tubula_1a_10	1	591	ct3_100_tubula_1a_10_1	+	7965		PFAM:PF02486.18	Replication-initiation-factor	rep_hall_hmm	common_virus	NaN		0	7965
+ct3_100_tubula_1a_10	595	948	ct3_100_tubula_1a_10_2	+	7965		pfam06950	Protein of unknown function (DUF1293). This family consists of several bacterial and phage proteins of around 115 residues in length. The function of this family is unknown.	mmseqs_cdd	nonviral_gene	NaN		0	7965
+ct3_100_tubula_1a_10	960	1205	ct3_100_tubula_1a_10_3	+	7965		PFAM:PF17091.4	Tail-G7P-protein	hallmark_hmm	common_virus	NaN		0	7965
+ct3_100_tubula_1a_10	1216	1449	ct3_100_tubula_1a_10_4	+	7965		CDD:PHA00979	putative-major-coat-protein	hallmark_hmm	common_virus	NaN		0	7965
+ct3_100_tubula_1a_10	1583	3058	ct3_100_tubula_1a_10_5	+	7965		PFAM:PF05616.12	minor-head-protein;-receptor-binding	phrogs_hmm	hypothetical_protein	NaN		0	7965
+ct3_100_tubula_1a_10	3060	3374	ct3_100_tubula_1a_10_6	+	7965		CDD:PHA01081	putative-minor-coat-protein	hallmark_hmm	common_virus	NaN		0	7965
+ct3_100_tubula_1a_10	3371	4513	ct3_100_tubula_1a_10_7	+	7965		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	7965
+ct3_100_tubula_1a_10	4821	5606	ct3_100_tubula_1a_10_8	-	7965		PFAM:PF07889.11	hol-like-chemotaxis	phrogs_hmm	hypothetical_protein	NaN		0	7965
+ct3_100_tubula_1a_10	5696	6064	ct3_100_tubula_1a_10_9	-	7965		PHA01082	putative transcription regulator	mmseqs_cdd	common_virus	NaN		0	7965
+ct3_100_tubula_1a_10	6042	6488	ct3_100_tubula_1a_10_10	-	7965		PFAM:PF10078.8	transcriptional-regulator	phrogs_hmm	common_virus	NaN		0	7965
+ct3_100_tubula_1a_10	6601	7212	ct3_100_tubula_1a_10_11	+	7965			hypothetical protein		hypothetical_protein	NaN		0	7965
+ct3_100_tubula_1a_10	7209	7424	ct3_100_tubula_1a_10_12	+	7965			hypothetical protein		hypothetical_protein	NaN		0	7965
+ct3_100_tubula_1a_10	7408	7965	ct3_100_tubula_1a_10_13	+	7965		PFAM:PF02486.18	Replication-initiation-factor	rep_hall_hmm	common_virus	NaN		0	7965
+ct3_100_tubula_1a_100	1	327	ct3_100_tubula_1a_100_1	+	8929		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	8929
+ct3_100_tubula_1a_100	399	599	ct3_100_tubula_1a_100_2	+	8929			hypothetical protein		hypothetical_protein	NaN		0	8929
+ct3_100_tubula_1a_100	624	821	ct3_100_tubula_1a_100_3	+	8929			hypothetical protein		hypothetical_protein	NaN		0	8929
+ct3_100_tubula_1a_100	821	1117	ct3_100_tubula_1a_100_4	+	8929			hypothetical protein		hypothetical_protein	NaN		0	8929
+ct3_100_tubula_1a_100	1117	1326	ct3_100_tubula_1a_100_5	+	8929			hypothetical protein		hypothetical_protein	NaN		0	8929
+ct3_100_tubula_1a_100	1326	1535	ct3_100_tubula_1a_100_6	+	8929			hypothetical protein		hypothetical_protein	NaN		0	8929
+ct3_100_tubula_1a_100	1538	1786	ct3_100_tubula_1a_100_7	+	8929		PFAM:PF17091.4	Tail-G7P-protein	hallmark_hmm	common_virus	NaN		0	8929
+ct3_100_tubula_1a_100	1789	2013	ct3_100_tubula_1a_100_8	+	8929		PFAM:PF10389.8	virion-structural-protein	phrogs_hmm	hypothetical_protein	NaN		0	8929
+ct3_100_tubula_1a_100	2089	3624	ct3_100_tubula_1a_100_9	+	8929		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	8929
+ct3_100_tubula_1a_100	3637	3966	ct3_100_tubula_1a_100_10	+	8929		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	8929
+ct3_100_tubula_1a_100	3971	5290	ct3_100_tubula_1a_100_11	+	8929		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	8929
+ct3_100_tubula_1a_100	6226	7083	ct3_100_tubula_1a_100_12	+	8929		PFAM:PF07232.10	Putative-rep-protein-(DUF1424)	common_virus_hmm	common_virus	NaN		0	8929
+ct3_100_tubula_1a_100	7091	7288	ct3_100_tubula_1a_100_13	-	8929			hypothetical protein		hypothetical_protein	NaN		0	8929
+ct3_100_tubula_1a_100	7608	7880	ct3_100_tubula_1a_100_14	+	8929			hypothetical protein		hypothetical_protein	NaN		0	8929
+ct3_100_tubula_1a_100	7831	8421	ct3_100_tubula_1a_100_15	-	8929		PDB:1ZR4_E	resolvase,-site-specific-recombination	common_virus_hmm	common_virus	NaN		0	8929
+ct3_100_tubula_1a_100	8524	8820	ct3_100_tubula_1a_100_16	-	8929		PFAM:PF10078.8	HTH-DNA-binding-protein	phrogs_hmm	hypothetical_protein	NaN		0	8929
+ct3_100_tubula_1a_11	100	1146	ct3_100_tubula_1a_11_1	+	21012		PFAM:PF02486.18	Replication-initiation-factor	rep_hall_hmm	common_virus	NaN		0	21012
+ct3_100_tubula_1a_11	1150	1299	ct3_100_tubula_1a_11_2	+	21012		pfam06950	Protein of unknown function (DUF1293). This family consists of several bacterial and phage proteins of around 115 residues in length. The function of this family is unknown.	mmseqs_cdd	nonviral_gene	NaN		0	21012
+ct3_100_tubula_1a_11	1323	1505	ct3_100_tubula_1a_11_3	+	21012		pfam06950	Protein of unknown function (DUF1293). This family consists of several bacterial and phage proteins of around 115 residues in length. The function of this family is unknown.	mmseqs_cdd	nonviral_gene	NaN		0	21012
+ct3_100_tubula_1a_11	1774	2007	ct3_100_tubula_1a_11_4	+	21012		CDD:PHA00979	putative-major-coat-protein	hallmark_hmm	common_virus	NaN		0	21012
+ct3_100_tubula_1a_11	2287	2862	ct3_100_tubula_1a_11_5	+	21012		PFAM:PF05616.12	minor-head-protein;-receptor-binding	phrogs_hmm	hypothetical_protein	NaN		0	21012
+ct3_100_tubula_1a_11	2859	3614	ct3_100_tubula_1a_11_6	+	21012		PFAM:PF05616.12	minor-head-protein;-receptor-binding	phrogs_hmm	hypothetical_protein	NaN		0	21012
+ct3_100_tubula_1a_11	3616	3930	ct3_100_tubula_1a_11_7	+	21012		CDD:PHA01081	putative-minor-coat-protein	hallmark_hmm	common_virus	NaN		0	21012
+ct3_100_tubula_1a_11	3927	5069	ct3_100_tubula_1a_11_8	+	21012		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	21012
+ct3_100_tubula_1a_11	5360	5833	ct3_100_tubula_1a_11_9	-	21012			hypothetical protein		hypothetical_protein	NaN		0	21012
+ct3_100_tubula_1a_11	5860	6234	ct3_100_tubula_1a_11_10	-	21012		PHA01082	putative transcription regulator	mmseqs_cdd	common_virus	NaN		0	21012
+ct3_100_tubula_1a_11	6191	6655	ct3_100_tubula_1a_11_11	-	21012		PDB:4IA8_B	helix-turn-helix-protein	common_virus_hmm	common_virus	NaN		0	21012
+ct3_100_tubula_1a_11	6769	7380	ct3_100_tubula_1a_11_12	+	21012			hypothetical protein		hypothetical_protein	NaN		0	21012
+ct3_100_tubula_1a_11	7377	7592	ct3_100_tubula_1a_11_13	+	21012			hypothetical protein		hypothetical_protein	NaN		0	21012
+ct3_100_tubula_1a_11	7576	8724	ct3_100_tubula_1a_11_14	+	21012		PFAM:PF02486.18	Replication-initiation-factor	rep_hall_hmm	common_virus	NaN		0	21012
+ct3_100_tubula_1a_11	8728	9081	ct3_100_tubula_1a_11_15	+	21012		pfam06950	Protein of unknown function (DUF1293). This family consists of several bacterial and phage proteins of around 115 residues in length. The function of this family is unknown.	mmseqs_cdd	nonviral_gene	NaN		0	21012
+ct3_100_tubula_1a_11	9093	9338	ct3_100_tubula_1a_11_16	+	21012		PFAM:PF17091.4	Tail-G7P-protein	hallmark_hmm	common_virus	NaN		0	21012
+ct3_100_tubula_1a_11	9349	9582	ct3_100_tubula_1a_11_17	+	21012		CDD:PHA00979	putative-major-coat-protein	hallmark_hmm	common_virus	NaN		0	21012
+ct3_100_tubula_1a_11	9716	11191	ct3_100_tubula_1a_11_18	+	21012		PFAM:PF05616.12	minor-head-protein;-receptor-binding	phrogs_hmm	hypothetical_protein	NaN		0	21012
+ct3_100_tubula_1a_11	11193	11507	ct3_100_tubula_1a_11_19	+	21012		CDD:PHA01081	putative-minor-coat-protein	hallmark_hmm	common_virus	NaN		0	21012
+ct3_100_tubula_1a_11	11504	12646	ct3_100_tubula_1a_11_20	+	21012		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	21012
+ct3_100_tubula_1a_11	12937	13410	ct3_100_tubula_1a_11_21	-	21012			hypothetical protein		hypothetical_protein	NaN		0	21012
+ct3_100_tubula_1a_11	13437	13793	ct3_100_tubula_1a_11_22	-	21012		PHA01082	putative transcription regulator	mmseqs_cdd	common_virus	NaN		0	21012
+ct3_100_tubula_1a_11	13790	14233	ct3_100_tubula_1a_11_23	-	21012		PDB:4IA8_B	helix-turn-helix-protein	common_virus_hmm	common_virus	NaN		0	21012
+ct3_100_tubula_1a_11	14381	14959	ct3_100_tubula_1a_11_24	+	21012			hypothetical protein		hypothetical_protein	NaN		0	21012
+ct3_100_tubula_1a_11	14956	15171	ct3_100_tubula_1a_11_25	+	21012			hypothetical protein		hypothetical_protein	NaN		0	21012
+ct3_100_tubula_1a_11	15258	16181	ct3_100_tubula_1a_11_26	+	21012		PFAM:PF02486.18	Replication-initiation-factor	rep_hall_hmm	common_virus	NaN		0	21012
+ct3_100_tubula_1a_11	16338	16652	ct3_100_tubula_1a_11_27	+	21012		pfam06950	Protein of unknown function (DUF1293). This family consists of several bacterial and phage proteins of around 115 residues in length. The function of this family is unknown.	mmseqs_cdd	nonviral_gene	NaN		0	21012
+ct3_100_tubula_1a_11	16675	16920	ct3_100_tubula_1a_11_28	+	21012		PFAM:PF17091.4	Tail-G7P-protein	hallmark_hmm	common_virus	NaN		0	21012
+ct3_100_tubula_1a_11	17437	18732	ct3_100_tubula_1a_11_29	+	21012		PFAM:PF05616.12	minor-head-protein;-receptor-binding	phrogs_hmm	hypothetical_protein	NaN		0	21012
+ct3_100_tubula_1a_11	18885	19088	ct3_100_tubula_1a_11_30	+	21012		CDD:PHA01081	putative-minor-coat-protein	hallmark_hmm	common_virus	NaN		0	21012
+ct3_100_tubula_1a_11	19128	19751	ct3_100_tubula_1a_11_31	+	21012		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	21012
+ct3_100_tubula_1a_11	19822	20085	ct3_100_tubula_1a_11_32	-	21012		PDB:4IA8_B	helix-turn-helix-protein	common_virus_hmm	common_virus	NaN		0	21012
+ct3_100_tubula_1a_11	20199	20444	ct3_100_tubula_1a_11_33	+	21012			hypothetical protein		hypothetical_protein	NaN		0	21012
+ct3_100_tubula_1a_11	20389	20637	ct3_100_tubula_1a_11_34	+	21012			hypothetical protein		hypothetical_protein	NaN		0	21012
+ct3_100_tubula_1a_11	20810	21010	ct3_100_tubula_1a_11_35	+	21012			hypothetical protein		hypothetical_protein	NaN		0	21012
+ct3_100_tubula_1a_12	2	1012	ct3_100_tubula_1a_12_1	+	8460		PFAM:PF05840.12	Rep-protein	rep_hall_hmm	common_virus	NaN		0	8460
+ct3_100_tubula_1a_12	963	1187	ct3_100_tubula_1a_12_2	-	8460			hypothetical protein		hypothetical_protein	NaN		0	8460
+ct3_100_tubula_1a_12	1203	1793	ct3_100_tubula_1a_12_3	-	8460		PDB:1ZR4_E	resolvase,-site-specific-recombination	common_virus_hmm	common_virus	NaN		0	8460
+ct3_100_tubula_1a_12	1895	2197	ct3_100_tubula_1a_12_4	-	8460		PFAM:PF10078.8	HTH-DNA-binding-protein	phrogs_hmm	hypothetical_protein	NaN		0	8460
+ct3_100_tubula_1a_12	2302	2631	ct3_100_tubula_1a_12_5	+	8460		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	8460
+ct3_100_tubula_1a_12	2664	2894	ct3_100_tubula_1a_12_6	+	8460			hypothetical protein		hypothetical_protein	NaN		0	8460
+ct3_100_tubula_1a_12	3002	3190	ct3_100_tubula_1a_12_7	+	8460			hypothetical protein		hypothetical_protein	NaN		0	8460
+ct3_100_tubula_1a_12	3187	3339	ct3_100_tubula_1a_12_8	+	8460			hypothetical protein		hypothetical_protein	NaN		0	8460
+ct3_100_tubula_1a_12	3339	3485	ct3_100_tubula_1a_12_9	+	8460			hypothetical protein		hypothetical_protein	NaN		0	8460
+ct3_100_tubula_1a_12	3495	4001	ct3_100_tubula_1a_12_10	+	8460			hypothetical protein		hypothetical_protein	NaN		0	8460
+ct3_100_tubula_1a_12	4095	4214	ct3_100_tubula_1a_12_11	+	8460			hypothetical protein		hypothetical_protein	NaN		0	8460
+ct3_100_tubula_1a_12	4272	4523	ct3_100_tubula_1a_12_12	+	8460		PDB:1IFL_A	Filamentous-Major-Coat-protein	hallmark_hmm	common_virus	NaN		0	8460
+ct3_100_tubula_1a_12	4523	4654	ct3_100_tubula_1a_12_13	+	8460			hypothetical protein		hypothetical_protein	NaN		0	8460
+ct3_100_tubula_1a_12	4617	6137	ct3_100_tubula_1a_12_14	+	8460		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	8460
+ct3_100_tubula_1a_12	6150	6479	ct3_100_tubula_1a_12_15	+	8460		CDD:PHA00094	minor-coat-protein	hallmark_hmm	common_virus	NaN		0	8460
+ct3_100_tubula_1a_12	6481	7311	ct3_100_tubula_1a_12_16	+	8460		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	8460
+ct3_100_tubula_1a_12	7334	7618	ct3_100_tubula_1a_12_17	+	8460			hypothetical protein		hypothetical_protein	NaN		0	8460
+ct3_100_tubula_1a_12	7640	7927	ct3_100_tubula_1a_12_18	-	8460			hypothetical protein		hypothetical_protein	NaN		0	8460
+ct3_100_tubula_1a_13	1	1062	ct3_100_tubula_1a_13_1	+	6564		PFAM:PF05840.12	Rep-protein	rep_hall_hmm	common_virus	NaN		0	6564
+ct3_100_tubula_1a_13	1059	1355	ct3_100_tubula_1a_13_2	+	6564		PDB:1GVP_A	Rep-protein	rep_hall_hmm	common_virus	NaN		0	6564
+ct3_100_tubula_1a_13	1359	1610	ct3_100_tubula_1a_13_3	+	6564		PFAM:PF17091.4	Tail-G7P-protein	hallmark_hmm	common_virus	NaN		0	6564
+ct3_100_tubula_1a_13	1638	1766	ct3_100_tubula_1a_13_4	+	6564		PFAM:PF10389.8	virion-structural-protein	phrogs_hmm	hypothetical_protein	NaN		0	6564
+ct3_100_tubula_1a_13	1971	2882	ct3_100_tubula_1a_13_5	+	6564		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	6564
+ct3_100_tubula_1a_13	2893	2994	ct3_100_tubula_1a_13_6	+	6564		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	6564
+ct3_100_tubula_1a_13	2957	3337	ct3_100_tubula_1a_13_7	+	6564		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	6564
+ct3_100_tubula_1a_13	3339	4661	ct3_100_tubula_1a_13_8	+	6564		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	6564
+ct3_100_tubula_1a_13	4691	5083	ct3_100_tubula_1a_13_9	+	6564			hypothetical protein		hypothetical_protein	NaN		0	6564
+ct3_100_tubula_1a_13	5122	5460	ct3_100_tubula_1a_13_10	-	6564		PDB:4IA8_B	helix-turn-helix-protein	common_virus_hmm	common_virus	NaN		0	6564
+ct3_100_tubula_1a_13	5457	5912	ct3_100_tubula_1a_13_11	-	6564		PDB:4IA8_B	helix-turn-helix-protein	common_virus_hmm	common_virus	NaN		0	6564
+ct3_100_tubula_1a_13	6039	6254	ct3_100_tubula_1a_13_12	+	6564			hypothetical protein		hypothetical_protein	NaN		0	6564
+ct3_100_tubula_1a_13	6251	6424	ct3_100_tubula_1a_13_13	+	6564			hypothetical protein		hypothetical_protein	NaN		0	6564
+ct3_100_tubula_1a_13	6417	6563	ct3_100_tubula_1a_13_14	+	6564			hypothetical protein		hypothetical_protein	NaN		0	6564
+ct3_100_tubula_1a_14	1	207	ct3_100_tubula_1a_14_1	+	7288			hypothetical protein		hypothetical_protein	NaN		0	7288
+ct3_100_tubula_1a_14	207	1334	ct3_100_tubula_1a_14_2	+	7288		PFAM:PF02486.18	Replication-initiation-factor	rep_hall_hmm	common_virus	NaN		0	7288
+ct3_100_tubula_1a_14	1339	1650	ct3_100_tubula_1a_14_3	+	7288		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	7288
+ct3_100_tubula_1a_14	1719	1919	ct3_100_tubula_1a_14_4	+	7288		PFAM:PF10389.8	coat-protein-B	hallmark_hmm	common_virus	NaN		0	7288
+ct3_100_tubula_1a_14	1919	2254	ct3_100_tubula_1a_14_5	+	7288			hypothetical protein		hypothetical_protein	NaN		0	7288
+ct3_100_tubula_1a_14	2334	3614	ct3_100_tubula_1a_14_6	+	7288		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	7288
+ct3_100_tubula_1a_14	3611	3886	ct3_100_tubula_1a_14_7	+	7288		CDD:PHA02508	putative-minor-coat-protein	hallmark_hmm	common_virus	NaN		0	7288
+ct3_100_tubula_1a_14	3883	4977	ct3_100_tubula_1a_14_8	+	7288		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	7288
+ct3_100_tubula_1a_14	5082	5681	ct3_100_tubula_1a_14_9	+	7288		PFAM:PF10723.8	Replication-regulatory-protein-RepB	rep_hall_hmm	common_virus	NaN		0	7288
+ct3_100_tubula_1a_14	5723	6154	ct3_100_tubula_1a_14_10	+	7288		pfam01724	Domain of unknown function DUF29. This family consists of various hypothetical proteins from cyanobacteria, none of which are functionally described. The aligned region is approximately 120-140 amino acids long corresponding to almost the entire length of the proteins in the family. Structure 3fcn is a small protein that has a novel all-alpha fold. The N-terminal helical hairpin is likely to function as a dimerization module. This protein is a member of PFam family pfam01724. The function of this protein is unknown. One protein sequence contains a fusion of this protein and a DnaB domain, suggesting a possible role in DNA helicase activity (hypothetical). Dali hits have low Z and high rmsd, suggesting probably only topological similarities (not functional relevance) (details derived from TOPSAN). The family has several highly conserved sequence motifs, including YD/ExD, DxxNVxEEIE, and CPY/F/W, as well as conserved tryptophans.	mmseqs_cdd	nonviral_gene	NaN		0	7288
+ct3_100_tubula_1a_14	6681	7151	ct3_100_tubula_1a_14_11	-	7288		PDB:4IA8_B	helix-turn-helix-protein	common_virus_hmm	common_virus	NaN		0	7288
+ct3_100_tubula_1a_15	12	338	ct3_100_tubula_1a_15_1	+	7929		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	7929
+ct3_100_tubula_1a_15	338	583	ct3_100_tubula_1a_15_2	+	7929			hypothetical protein		hypothetical_protein	NaN		0	7929
+ct3_100_tubula_1a_15	593	871	ct3_100_tubula_1a_15_3	+	7929			hypothetical protein		hypothetical_protein	NaN		0	7929
+ct3_100_tubula_1a_15	871	1080	ct3_100_tubula_1a_15_4	+	7929			hypothetical protein		hypothetical_protein	NaN		0	7929
+ct3_100_tubula_1a_15	1080	1289	ct3_100_tubula_1a_15_5	+	7929			hypothetical protein		hypothetical_protein	NaN		0	7929
+ct3_100_tubula_1a_15	1292	1540	ct3_100_tubula_1a_15_6	+	7929		PFAM:PF17091.4	Tail-G7P-protein	hallmark_hmm	common_virus	NaN		0	7929
+ct3_100_tubula_1a_15	1543	1761	ct3_100_tubula_1a_15_7	+	7929		PFAM:PF10389.8	virion-structural-protein	phrogs_hmm	hypothetical_protein	NaN		0	7929
+ct3_100_tubula_1a_15	1836	3359	ct3_100_tubula_1a_15_8	+	7929		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	7929
+ct3_100_tubula_1a_15	3372	3701	ct3_100_tubula_1a_15_9	+	7929		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	7929
+ct3_100_tubula_1a_15	3706	5019	ct3_100_tubula_1a_15_10	+	7929		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	7929
+ct3_100_tubula_1a_15	5537	6472	ct3_100_tubula_1a_15_11	+	7929		PFAM:PF05840.12	Rep-protein	rep_hall_hmm	common_virus	NaN		0	7929
+ct3_100_tubula_1a_15	6469	6747	ct3_100_tubula_1a_15_12	-	7929			hypothetical protein		hypothetical_protein	NaN		0	7929
+ct3_100_tubula_1a_15	6767	7357	ct3_100_tubula_1a_15_13	-	7929		PDB:1ZR4_E	resolvase,-site-specific-recombination	common_virus_hmm	common_virus	NaN		0	7929
+ct3_100_tubula_1a_15	7458	7748	ct3_100_tubula_1a_15_14	-	7929		PFAM:PF10078.8	transcriptional-regulator	phrogs_hmm	hypothetical_protein	NaN		0	7929
+ct3_100_tubula_1a_16	1	903	ct3_100_tubula_1a_16_1	+	5853		PFAM:PF05840.12	Rep-protein	rep_hall_hmm	common_virus	NaN		0	5853
+ct3_100_tubula_1a_16	944	1111	ct3_100_tubula_1a_16_2	+	5853			hypothetical protein		hypothetical_protein	NaN		0	5853
+ct3_100_tubula_1a_16	1322	1495	ct3_100_tubula_1a_16_3	-	5853		PFAM:PF04221.11	Arc-like-repressor	phrogs_hmm	hypothetical_protein	NaN		0	5853
+ct3_100_tubula_1a_16	1849	2109	ct3_100_tubula_1a_16_4	+	5853			hypothetical protein		hypothetical_protein	NaN		0	5853
+ct3_100_tubula_1a_16	2239	2514	ct3_100_tubula_1a_16_5	+	5853			hypothetical protein		hypothetical_protein	NaN		0	5853
+ct3_100_tubula_1a_16	2534	2722	ct3_100_tubula_1a_16_6	+	5853			hypothetical protein		hypothetical_protein	NaN		0	5853
+ct3_100_tubula_1a_16	2976	3200	ct3_100_tubula_1a_16_7	+	5853			hypothetical protein		hypothetical_protein	NaN		0	5853
+ct3_100_tubula_1a_16	3200	4807	ct3_100_tubula_1a_16_8	+	5853			hypothetical protein		hypothetical_protein	NaN		0	5853
+ct3_100_tubula_1a_16	5081	5725	ct3_100_tubula_1a_16_9	+	5853		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	5853
+ct3_100_tubula_1a_17	1	273	ct3_100_tubula_1a_17_1	+	7292			hypothetical protein		hypothetical_protein	NaN		0	7292
+ct3_100_tubula_1a_17	516	761	ct3_100_tubula_1a_17_2	-	7292			hypothetical protein		hypothetical_protein	NaN		0	7292
+ct3_100_tubula_1a_17	754	1083	ct3_100_tubula_1a_17_3	-	7292			hypothetical protein		hypothetical_protein	NaN		0	7292
+ct3_100_tubula_1a_17	1126	1347	ct3_100_tubula_1a_17_4	-	7292			hypothetical protein		hypothetical_protein	NaN		0	7292
+ct3_100_tubula_1a_17	1351	1590	ct3_100_tubula_1a_17_5	-	7292			hypothetical protein		hypothetical_protein	NaN		0	7292
+ct3_100_tubula_1a_17	1577	2479	ct3_100_tubula_1a_17_6	-	7292		PFAM:PF05840.12	Rep-protein	rep_hall_hmm	common_virus	NaN		0	7292
+ct3_100_tubula_1a_17	2564	3442	ct3_100_tubula_1a_17_7	-	7292		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	7292
+ct3_100_tubula_1a_17	3439	3585	ct3_100_tubula_1a_17_8	-	7292			hypothetical protein		hypothetical_protein	NaN		0	7292
+ct3_100_tubula_1a_17	3662	3901	ct3_100_tubula_1a_17_9	-	7292			hypothetical protein		hypothetical_protein	NaN		0	7292
+ct3_100_tubula_1a_17	3917	4084	ct3_100_tubula_1a_17_10	-	7292			hypothetical protein		hypothetical_protein	NaN		0	7292
+ct3_100_tubula_1a_17	4084	4245	ct3_100_tubula_1a_17_11	-	7292			hypothetical protein		hypothetical_protein	NaN		0	7292
+ct3_100_tubula_1a_17	4242	5075	ct3_100_tubula_1a_17_12	-	7292			hypothetical protein		hypothetical_protein	NaN		0	7292
+ct3_100_tubula_1a_17	5075	5233	ct3_100_tubula_1a_17_13	-	7292			hypothetical protein		hypothetical_protein	NaN		0	7292
+ct3_100_tubula_1a_17	5239	5457	ct3_100_tubula_1a_17_14	-	7292			hypothetical protein		hypothetical_protein	NaN		0	7292
+ct3_100_tubula_1a_17	5464	6735	ct3_100_tubula_1a_17_15	-	7292			hypothetical protein		hypothetical_protein	NaN		0	7292
+ct3_100_tubula_1a_17	6765	7037	ct3_100_tubula_1a_17_16	-	7292			hypothetical protein		hypothetical_protein	NaN		0	7292
+ct3_100_tubula_1a_18	1	831	ct3_100_tubula_1a_18_1	+	6407		PFAM:PF05144.13	Phage-replication-protein	rep_hall_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_18	843	1106	ct3_100_tubula_1a_18_2	+	6407		PDB:1GVP_A	Rep-protein	rep_hall_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_18	1301	1522	ct3_100_tubula_1a_18_3	+	6407		CDD:PHA00025	major-coat-protein	hallmark_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_18	1579	2853	ct3_100_tubula_1a_18_4	+	6407		CDD:pfam05357	Filamentous-Minor-Coat-Protein-	hallmark_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_18	2856	3194	ct3_100_tubula_1a_18_5	+	6407		CDD:PHA00094	minor-coat-protein	hallmark_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_18	3196	4242	ct3_100_tubula_1a_18_6	+	6407		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_18	4220	5500	ct3_100_tubula_1a_18_7	+	6407		PDB:5WQ8_J	Type-II-secretion-system-protein	common_virus_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_18	6006	6407	ct3_100_tubula_1a_18_8	+	6407		PFAM:PF05144.13	Phage-replication-protein	rep_hall_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_19	102	1139	ct3_100_tubula_1a_19_1	+	7878		PFAM:PF05840.12	Rep-protein	rep_hall_hmm	common_virus	NaN		0	7878
+ct3_100_tubula_1a_19	1492	1806	ct3_100_tubula_1a_19_2	+	7878			hypothetical protein		hypothetical_protein	NaN		0	7878
+ct3_100_tubula_1a_19	2021	2149	ct3_100_tubula_1a_19_3	+	7878			hypothetical protein		hypothetical_protein	NaN		0	7878
+ct3_100_tubula_1a_19	2139	2408	ct3_100_tubula_1a_19_4	+	7878			hypothetical protein		hypothetical_protein	NaN		0	7878
+ct3_100_tubula_1a_19	2410	2589	ct3_100_tubula_1a_19_5	+	7878			hypothetical protein		hypothetical_protein	NaN		0	7878
+ct3_100_tubula_1a_19	2591	2764	ct3_100_tubula_1a_19_6	+	7878			hypothetical protein		hypothetical_protein	NaN		0	7878
+ct3_100_tubula_1a_19	2851	3042	ct3_100_tubula_1a_19_7	+	7878			hypothetical protein		hypothetical_protein	NaN		0	7878
+ct3_100_tubula_1a_19	3271	3468	ct3_100_tubula_1a_19_8	+	7878		PHA00646	hypothetical protein	mmseqs_cdd	common_virus	NaN		0	7878
+ct3_100_tubula_1a_19	3469	4476	ct3_100_tubula_1a_19_9	+	7878		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	7878
+ct3_100_tubula_1a_19	4479	4769	ct3_100_tubula_1a_19_10	+	7878		PHA00645	hypothetical protein	mmseqs_cdd	common_virus	NaN		0	7878
+ct3_100_tubula_1a_19	4769	5008	ct3_100_tubula_1a_19_11	+	7878			hypothetical protein		hypothetical_protein	NaN		0	7878
+ct3_100_tubula_1a_19	5024	6433	ct3_100_tubula_1a_19_12	+	7878		pfam12461	Protein of unknown function (DUF3688). This domain family is found in bacteria and viruses, and is typically between 79 and 104 amino acids in length. There is a conserved YRW sequence motif. There is a single completely conserved residue Y that may be functionally important.	mmseqs_cdd	nonviral_gene	NaN		0	7878
+ct3_100_tubula_1a_19	6699	7637	ct3_100_tubula_1a_19_13	+	7878			hypothetical protein		hypothetical_protein	NaN		0	7878
+ct3_100_tubula_1a_2	49	306	ct3_100_tubula_1a_2_1	-	5748			hypothetical protein		hypothetical_protein	NaN		0	5748
+ct3_100_tubula_1a_2	360	1103	ct3_100_tubula_1a_2_2	-	5748		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	5748
+ct3_100_tubula_1a_2	1151	1321	ct3_100_tubula_1a_2_3	-	5748			hypothetical protein		hypothetical_protein	NaN		0	5748
+ct3_100_tubula_1a_2	1695	2216	ct3_100_tubula_1a_2_4	-	5748			hypothetical protein		hypothetical_protein	NaN		0	5748
+ct3_100_tubula_1a_2	2213	2404	ct3_100_tubula_1a_2_5	-	5748			hypothetical protein		hypothetical_protein	NaN		0	5748
+ct3_100_tubula_1a_2	2417	2563	ct3_100_tubula_1a_2_6	-	5748			hypothetical protein		hypothetical_protein	NaN		0	5748
+ct3_100_tubula_1a_2	2701	3810	ct3_100_tubula_1a_2_7	-	5748			hypothetical protein		hypothetical_protein	NaN		0	5748
+ct3_100_tubula_1a_2	4011	4244	ct3_100_tubula_1a_2_8	-	5748			hypothetical protein		hypothetical_protein	NaN		0	5748
+ct3_100_tubula_1a_2	4237	4812	ct3_100_tubula_1a_2_9	-	5748		PFAM:PF01719.16	Plasmid-like-replication-protein	rep_hall_hmm	common_virus	NaN		0	5748
+ct3_100_tubula_1a_2	4966	5157	ct3_100_tubula_1a_2_10	-	5748			hypothetical protein		hypothetical_protein	NaN		0	5748
+ct3_100_tubula_1a_20	1	1494	ct3_100_tubula_1a_20_1	+	11668		NF000391	multidrug efflux MFS transporter permease subunit EmrB. 	mmseqs_cdd	nonviral_gene	NaN		0	11668
+ct3_100_tubula_1a_20	1650	2117	ct3_100_tubula_1a_20_2	-	11668			hypothetical protein		hypothetical_protein	NaN		0	11668
+ct3_100_tubula_1a_20	2209	2703	ct3_100_tubula_1a_20_3	+	11668		COG3038	Cytochrome b561 [Energy production and conversion]. 	mmseqs_cdd	nonviral_gene	NaN		0	11668
+ct3_100_tubula_1a_20	3034	3507	ct3_100_tubula_1a_20_4	-	11668			hypothetical protein		hypothetical_protein	NaN		0	11668
+ct3_100_tubula_1a_20	3646	4101	ct3_100_tubula_1a_20_5	+	11668			hypothetical protein		hypothetical_protein	NaN		0	11668
+ct3_100_tubula_1a_20	4358	4747	ct3_100_tubula_1a_20_6	-	11668		PDB:4IA8_B	helix-turn-helix-protein	common_virus_hmm	common_virus	NaN		0	11668
+ct3_100_tubula_1a_20	4861	5067	ct3_100_tubula_1a_20_7	+	11668			hypothetical protein		hypothetical_protein	NaN		0	11668
+ct3_100_tubula_1a_20	5217	6293	ct3_100_tubula_1a_20_8	+	11668		PFAM:PF02486.18	Replication-initiation-factor	rep_hall_hmm	common_virus	NaN		0	11668
+ct3_100_tubula_1a_20	6297	6614	ct3_100_tubula_1a_20_9	+	11668		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	11668
+ct3_100_tubula_1a_20	6614	6886	ct3_100_tubula_1a_20_10	+	11668			hypothetical protein		hypothetical_protein	NaN		0	11668
+ct3_100_tubula_1a_20	6886	7125	ct3_100_tubula_1a_20_11	+	11668		PDB:2IFO_A	Filamenous-Major-Coat-protein	hallmark_hmm	common_virus	NaN		0	11668
+ct3_100_tubula_1a_20	7122	7331	ct3_100_tubula_1a_20_12	+	11668		PDB:2IFO_A	Filamentous-Major-Coat-protein	hallmark_hmm	common_virus	NaN		0	11668
+ct3_100_tubula_1a_20	7476	8873	ct3_100_tubula_1a_20_13	+	11668		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	11668
+ct3_100_tubula_1a_20	8873	9190	ct3_100_tubula_1a_20_14	+	11668		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	11668
+ct3_100_tubula_1a_20	9201	10346	ct3_100_tubula_1a_20_15	+	11668		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	11668
+ct3_100_tubula_1a_20	10432	11193	ct3_100_tubula_1a_20_16	+	11668		PFAM:PF10723.8	Replication-regulatory-protein-RepB	rep_hall_hmm	common_virus	NaN		0	11668
+ct3_100_tubula_1a_20	11237	11668	ct3_100_tubula_1a_20_17	+	11668		pfam01724	Domain of unknown function DUF29. This family consists of various hypothetical proteins from cyanobacteria, none of which are functionally described. The aligned region is approximately 120-140 amino acids long corresponding to almost the entire length of the proteins in the family. Structure 3fcn is a small protein that has a novel all-alpha fold. The N-terminal helical hairpin is likely to function as a dimerization module. This protein is a member of PFam family pfam01724. The function of this protein is unknown. One protein sequence contains a fusion of this protein and a DnaB domain, suggesting a possible role in DNA helicase activity (hypothetical). Dali hits have low Z and high rmsd, suggesting probably only topological similarities (not functional relevance) (details derived from TOPSAN). The family has several highly conserved sequence motifs, including YD/ExD, DxxNVxEEIE, and CPY/F/W, as well as conserved tryptophans.	mmseqs_cdd	nonviral_gene	NaN		0	11668
+ct3_100_tubula_1a_21	1	252	ct3_100_tubula_1a_21_1	+	7265			hypothetical protein		hypothetical_protein	NaN		0	7265
+ct3_100_tubula_1a_21	364	549	ct3_100_tubula_1a_21_2	+	7265			hypothetical protein		hypothetical_protein	NaN		0	7265
+ct3_100_tubula_1a_21	552	1913	ct3_100_tubula_1a_21_3	+	7265		PFAM:PF02486.18	Replication-initiation-factor	rep_hall_hmm	common_virus	NaN		0	7265
+ct3_100_tubula_1a_21	1903	2199	ct3_100_tubula_1a_21_4	+	7265		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	7265
+ct3_100_tubula_1a_21	2212	2388	ct3_100_tubula_1a_21_5	+	7265			hypothetical protein		hypothetical_protein	NaN		0	7265
+ct3_100_tubula_1a_21	2399	2617	ct3_100_tubula_1a_21_6	+	7265			hypothetical protein		hypothetical_protein	NaN		0	7265
+ct3_100_tubula_1a_21	2704	3918	ct3_100_tubula_1a_21_7	+	7265		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	7265
+ct3_100_tubula_1a_21	3921	4202	ct3_100_tubula_1a_21_8	+	7265		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	7265
+ct3_100_tubula_1a_21	4286	5698	ct3_100_tubula_1a_21_9	+	7265		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	7265
+ct3_100_tubula_1a_21	5840	6040	ct3_100_tubula_1a_21_10	+	7265			hypothetical protein		hypothetical_protein	NaN		0	7265
+ct3_100_tubula_1a_21	6109	6282	ct3_100_tubula_1a_21_11	+	7265			hypothetical protein		hypothetical_protein	NaN		0	7265
+ct3_100_tubula_1a_21	6438	6884	ct3_100_tubula_1a_21_12	-	7265			hypothetical protein		hypothetical_protein	NaN		0	7265
+ct3_100_tubula_1a_21	6959	7153	ct3_100_tubula_1a_21_13	-	7265			hypothetical protein		hypothetical_protein	NaN		0	7265
+ct3_100_tubula_1a_22	1	348	ct3_100_tubula_1a_22_1	+	5999		PFAM:PF06950.10	single-strand-DNA-binding-protein	phrogs_hmm	common_virus	NaN		0	5999
+ct3_100_tubula_1a_22	351	548	ct3_100_tubula_1a_22_2	+	5999			hypothetical protein		hypothetical_protein	NaN		0	5999
+ct3_100_tubula_1a_22	514	786	ct3_100_tubula_1a_22_3	+	5999		PDB:2IFO_A	Filamentous-Major-Coat-protein	hallmark_hmm	common_virus	NaN		0	5999
+ct3_100_tubula_1a_22	872	2407	ct3_100_tubula_1a_22_4	+	5999			hypothetical protein		hypothetical_protein	NaN		0	5999
+ct3_100_tubula_1a_22	2409	2720	ct3_100_tubula_1a_22_5	+	5999		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	5999
+ct3_100_tubula_1a_22	2717	4063	ct3_100_tubula_1a_22_6	+	5999		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	5999
+ct3_100_tubula_1a_22	4338	4529	ct3_100_tubula_1a_22_7	-	5999			hypothetical protein		hypothetical_protein	NaN		0	5999
+ct3_100_tubula_1a_22	4594	4839	ct3_100_tubula_1a_22_8	+	5999			hypothetical protein		hypothetical_protein	NaN		0	5999
+ct3_100_tubula_1a_22	4839	5999	ct3_100_tubula_1a_22_9	+	5999		PFAM:PF02486.18	Replication-initiation-factor	rep_hall_hmm	common_virus	NaN		0	5999
+ct3_100_tubula_1a_23	1	831	ct3_100_tubula_1a_23_1	+	6407		PFAM:PF05144.13	Phage-replication-protein	rep_hall_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_23	843	1106	ct3_100_tubula_1a_23_2	+	6407		PDB:1GVP_A	Rep-protein	rep_hall_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_23	1301	1522	ct3_100_tubula_1a_23_3	+	6407		CDD:PHA00025	major-coat-protein	hallmark_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_23	1579	2853	ct3_100_tubula_1a_23_4	+	6407		CDD:pfam05357	Filamentous-Minor-Coat-Protein-	hallmark_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_23	2856	3194	ct3_100_tubula_1a_23_5	+	6407		CDD:PHA00094	minor-coat-protein	hallmark_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_23	3196	4242	ct3_100_tubula_1a_23_6	+	6407		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_23	4220	5500	ct3_100_tubula_1a_23_7	+	6407		PDB:5WQ8_J	Type-II-secretion-system-protein	common_virus_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_24	1	432	ct3_100_tubula_1a_24_1	-	6271		pfam01724	Domain of unknown function DUF29. This family consists of various hypothetical proteins from cyanobacteria, none of which are functionally described. The aligned region is approximately 120-140 amino acids long corresponding to almost the entire length of the proteins in the family. Structure 3fcn is a small protein that has a novel all-alpha fold. The N-terminal helical hairpin is likely to function as a dimerization module. This protein is a member of PFam family pfam01724. The function of this protein is unknown. One protein sequence contains a fusion of this protein and a DnaB domain, suggesting a possible role in DNA helicase activity (hypothetical). Dali hits have low Z and high rmsd, suggesting probably only topological similarities (not functional relevance) (details derived from TOPSAN). The family has several highly conserved sequence motifs, including YD/ExD, DxxNVxEEIE, and CPY/F/W, as well as conserved tryptophans.	mmseqs_cdd	nonviral_gene	NaN		0	6271
+ct3_100_tubula_1a_24	476	1192	ct3_100_tubula_1a_24_2	-	6271		PFAM:PF10723.8	Replication-regulatory-protein-RepB	rep_hall_hmm	common_virus	NaN		0	6271
+ct3_100_tubula_1a_24	1297	2391	ct3_100_tubula_1a_24_3	-	6271		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	6271
+ct3_100_tubula_1a_24	2388	2663	ct3_100_tubula_1a_24_4	-	6271		CDD:PHA02508	putative-minor-coat-protein	hallmark_hmm	common_virus	NaN		0	6271
+ct3_100_tubula_1a_24	2660	3940	ct3_100_tubula_1a_24_5	-	6271		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	6271
+ct3_100_tubula_1a_24	4020	4355	ct3_100_tubula_1a_24_6	-	6271			hypothetical protein		hypothetical_protein	NaN		0	6271
+ct3_100_tubula_1a_24	4355	4555	ct3_100_tubula_1a_24_7	-	6271		PFAM:PF10389.8	coat-protein-B	hallmark_hmm	common_virus	NaN		0	6271
+ct3_100_tubula_1a_24	4622	4933	ct3_100_tubula_1a_24_8	-	6271		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	6271
+ct3_100_tubula_1a_24	4938	6065	ct3_100_tubula_1a_24_9	-	6271		PFAM:PF02486.18	Replication-initiation-factor	rep_hall_hmm	common_virus	NaN		0	6271
+ct3_100_tubula_1a_24	6065	6271	ct3_100_tubula_1a_24_10	-	6271			hypothetical protein		hypothetical_protein	NaN		0	6271
+ct3_100_tubula_1a_25	1	831	ct3_100_tubula_1a_25_1	+	6407		PFAM:PF05144.13	Phage-replication-protein	rep_hall_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_25	843	1106	ct3_100_tubula_1a_25_2	+	6407		PDB:1GVP_A	Rep-protein	rep_hall_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_25	1301	1522	ct3_100_tubula_1a_25_3	+	6407		CDD:PHA00025	major-coat-protein	hallmark_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_25	1579	2853	ct3_100_tubula_1a_25_4	+	6407		CDD:pfam05357	Filamentous-Minor-Coat-Protein-	hallmark_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_25	2856	3194	ct3_100_tubula_1a_25_5	+	6407		CDD:PHA00094	minor-coat-protein	hallmark_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_25	3196	4242	ct3_100_tubula_1a_25_6	+	6407		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_25	4220	5500	ct3_100_tubula_1a_25_7	+	6407		PDB:5WQ8_J	Type-II-secretion-system-protein	common_virus_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_25	6123	6407	ct3_100_tubula_1a_25_8	+	6407		PFAM:PF05144.13	Phage-replication-protein	rep_hall_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_26	2	775	ct3_100_tubula_1a_26_1	+	31014		COG3071	Uncharacterized conserved protein HemY, contains two TPR repeats [Function unknown]. 	mmseqs_cdd	nonviral_gene	NaN		0	31014
+ct3_100_tubula_1a_26	817	1344	ct3_100_tubula_1a_26_2	-	31014		COG3658	Cytochrome b  [Energy production and conversion]. 	mmseqs_cdd	nonviral_gene	NaN		0	31014
+ct3_100_tubula_1a_26	1374	1640	ct3_100_tubula_1a_26_3	-	31014		COG5591	Uncharacterized protein [Function unknown]. 	mmseqs_cdd	nonviral_gene	NaN		0	31014
+ct3_100_tubula_1a_26	1786	3114	ct3_100_tubula_1a_26_4	-	31014		cd17319	Hexuronate transporter, Glucarate transporter, and similar transporters of the Major Facilitator Superfamily. This family is composed of predominantly bacterial transporters for hexuronate (ExuT), glucarate (GudP), galactarate (GarP), and galactonate (DgoT). They mediate the uptake of these compounds into the cell. They belong to the Major Facilitator Superfamily (MFS) of membrane transport proteins, which are thought to function through a single substrate binding site, alternating-access mechanism involving a rocker-switch type of movement.	mmseqs_cdd	nonviral_gene	NaN		0	31014
+ct3_100_tubula_1a_26	3263	4021	ct3_100_tubula_1a_26_5	-	31014		cd05345	putative beta-ketoacyl acyl carrier protein [ACP] reductase (BKR), subgroup 3, classical (c) SDR. This subgroup includes the putative Brucella melitensis biovar Abortus 2308 BKR, FabG, Mesorhizobium loti MAFF303099 FabG, and other classical SDRs. BKR, a member of the SDR family, catalyzes the NADPH-dependent reduction of acyl carrier protein in the first reductive step of de novo fatty acid synthesis (FAS).  FAS consists of 4 elongation steps, which are repeated to extend the fatty acid chain thru the addition of two-carbo units from malonyl acyl-carrier protein (ACP): condensation, reduction, dehydration, and final reduction. Type II FAS, typical of plants and many bacteria, maintains these activities on discrete polypeptides, while type I Fas utilizes one or 2 multifunctional polypeptides. BKR resembles enoyl reductase, which catalyzes the second reduction step in FAS. SDRs are a functionally diverse family of oxidoreductases that have a single domain with a structurally conserved Rossmann fold (alpha/beta folding pattern with a central beta-sheet), an NAD(P)(H)-binding region, and a structurally diverse C-terminal region. Classical SDRs are typically about 250 residues long, while extended SDRS are approximately 350 residues. Sequence identity between different SDR enzymes are typically in the 15-30% range, but the enzymes share the Rossmann fold NAD-binding motif and characteristic NAD-binding and catalytic sequence patterns. These enzymes have a 3-glycine N-terminal NAD(P)(H)-binding pattern (typically, TGxxxGxG in classical SDRs and TGxxGxxG in extended SDRs), while substrate binding is in the C-terminal region. A critical catalytic Tyr residue (Tyr-151, human 15-hydroxyprostaglandin dehydrogenase (15-PGDH) numbering), is often found in a conserved YXXXK pattern. In addition to the Tyr and Lys, there is often an upstream Ser (Ser-138, 15-PGDH numbering) and/or an Asn (Asn-107, 15-PGDH numbering) or additional Ser, contributing to the active site. Substrates for these enzymes include sugars, steroids, alcohols, and aromatic compounds. The standard reaction mechanism is a proton relay involving the conserved Tyr and Lys, as well as Asn (or Ser). Some SDR family members, including 17 beta-hydroxysteroid dehydrogenase contain an additional helix-turn-helix motif that is not generally found among SDRs.	mmseqs_cdd	nonviral_gene	NaN		0	31014
+ct3_100_tubula_1a_26	4055	5491	ct3_100_tubula_1a_26_6	-	31014		cd07109	Uncharacterized Saccharopolyspora spinosa aldehyde dehydrogenase (AAS00426)-like. Uncharacterized aldehyde dehydrogenase of Saccharopolyspora spinosa (AAS00426) and other similar sequences, are present in this CD.	mmseqs_cdd	nonviral_gene	NaN		0	31014
+ct3_100_tubula_1a_26	5631	6158	ct3_100_tubula_1a_26_7	+	31014		PRK01250	inorganic diphosphatase. 	mmseqs_cdd	nonviral_gene	NaN		0	31014
+ct3_100_tubula_1a_26	6460	6639	ct3_100_tubula_1a_26_8	+	31014			hypothetical protein		hypothetical_protein	NaN		0	31014
+ct3_100_tubula_1a_26	6582	6731	ct3_100_tubula_1a_26_9	-	31014			hypothetical protein		hypothetical_protein	NaN		0	31014
+ct3_100_tubula_1a_26	6728	7954	ct3_100_tubula_1a_26_10	-	31014		COG3146	Predicted N-acyltransferase  [General function prediction only]. 	mmseqs_cdd	nonviral_gene	NaN		0	31014
+ct3_100_tubula_1a_26	8010	9650	ct3_100_tubula_1a_26_11	+	31014		PRK13981	NAD synthetase; Provisional	mmseqs_cdd	nonviral_gene	NaN		0	31014
+ct3_100_tubula_1a_26	9663	10289	ct3_100_tubula_1a_26_12	+	31014		PRK00216	bifunctional demethylmenaquinone methyltransferase/2-methoxy-6-polyprenyl-1,4-benzoquinol methylase UbiE. 	mmseqs_cdd	nonviral_gene	NaN		0	31014
+ct3_100_tubula_1a_26	10305	10643	ct3_100_tubula_1a_26_13	+	31014		PRK10858	nitrogen regulatory protein P-II. 	mmseqs_cdd	nonviral_gene	NaN		0	31014
+ct3_100_tubula_1a_26	10680	11303	ct3_100_tubula_1a_26_14	-	31014		COG2860	Uncharacterized membrane protein YeiH [Function unknown]. 	mmseqs_cdd	nonviral_gene	NaN		0	31014
+ct3_100_tubula_1a_26	11345	12010	ct3_100_tubula_1a_26_15	-	31014		COG2840	DNA-nicking endonuclease, Smr domain  [Replication, recombination and repair]. 	mmseqs_cdd	nonviral_gene	NaN		0	31014
+ct3_100_tubula_1a_26	12139	13095	ct3_100_tubula_1a_26_16	-	31014		PRK10262	thioredoxin reductase; Provisional	mmseqs_cdd	nonviral_gene	NaN		0	31014
+ct3_100_tubula_1a_26	13314	15659	ct3_100_tubula_1a_26_17	+	31014		PDB:2IUS_D	DNA-TRANSLOCASE-FTSK	common_virus_hmm	common_virus	NaN		0	31014
+ct3_100_tubula_1a_26	15748	16395	ct3_100_tubula_1a_26_18	+	31014		PRK00031	outer membrane lipoprotein chaperone LolA. 	mmseqs_cdd	nonviral_gene	NaN		0	31014
+ct3_100_tubula_1a_26	16431	16847	ct3_100_tubula_1a_26_19	+	31014			hypothetical protein		hypothetical_protein	NaN		0	31014
+ct3_100_tubula_1a_26	16918	18267	ct3_100_tubula_1a_26_20	+	31014		PDB:1SXJ_A	Clamp-Loader	common_virus_hmm	common_virus	NaN		0	31014
+ct3_100_tubula_1a_26	18334	19650	ct3_100_tubula_1a_26_21	+	31014		PRK05431	seryl-tRNA synthetase; Provisional	mmseqs_cdd	nonviral_gene	NaN		0	31014
+ct3_100_tubula_1a_26	19873	20463	ct3_100_tubula_1a_26_22	+	31014		PDB:1ZR4_E	resolvase,-site-specific-recombination	common_virus_hmm	common_virus	NaN		0	31014
+ct3_100_tubula_1a_26	20490	21203	ct3_100_tubula_1a_26_23	+	31014			hypothetical protein		hypothetical_protein	NaN		0	31014
+ct3_100_tubula_1a_26	21211	22146	ct3_100_tubula_1a_26_24	-	31014		PFAM:PF05840.12	Rep-protein	rep_hall_hmm	common_virus	NaN		0	31014
+ct3_100_tubula_1a_26	22565	23278	ct3_100_tubula_1a_26_25	-	31014		PFAM:PF10723.8	Replication-regulatory-protein-RepB	rep_hall_hmm	common_virus	NaN		0	31014
+ct3_100_tubula_1a_26	23365	24687	ct3_100_tubula_1a_26_26	-	31014		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	31014
+ct3_100_tubula_1a_26	24692	25021	ct3_100_tubula_1a_26_27	-	31014		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	31014
+ct3_100_tubula_1a_26	25034	26569	ct3_100_tubula_1a_26_28	-	31014		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	31014
+ct3_100_tubula_1a_26	26645	26869	ct3_100_tubula_1a_26_29	-	31014		PFAM:PF10389.8	virion-structural-protein	phrogs_hmm	hypothetical_protein	NaN		0	31014
+ct3_100_tubula_1a_26	26872	27120	ct3_100_tubula_1a_26_30	-	31014		PFAM:PF17091.4	Tail-G7P-protein	hallmark_hmm	common_virus	NaN		0	31014
+ct3_100_tubula_1a_26	27123	27332	ct3_100_tubula_1a_26_31	-	31014			hypothetical protein		hypothetical_protein	NaN		0	31014
+ct3_100_tubula_1a_26	27541	27837	ct3_100_tubula_1a_26_32	-	31014			hypothetical protein		hypothetical_protein	NaN		0	31014
+ct3_100_tubula_1a_26	28147	28335	ct3_100_tubula_1a_26_33	-	31014			hypothetical protein		hypothetical_protein	NaN		0	31014
+ct3_100_tubula_1a_26	28404	28730	ct3_100_tubula_1a_26_34	-	31014		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	31014
+ct3_100_tubula_1a_26	28909	29208	ct3_100_tubula_1a_26_35	+	31014		PFAM:PF10078.8	HTH-DNA-binding-protein	phrogs_hmm	hypothetical_protein	NaN		0	31014
+ct3_100_tubula_1a_26	29329	31014	ct3_100_tubula_1a_26_36	+	31014		PDB:1Z19_B	Integrase	common_virus_hmm	common_virus	NaN		0	31014
+ct3_100_tubula_1a_27	90	200	ct3_100_tubula_1a_27_1	+	7870			hypothetical protein		hypothetical_protein	NaN		0	7870
+ct3_100_tubula_1a_27	482	730	ct3_100_tubula_1a_27_2	+	7870			hypothetical protein		hypothetical_protein	NaN		0	7870
+ct3_100_tubula_1a_27	1082	1381	ct3_100_tubula_1a_27_3	+	7870			hypothetical protein		hypothetical_protein	NaN		0	7870
+ct3_100_tubula_1a_27	1411	1851	ct3_100_tubula_1a_27_4	+	7870			hypothetical protein		hypothetical_protein	NaN		0	7870
+ct3_100_tubula_1a_27	2004	2207	ct3_100_tubula_1a_27_5	+	7870		pfam10854	Protein of unknown function (DUF2649). Members in this family of proteins are annotated as Plectrovirus orf 10 transmembrane proteins however currently no function is known.	mmseqs_cdd	nonviral_gene	NaN		0	7870
+ct3_100_tubula_1a_27	2207	3220	ct3_100_tubula_1a_27_6	+	7870		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	7870
+ct3_100_tubula_1a_27	3213	3590	ct3_100_tubula_1a_27_7	+	7870		PHA00645	hypothetical protein	mmseqs_cdd	common_virus	NaN		0	7870
+ct3_100_tubula_1a_27	3590	3826	ct3_100_tubula_1a_27_8	+	7870			hypothetical protein		hypothetical_protein	NaN		0	7870
+ct3_100_tubula_1a_27	3838	6024	ct3_100_tubula_1a_27_9	+	7870		PHA00540	hypothetical protein	mmseqs_cdd	common_virus	NaN		0	7870
+ct3_100_tubula_1a_27	6039	6506	ct3_100_tubula_1a_27_10	-	7870		PHA00540	hypothetical protein	mmseqs_cdd	common_virus	NaN		0	7870
+ct3_100_tubula_1a_27	6624	7712	ct3_100_tubula_1a_27_11	+	7870		PDB:4U7B_B	Mos-transposase	common_virus_hmm	common_virus	NaN		0	7870
+ct3_100_tubula_1a_28	1	378	ct3_100_tubula_1a_28_1	-	7540		PDB:4IA8_B	helix-turn-helix-protein	common_virus_hmm	common_virus	NaN		0	7540
+ct3_100_tubula_1a_28	515	856	ct3_100_tubula_1a_28_2	+	7540			hypothetical protein		hypothetical_protein	NaN		0	7540
+ct3_100_tubula_1a_28	856	1983	ct3_100_tubula_1a_28_3	+	7540		PFAM:PF02486.18	Replication-initiation-factor	rep_hall_hmm	common_virus	NaN		0	7540
+ct3_100_tubula_1a_28	1988	2299	ct3_100_tubula_1a_28_4	+	7540		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	7540
+ct3_100_tubula_1a_28	2368	2568	ct3_100_tubula_1a_28_5	+	7540		PFAM:PF10389.8	coat-protein-B	hallmark_hmm	common_virus	NaN		0	7540
+ct3_100_tubula_1a_28	2568	2903	ct3_100_tubula_1a_28_6	+	7540			hypothetical protein		hypothetical_protein	NaN		0	7540
+ct3_100_tubula_1a_28	2983	4263	ct3_100_tubula_1a_28_7	+	7540		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	7540
+ct3_100_tubula_1a_28	4260	4535	ct3_100_tubula_1a_28_8	+	7540		CDD:PHA02508	putative-minor-coat-protein	hallmark_hmm	common_virus	NaN		0	7540
+ct3_100_tubula_1a_28	4532	5626	ct3_100_tubula_1a_28_9	+	7540		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	7540
+ct3_100_tubula_1a_28	5731	6447	ct3_100_tubula_1a_28_10	+	7540		PFAM:PF10723.8	Replication-regulatory-protein-RepB	rep_hall_hmm	common_virus	NaN		0	7540
+ct3_100_tubula_1a_28	6491	6922	ct3_100_tubula_1a_28_11	+	7540		pfam01724	Domain of unknown function DUF29. This family consists of various hypothetical proteins from cyanobacteria, none of which are functionally described. The aligned region is approximately 120-140 amino acids long corresponding to almost the entire length of the proteins in the family. Structure 3fcn is a small protein that has a novel all-alpha fold. The N-terminal helical hairpin is likely to function as a dimerization module. This protein is a member of PFam family pfam01724. The function of this protein is unknown. One protein sequence contains a fusion of this protein and a DnaB domain, suggesting a possible role in DNA helicase activity (hypothetical). Dali hits have low Z and high rmsd, suggesting probably only topological similarities (not functional relevance) (details derived from TOPSAN). The family has several highly conserved sequence motifs, including YD/ExD, DxxNVxEEIE, and CPY/F/W, as well as conserved tryptophans.	mmseqs_cdd	nonviral_gene	NaN		0	7540
+ct3_100_tubula_1a_29	1	327	ct3_100_tubula_1a_29_1	+	9004		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	9004
+ct3_100_tubula_1a_29	399	683	ct3_100_tubula_1a_29_2	+	9004			hypothetical protein		hypothetical_protein	NaN		0	9004
+ct3_100_tubula_1a_29	708	905	ct3_100_tubula_1a_29_3	+	9004			hypothetical protein		hypothetical_protein	NaN		0	9004
+ct3_100_tubula_1a_29	905	1201	ct3_100_tubula_1a_29_4	+	9004			hypothetical protein		hypothetical_protein	NaN		0	9004
+ct3_100_tubula_1a_29	1201	1410	ct3_100_tubula_1a_29_5	+	9004			hypothetical protein		hypothetical_protein	NaN		0	9004
+ct3_100_tubula_1a_29	1410	1619	ct3_100_tubula_1a_29_6	+	9004			hypothetical protein		hypothetical_protein	NaN		0	9004
+ct3_100_tubula_1a_29	1622	1870	ct3_100_tubula_1a_29_7	+	9004		PFAM:PF17091.4	Tail-G7P-protein	hallmark_hmm	common_virus	NaN		0	9004
+ct3_100_tubula_1a_29	1873	2097	ct3_100_tubula_1a_29_8	+	9004		PFAM:PF10389.8	virion-structural-protein	phrogs_hmm	hypothetical_protein	NaN		0	9004
+ct3_100_tubula_1a_29	2173	3669	ct3_100_tubula_1a_29_9	+	9004		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	9004
+ct3_100_tubula_1a_29	3682	4011	ct3_100_tubula_1a_29_10	+	9004		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	9004
+ct3_100_tubula_1a_29	4016	5335	ct3_100_tubula_1a_29_11	+	9004		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	9004
+ct3_100_tubula_1a_29	5332	5619	ct3_100_tubula_1a_29_12	-	9004			hypothetical protein		hypothetical_protein	NaN		0	9004
+ct3_100_tubula_1a_29	6222	7157	ct3_100_tubula_1a_29_13	+	9004		PFAM:PF05840.12	Rep-protein	rep_hall_hmm	common_virus	NaN		0	9004
+ct3_100_tubula_1a_29	7165	7878	ct3_100_tubula_1a_29_14	-	9004			hypothetical protein		hypothetical_protein	NaN		0	9004
+ct3_100_tubula_1a_29	7905	8495	ct3_100_tubula_1a_29_15	-	9004		PDB:1ZR4_E	resolvase,-site-specific-recombination	common_virus_hmm	common_virus	NaN		0	9004
+ct3_100_tubula_1a_29	8599	8895	ct3_100_tubula_1a_29_16	-	9004		PFAM:PF10078.8	HTH-DNA-binding-protein	phrogs_hmm	hypothetical_protein	NaN		0	9004
+ct3_100_tubula_1a_3	1	831	ct3_100_tubula_1a_3_1	+	6407		PFAM:PF05144.13	Phage-replication-protein	rep_hall_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_3	843	1106	ct3_100_tubula_1a_3_2	+	6407		PDB:1GVP_A	Rep-protein	rep_hall_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_3	1301	1522	ct3_100_tubula_1a_3_3	+	6407		CDD:PHA00025	major-coat-protein	hallmark_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_3	1579	2853	ct3_100_tubula_1a_3_4	+	6407		CDD:pfam05357	Filamentous-Minor-Coat-Protein-	hallmark_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_3	2856	3194	ct3_100_tubula_1a_3_5	+	6407		CDD:PHA00094	minor-coat-protein	hallmark_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_3	3196	4242	ct3_100_tubula_1a_3_6	+	6407		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_3	4220	5500	ct3_100_tubula_1a_3_7	+	6407		PDB:5WQ8_J	Type-II-secretion-system-protein	common_virus_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_3	6123	6407	ct3_100_tubula_1a_3_8	+	6407		PFAM:PF05144.13	Phage-replication-protein	rep_hall_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_30	1	1473	ct3_100_tubula_1a_30_1	+	7006		PFAM:PF05616.12	minor-head-protein;-receptor-binding	phrogs_hmm	hypothetical_protein	NaN		0	7006
+ct3_100_tubula_1a_30	1475	1792	ct3_100_tubula_1a_30_2	+	7006		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	7006
+ct3_100_tubula_1a_30	1795	2970	ct3_100_tubula_1a_30_3	+	7006		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	7006
+ct3_100_tubula_1a_30	3193	3654	ct3_100_tubula_1a_30_4	+	7006			hypothetical protein		hypothetical_protein	NaN		0	7006
+ct3_100_tubula_1a_30	3507	3875	ct3_100_tubula_1a_30_5	-	7006		PHA01082	putative transcription regulator	mmseqs_cdd	common_virus	NaN		0	7006
+ct3_100_tubula_1a_30	3835	4287	ct3_100_tubula_1a_30_6	-	7006		PDB:4IA8_B	helix-turn-helix-protein	common_virus_hmm	common_virus	NaN		0	7006
+ct3_100_tubula_1a_30	4465	4680	ct3_100_tubula_1a_30_7	+	7006			hypothetical protein		hypothetical_protein	NaN		0	7006
+ct3_100_tubula_1a_30	4683	4898	ct3_100_tubula_1a_30_8	+	7006			hypothetical protein		hypothetical_protein	NaN		0	7006
+ct3_100_tubula_1a_30	4891	6144	ct3_100_tubula_1a_30_9	+	7006		PFAM:PF02486.18	Replication-initiation-factor	rep_hall_hmm	common_virus	NaN		0	7006
+ct3_100_tubula_1a_30	6137	6448	ct3_100_tubula_1a_30_10	+	7006		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	7006
+ct3_100_tubula_1a_30	6461	6706	ct3_100_tubula_1a_30_11	+	7006		PFAM:PF17091.4	G7P-protein	common_virus_hmm	common_virus	NaN		0	7006
+ct3_100_tubula_1a_30	6727	6861	ct3_100_tubula_1a_30_12	+	7006		UniProt:tr|Q8W6E1_9VIRU	Major-capsid-protein-	hallmark_hmm	common_virus	NaN		0	7006
+ct3_100_tubula_1a_30	6876	6971	ct3_100_tubula_1a_30_13	+	7006			hypothetical protein		hypothetical_protein	NaN		0	7006
+ct3_100_tubula_1a_31	1	396	ct3_100_tubula_1a_31_1	+	5368		PFAM:PF01719.16	Plasmid-like-replication-protein	rep_hall_hmm	common_virus	NaN		0	5368
+ct3_100_tubula_1a_31	489	1772	ct3_100_tubula_1a_31_2	+	5368			hypothetical protein		hypothetical_protein	NaN		0	5368
+ct3_100_tubula_1a_31	1765	1911	ct3_100_tubula_1a_31_3	+	5368			hypothetical protein		hypothetical_protein	NaN		0	5368
+ct3_100_tubula_1a_31	1908	2057	ct3_100_tubula_1a_31_4	+	5368			hypothetical protein		hypothetical_protein	NaN		0	5368
+ct3_100_tubula_1a_31	2070	2285	ct3_100_tubula_1a_31_5	+	5368			hypothetical protein		hypothetical_protein	NaN		0	5368
+ct3_100_tubula_1a_31	2282	2995	ct3_100_tubula_1a_31_6	+	5368			hypothetical protein		hypothetical_protein	NaN		0	5368
+ct3_100_tubula_1a_31	2983	3126	ct3_100_tubula_1a_31_7	+	5368			hypothetical protein		hypothetical_protein	NaN		0	5368
+ct3_100_tubula_1a_31	3143	3340	ct3_100_tubula_1a_31_8	+	5368			hypothetical protein		hypothetical_protein	NaN		0	5368
+ct3_100_tubula_1a_31	3383	3757	ct3_100_tubula_1a_31_9	+	5368		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	5368
+ct3_100_tubula_1a_31	3754	4098	ct3_100_tubula_1a_31_10	+	5368		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	common_virus_hmm	common_virus	NaN		0	5368
+ct3_100_tubula_1a_31	4105	4287	ct3_100_tubula_1a_31_11	+	5368			hypothetical protein		hypothetical_protein	NaN		0	5368
+ct3_100_tubula_1a_31	4489	4719	ct3_100_tubula_1a_31_12	+	5368		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	5368
+ct3_100_tubula_1a_31	4858	5043	ct3_100_tubula_1a_31_13	+	5368			hypothetical protein		hypothetical_protein	NaN		0	5368
+ct3_100_tubula_1a_32	116	586	ct3_100_tubula_1a_32_1	+	7480		PDB:4IA8_B	helix-turn-helix-protein	common_virus_hmm	common_virus	NaN		0	7480
+ct3_100_tubula_1a_32	533	1066	ct3_100_tubula_1a_32_2	-	7480			hypothetical protein		hypothetical_protein	NaN		0	7480
+ct3_100_tubula_1a_32	1210	1641	ct3_100_tubula_1a_32_3	-	7480		pfam01724	Domain of unknown function DUF29. This family consists of various hypothetical proteins from cyanobacteria, none of which are functionally described. The aligned region is approximately 120-140 amino acids long corresponding to almost the entire length of the proteins in the family. Structure 3fcn is a small protein that has a novel all-alpha fold. The N-terminal helical hairpin is likely to function as a dimerization module. This protein is a member of PFam family pfam01724. The function of this protein is unknown. One protein sequence contains a fusion of this protein and a DnaB domain, suggesting a possible role in DNA helicase activity (hypothetical). Dali hits have low Z and high rmsd, suggesting probably only topological similarities (not functional relevance) (details derived from TOPSAN). The family has several highly conserved sequence motifs, including YD/ExD, DxxNVxEEIE, and CPY/F/W, as well as conserved tryptophans.	mmseqs_cdd	nonviral_gene	NaN		0	7480
+ct3_100_tubula_1a_32	1685	2401	ct3_100_tubula_1a_32_4	-	7480		PFAM:PF10723.8	Replication-regulatory-protein-RepB	rep_hall_hmm	common_virus	NaN		0	7480
+ct3_100_tubula_1a_32	2506	3600	ct3_100_tubula_1a_32_5	-	7480		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	7480
+ct3_100_tubula_1a_32	3597	3869	ct3_100_tubula_1a_32_6	-	7480		CDD:PHA02508	putative-minor-coat-protein	hallmark_hmm	common_virus	NaN		0	7480
+ct3_100_tubula_1a_32	3869	5149	ct3_100_tubula_1a_32_7	-	7480		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	7480
+ct3_100_tubula_1a_32	5229	5564	ct3_100_tubula_1a_32_8	-	7480			hypothetical protein		hypothetical_protein	NaN		0	7480
+ct3_100_tubula_1a_32	5564	5764	ct3_100_tubula_1a_32_9	-	7480		PFAM:PF10389.8	coat-protein-B	hallmark_hmm	common_virus	NaN		0	7480
+ct3_100_tubula_1a_32	5831	6142	ct3_100_tubula_1a_32_10	-	7480		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	7480
+ct3_100_tubula_1a_32	6147	7274	ct3_100_tubula_1a_32_11	-	7480		PFAM:PF02486.18	Replication-initiation-factor	rep_hall_hmm	common_virus	NaN		0	7480
+ct3_100_tubula_1a_32	7274	7480	ct3_100_tubula_1a_32_12	-	7480			hypothetical protein		hypothetical_protein	NaN		0	7480
+ct3_100_tubula_1a_33	1	1272	ct3_100_tubula_1a_33_1	+	6608		PFAM:PF05144.13	Phage-replication-protein	rep_hall_hmm	common_virus	NaN		0	6608
+ct3_100_tubula_1a_33	1298	1570	ct3_100_tubula_1a_33_2	+	6608		PDB:1GVP_A	Rep-protein	rep_hall_hmm	common_virus	NaN		0	6608
+ct3_100_tubula_1a_33	1567	1659	ct3_100_tubula_1a_33_3	+	6608		UniProt:sp|G7P_BPI22	Tail-virion-protein	hallmark_hmm	common_virus	NaN		0	6608
+ct3_100_tubula_1a_33	1656	1757	ct3_100_tubula_1a_33_4	+	6608		CDD:PHA00024	minor-coat-protein	hallmark_hmm	common_virus	NaN		0	6608
+ct3_100_tubula_1a_33	1769	2017	ct3_100_tubula_1a_33_5	+	6608		PDB:1IFL_A	Filamentous-Major-Coat-protein	hallmark_hmm	common_virus	NaN		0	6608
+ct3_100_tubula_1a_33	2113	3393	ct3_100_tubula_1a_33_6	+	6608		CDD:pfam05357	Filamentous-Minor-Coat-Protein-	hallmark_hmm	common_virus	NaN		0	6608
+ct3_100_tubula_1a_33	3393	3743	ct3_100_tubula_1a_33_7	+	6608		CDD:PHA00094	minor-coat-protein	hallmark_hmm	common_virus	NaN		0	6608
+ct3_100_tubula_1a_33	3745	4842	ct3_100_tubula_1a_33_8	+	6608		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	6608
+ct3_100_tubula_1a_33	4845	5636	ct3_100_tubula_1a_33_9	+	6608		PDB:5WQ8_J	Type-II-secretion-system-protein	common_virus_hmm	common_virus	NaN		0	6608
+ct3_100_tubula_1a_33	5678	6154	ct3_100_tubula_1a_33_10	+	6608		PDB:5WQ8_J	Type-II-secretion-system-protein	common_virus_hmm	common_virus	NaN		0	6608
+ct3_100_tubula_1a_34	3	386	ct3_100_tubula_1a_34_1	+	5424			hypothetical protein		hypothetical_protein	NaN		0	5424
+ct3_100_tubula_1a_34	383	523	ct3_100_tubula_1a_34_2	+	5424			hypothetical protein		hypothetical_protein	NaN		0	5424
+ct3_100_tubula_1a_34	523	672	ct3_100_tubula_1a_34_3	+	5424			hypothetical protein		hypothetical_protein	NaN		0	5424
+ct3_100_tubula_1a_34	618	839	ct3_100_tubula_1a_34_4	-	5424			hypothetical protein		hypothetical_protein	NaN		0	5424
+ct3_100_tubula_1a_34	905	1384	ct3_100_tubula_1a_34_5	+	5424			hypothetical protein		hypothetical_protein	NaN		0	5424
+ct3_100_tubula_1a_34	1377	1520	ct3_100_tubula_1a_34_6	+	5424			hypothetical protein		hypothetical_protein	NaN		0	5424
+ct3_100_tubula_1a_34	1555	1752	ct3_100_tubula_1a_34_7	+	5424			hypothetical protein		hypothetical_protein	NaN		0	5424
+ct3_100_tubula_1a_34	1765	1929	ct3_100_tubula_1a_34_8	+	5424			hypothetical protein		hypothetical_protein	NaN		0	5424
+ct3_100_tubula_1a_34	1997	2674	ct3_100_tubula_1a_34_9	+	5424		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	5424
+ct3_100_tubula_1a_34	2661	2909	ct3_100_tubula_1a_34_10	+	5424			hypothetical protein		hypothetical_protein	NaN		0	5424
+ct3_100_tubula_1a_34	3112	4323	ct3_100_tubula_1a_34_11	+	5424		PFAM:PF02486.18	Replication-initiation-factor	rep_hall_hmm	common_virus	NaN		0	5424
+ct3_100_tubula_1a_34	4301	4537	ct3_100_tubula_1a_34_12	+	5424			hypothetical protein		hypothetical_protein	NaN		0	5424
+ct3_100_tubula_1a_34	4683	5423	ct3_100_tubula_1a_34_13	+	5424			hypothetical protein		hypothetical_protein	NaN		0	5424
+ct3_100_tubula_1a_35	378	1514	ct3_100_tubula_1a_35_1	+	5210		PFAM:PF02486.18	Replication-initiation-factor	rep_hall_hmm	common_virus	NaN		0	5210
+ct3_100_tubula_1a_35	1533	1775	ct3_100_tubula_1a_35_2	+	5210		PFAM:PF07459.10	RstB-sensor-of-two-protein-system	phrogs_hmm	hypothetical_protein	NaN		0	5210
+ct3_100_tubula_1a_35	1958	3139	ct3_100_tubula_1a_35_3	+	5210		UniProtKB:G5CUF1_9VIRU	Protein-C-	common_virus_hmm	common_virus	NaN		0	5210
+ct3_100_tubula_1a_35	3139	3267	ct3_100_tubula_1a_35_4	+	5210		UniProtKB:G5CUF1_9VIRU	Protein-C-	common_virus_hmm	common_virus	NaN		0	5210
+ct3_100_tubula_1a_35	3267	3398	ct3_100_tubula_1a_35_5	+	5210			hypothetical protein		hypothetical_protein	NaN		0	5210
+ct3_100_tubula_1a_35	3392	3559	ct3_100_tubula_1a_35_6	+	5210			hypothetical protein		hypothetical_protein	NaN		0	5210
+ct3_100_tubula_1a_35	3556	4170	ct3_100_tubula_1a_35_7	+	5210			hypothetical protein		hypothetical_protein	NaN		0	5210
+ct3_100_tubula_1a_35	4587	5210	ct3_100_tubula_1a_35_8	+	5210		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	5210
+ct3_100_tubula_1a_36	1	831	ct3_100_tubula_1a_36_1	+	6407		PFAM:PF05144.13	Phage-replication-protein	rep_hall_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_36	843	1106	ct3_100_tubula_1a_36_2	+	6407		PDB:1GVP_A	Rep-protein	rep_hall_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_36	1301	1522	ct3_100_tubula_1a_36_3	+	6407		CDD:PHA00025	major-coat-protein	hallmark_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_36	1579	2853	ct3_100_tubula_1a_36_4	+	6407		CDD:pfam05357	Filamentous-Minor-Coat-Protein-	hallmark_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_36	2856	3194	ct3_100_tubula_1a_36_5	+	6407		CDD:PHA00094	minor-coat-protein	hallmark_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_36	3196	4242	ct3_100_tubula_1a_36_6	+	6407		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_36	4220	5500	ct3_100_tubula_1a_36_7	+	6407		PDB:5WQ8_J	Type-II-secretion-system-protein	common_virus_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_36	6123	6407	ct3_100_tubula_1a_36_8	+	6407		PFAM:PF05144.13	Phage-replication-protein	rep_hall_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_37	1	831	ct3_100_tubula_1a_37_1	+	6761		pfam05155	Phage X family. This family is the product of Gene X. The function of this protein is unknown.	mmseqs_cdd	common_virus	NaN		0	6761
+ct3_100_tubula_1a_37	845	1144	ct3_100_tubula_1a_37_2	+	6761		PDB:1GVP_A	Rep-protein	rep_hall_hmm	common_virus	NaN		0	6761
+ct3_100_tubula_1a_37	1144	1365	ct3_100_tubula_1a_37_3	+	6761		PFAM:PF17091.4	tail-protein	phrogs_hmm	hypothetical_protein	NaN		0	6761
+ct3_100_tubula_1a_37	1415	1624	ct3_100_tubula_1a_37_4	+	6761		PDB:2IFO_A	Filamentous-Major-Coat-protein	hallmark_hmm	common_virus	NaN		0	6761
+ct3_100_tubula_1a_37	1727	3247	ct3_100_tubula_1a_37_5	+	6761		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	6761
+ct3_100_tubula_1a_37	3318	3668	ct3_100_tubula_1a_37_6	+	6761		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	6761
+ct3_100_tubula_1a_37	3671	4711	ct3_100_tubula_1a_37_7	+	6761		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	6761
+ct3_100_tubula_1a_37	4803	5180	ct3_100_tubula_1a_37_8	+	6761		PFAM:PF10723.8	Replication-regulatory-protein-RepB	rep_hall_hmm	common_virus	NaN		0	6761
+ct3_100_tubula_1a_37	5198	5398	ct3_100_tubula_1a_37_9	-	6761			hypothetical protein		hypothetical_protein	NaN		0	6761
+ct3_100_tubula_1a_37	5507	5668	ct3_100_tubula_1a_37_10	-	6761			hypothetical protein		hypothetical_protein	NaN		0	6761
+ct3_100_tubula_1a_37	5665	6087	ct3_100_tubula_1a_37_11	-	6761		PDB:4IA8_B	helix-turn-helix-protein	common_virus_hmm	common_virus	NaN		0	6761
+ct3_100_tubula_1a_37	6474	6761	ct3_100_tubula_1a_37_12	+	6761		PFAM:PF05144.13	replication-protein	phrogs_hmm	hypothetical_protein	NaN		0	6761
+ct3_100_tubula_1a_38	1	291	ct3_100_tubula_1a_38_1	-	13152		PFAM:PF10078.8	transcriptional-regulator	phrogs_hmm	hypothetical_protein	NaN		0	13152
+ct3_100_tubula_1a_38	484	810	ct3_100_tubula_1a_38_2	+	13152		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	13152
+ct3_100_tubula_1a_38	810	1055	ct3_100_tubula_1a_38_3	+	13152			hypothetical protein		hypothetical_protein	NaN		0	13152
+ct3_100_tubula_1a_38	1065	1343	ct3_100_tubula_1a_38_4	+	13152			hypothetical protein		hypothetical_protein	NaN		0	13152
+ct3_100_tubula_1a_38	1343	1552	ct3_100_tubula_1a_38_5	+	13152			hypothetical protein		hypothetical_protein	NaN		0	13152
+ct3_100_tubula_1a_38	1552	1761	ct3_100_tubula_1a_38_6	+	13152			hypothetical protein		hypothetical_protein	NaN		0	13152
+ct3_100_tubula_1a_38	1764	2012	ct3_100_tubula_1a_38_7	+	13152		PFAM:PF17091.4	Tail-G7P-protein	hallmark_hmm	common_virus	NaN		0	13152
+ct3_100_tubula_1a_38	2015	2233	ct3_100_tubula_1a_38_8	+	13152		PFAM:PF10389.8	virion-structural-protein	phrogs_hmm	hypothetical_protein	NaN		0	13152
+ct3_100_tubula_1a_38	2308	3831	ct3_100_tubula_1a_38_9	+	13152		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	13152
+ct3_100_tubula_1a_38	3844	4173	ct3_100_tubula_1a_38_10	+	13152		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	13152
+ct3_100_tubula_1a_38	4178	5491	ct3_100_tubula_1a_38_11	+	13152		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	13152
+ct3_100_tubula_1a_38	6009	6944	ct3_100_tubula_1a_38_12	+	13152		PFAM:PF05840.12	Rep-protein	rep_hall_hmm	common_virus	NaN		0	13152
+ct3_100_tubula_1a_38	6941	7219	ct3_100_tubula_1a_38_13	-	13152			hypothetical protein		hypothetical_protein	NaN		0	13152
+ct3_100_tubula_1a_38	7239	7829	ct3_100_tubula_1a_38_14	-	13152		PDB:1ZR4_E	resolvase,-site-specific-recombination	common_virus_hmm	common_virus	NaN		0	13152
+ct3_100_tubula_1a_38	8053	9369	ct3_100_tubula_1a_38_15	-	13152		PRK05431	seryl-tRNA synthetase; Provisional	mmseqs_cdd	nonviral_gene	NaN		0	13152
+ct3_100_tubula_1a_38	9436	10488	ct3_100_tubula_1a_38_16	-	13152		COG2256	Replication-associated recombination protein RarA (DNA-dependent ATPase) [Replication, recombination and repair]. 	mmseqs_cdd	nonviral_gene	NaN		0	13152
+ct3_100_tubula_1a_38	10676	11956	ct3_100_tubula_1a_38_17	+	13152		PDB:1Z19_B	Integrase	common_virus_hmm	common_virus	NaN		0	13152
+ct3_100_tubula_1a_38	11986	12882	ct3_100_tubula_1a_38_18	+	13152			hypothetical protein		hypothetical_protein	NaN		0	13152
+ct3_100_tubula_1a_39	1	207	ct3_100_tubula_1a_39_1	+	7273			hypothetical protein		hypothetical_protein	NaN		0	7273
+ct3_100_tubula_1a_39	207	1334	ct3_100_tubula_1a_39_2	+	7273		PFAM:PF02486.18	Replication-initiation-factor	rep_hall_hmm	common_virus	NaN		0	7273
+ct3_100_tubula_1a_39	1339	1650	ct3_100_tubula_1a_39_3	+	7273		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	7273
+ct3_100_tubula_1a_39	1719	1919	ct3_100_tubula_1a_39_4	+	7273		PFAM:PF10389.8	coat-protein-B	hallmark_hmm	common_virus	NaN		0	7273
+ct3_100_tubula_1a_39	1919	2254	ct3_100_tubula_1a_39_5	+	7273			hypothetical protein		hypothetical_protein	NaN		0	7273
+ct3_100_tubula_1a_39	2334	3614	ct3_100_tubula_1a_39_6	+	7273		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	7273
+ct3_100_tubula_1a_39	3611	3886	ct3_100_tubula_1a_39_7	+	7273		CDD:PHA02508	putative-minor-coat-protein	hallmark_hmm	common_virus	NaN		0	7273
+ct3_100_tubula_1a_39	3883	4977	ct3_100_tubula_1a_39_8	+	7273		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	7273
+ct3_100_tubula_1a_39	5082	5690	ct3_100_tubula_1a_39_9	+	7273		PFAM:PF10723.8	Replication-regulatory-protein-RepB	rep_hall_hmm	common_virus	NaN		0	7273
+ct3_100_tubula_1a_39	5732	6163	ct3_100_tubula_1a_39_10	+	7273		pfam01724	Domain of unknown function DUF29. This family consists of various hypothetical proteins from cyanobacteria, none of which are functionally described. The aligned region is approximately 120-140 amino acids long corresponding to almost the entire length of the proteins in the family. Structure 3fcn is a small protein that has a novel all-alpha fold. The N-terminal helical hairpin is likely to function as a dimerization module. This protein is a member of PFam family pfam01724. The function of this protein is unknown. One protein sequence contains a fusion of this protein and a DnaB domain, suggesting a possible role in DNA helicase activity (hypothetical). Dali hits have low Z and high rmsd, suggesting probably only topological similarities (not functional relevance) (details derived from TOPSAN). The family has several highly conserved sequence motifs, including YD/ExD, DxxNVxEEIE, and CPY/F/W, as well as conserved tryptophans.	mmseqs_cdd	nonviral_gene	NaN		0	7273
+ct3_100_tubula_1a_39	6688	7158	ct3_100_tubula_1a_39_11	-	7273		PDB:4IA8_B	helix-turn-helix-protein	common_virus_hmm	common_virus	NaN		0	7273
+ct3_100_tubula_1a_4	3	251	ct3_100_tubula_1a_4_1	+	6834		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	6834
+ct3_100_tubula_1a_4	801	938	ct3_100_tubula_1a_4_2	-	6834		PHA01082	putative transcription regulator	mmseqs_cdd	common_virus	NaN		0	6834
+ct3_100_tubula_1a_4	1189	1530	ct3_100_tubula_1a_4_3	-	6834		PDB:4IA8_B	helix-turn-helix-protein	common_virus_hmm	common_virus	NaN		0	6834
+ct3_100_tubula_1a_4	1700	1933	ct3_100_tubula_1a_4_4	+	6834			hypothetical protein		hypothetical_protein	NaN		0	6834
+ct3_100_tubula_1a_4	2167	3270	ct3_100_tubula_1a_4_5	+	6834		PFAM:PF02486.18	Replication-initiation-factor	rep_hall_hmm	common_virus	NaN		0	6834
+ct3_100_tubula_1a_4	3275	3604	ct3_100_tubula_1a_4_6	+	6834		PFAM:PF06950.10	single-strand-DNA-binding-protein	phrogs_hmm	common_virus	NaN		0	6834
+ct3_100_tubula_1a_4	3622	3864	ct3_100_tubula_1a_4_7	+	6834		PFAM:PF17091.4	G7P-protein	common_virus_hmm	common_virus	NaN		0	6834
+ct3_100_tubula_1a_4	3875	4009	ct3_100_tubula_1a_4_8	+	6834		UniProt:tr|Q8W6E1_9VIRU	Major-capsid-protein-	hallmark_hmm	common_virus	NaN		0	6834
+ct3_100_tubula_1a_4	4356	5513	ct3_100_tubula_1a_4_9	+	6834		PFAM:PF05616.12	minor-head-protein;-receptor-binding	phrogs_hmm	hypothetical_protein	NaN		0	6834
+ct3_100_tubula_1a_4	5931	6833	ct3_100_tubula_1a_4_10	+	6834		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	6834
+ct3_100_tubula_1a_40	1	1005	ct3_100_tubula_1a_40_1	+	6176		PFAM:PF05840.12	Rep-protein	rep_hall_hmm	common_virus	NaN		0	6176
+ct3_100_tubula_1a_40	1006	1239	ct3_100_tubula_1a_40_2	+	6176			hypothetical protein		hypothetical_protein	NaN		0	6176
+ct3_100_tubula_1a_40	1220	1600	ct3_100_tubula_1a_40_3	+	6176		pfam20037	Family of unknown function (DUF6440). This family of proteins is functionally uncharacterized. This family of proteins is mainly found in Firmicutes but also in viruses. Proteins in this family are approximately 60 amino acids in length and they contain three conserved motifs: RF, TGxxY and TPLLD. Some members of this family are probably Xylan 1,4-beta-xylosidases.	mmseqs_cdd	nonviral_gene	NaN		0	6176
+ct3_100_tubula_1a_40	1951	2163	ct3_100_tubula_1a_40_4	-	6176			hypothetical protein		hypothetical_protein	NaN		0	6176
+ct3_100_tubula_1a_40	2382	2603	ct3_100_tubula_1a_40_5	-	6176		PDB:2FJR_A	Repressor-protein-CI	common_virus_hmm	common_virus	NaN		0	6176
+ct3_100_tubula_1a_40	2759	3076	ct3_100_tubula_1a_40_6	+	6176			hypothetical protein		hypothetical_protein	NaN		0	6176
+ct3_100_tubula_1a_40	3086	3289	ct3_100_tubula_1a_40_7	+	6176			hypothetical protein		hypothetical_protein	NaN		0	6176
+ct3_100_tubula_1a_40	3283	3507	ct3_100_tubula_1a_40_8	+	6176			hypothetical protein		hypothetical_protein	NaN		0	6176
+ct3_100_tubula_1a_40	3591	4619	ct3_100_tubula_1a_40_9	+	6176			hypothetical protein		hypothetical_protein	NaN		0	6176
+ct3_100_tubula_1a_40	4621	4848	ct3_100_tubula_1a_40_10	+	6176			hypothetical protein		hypothetical_protein	NaN		0	6176
+ct3_100_tubula_1a_40	4845	5042	ct3_100_tubula_1a_40_11	+	6176			hypothetical protein		hypothetical_protein	NaN		0	6176
+ct3_100_tubula_1a_40	5042	5245	ct3_100_tubula_1a_40_12	+	6176			hypothetical protein		hypothetical_protein	NaN		0	6176
+ct3_100_tubula_1a_40	5242	5379	ct3_100_tubula_1a_40_13	+	6176			hypothetical protein		hypothetical_protein	NaN		0	6176
+ct3_100_tubula_1a_40	5380	6114	ct3_100_tubula_1a_40_14	+	6176		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	6176
+ct3_100_tubula_1a_41	638	976	ct3_100_tubula_1a_41_1	-	7088		PDB:2FJR_A	Repressor-protein-CI	common_virus_hmm	common_virus	NaN		0	7088
+ct3_100_tubula_1a_41	1102	2181	ct3_100_tubula_1a_41_2	+	7088		PFAM:PF02486.18	Replication-initiation-factor	rep_hall_hmm	common_virus	NaN		0	7088
+ct3_100_tubula_1a_41	2183	2539	ct3_100_tubula_1a_41_3	+	7088		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	7088
+ct3_100_tubula_1a_41	2539	2682	ct3_100_tubula_1a_41_4	+	7088			hypothetical protein		hypothetical_protein	NaN		0	7088
+ct3_100_tubula_1a_41	2675	2923	ct3_100_tubula_1a_41_5	+	7088		PFAM:PF05356.10	Coat-protein-B	hallmark_hmm	common_virus	NaN		0	7088
+ct3_100_tubula_1a_41	3030	4217	ct3_100_tubula_1a_41_6	+	7088		CDD:pfam16710	filamentous-minor-capsid-protein	hallmark_hmm	common_virus	NaN		0	7088
+ct3_100_tubula_1a_41	4223	4507	ct3_100_tubula_1a_41_7	+	7088		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	7088
+ct3_100_tubula_1a_41	4504	5703	ct3_100_tubula_1a_41_8	+	7088		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	7088
+ct3_100_tubula_1a_41	5966	6781	ct3_100_tubula_1a_41_9	+	7088		cd05150	Aminoglycoside 3'-phosphotransferase. APH catalyzes the transfer of the gamma-phosphoryl group from ATP to aminoglycoside antibiotics such as kanamycin, streptomycin, neomycin, and gentamicin, among others. The aminoglycoside antibiotics target the 30S ribosome and promote miscoding, leading to the production of defective proteins which insert into the bacterial membrane, resulting in membrane damage and the ultimate demise of the bacterium. Phosphorylation of the aminoglycoside antibiotics results in their inactivation, leading to bacterial antibiotic resistance. The APH gene is found on transposons and plasmids and is thought to have originated as a self-defense mechanism used by microorganisms that produce the antibiotics. The APH subfamily is part of a larger superfamily that includes the catalytic domains of other kinases, such as the typical serine/threonine/tyrosine protein kinases (PKs), RIO kinases, actin-fragmin kinase (AFK), and phosphoinositide 3-kinase (PI3K).	mmseqs_cdd	nonviral_gene	NaN		0	7088
+ct3_100_tubula_1a_41	6799	7002	ct3_100_tubula_1a_41_10	+	7088		pfam01376	Heat-labile enterotoxin beta chain. 	mmseqs_cdd	nonviral_gene	NaN		0	7088
+ct3_100_tubula_1a_42	1	1347	ct3_100_tubula_1a_42_1	+	4986			hypothetical protein		hypothetical_protein	NaN		0	4986
+ct3_100_tubula_1a_42	1642	1854	ct3_100_tubula_1a_42_2	+	4986			hypothetical protein		hypothetical_protein	NaN		0	4986
+ct3_100_tubula_1a_42	1851	2444	ct3_100_tubula_1a_42_3	+	4986			hypothetical protein		hypothetical_protein	NaN		0	4986
+ct3_100_tubula_1a_42	2590	2778	ct3_100_tubula_1a_42_4	+	4986			hypothetical protein		hypothetical_protein	NaN		0	4986
+ct3_100_tubula_1a_42	2812	3528	ct3_100_tubula_1a_42_5	+	4986		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	4986
+ct3_100_tubula_1a_42	3966	4205	ct3_100_tubula_1a_42_6	+	4986			hypothetical protein		hypothetical_protein	NaN		0	4986
+ct3_100_tubula_1a_42	4332	4919	ct3_100_tubula_1a_42_7	+	4986		PFAM:PF01719.16	Plasmid-like-replication-protein	rep_hall_hmm	common_virus	NaN		0	4986
+ct3_100_tubula_1a_43	638	976	ct3_100_tubula_1a_43_1	-	7091		PDB:2FJR_A	Repressor-protein-CI	common_virus_hmm	common_virus	NaN		0	7091
+ct3_100_tubula_1a_43	1102	2181	ct3_100_tubula_1a_43_2	+	7091		PFAM:PF02486.18	Replication-initiation-factor	rep_hall_hmm	common_virus	NaN		0	7091
+ct3_100_tubula_1a_43	2183	2542	ct3_100_tubula_1a_43_3	+	7091		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	7091
+ct3_100_tubula_1a_43	2542	2685	ct3_100_tubula_1a_43_4	+	7091			hypothetical protein		hypothetical_protein	NaN		0	7091
+ct3_100_tubula_1a_43	2678	2926	ct3_100_tubula_1a_43_5	+	7091		PFAM:PF05356.10	Coat-protein-B	hallmark_hmm	common_virus	NaN		0	7091
+ct3_100_tubula_1a_43	3033	4220	ct3_100_tubula_1a_43_6	+	7091		CDD:pfam16710	filamentous-minor-capsid-protein	hallmark_hmm	common_virus	NaN		0	7091
+ct3_100_tubula_1a_43	4226	4510	ct3_100_tubula_1a_43_7	+	7091		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	7091
+ct3_100_tubula_1a_43	4507	5706	ct3_100_tubula_1a_43_8	+	7091		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	7091
+ct3_100_tubula_1a_43	5969	6784	ct3_100_tubula_1a_43_9	+	7091		cd05150	Aminoglycoside 3'-phosphotransferase. APH catalyzes the transfer of the gamma-phosphoryl group from ATP to aminoglycoside antibiotics such as kanamycin, streptomycin, neomycin, and gentamicin, among others. The aminoglycoside antibiotics target the 30S ribosome and promote miscoding, leading to the production of defective proteins which insert into the bacterial membrane, resulting in membrane damage and the ultimate demise of the bacterium. Phosphorylation of the aminoglycoside antibiotics results in their inactivation, leading to bacterial antibiotic resistance. The APH gene is found on transposons and plasmids and is thought to have originated as a self-defense mechanism used by microorganisms that produce the antibiotics. The APH subfamily is part of a larger superfamily that includes the catalytic domains of other kinases, such as the typical serine/threonine/tyrosine protein kinases (PKs), RIO kinases, actin-fragmin kinase (AFK), and phosphoinositide 3-kinase (PI3K).	mmseqs_cdd	nonviral_gene	NaN		0	7091
+ct3_100_tubula_1a_43	6802	7005	ct3_100_tubula_1a_43_10	+	7091		pfam01376	Heat-labile enterotoxin beta chain. 	mmseqs_cdd	nonviral_gene	NaN		0	7091
+ct3_100_tubula_1a_44	28	474	ct3_100_tubula_1a_44_1	+	8280			hypothetical protein		hypothetical_protein	NaN		0	8280
+ct3_100_tubula_1a_44	765	1058	ct3_100_tubula_1a_44_2	-	8280			hypothetical protein		hypothetical_protein	NaN		0	8280
+ct3_100_tubula_1a_44	1217	1864	ct3_100_tubula_1a_44_3	-	8280		PRK13882	conjugal transfer protein TrbP; Provisional	mmseqs_cdd	nonviral_gene	NaN		0	8280
+ct3_100_tubula_1a_44	1866	3059	ct3_100_tubula_1a_44_4	-	8280		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	8280
+ct3_100_tubula_1a_44	3059	3388	ct3_100_tubula_1a_44_5	-	8280		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	8280
+ct3_100_tubula_1a_44	3388	4794	ct3_100_tubula_1a_44_6	-	8280		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	8280
+ct3_100_tubula_1a_44	4931	5161	ct3_100_tubula_1a_44_7	-	8280		PDB:2IFO_A	Filamentous-Major-Coat-protein	hallmark_hmm	common_virus	NaN		0	8280
+ct3_100_tubula_1a_44	5173	5376	ct3_100_tubula_1a_44_8	-	8280		PDB:2IFO_A	Filamenous-Major-Coat-protein	hallmark_hmm	common_virus	NaN		0	8280
+ct3_100_tubula_1a_44	5380	5676	ct3_100_tubula_1a_44_9	-	8280		PDB:1GVP_A	Rep-protein	rep_hall_hmm	common_virus	NaN		0	8280
+ct3_100_tubula_1a_44	5621	6712	ct3_100_tubula_1a_44_10	-	8280		PFAM:PF05840.12	Rep-protein	rep_hall_hmm	common_virus	NaN		0	8280
+ct3_100_tubula_1a_44	6844	7077	ct3_100_tubula_1a_44_11	-	8280			hypothetical protein		hypothetical_protein	NaN		0	8280
+ct3_100_tubula_1a_44	7077	7262	ct3_100_tubula_1a_44_12	-	8280			hypothetical protein		hypothetical_protein	NaN		0	8280
+ct3_100_tubula_1a_44	7390	8160	ct3_100_tubula_1a_44_13	+	8280		PDB:4IA8_B	helix-turn-helix-protein	common_virus_hmm	common_virus	NaN		0	8280
+ct3_100_tubula_1a_45	1	897	ct3_100_tubula_1a_45_1	+	5922		PFAM:PF05840.12	Rep-protein	rep_hall_hmm	common_virus	NaN		0	5922
+ct3_100_tubula_1a_45	791	1075	ct3_100_tubula_1a_45_2	-	5922			hypothetical protein		hypothetical_protein	NaN		0	5922
+ct3_100_tubula_1a_45	1137	1379	ct3_100_tubula_1a_45_3	+	5922			hypothetical protein		hypothetical_protein	NaN		0	5922
+ct3_100_tubula_1a_45	1462	1701	ct3_100_tubula_1a_45_4	+	5922			hypothetical protein		hypothetical_protein	NaN		0	5922
+ct3_100_tubula_1a_45	1707	1931	ct3_100_tubula_1a_45_5	+	5922			hypothetical protein		hypothetical_protein	NaN		0	5922
+ct3_100_tubula_1a_45	1974	3041	ct3_100_tubula_1a_45_6	+	5922			hypothetical protein		hypothetical_protein	NaN		0	5922
+ct3_100_tubula_1a_45	3053	3265	ct3_100_tubula_1a_45_7	+	5922			hypothetical protein		hypothetical_protein	NaN		0	5922
+ct3_100_tubula_1a_45	3428	4195	ct3_100_tubula_1a_45_8	+	5922			hypothetical protein		hypothetical_protein	NaN		0	5922
+ct3_100_tubula_1a_45	4339	4497	ct3_100_tubula_1a_45_9	+	5922			hypothetical protein		hypothetical_protein	NaN		0	5922
+ct3_100_tubula_1a_45	4563	4760	ct3_100_tubula_1a_45_10	+	5922			hypothetical protein		hypothetical_protein	NaN		0	5922
+ct3_100_tubula_1a_45	5021	5827	ct3_100_tubula_1a_45_11	+	5922		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	common_virus_hmm	common_virus	NaN		0	5922
+ct3_100_tubula_1a_46	222	1673	ct3_100_tubula_1a_46_1	-	7321		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	7321
+ct3_100_tubula_1a_46	1811	2041	ct3_100_tubula_1a_46_2	-	7321		PFAM:PF10389.8	virion-structural-protein	phrogs_hmm	hypothetical_protein	NaN		0	7321
+ct3_100_tubula_1a_46	2052	2276	ct3_100_tubula_1a_46_3	-	7321			hypothetical protein		hypothetical_protein	NaN		0	7321
+ct3_100_tubula_1a_46	2276	2560	ct3_100_tubula_1a_46_4	-	7321		PDB:1PFS_B	PF3-SINGLE-STRANDED-DNA-BINDING-PROTEI	common_virus_hmm	common_virus	NaN		0	7321
+ct3_100_tubula_1a_46	2770	2964	ct3_100_tubula_1a_46_5	+	7321			hypothetical protein		hypothetical_protein	NaN		0	7321
+ct3_100_tubula_1a_46	2933	4204	ct3_100_tubula_1a_46_6	-	7321		PFAM:PF01446.16	Plasmid-like-replication-protein	rep_hall_hmm	common_virus	NaN		0	7321
+ct3_100_tubula_1a_46	4411	4602	ct3_100_tubula_1a_46_7	-	7321		PFAM:PF05534.11	Arc-like-repressor	phrogs_hmm	hypothetical_protein	NaN		0	7321
+ct3_100_tubula_1a_46	4885	6114	ct3_100_tubula_1a_46_8	-	7321		PDB:5WQ8_J	Type-II-secretion-system-protein	common_virus_hmm	common_virus	NaN		0	7321
+ct3_100_tubula_1a_46	6120	7226	ct3_100_tubula_1a_46_9	-	7321		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	7321
+ct3_100_tubula_1a_47	1	1152	ct3_100_tubula_1a_47_1	+	7705		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	7705
+ct3_100_tubula_1a_47	1453	2403	ct3_100_tubula_1a_47_2	+	7705		PFAM:PF01548.16	Transposase	common_virus_hmm	common_virus	NaN		0	7705
+ct3_100_tubula_1a_47	2615	2833	ct3_100_tubula_1a_47_3	+	7705			hypothetical protein		hypothetical_protein	NaN		0	7705
+ct3_100_tubula_1a_47	2830	4155	ct3_100_tubula_1a_47_4	+	7705		PFAM:PF02486.18	Replication-initiation-factor	rep_hall_hmm	common_virus	NaN		0	7705
+ct3_100_tubula_1a_47	4209	4505	ct3_100_tubula_1a_47_5	+	7705		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	7705
+ct3_100_tubula_1a_47	4509	4706	ct3_100_tubula_1a_47_6	+	7705			hypothetical protein		hypothetical_protein	NaN		0	7705
+ct3_100_tubula_1a_47	4784	5002	ct3_100_tubula_1a_47_7	+	7705		PFAM:PF10389.8	major-head-protein	phrogs_hmm	hypothetical_protein	NaN		0	7705
+ct3_100_tubula_1a_47	5015	5290	ct3_100_tubula_1a_47_8	+	7705			hypothetical protein		hypothetical_protein	NaN		0	7705
+ct3_100_tubula_1a_47	5364	5600	ct3_100_tubula_1a_47_9	+	7705			hypothetical protein		hypothetical_protein	NaN		0	7705
+ct3_100_tubula_1a_47	5652	5945	ct3_100_tubula_1a_47_10	+	7705			hypothetical protein		hypothetical_protein	NaN		0	7705
+ct3_100_tubula_1a_47	5899	7377	ct3_100_tubula_1a_47_11	+	7705		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	7705
+ct3_100_tubula_1a_47	7387	7677	ct3_100_tubula_1a_47_12	+	7705		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	7705
+ct3_100_tubula_1a_48	20	328	ct3_100_tubula_1a_48_1	-	6009			hypothetical protein		hypothetical_protein	NaN		0	6009
+ct3_100_tubula_1a_48	395	733	ct3_100_tubula_1a_48_2	-	6009		PDB:4IA8_B	helix-turn-helix-protein	common_virus_hmm	common_virus	NaN		0	6009
+ct3_100_tubula_1a_48	724	1191	ct3_100_tubula_1a_48_3	-	6009		PDB:4IA8_B	helix-turn-helix-protein	common_virus_hmm	common_virus	NaN		0	6009
+ct3_100_tubula_1a_48	1319	1486	ct3_100_tubula_1a_48_4	+	6009			hypothetical protein		hypothetical_protein	NaN		0	6009
+ct3_100_tubula_1a_48	1479	2519	ct3_100_tubula_1a_48_5	+	6009		PFAM:PF05840.12	Rep-protein	rep_hall_hmm	common_virus	NaN		0	6009
+ct3_100_tubula_1a_48	2516	2812	ct3_100_tubula_1a_48_6	+	6009		PDB:1GVP_A	Rep-protein	rep_hall_hmm	common_virus	NaN		0	6009
+ct3_100_tubula_1a_48	2816	3067	ct3_100_tubula_1a_48_7	+	6009		PFAM:PF17091.4	Tail-G7P-protein	hallmark_hmm	common_virus	NaN		0	6009
+ct3_100_tubula_1a_48	3095	3223	ct3_100_tubula_1a_48_8	+	6009		PFAM:PF10389.8	virion-structural-protein	phrogs_hmm	hypothetical_protein	NaN		0	6009
+ct3_100_tubula_1a_48	3801	4121	ct3_100_tubula_1a_48_9	+	6009			hypothetical protein		hypothetical_protein	NaN		0	6009
+ct3_100_tubula_1a_48	4073	4354	ct3_100_tubula_1a_48_10	+	6009		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	6009
+ct3_100_tubula_1a_48	4365	4685	ct3_100_tubula_1a_48_11	+	6009		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	6009
+ct3_100_tubula_1a_48	4687	6009	ct3_100_tubula_1a_48_12	+	6009		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	6009
+ct3_100_tubula_1a_49	69	434	ct3_100_tubula_1a_49_1	+	10295		PHA01082	putative transcription regulator	mmseqs_cdd	common_virus	NaN		0	10295
+ct3_100_tubula_1a_49	464	1174	ct3_100_tubula_1a_49_2	-	10295			hypothetical protein		hypothetical_protein	NaN		0	10295
+ct3_100_tubula_1a_49	1368	3161	ct3_100_tubula_1a_49_3	-	10295		PDB:4UX3_A	Chromosome-Mainenance-protein	common_virus_hmm	common_virus	NaN		0	10295
+ct3_100_tubula_1a_49	3678	3821	ct3_100_tubula_1a_49_4	-	10295			hypothetical protein		hypothetical_protein	NaN		0	10295
+ct3_100_tubula_1a_49	3821	5206	ct3_100_tubula_1a_49_5	-	10295		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	10295
+ct3_100_tubula_1a_49	5211	5555	ct3_100_tubula_1a_49_6	-	10295		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	10295
+ct3_100_tubula_1a_49	5557	7056	ct3_100_tubula_1a_49_7	-	10295		PFAM:PF05616.12	minor-head-protein;-receptor-binding	phrogs_hmm	hypothetical_protein	NaN		0	10295
+ct3_100_tubula_1a_49	7226	7471	ct3_100_tubula_1a_49_8	-	10295		PFAM:PF05356.10	Major-Filamentous-Coat-protein	hallmark_hmm	common_virus	NaN		0	10295
+ct3_100_tubula_1a_49	7477	7707	ct3_100_tubula_1a_49_9	-	10295		PFAM:PF17091.4	Tail-G7P-protein	hallmark_hmm	common_virus	NaN		0	10295
+ct3_100_tubula_1a_49	7711	8070	ct3_100_tubula_1a_49_10	-	10295		pfam06950	Protein of unknown function (DUF1293). This family consists of several bacterial and phage proteins of around 115 residues in length. The function of this family is unknown.	mmseqs_cdd	nonviral_gene	NaN		0	10295
+ct3_100_tubula_1a_49	8074	9222	ct3_100_tubula_1a_49_11	-	10295		PFAM:PF02486.18	Replication-initiation-factor	rep_hall_hmm	common_virus	NaN		0	10295
+ct3_100_tubula_1a_49	9206	9421	ct3_100_tubula_1a_49_12	-	10295			hypothetical protein		hypothetical_protein	NaN		0	10295
+ct3_100_tubula_1a_49	9424	9729	ct3_100_tubula_1a_49_13	-	10295			hypothetical protein		hypothetical_protein	NaN		0	10295
+ct3_100_tubula_1a_49	9928	10293	ct3_100_tubula_1a_49_14	+	10295		PDB:4IA8_B	helix-turn-helix-protein	common_virus_hmm	common_virus	NaN		0	10295
+ct3_100_tubula_1a_5	285	1181	ct3_100_tubula_1a_5_1	-	13166			hypothetical protein		hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_5	1211	2491	ct3_100_tubula_1a_5_2	-	13166		PDB:1Z19_B	Integrase	common_virus_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_5	2679	3731	ct3_100_tubula_1a_5_3	+	13166		COG2256	Replication-associated recombination protein RarA (DNA-dependent ATPase) [Replication, recombination and repair]. 	mmseqs_cdd	nonviral_gene	NaN		0	13166
+ct3_100_tubula_1a_5	3798	5114	ct3_100_tubula_1a_5_4	+	13166		PRK05431	seryl-tRNA synthetase; Provisional	mmseqs_cdd	nonviral_gene	NaN		0	13166
+ct3_100_tubula_1a_5	5338	5928	ct3_100_tubula_1a_5_5	+	13166		PDB:1ZR4_E	resolvase,-site-specific-recombination	common_virus_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_5	5948	6226	ct3_100_tubula_1a_5_6	+	13166			hypothetical protein		hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_5	6223	7158	ct3_100_tubula_1a_5_7	-	13166		PFAM:PF05840.12	Rep-protein	rep_hall_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_5	7676	8989	ct3_100_tubula_1a_5_8	-	13166		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_5	8994	9323	ct3_100_tubula_1a_5_9	-	13166		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_5	9336	10859	ct3_100_tubula_1a_5_10	-	13166		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_5	10934	11152	ct3_100_tubula_1a_5_11	-	13166		PFAM:PF10389.8	virion-structural-protein	phrogs_hmm	hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_5	11155	11403	ct3_100_tubula_1a_5_12	-	13166		PFAM:PF17091.4	Tail-G7P-protein	hallmark_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_5	11406	11615	ct3_100_tubula_1a_5_13	-	13166			hypothetical protein		hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_5	11615	11824	ct3_100_tubula_1a_5_14	-	13166			hypothetical protein		hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_5	11824	12102	ct3_100_tubula_1a_5_15	-	13166			hypothetical protein		hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_5	12112	12357	ct3_100_tubula_1a_5_16	-	13166			hypothetical protein		hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_5	12357	12683	ct3_100_tubula_1a_5_17	-	13166		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_5	12876	13166	ct3_100_tubula_1a_5_18	+	13166		PFAM:PF10078.8	transcriptional-regulator	phrogs_hmm	hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_50	285	1181	ct3_100_tubula_1a_50_1	-	13166			hypothetical protein		hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_50	1211	2491	ct3_100_tubula_1a_50_2	-	13166		PDB:1Z19_B	Integrase	common_virus_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_50	2679	3731	ct3_100_tubula_1a_50_3	+	13166		COG2256	Replication-associated recombination protein RarA (DNA-dependent ATPase) [Replication, recombination and repair]. 	mmseqs_cdd	nonviral_gene	NaN		0	13166
+ct3_100_tubula_1a_50	3798	5114	ct3_100_tubula_1a_50_4	+	13166		PRK05431	seryl-tRNA synthetase; Provisional	mmseqs_cdd	nonviral_gene	NaN		0	13166
+ct3_100_tubula_1a_50	5338	5928	ct3_100_tubula_1a_50_5	+	13166		PDB:1ZR4_E	resolvase,-site-specific-recombination	common_virus_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_50	5948	6226	ct3_100_tubula_1a_50_6	+	13166			hypothetical protein		hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_50	6223	7158	ct3_100_tubula_1a_50_7	-	13166		PFAM:PF05840.12	Rep-protein	rep_hall_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_50	7676	8989	ct3_100_tubula_1a_50_8	-	13166		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_50	8994	9323	ct3_100_tubula_1a_50_9	-	13166		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_50	9336	10859	ct3_100_tubula_1a_50_10	-	13166		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_50	10934	11152	ct3_100_tubula_1a_50_11	-	13166		PFAM:PF10389.8	virion-structural-protein	phrogs_hmm	hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_50	11155	11403	ct3_100_tubula_1a_50_12	-	13166		PFAM:PF17091.4	Tail-G7P-protein	hallmark_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_50	11406	11615	ct3_100_tubula_1a_50_13	-	13166			hypothetical protein		hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_50	11615	11824	ct3_100_tubula_1a_50_14	-	13166			hypothetical protein		hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_50	11824	12102	ct3_100_tubula_1a_50_15	-	13166			hypothetical protein		hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_50	12112	12357	ct3_100_tubula_1a_50_16	-	13166			hypothetical protein		hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_50	12357	12683	ct3_100_tubula_1a_50_17	-	13166		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_50	12876	13166	ct3_100_tubula_1a_50_18	+	13166		PFAM:PF10078.8	transcriptional-regulator	phrogs_hmm	hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_51	277	1080	ct3_100_tubula_1a_51_1	+	7542		PFAM:PF02486.18	Replication-initiation-factor	rep_hall_hmm	common_virus	NaN		0	7542
+ct3_100_tubula_1a_51	1085	1423	ct3_100_tubula_1a_51_2	+	7542		PFAM:PF06950.10	single-strand-DNA-binding-protein	phrogs_hmm	common_virus	NaN		0	7542
+ct3_100_tubula_1a_51	1433	1678	ct3_100_tubula_1a_51_3	+	7542		PFAM:PF17091.4	G7P-protein	common_virus_hmm	common_virus	NaN		0	7542
+ct3_100_tubula_1a_51	1690	1824	ct3_100_tubula_1a_51_4	+	7542		UniProt:tr|Q8W6E1_9VIRU	Major-capsid-protein-	hallmark_hmm	common_virus	NaN		0	7542
+ct3_100_tubula_1a_51	1954	3435	ct3_100_tubula_1a_51_5	+	7542		PFAM:PF05616.12	minor-head-protein;-receptor-binding	phrogs_hmm	hypothetical_protein	NaN		0	7542
+ct3_100_tubula_1a_51	3450	3752	ct3_100_tubula_1a_51_6	+	7542		CDD:PHA01081	putative-minor-coat-protein	hallmark_hmm	common_virus	NaN		0	7542
+ct3_100_tubula_1a_51	3755	4909	ct3_100_tubula_1a_51_7	+	7542		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	7542
+ct3_100_tubula_1a_51	6102	6476	ct3_100_tubula_1a_51_8	-	7542		PHA01082	putative transcription regulator	mmseqs_cdd	common_virus	NaN		0	7542
+ct3_100_tubula_1a_51	6436	6900	ct3_100_tubula_1a_51_9	-	7542		PDB:4IA8_B	helix-turn-helix-protein	common_virus_hmm	common_virus	NaN		0	7542
+ct3_100_tubula_1a_51	7328	7531	ct3_100_tubula_1a_51_10	+	7542			hypothetical protein		hypothetical_protein	NaN		0	7542
+ct3_100_tubula_1a_52	1	912	ct3_100_tubula_1a_52_1	+	5178		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	5178
+ct3_100_tubula_1a_52	961	1227	ct3_100_tubula_1a_52_2	+	5178			hypothetical protein		hypothetical_protein	NaN		0	5178
+ct3_100_tubula_1a_52	1232	1471	ct3_100_tubula_1a_52_3	+	5178			hypothetical protein		hypothetical_protein	NaN		0	5178
+ct3_100_tubula_1a_52	1958	2770	ct3_100_tubula_1a_52_4	+	5178		PDB:4CIJ_B	Rep-protein	rep_hall_hmm	common_virus	NaN		0	5178
+ct3_100_tubula_1a_52	2763	3014	ct3_100_tubula_1a_52_5	+	5178		PDB:1PFS_B	PF3-SINGLE-STRANDED-DNA-BINDING-PROTEI	common_virus_hmm	common_virus	NaN		0	5178
+ct3_100_tubula_1a_52	3014	3178	ct3_100_tubula_1a_52_6	+	5178			hypothetical protein		hypothetical_protein	NaN		0	5178
+ct3_100_tubula_1a_52	3183	3308	ct3_100_tubula_1a_52_7	+	5178		CDD:pfam10389	filamentous-major-capsid-protein-B	hallmark_hmm	common_virus	NaN		0	5178
+ct3_100_tubula_1a_52	3369	4796	ct3_100_tubula_1a_52_8	+	5178		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	5178
+ct3_100_tubula_1a_52	4789	5067	ct3_100_tubula_1a_52_9	+	5178		CDD:PHA02508	putative-minor-coat-protein	hallmark_hmm	common_virus	NaN		0	5178
+ct3_100_tubula_1a_52	5067	5177	ct3_100_tubula_1a_52_10	+	5178			hypothetical protein		hypothetical_protein	NaN		0	5178
+ct3_100_tubula_1a_53	288	2438	ct3_100_tubula_1a_53_1	+	8651		PFAM:PF05840.12	Rep-protein	rep_hall_hmm	common_virus	NaN		0	8651
+ct3_100_tubula_1a_53	2435	2749	ct3_100_tubula_1a_53_2	+	8651			hypothetical protein		hypothetical_protein	NaN		0	8651
+ct3_100_tubula_1a_53	2876	2992	ct3_100_tubula_1a_53_3	+	8651		UniProt:tr|R9TEZ3_9VIRU	Minor-coat-protein-	hallmark_hmm	common_virus	NaN		0	8651
+ct3_100_tubula_1a_53	3017	3238	ct3_100_tubula_1a_53_4	+	8651		CDD:PHA00025	major-coat-protein	hallmark_hmm	common_virus	NaN		0	8651
+ct3_100_tubula_1a_53	3287	4813	ct3_100_tubula_1a_53_5	+	8651		PFAM:PF05616.12	minor-head-protein;-receptor-binding	phrogs_hmm	hypothetical_protein	NaN		0	8651
+ct3_100_tubula_1a_53	4820	5170	ct3_100_tubula_1a_53_6	+	8651		CDD:PHA00094	minor-coat-protein	hallmark_hmm	common_virus	NaN		0	8651
+ct3_100_tubula_1a_53	5193	6278	ct3_100_tubula_1a_53_7	+	8651		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	8651
+ct3_100_tubula_1a_53	6259	7761	ct3_100_tubula_1a_53_8	+	8651		PDB:5WQ8_J	Type-II-secretion-system-protein	common_virus_hmm	common_virus	NaN		0	8651
+ct3_100_tubula_1a_53	7715	7951	ct3_100_tubula_1a_53_9	-	8651		PHA01082	putative transcription regulator	mmseqs_cdd	common_virus	NaN		0	8651
+ct3_100_tubula_1a_53	8384	8650	ct3_100_tubula_1a_53_10	-	8651		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	8651
+ct3_100_tubula_1a_54	1	831	ct3_100_tubula_1a_54_1	+	6407		PFAM:PF05144.13	Phage-replication-protein	rep_hall_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_54	843	1106	ct3_100_tubula_1a_54_2	+	6407		PDB:1GVP_A	Rep-protein	rep_hall_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_54	1301	1522	ct3_100_tubula_1a_54_3	+	6407		CDD:PHA00025	major-coat-protein	hallmark_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_54	1579	2853	ct3_100_tubula_1a_54_4	+	6407		CDD:pfam05357	Filamentous-Minor-Coat-Protein-	hallmark_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_54	2856	3194	ct3_100_tubula_1a_54_5	+	6407		CDD:PHA00094	minor-coat-protein	hallmark_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_54	3196	4242	ct3_100_tubula_1a_54_6	+	6407		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_54	4220	5500	ct3_100_tubula_1a_54_7	+	6407		PDB:5WQ8_J	Type-II-secretion-system-protein	common_virus_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_54	6006	6407	ct3_100_tubula_1a_54_8	+	6407		PFAM:PF05144.13	Phage-replication-protein	rep_hall_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_55	1	591	ct3_100_tubula_1a_55_1	+	7965		PFAM:PF02486.18	Replication-initiation-factor	rep_hall_hmm	common_virus	NaN		0	7965
+ct3_100_tubula_1a_55	595	948	ct3_100_tubula_1a_55_2	+	7965		pfam06950	Protein of unknown function (DUF1293). This family consists of several bacterial and phage proteins of around 115 residues in length. The function of this family is unknown.	mmseqs_cdd	nonviral_gene	NaN		0	7965
+ct3_100_tubula_1a_55	960	1205	ct3_100_tubula_1a_55_3	+	7965		PFAM:PF17091.4	Tail-G7P-protein	hallmark_hmm	common_virus	NaN		0	7965
+ct3_100_tubula_1a_55	1216	1449	ct3_100_tubula_1a_55_4	+	7965		CDD:PHA00979	putative-major-coat-protein	hallmark_hmm	common_virus	NaN		0	7965
+ct3_100_tubula_1a_55	1583	3058	ct3_100_tubula_1a_55_5	+	7965		PFAM:PF05616.12	minor-head-protein;-receptor-binding	phrogs_hmm	hypothetical_protein	NaN		0	7965
+ct3_100_tubula_1a_55	3060	3374	ct3_100_tubula_1a_55_6	+	7965		CDD:PHA01081	putative-minor-coat-protein	hallmark_hmm	common_virus	NaN		0	7965
+ct3_100_tubula_1a_55	3371	4513	ct3_100_tubula_1a_55_7	+	7965		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	7965
+ct3_100_tubula_1a_55	4821	5606	ct3_100_tubula_1a_55_8	-	7965		PFAM:PF07889.11	hol-like-chemotaxis	phrogs_hmm	hypothetical_protein	NaN		0	7965
+ct3_100_tubula_1a_55	5696	6064	ct3_100_tubula_1a_55_9	-	7965		PHA01082	putative transcription regulator	mmseqs_cdd	common_virus	NaN		0	7965
+ct3_100_tubula_1a_55	6042	6488	ct3_100_tubula_1a_55_10	-	7965		PFAM:PF10078.8	transcriptional-regulator	phrogs_hmm	common_virus	NaN		0	7965
+ct3_100_tubula_1a_55	6601	7212	ct3_100_tubula_1a_55_11	+	7965			hypothetical protein		hypothetical_protein	NaN		0	7965
+ct3_100_tubula_1a_55	7209	7424	ct3_100_tubula_1a_55_12	+	7965			hypothetical protein		hypothetical_protein	NaN		0	7965
+ct3_100_tubula_1a_55	7408	7965	ct3_100_tubula_1a_55_13	+	7965		PFAM:PF02486.18	Replication-initiation-factor	rep_hall_hmm	common_virus	NaN		0	7965
+ct3_100_tubula_1a_56	1	1200	ct3_100_tubula_1a_56_1	+	4649		PFAM:PF05840.12	Rep-protein	rep_hall_hmm	common_virus	NaN		0	4649
+ct3_100_tubula_1a_56	1264	1773	ct3_100_tubula_1a_56_2	+	4649			hypothetical protein		hypothetical_protein	NaN		0	4649
+ct3_100_tubula_1a_56	1763	2455	ct3_100_tubula_1a_56_3	+	4649			hypothetical protein		hypothetical_protein	NaN		0	4649
+ct3_100_tubula_1a_56	2452	3858	ct3_100_tubula_1a_56_4	+	4649			hypothetical protein		hypothetical_protein	NaN		0	4649
+ct3_100_tubula_1a_56	4162	4398	ct3_100_tubula_1a_56_5	+	4649			hypothetical protein		hypothetical_protein	NaN		0	4649
+ct3_100_tubula_1a_56	4398	4634	ct3_100_tubula_1a_56_6	+	4649			hypothetical protein		hypothetical_protein	NaN		0	4649
+ct3_100_tubula_1a_57	1	1041	ct3_100_tubula_1a_57_1	+	6062		PFAM:PF05840.12	Rep-protein	rep_hall_hmm	common_virus	NaN		0	6062
+ct3_100_tubula_1a_57	1038	1334	ct3_100_tubula_1a_57_2	+	6062		PDB:1GVP_A	Rep-protein	rep_hall_hmm	common_virus	NaN		0	6062
+ct3_100_tubula_1a_57	1338	1589	ct3_100_tubula_1a_57_3	+	6062		PFAM:PF17091.4	Tail-G7P-protein	hallmark_hmm	common_virus	NaN		0	6062
+ct3_100_tubula_1a_57	1617	1745	ct3_100_tubula_1a_57_4	+	6062		PFAM:PF10389.8	virion-structural-protein	phrogs_hmm	hypothetical_protein	NaN		0	6062
+ct3_100_tubula_1a_57	2323	2700	ct3_100_tubula_1a_57_5	+	6062			hypothetical protein		hypothetical_protein	NaN		0	6062
+ct3_100_tubula_1a_57	2652	2933	ct3_100_tubula_1a_57_6	+	6062		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	6062
+ct3_100_tubula_1a_57	2944	3264	ct3_100_tubula_1a_57_7	+	6062		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	6062
+ct3_100_tubula_1a_57	3266	4588	ct3_100_tubula_1a_57_8	+	6062		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	6062
+ct3_100_tubula_1a_57	4608	4916	ct3_100_tubula_1a_57_9	-	6062			hypothetical protein		hypothetical_protein	NaN		0	6062
+ct3_100_tubula_1a_57	4983	5309	ct3_100_tubula_1a_57_10	-	6062		PDB:4IA8_B	helix-turn-helix-protein	common_virus_hmm	common_virus	NaN		0	6062
+ct3_100_tubula_1a_57	5299	5775	ct3_100_tubula_1a_57_11	-	6062		PDB:4IA8_B	helix-turn-helix-protein	common_virus_hmm	common_virus	NaN		0	6062
+ct3_100_tubula_1a_57	5903	6061	ct3_100_tubula_1a_57_12	+	6062			hypothetical protein		hypothetical_protein	NaN		0	6062
+ct3_100_tubula_1a_58	285	1181	ct3_100_tubula_1a_58_1	-	13166			hypothetical protein		hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_58	1211	2491	ct3_100_tubula_1a_58_2	-	13166		PDB:1Z19_B	Integrase	common_virus_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_58	2679	3731	ct3_100_tubula_1a_58_3	+	13166		COG2256	Replication-associated recombination protein RarA (DNA-dependent ATPase) [Replication, recombination and repair]. 	mmseqs_cdd	nonviral_gene	NaN		0	13166
+ct3_100_tubula_1a_58	3798	5114	ct3_100_tubula_1a_58_4	+	13166		PRK05431	seryl-tRNA synthetase; Provisional	mmseqs_cdd	nonviral_gene	NaN		0	13166
+ct3_100_tubula_1a_58	5338	5928	ct3_100_tubula_1a_58_5	+	13166		PDB:1ZR4_E	resolvase,-site-specific-recombination	common_virus_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_58	5948	6226	ct3_100_tubula_1a_58_6	+	13166			hypothetical protein		hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_58	6223	7158	ct3_100_tubula_1a_58_7	-	13166		PFAM:PF05840.12	Rep-protein	rep_hall_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_58	7676	8989	ct3_100_tubula_1a_58_8	-	13166		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_58	8994	9323	ct3_100_tubula_1a_58_9	-	13166		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_58	9336	10859	ct3_100_tubula_1a_58_10	-	13166		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_58	10934	11152	ct3_100_tubula_1a_58_11	-	13166		PFAM:PF10389.8	virion-structural-protein	phrogs_hmm	hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_58	11155	11403	ct3_100_tubula_1a_58_12	-	13166		PFAM:PF17091.4	Tail-G7P-protein	hallmark_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_58	11406	11615	ct3_100_tubula_1a_58_13	-	13166			hypothetical protein		hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_58	11615	11824	ct3_100_tubula_1a_58_14	-	13166			hypothetical protein		hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_58	11824	12102	ct3_100_tubula_1a_58_15	-	13166			hypothetical protein		hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_58	12112	12357	ct3_100_tubula_1a_58_16	-	13166			hypothetical protein		hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_58	12357	12683	ct3_100_tubula_1a_58_17	-	13166		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_58	12876	13166	ct3_100_tubula_1a_58_18	+	13166		PFAM:PF10078.8	transcriptional-regulator	phrogs_hmm	hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_59	120	254	ct3_100_tubula_1a_59_1	+	5833		CDD:pfam10389	filamentous-major-capsid-protein-B	hallmark_hmm	common_virus	NaN		0	5833
+ct3_100_tubula_1a_59	362	1813	ct3_100_tubula_1a_59_2	+	5833		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	5833
+ct3_100_tubula_1a_59	1806	2087	ct3_100_tubula_1a_59_3	+	5833		CDD:PHA02508	putative-minor-coat-protein	hallmark_hmm	common_virus	NaN		0	5833
+ct3_100_tubula_1a_59	2084	3376	ct3_100_tubula_1a_59_4	+	5833		PDB:5WQ8_J	Type-II-secretion-system-protein	common_virus_hmm	common_virus	NaN		0	5833
+ct3_100_tubula_1a_59	3449	4354	ct3_100_tubula_1a_59_5	+	5833		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	5833
+ct3_100_tubula_1a_59	4468	5304	ct3_100_tubula_1a_59_6	+	5833		PFAM:PF05840.12	Rep-protein	rep_hall_hmm	common_virus	NaN		0	5833
+ct3_100_tubula_1a_59	5301	5516	ct3_100_tubula_1a_59_7	+	5833			hypothetical protein		hypothetical_protein	NaN		0	5833
+ct3_100_tubula_1a_59	5527	5763	ct3_100_tubula_1a_59_8	+	5833		PDB:1PFS_B	PF3-SINGLE-STRANDED-DNA-BINDING-PROTEI	common_virus_hmm	common_virus	NaN		0	5833
+ct3_100_tubula_1a_59	5763	5831	ct3_100_tubula_1a_59_9	+	5833			hypothetical protein		hypothetical_protein	NaN		0	5833
+ct3_100_tubula_1a_6	1	1164	ct3_100_tubula_1a_6_1	+	7540		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	7540
+ct3_100_tubula_1a_6	1703	2653	ct3_100_tubula_1a_6_2	+	7540		PFAM:PF01548.16	Transposase	common_virus_hmm	common_virus	NaN		0	7540
+ct3_100_tubula_1a_6	2902	4245	ct3_100_tubula_1a_6_3	+	7540		PFAM:PF02486.18	Replication-initiation-factor	rep_hall_hmm	common_virus	NaN		0	7540
+ct3_100_tubula_1a_6	4291	4581	ct3_100_tubula_1a_6_4	+	7540		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	7540
+ct3_100_tubula_1a_6	4586	4783	ct3_100_tubula_1a_6_5	+	7540			hypothetical protein		hypothetical_protein	NaN		0	7540
+ct3_100_tubula_1a_6	4856	5086	ct3_100_tubula_1a_6_6	+	7540		CDD:PHA00979	putative-major-coat-protein	hallmark_hmm	common_virus	NaN		0	7540
+ct3_100_tubula_1a_6	5095	5397	ct3_100_tubula_1a_6_7	+	7540			hypothetical protein		hypothetical_protein	NaN		0	7540
+ct3_100_tubula_1a_6	5413	7233	ct3_100_tubula_1a_6_8	+	7540		pfam05616	Neisseria meningitidis TspB protein. This family consists of several Neisseria meningitidis TspB virulence factor proteins.	mmseqs_cdd	nonviral_gene	NaN		0	7540
+ct3_100_tubula_1a_6	7235	7513	ct3_100_tubula_1a_6_9	+	7540		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	7540
+ct3_100_tubula_1a_60	1	1476	ct3_100_tubula_1a_60_1	+	6023	TTGCTGCGTACATGATAGGAGAGAGAATCGCTTTGAAGAGATAGCCCGTAACATAAA	PFAM:PF05616.12	minor-head-protein;-receptor-binding	phrogs_hmm	hypothetical_protein	NaN		0	6023
+ct3_100_tubula_1a_60	1478	1792	ct3_100_tubula_1a_60_2	+	6023	TTGCTGCGTACATGATAGGAGAGAGAATCGCTTTGAAGAGATAGCCCGTAACATAAA	CDD:PHA01081	putative-minor-coat-protein	hallmark_hmm	common_virus	NaN		0	6023
+ct3_100_tubula_1a_60	1789	2928	ct3_100_tubula_1a_60_3	+	6023	TTGCTGCGTACATGATAGGAGAGAGAATCGCTTTGAAGAGATAGCCCGTAACATAAA	PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	6023
+ct3_100_tubula_1a_60	3979	5058	ct3_100_tubula_1a_60_4	+	6023	TTGCTGCGTACATGATAGGAGAGAGAATCGCTTTGAAGAGATAGCCCGTAACATAAA	PFAM:PF02486.18	Replication-initiation-factor	rep_hall_hmm	common_virus	NaN		0	6023
+ct3_100_tubula_1a_60	5060	5395	ct3_100_tubula_1a_60_5	+	6023	TTGCTGCGTACATGATAGGAGAGAGAATCGCTTTGAAGAGATAGCCCGTAACATAAA	PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	6023
+ct3_100_tubula_1a_60	5407	5652	ct3_100_tubula_1a_60_6	+	6023	TTGCTGCGTACATGATAGGAGAGAGAATCGCTTTGAAGAGATAGCCCGTAACATAAA	PFAM:PF17091.4	G7P-protein	common_virus_hmm	common_virus	NaN		0	6023
+ct3_100_tubula_1a_60	5660	5890	ct3_100_tubula_1a_60_7	+	6023	TTGCTGCGTACATGATAGGAGAGAGAATCGCTTTGAAGAGATAGCCCGTAACATAAA	CDD:PHA00979	putative-major-coat-protein	hallmark_hmm	common_virus	NaN		0	6023
+ct3_100_tubula_1a_61	1	258	ct3_100_tubula_1a_61_1	+	4551		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	4551
+ct3_100_tubula_1a_61	269	526	ct3_100_tubula_1a_61_2	+	4551			hypothetical protein		hypothetical_protein	NaN		0	4551
+ct3_100_tubula_1a_61	725	1426	ct3_100_tubula_1a_61_3	+	4551		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	4551
+ct3_100_tubula_1a_61	1429	1572	ct3_100_tubula_1a_61_4	+	4551			hypothetical protein		hypothetical_protein	NaN		0	4551
+ct3_100_tubula_1a_61	1572	2234	ct3_100_tubula_1a_61_5	+	4551			hypothetical protein		hypothetical_protein	NaN		0	4551
+ct3_100_tubula_1a_61	2173	3135	ct3_100_tubula_1a_61_6	+	4551			hypothetical protein		hypothetical_protein	NaN		0	4551
+ct3_100_tubula_1a_61	3136	3405	ct3_100_tubula_1a_61_7	+	4551			hypothetical protein		hypothetical_protein	NaN		0	4551
+ct3_100_tubula_1a_61	3605	4468	ct3_100_tubula_1a_61_8	+	4551		PFAM:PF01446.16	Plasmid-like-replication-protein	rep_hall_hmm	common_virus	NaN		0	4551
+ct3_100_tubula_1a_62	1	1146	ct3_100_tubula_1a_62_1	+	8954		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	8954
+ct3_100_tubula_1a_62	1124	2272	ct3_100_tubula_1a_62_2	+	8954		PDB:5WQ8_J	Type-II-secretion-system-protein	common_virus_hmm	common_virus	NaN		0	8954
+ct3_100_tubula_1a_62	2422	2811	ct3_100_tubula_1a_62_3	+	8954			hypothetical protein		hypothetical_protein	NaN		0	8954
+ct3_100_tubula_1a_62	2851	3507	ct3_100_tubula_1a_62_4	+	8954		PFAM:PF13921.5	transcriptional-regulator,-D5-like	phrogs_hmm	hypothetical_protein	NaN		0	8954
+ct3_100_tubula_1a_62	4182	4472	ct3_100_tubula_1a_62_5	+	8954			hypothetical protein		hypothetical_protein	NaN		0	8954
+ct3_100_tubula_1a_62	4469	4699	ct3_100_tubula_1a_62_6	-	8954			hypothetical protein		hypothetical_protein	NaN		0	8954
+ct3_100_tubula_1a_62	4779	4991	ct3_100_tubula_1a_62_7	-	8954			hypothetical protein		hypothetical_protein	NaN		0	8954
+ct3_100_tubula_1a_62	5120	6265	ct3_100_tubula_1a_62_8	+	8954		PFAM:PF05144.13	Phage-replication-protein	rep_hall_hmm	common_virus	NaN		0	8954
+ct3_100_tubula_1a_62	6286	6612	ct3_100_tubula_1a_62_9	+	8954		pfam17426	Putative Gamma DNA binding protein G5P. This domain family is found in Gammaproteobacterial proteins. Members of the family are predicted to be G5P DNA binding proteins. Homologous proteins are found in pfam02303	mmseqs_cdd	nonviral_gene	NaN		0	8954
+ct3_100_tubula_1a_62	6805	7050	ct3_100_tubula_1a_62_10	+	8954			hypothetical protein		hypothetical_protein	NaN		0	8954
+ct3_100_tubula_1a_62	7074	7295	ct3_100_tubula_1a_62_11	+	8954		PFAM:PF10389.8	virion-structural-protein	phrogs_hmm	hypothetical_protein	NaN		0	8954
+ct3_100_tubula_1a_62	7435	8640	ct3_100_tubula_1a_62_12	+	8954			hypothetical protein		hypothetical_protein	NaN		0	8954
+ct3_100_tubula_1a_62	8650	8952	ct3_100_tubula_1a_62_13	+	8954		PFAM:PF10734.8	minor-head-protein	phrogs_hmm	hypothetical_protein	NaN		0	8954
+ct3_100_tubula_1a_63	285	1181	ct3_100_tubula_1a_63_1	-	13166			hypothetical protein		hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_63	1211	2491	ct3_100_tubula_1a_63_2	-	13166		PDB:1Z19_B	Integrase	common_virus_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_63	2679	3731	ct3_100_tubula_1a_63_3	+	13166		COG2256	Replication-associated recombination protein RarA (DNA-dependent ATPase) [Replication, recombination and repair]. 	mmseqs_cdd	nonviral_gene	NaN		0	13166
+ct3_100_tubula_1a_63	3798	5114	ct3_100_tubula_1a_63_4	+	13166		PRK05431	seryl-tRNA synthetase; Provisional	mmseqs_cdd	nonviral_gene	NaN		0	13166
+ct3_100_tubula_1a_63	5338	5928	ct3_100_tubula_1a_63_5	+	13166		PDB:1ZR4_E	resolvase,-site-specific-recombination	common_virus_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_63	5948	6226	ct3_100_tubula_1a_63_6	+	13166			hypothetical protein		hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_63	6223	7158	ct3_100_tubula_1a_63_7	-	13166		PFAM:PF05840.12	Rep-protein	rep_hall_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_63	7676	8989	ct3_100_tubula_1a_63_8	-	13166		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_63	8994	9323	ct3_100_tubula_1a_63_9	-	13166		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_63	9336	10859	ct3_100_tubula_1a_63_10	-	13166		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_63	10934	11152	ct3_100_tubula_1a_63_11	-	13166		PFAM:PF10389.8	virion-structural-protein	phrogs_hmm	hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_63	11155	11403	ct3_100_tubula_1a_63_12	-	13166		PFAM:PF17091.4	Tail-G7P-protein	hallmark_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_63	11406	11615	ct3_100_tubula_1a_63_13	-	13166			hypothetical protein		hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_63	11615	11824	ct3_100_tubula_1a_63_14	-	13166			hypothetical protein		hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_63	11824	12102	ct3_100_tubula_1a_63_15	-	13166			hypothetical protein		hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_63	12112	12357	ct3_100_tubula_1a_63_16	-	13166			hypothetical protein		hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_63	12357	12683	ct3_100_tubula_1a_63_17	-	13166		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_63	12876	13166	ct3_100_tubula_1a_63_18	+	13166		PFAM:PF10078.8	transcriptional-regulator	phrogs_hmm	hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_64	1	831	ct3_100_tubula_1a_64_1	+	6407		PFAM:PF05144.13	Phage-replication-protein	rep_hall_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_64	843	1106	ct3_100_tubula_1a_64_2	+	6407		PDB:1GVP_A	Rep-protein	rep_hall_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_64	1301	1522	ct3_100_tubula_1a_64_3	+	6407		CDD:PHA00025	major-coat-protein	hallmark_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_64	1579	2853	ct3_100_tubula_1a_64_4	+	6407		CDD:pfam05357	Filamentous-Minor-Coat-Protein-	hallmark_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_64	2856	3194	ct3_100_tubula_1a_64_5	+	6407		CDD:PHA00094	minor-coat-protein	hallmark_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_64	3196	4242	ct3_100_tubula_1a_64_6	+	6407		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_64	4220	5500	ct3_100_tubula_1a_64_7	+	6407		PDB:5WQ8_J	Type-II-secretion-system-protein	common_virus_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_64	6123	6407	ct3_100_tubula_1a_64_8	+	6407		PFAM:PF05144.13	Phage-replication-protein	rep_hall_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_65	1	291	ct3_100_tubula_1a_65_1	-	13152		PFAM:PF10078.8	transcriptional-regulator	phrogs_hmm	hypothetical_protein	NaN		0	13152
+ct3_100_tubula_1a_65	484	810	ct3_100_tubula_1a_65_2	+	13152		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	13152
+ct3_100_tubula_1a_65	810	1055	ct3_100_tubula_1a_65_3	+	13152			hypothetical protein		hypothetical_protein	NaN		0	13152
+ct3_100_tubula_1a_65	1065	1343	ct3_100_tubula_1a_65_4	+	13152			hypothetical protein		hypothetical_protein	NaN		0	13152
+ct3_100_tubula_1a_65	1343	1552	ct3_100_tubula_1a_65_5	+	13152			hypothetical protein		hypothetical_protein	NaN		0	13152
+ct3_100_tubula_1a_65	1552	1761	ct3_100_tubula_1a_65_6	+	13152			hypothetical protein		hypothetical_protein	NaN		0	13152
+ct3_100_tubula_1a_65	1764	2012	ct3_100_tubula_1a_65_7	+	13152		PFAM:PF17091.4	Tail-G7P-protein	hallmark_hmm	common_virus	NaN		0	13152
+ct3_100_tubula_1a_65	2015	2233	ct3_100_tubula_1a_65_8	+	13152		PFAM:PF10389.8	virion-structural-protein	phrogs_hmm	hypothetical_protein	NaN		0	13152
+ct3_100_tubula_1a_65	2308	3831	ct3_100_tubula_1a_65_9	+	13152		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	13152
+ct3_100_tubula_1a_65	3844	4173	ct3_100_tubula_1a_65_10	+	13152		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	13152
+ct3_100_tubula_1a_65	4178	5491	ct3_100_tubula_1a_65_11	+	13152		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	13152
+ct3_100_tubula_1a_65	6009	6944	ct3_100_tubula_1a_65_12	+	13152		PFAM:PF05840.12	Rep-protein	rep_hall_hmm	common_virus	NaN		0	13152
+ct3_100_tubula_1a_65	6941	7219	ct3_100_tubula_1a_65_13	-	13152			hypothetical protein		hypothetical_protein	NaN		0	13152
+ct3_100_tubula_1a_65	7239	7829	ct3_100_tubula_1a_65_14	-	13152		PDB:1ZR4_E	resolvase,-site-specific-recombination	common_virus_hmm	common_virus	NaN		0	13152
+ct3_100_tubula_1a_65	8053	9369	ct3_100_tubula_1a_65_15	-	13152		PRK05431	seryl-tRNA synthetase; Provisional	mmseqs_cdd	nonviral_gene	NaN		0	13152
+ct3_100_tubula_1a_65	9436	10488	ct3_100_tubula_1a_65_16	-	13152		COG2256	Replication-associated recombination protein RarA (DNA-dependent ATPase) [Replication, recombination and repair]. 	mmseqs_cdd	nonviral_gene	NaN		0	13152
+ct3_100_tubula_1a_65	10676	11956	ct3_100_tubula_1a_65_17	+	13152		PDB:1Z19_B	Integrase	common_virus_hmm	common_virus	NaN		0	13152
+ct3_100_tubula_1a_65	11986	12882	ct3_100_tubula_1a_65_18	+	13152			hypothetical protein		hypothetical_protein	NaN		0	13152
+ct3_100_tubula_1a_66	3	365	ct3_100_tubula_1a_66_1	+	8529		PHA01082	putative transcription regulator	mmseqs_cdd	common_virus	NaN		0	8529
+ct3_100_tubula_1a_66	435	1274	ct3_100_tubula_1a_66_2	-	8529			hypothetical protein		hypothetical_protein	NaN		0	8529
+ct3_100_tubula_1a_66	1298	1732	ct3_100_tubula_1a_66_3	-	8529			hypothetical protein		hypothetical_protein	NaN		0	8529
+ct3_100_tubula_1a_66	2246	2389	ct3_100_tubula_1a_66_4	-	8529			hypothetical protein		hypothetical_protein	NaN		0	8529
+ct3_100_tubula_1a_66	2389	3774	ct3_100_tubula_1a_66_5	-	8529		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	8529
+ct3_100_tubula_1a_66	3779	4123	ct3_100_tubula_1a_66_6	-	8529		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	8529
+ct3_100_tubula_1a_66	4125	5405	ct3_100_tubula_1a_66_7	-	8529		PFAM:PF05616.12	minor-head-protein;-receptor-binding	phrogs_hmm	hypothetical_protein	NaN		0	8529
+ct3_100_tubula_1a_66	5809	6054	ct3_100_tubula_1a_66_8	-	8529		PFAM:PF05356.10	Major-Filamentous-Coat-protein	hallmark_hmm	common_virus	NaN		0	8529
+ct3_100_tubula_1a_66	6060	6290	ct3_100_tubula_1a_66_9	-	8529		PFAM:PF17091.4	Tail-G7P-protein	hallmark_hmm	common_virus	NaN		0	8529
+ct3_100_tubula_1a_66	6294	6653	ct3_100_tubula_1a_66_10	-	8529		pfam06950	Protein of unknown function (DUF1293). This family consists of several bacterial and phage proteins of around 115 residues in length. The function of this family is unknown.	mmseqs_cdd	nonviral_gene	NaN		0	8529
+ct3_100_tubula_1a_66	6657	7805	ct3_100_tubula_1a_66_11	-	8529		PFAM:PF02486.18	Replication-initiation-factor	rep_hall_hmm	common_virus	NaN		0	8529
+ct3_100_tubula_1a_66	7789	8004	ct3_100_tubula_1a_66_12	-	8529			hypothetical protein		hypothetical_protein	NaN		0	8529
+ct3_100_tubula_1a_66	8161	8529	ct3_100_tubula_1a_66_13	+	8529		PDB:4IA8_B	helix-turn-helix-protein	common_virus_hmm	common_virus	NaN		0	8529
+ct3_100_tubula_1a_67	285	1181	ct3_100_tubula_1a_67_1	-	13166			hypothetical protein		hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_67	1211	2491	ct3_100_tubula_1a_67_2	-	13166		PDB:1Z19_B	Integrase	common_virus_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_67	2679	3731	ct3_100_tubula_1a_67_3	+	13166		COG2256	Replication-associated recombination protein RarA (DNA-dependent ATPase) [Replication, recombination and repair]. 	mmseqs_cdd	nonviral_gene	NaN		0	13166
+ct3_100_tubula_1a_67	3798	5114	ct3_100_tubula_1a_67_4	+	13166		PRK05431	seryl-tRNA synthetase; Provisional	mmseqs_cdd	nonviral_gene	NaN		0	13166
+ct3_100_tubula_1a_67	5338	5928	ct3_100_tubula_1a_67_5	+	13166		PDB:1ZR4_E	resolvase,-site-specific-recombination	common_virus_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_67	5948	6226	ct3_100_tubula_1a_67_6	+	13166			hypothetical protein		hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_67	6223	7158	ct3_100_tubula_1a_67_7	-	13166		PFAM:PF05840.12	Rep-protein	rep_hall_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_67	7676	8989	ct3_100_tubula_1a_67_8	-	13166		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_67	8994	9323	ct3_100_tubula_1a_67_9	-	13166		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_67	9336	10859	ct3_100_tubula_1a_67_10	-	13166		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_67	10934	11152	ct3_100_tubula_1a_67_11	-	13166		PFAM:PF10389.8	virion-structural-protein	phrogs_hmm	hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_67	11155	11403	ct3_100_tubula_1a_67_12	-	13166		PFAM:PF17091.4	Tail-G7P-protein	hallmark_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_67	11406	11615	ct3_100_tubula_1a_67_13	-	13166			hypothetical protein		hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_67	11615	11824	ct3_100_tubula_1a_67_14	-	13166			hypothetical protein		hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_67	11824	12102	ct3_100_tubula_1a_67_15	-	13166			hypothetical protein		hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_67	12112	12357	ct3_100_tubula_1a_67_16	-	13166			hypothetical protein		hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_67	12357	12683	ct3_100_tubula_1a_67_17	-	13166		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_67	12876	13166	ct3_100_tubula_1a_67_18	+	13166		PFAM:PF10078.8	transcriptional-regulator	phrogs_hmm	hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_68	1	1539	ct3_100_tubula_1a_68_1	-	10061		PFAM:PF05766.11	HNH-endonuclease	phrogs_hmm	hypothetical_protein	NaN		0	10061
+ct3_100_tubula_1a_68	2093	2302	ct3_100_tubula_1a_68_2	+	10061		PFAM:PF11112.7	Cox-like-excisionase-and-repressor	phrogs_hmm	hypothetical_protein	NaN		0	10061
+ct3_100_tubula_1a_68	2302	2826	ct3_100_tubula_1a_68_3	+	10061			hypothetical protein		hypothetical_protein	NaN		0	10061
+ct3_100_tubula_1a_68	2816	3199	ct3_100_tubula_1a_68_4	+	10061			hypothetical protein		hypothetical_protein	NaN		0	10061
+ct3_100_tubula_1a_68	3328	3762	ct3_100_tubula_1a_68_5	+	10061			hypothetical protein		hypothetical_protein	NaN		0	10061
+ct3_100_tubula_1a_68	3779	3871	ct3_100_tubula_1a_68_6	+	10061			hypothetical protein		hypothetical_protein	NaN		0	10061
+ct3_100_tubula_1a_68	3884	4135	ct3_100_tubula_1a_68_7	+	10061			hypothetical protein		hypothetical_protein	NaN		0	10061
+ct3_100_tubula_1a_68	4148	4396	ct3_100_tubula_1a_68_8	+	10061		CDD:pfam05356	Filamentous-Major-Coat-protein	hallmark_hmm	common_virus	NaN		0	10061
+ct3_100_tubula_1a_68	4550	5887	ct3_100_tubula_1a_68_9	+	10061			hypothetical protein		hypothetical_protein	NaN		0	10061
+ct3_100_tubula_1a_68	5892	6248	ct3_100_tubula_1a_68_10	+	10061		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	10061
+ct3_100_tubula_1a_68	6252	7535	ct3_100_tubula_1a_68_11	+	10061		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	10061
+ct3_100_tubula_1a_68	7532	7633	ct3_100_tubula_1a_68_12	+	10061			hypothetical protein		hypothetical_protein	NaN		0	10061
+ct3_100_tubula_1a_68	7906	8898	ct3_100_tubula_1a_68_13	+	10061			hypothetical protein		hypothetical_protein	NaN		0	10061
+ct3_100_tubula_1a_68	8898	9938	ct3_100_tubula_1a_68_14	+	10061		PDB:5C6K_B	Integrase	common_virus_hmm	common_virus	NaN		0	10061
+ct3_100_tubula_1a_69	61	399	ct3_100_tubula_1a_69_1	-	6496			hypothetical protein		hypothetical_protein	NaN		0	6496
+ct3_100_tubula_1a_69	767	1945	ct3_100_tubula_1a_69_2	-	6496		PDB:1Z19_B	Integrase	common_virus_hmm	common_virus	NaN		0	6496
+ct3_100_tubula_1a_69	2013	2213	ct3_100_tubula_1a_69_3	-	6496		PFAM:PF12964.6	HTH-DNA-binding-protein	phrogs_hmm	hypothetical_protein	NaN		0	6496
+ct3_100_tubula_1a_69	2210	2617	ct3_100_tubula_1a_69_4	-	6496		PFAM:PF03592.15	terminase-small-subunit	phrogs_hmm	hypothetical_protein	NaN		0	6496
+ct3_100_tubula_1a_69	2680	3024	ct3_100_tubula_1a_69_5	-	6496			hypothetical protein		hypothetical_protein	NaN		0	6496
+ct3_100_tubula_1a_69	3021	3374	ct3_100_tubula_1a_69_6	-	6496			hypothetical protein		hypothetical_protein	NaN		0	6496
+ct3_100_tubula_1a_69	3570	3734	ct3_100_tubula_1a_69_7	+	6496			hypothetical protein		hypothetical_protein	NaN		0	6496
+ct3_100_tubula_1a_69	3711	5138	ct3_100_tubula_1a_69_8	-	6496		PFAM:PF04735.11	DNA-helicase	common_virus_hmm	common_virus	NaN		0	6496
+ct3_100_tubula_1a_69	5125	5943	ct3_100_tubula_1a_69_9	-	6496		PFAM:PF09250.10	Bifunctional-DNA-primase-polymerase	common_virus_hmm	common_virus	NaN		0	6496
+ct3_100_tubula_1a_69	5940	6212	ct3_100_tubula_1a_69_10	-	6496			hypothetical protein		hypothetical_protein	NaN		0	6496
+ct3_100_tubula_1a_69	6215	6496	ct3_100_tubula_1a_69_11	-	6496			hypothetical protein		hypothetical_protein	NaN		0	6496
+ct3_100_tubula_1a_7	638	976	ct3_100_tubula_1a_7_1	-	7091		PDB:2FJR_A	Repressor-protein-CI	common_virus_hmm	common_virus	NaN		0	7091
+ct3_100_tubula_1a_7	1102	2181	ct3_100_tubula_1a_7_2	+	7091		PFAM:PF02486.18	Replication-initiation-factor	rep_hall_hmm	common_virus	NaN		0	7091
+ct3_100_tubula_1a_7	2183	2542	ct3_100_tubula_1a_7_3	+	7091		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	7091
+ct3_100_tubula_1a_7	2542	2685	ct3_100_tubula_1a_7_4	+	7091			hypothetical protein		hypothetical_protein	NaN		0	7091
+ct3_100_tubula_1a_7	2678	2926	ct3_100_tubula_1a_7_5	+	7091		PFAM:PF05356.10	Coat-protein-B	hallmark_hmm	common_virus	NaN		0	7091
+ct3_100_tubula_1a_7	3033	4220	ct3_100_tubula_1a_7_6	+	7091		CDD:pfam16710	filamentous-minor-capsid-protein	hallmark_hmm	common_virus	NaN		0	7091
+ct3_100_tubula_1a_7	4226	4510	ct3_100_tubula_1a_7_7	+	7091		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	7091
+ct3_100_tubula_1a_7	4507	5706	ct3_100_tubula_1a_7_8	+	7091		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	7091
+ct3_100_tubula_1a_7	5969	6784	ct3_100_tubula_1a_7_9	+	7091		cd05150	Aminoglycoside 3'-phosphotransferase. APH catalyzes the transfer of the gamma-phosphoryl group from ATP to aminoglycoside antibiotics such as kanamycin, streptomycin, neomycin, and gentamicin, among others. The aminoglycoside antibiotics target the 30S ribosome and promote miscoding, leading to the production of defective proteins which insert into the bacterial membrane, resulting in membrane damage and the ultimate demise of the bacterium. Phosphorylation of the aminoglycoside antibiotics results in their inactivation, leading to bacterial antibiotic resistance. The APH gene is found on transposons and plasmids and is thought to have originated as a self-defense mechanism used by microorganisms that produce the antibiotics. The APH subfamily is part of a larger superfamily that includes the catalytic domains of other kinases, such as the typical serine/threonine/tyrosine protein kinases (PKs), RIO kinases, actin-fragmin kinase (AFK), and phosphoinositide 3-kinase (PI3K).	mmseqs_cdd	nonviral_gene	NaN		0	7091
+ct3_100_tubula_1a_7	6802	7005	ct3_100_tubula_1a_7_10	+	7091		pfam01376	Heat-labile enterotoxin beta chain. 	mmseqs_cdd	nonviral_gene	NaN		0	7091
+ct3_100_tubula_1a_70	1	432	ct3_100_tubula_1a_70_1	-	11668		pfam01724	Domain of unknown function DUF29. This family consists of various hypothetical proteins from cyanobacteria, none of which are functionally described. The aligned region is approximately 120-140 amino acids long corresponding to almost the entire length of the proteins in the family. Structure 3fcn is a small protein that has a novel all-alpha fold. The N-terminal helical hairpin is likely to function as a dimerization module. This protein is a member of PFam family pfam01724. The function of this protein is unknown. One protein sequence contains a fusion of this protein and a DnaB domain, suggesting a possible role in DNA helicase activity (hypothetical). Dali hits have low Z and high rmsd, suggesting probably only topological similarities (not functional relevance) (details derived from TOPSAN). The family has several highly conserved sequence motifs, including YD/ExD, DxxNVxEEIE, and CPY/F/W, as well as conserved tryptophans.	mmseqs_cdd	nonviral_gene	NaN		0	11668
+ct3_100_tubula_1a_70	476	1237	ct3_100_tubula_1a_70_2	-	11668		PFAM:PF10723.8	Replication-regulatory-protein-RepB	rep_hall_hmm	common_virus	NaN		0	11668
+ct3_100_tubula_1a_70	1323	2468	ct3_100_tubula_1a_70_3	-	11668		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	11668
+ct3_100_tubula_1a_70	2479	2796	ct3_100_tubula_1a_70_4	-	11668		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	11668
+ct3_100_tubula_1a_70	2796	4193	ct3_100_tubula_1a_70_5	-	11668		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	11668
+ct3_100_tubula_1a_70	4338	4547	ct3_100_tubula_1a_70_6	-	11668		PDB:2IFO_A	Filamentous-Major-Coat-protein	hallmark_hmm	common_virus	NaN		0	11668
+ct3_100_tubula_1a_70	4544	4783	ct3_100_tubula_1a_70_7	-	11668		PDB:2IFO_A	Filamenous-Major-Coat-protein	hallmark_hmm	common_virus	NaN		0	11668
+ct3_100_tubula_1a_70	4783	5055	ct3_100_tubula_1a_70_8	-	11668			hypothetical protein		hypothetical_protein	NaN		0	11668
+ct3_100_tubula_1a_70	5055	5372	ct3_100_tubula_1a_70_9	-	11668		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	11668
+ct3_100_tubula_1a_70	5376	6452	ct3_100_tubula_1a_70_10	-	11668		PFAM:PF02486.18	Replication-initiation-factor	rep_hall_hmm	common_virus	NaN		0	11668
+ct3_100_tubula_1a_70	6602	6808	ct3_100_tubula_1a_70_11	-	11668			hypothetical protein		hypothetical_protein	NaN		0	11668
+ct3_100_tubula_1a_70	6922	7311	ct3_100_tubula_1a_70_12	+	11668		PDB:4IA8_B	helix-turn-helix-protein	common_virus_hmm	common_virus	NaN		0	11668
+ct3_100_tubula_1a_70	7568	8023	ct3_100_tubula_1a_70_13	-	11668			hypothetical protein		hypothetical_protein	NaN		0	11668
+ct3_100_tubula_1a_70	8162	8635	ct3_100_tubula_1a_70_14	+	11668			hypothetical protein		hypothetical_protein	NaN		0	11668
+ct3_100_tubula_1a_70	8966	9460	ct3_100_tubula_1a_70_15	-	11668		COG3038	Cytochrome b561 [Energy production and conversion]. 	mmseqs_cdd	nonviral_gene	NaN		0	11668
+ct3_100_tubula_1a_70	9552	10019	ct3_100_tubula_1a_70_16	+	11668			hypothetical protein		hypothetical_protein	NaN		0	11668
+ct3_100_tubula_1a_70	10175	11668	ct3_100_tubula_1a_70_17	-	11668		NF000391	multidrug efflux MFS transporter permease subunit EmrB. 	mmseqs_cdd	nonviral_gene	NaN		0	11668
+ct3_100_tubula_1a_71	1	864	ct3_100_tubula_1a_71_1	+	4958		PFAM:PF01446.16	Plasmid-like-replication-protein	rep_hall_hmm	common_virus	NaN		0	4958
+ct3_100_tubula_1a_71	949	1206	ct3_100_tubula_1a_71_2	+	4958		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	4958
+ct3_100_tubula_1a_71	1217	1480	ct3_100_tubula_1a_71_3	+	4958		PFAM:PF10389.8	virion-structural-protein	phrogs_hmm	hypothetical_protein	NaN		0	4958
+ct3_100_tubula_1a_71	1619	2320	ct3_100_tubula_1a_71_4	+	4958		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	4958
+ct3_100_tubula_1a_71	2325	2468	ct3_100_tubula_1a_71_5	+	4958			hypothetical protein		hypothetical_protein	NaN		0	4958
+ct3_100_tubula_1a_71	2468	3133	ct3_100_tubula_1a_71_6	+	4958			hypothetical protein		hypothetical_protein	NaN		0	4958
+ct3_100_tubula_1a_71	3093	4025	ct3_100_tubula_1a_71_7	+	4958			hypothetical protein		hypothetical_protein	NaN		0	4958
+ct3_100_tubula_1a_71	4027	4296	ct3_100_tubula_1a_71_8	+	4958			hypothetical protein		hypothetical_protein	NaN		0	4958
+ct3_100_tubula_1a_71	4524	4751	ct3_100_tubula_1a_71_9	+	4958			hypothetical protein		hypothetical_protein	NaN		0	4958
+ct3_100_tubula_1a_71	4729	4920	ct3_100_tubula_1a_71_10	+	4958			hypothetical protein		hypothetical_protein	NaN		0	4958
+ct3_100_tubula_1a_72	180	335	ct3_100_tubula_1a_72_1	+	4491			hypothetical protein		hypothetical_protein	NaN		0	4491
+ct3_100_tubula_1a_72	397	714	ct3_100_tubula_1a_72_2	+	4491			hypothetical protein		hypothetical_protein	NaN		0	4491
+ct3_100_tubula_1a_72	767	1009	ct3_100_tubula_1a_72_3	+	4491			hypothetical protein		hypothetical_protein	NaN		0	4491
+ct3_100_tubula_1a_72	1066	1497	ct3_100_tubula_1a_72_4	+	4491			hypothetical protein		hypothetical_protein	NaN		0	4491
+ct3_100_tubula_1a_72	1494	1985	ct3_100_tubula_1a_72_5	+	4491			hypothetical protein		hypothetical_protein	NaN		0	4491
+ct3_100_tubula_1a_72	2136	2300	ct3_100_tubula_1a_72_6	-	4491			hypothetical protein		hypothetical_protein	NaN		0	4491
+ct3_100_tubula_1a_72	2547	2792	ct3_100_tubula_1a_72_7	+	4491			hypothetical protein		hypothetical_protein	NaN		0	4491
+ct3_100_tubula_1a_72	3057	3605	ct3_100_tubula_1a_72_8	+	4491			hypothetical protein		hypothetical_protein	NaN		0	4491
+ct3_100_tubula_1a_72	3602	3709	ct3_100_tubula_1a_72_9	+	4491			hypothetical protein		hypothetical_protein	NaN		0	4491
+ct3_100_tubula_1a_72	3785	4489	ct3_100_tubula_1a_72_10	+	4491			hypothetical protein		hypothetical_protein	NaN		0	4491
+ct3_100_tubula_1a_73	1	1104	ct3_100_tubula_1a_73_1	+	7107		PFAM:PF02486.18	Replication-initiation-factor	rep_hall_hmm	common_virus	NaN		0	7107
+ct3_100_tubula_1a_73	1109	1375	ct3_100_tubula_1a_73_2	+	7107		PFAM:PF06950.10	single-strand-DNA-binding-protein	phrogs_hmm	common_virus	NaN		0	7107
+ct3_100_tubula_1a_73	1798	2037	ct3_100_tubula_1a_73_3	+	7107		PFAM:PF05356.10	Major-Filamentous-Coat-protein	hallmark_hmm	common_virus	NaN		0	7107
+ct3_100_tubula_1a_73	2066	2998	ct3_100_tubula_1a_73_4	+	7107			hypothetical protein		hypothetical_protein	NaN		0	7107
+ct3_100_tubula_1a_73	3453	3797	ct3_100_tubula_1a_73_5	+	7107		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	7107
+ct3_100_tubula_1a_73	3800	5167	ct3_100_tubula_1a_73_6	+	7107		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	7107
+ct3_100_tubula_1a_73	5384	5782	ct3_100_tubula_1a_73_7	+	7107			hypothetical protein		hypothetical_protein	NaN		0	7107
+ct3_100_tubula_1a_73	6655	6900	ct3_100_tubula_1a_73_8	+	7107			hypothetical protein		hypothetical_protein	NaN		0	7107
+ct3_100_tubula_1a_74	1	831	ct3_100_tubula_1a_74_1	+	6407		PFAM:PF05144.13	Phage-replication-protein	rep_hall_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_74	843	1106	ct3_100_tubula_1a_74_2	+	6407		PDB:1GVP_A	Rep-protein	rep_hall_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_74	1301	1522	ct3_100_tubula_1a_74_3	+	6407		CDD:PHA00025	major-coat-protein	hallmark_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_74	1579	2853	ct3_100_tubula_1a_74_4	+	6407		CDD:pfam05357	Filamentous-Minor-Coat-Protein-	hallmark_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_74	2856	3194	ct3_100_tubula_1a_74_5	+	6407		CDD:PHA00094	minor-coat-protein	hallmark_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_74	3196	4242	ct3_100_tubula_1a_74_6	+	6407		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_74	4220	5500	ct3_100_tubula_1a_74_7	+	6407		PDB:5WQ8_J	Type-II-secretion-system-protein	common_virus_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_74	6123	6407	ct3_100_tubula_1a_74_8	+	6407		PFAM:PF05144.13	Phage-replication-protein	rep_hall_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_75	1	327	ct3_100_tubula_1a_75_1	+	8929		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	8929
+ct3_100_tubula_1a_75	399	599	ct3_100_tubula_1a_75_2	+	8929			hypothetical protein		hypothetical_protein	NaN		0	8929
+ct3_100_tubula_1a_75	624	821	ct3_100_tubula_1a_75_3	+	8929			hypothetical protein		hypothetical_protein	NaN		0	8929
+ct3_100_tubula_1a_75	821	1117	ct3_100_tubula_1a_75_4	+	8929			hypothetical protein		hypothetical_protein	NaN		0	8929
+ct3_100_tubula_1a_75	1117	1326	ct3_100_tubula_1a_75_5	+	8929			hypothetical protein		hypothetical_protein	NaN		0	8929
+ct3_100_tubula_1a_75	1326	1535	ct3_100_tubula_1a_75_6	+	8929			hypothetical protein		hypothetical_protein	NaN		0	8929
+ct3_100_tubula_1a_75	1538	1786	ct3_100_tubula_1a_75_7	+	8929		PFAM:PF17091.4	Tail-G7P-protein	hallmark_hmm	common_virus	NaN		0	8929
+ct3_100_tubula_1a_75	1789	2013	ct3_100_tubula_1a_75_8	+	8929		PFAM:PF10389.8	virion-structural-protein	phrogs_hmm	hypothetical_protein	NaN		0	8929
+ct3_100_tubula_1a_75	2089	3624	ct3_100_tubula_1a_75_9	+	8929		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	8929
+ct3_100_tubula_1a_75	3637	3966	ct3_100_tubula_1a_75_10	+	8929		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	8929
+ct3_100_tubula_1a_75	3971	5290	ct3_100_tubula_1a_75_11	+	8929		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	8929
+ct3_100_tubula_1a_75	6226	7083	ct3_100_tubula_1a_75_12	+	8929		PFAM:PF07232.10	Putative-rep-protein-(DUF1424)	common_virus_hmm	common_virus	NaN		0	8929
+ct3_100_tubula_1a_75	7091	7288	ct3_100_tubula_1a_75_13	-	8929			hypothetical protein		hypothetical_protein	NaN		0	8929
+ct3_100_tubula_1a_75	7608	7880	ct3_100_tubula_1a_75_14	+	8929			hypothetical protein		hypothetical_protein	NaN		0	8929
+ct3_100_tubula_1a_75	7831	8421	ct3_100_tubula_1a_75_15	-	8929		PDB:1ZR4_E	resolvase,-site-specific-recombination	common_virus_hmm	common_virus	NaN		0	8929
+ct3_100_tubula_1a_75	8524	8820	ct3_100_tubula_1a_75_16	-	8929		PFAM:PF10078.8	HTH-DNA-binding-protein	phrogs_hmm	hypothetical_protein	NaN		0	8929
+ct3_100_tubula_1a_76	1	2097	ct3_100_tubula_1a_76_1	+	8555		PFAM:PF05840.12	Rep-protein	rep_hall_hmm	common_virus	NaN		0	8555
+ct3_100_tubula_1a_76	2150	2464	ct3_100_tubula_1a_76_2	+	8555			hypothetical protein		hypothetical_protein	NaN		0	8555
+ct3_100_tubula_1a_76	2475	2591	ct3_100_tubula_1a_76_3	+	8555			hypothetical protein		hypothetical_protein	NaN		0	8555
+ct3_100_tubula_1a_76	2729	2950	ct3_100_tubula_1a_76_4	+	8555		CDD:PHA00025	major-coat-protein	hallmark_hmm	common_virus	NaN		0	8555
+ct3_100_tubula_1a_76	3028	4527	ct3_100_tubula_1a_76_5	+	8555		PFAM:PF05616.12	minor-head-protein;-receptor-binding	phrogs_hmm	hypothetical_protein	NaN		0	8555
+ct3_100_tubula_1a_76	4534	4905	ct3_100_tubula_1a_76_6	+	8555		CDD:PHA00094	minor-coat-protein	hallmark_hmm	common_virus	NaN		0	8555
+ct3_100_tubula_1a_76	4910	5995	ct3_100_tubula_1a_76_7	+	8555		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	8555
+ct3_100_tubula_1a_76	5976	7304	ct3_100_tubula_1a_76_8	+	8555		PDB:5WQ8_J	Type-II-secretion-system-protein	common_virus_hmm	common_virus	NaN		0	8555
+ct3_100_tubula_1a_76	7312	7683	ct3_100_tubula_1a_76_9	-	8555		PHA01082	putative transcription regulator	mmseqs_cdd	common_virus	NaN		0	8555
+ct3_100_tubula_1a_76	7643	8107	ct3_100_tubula_1a_76_10	-	8555		PDB:4IA8_B	helix-turn-helix-protein	common_virus_hmm	common_virus	NaN		0	8555
+ct3_100_tubula_1a_76	8284	8553	ct3_100_tubula_1a_76_11	+	8555		pfam12961	Domain of Unknown Function with PDB structure (DUF3850). The search results from NCBI sequence alignment indicates a conserved domain belonging to ASCH superfamily. Dali searching results show that the protein is a structurally similar to the PUA domain, suggesting it may be involved in RNA recognition. It has been reported that the deletion of PUA genes results in impaired growth (RluD) and competitive disadvantage (TruB) in Escherichia coli. Suggestions have been put forward that, apart from their usual catalytic role, certain PUS enzymes (e.g. TruB) may also act as chaperones for RNA folding. The interface interaction indicates that the biomolecule of protein NP_809782.1 should be a dimer.	mmseqs_cdd	common_virus	NaN		0	8555
+ct3_100_tubula_1a_77	1	1296	ct3_100_tubula_1a_77_1	-	27557		PDB:5JXR_A	Chromatin-remodeling-complex-ATPase	common_virus_hmm	common_virus	NaN		0	27557
+ct3_100_tubula_1a_77	1289	3952	ct3_100_tubula_1a_77_2	-	27557		NF033455	BREX-6 system adenine-specific DNA-methyltransferase PglX. 	mmseqs_cdd	nonviral_gene	NaN		0	27557
+ct3_100_tubula_1a_77	4035	4508	ct3_100_tubula_1a_77_3	-	27557			hypothetical protein		hypothetical_protein	NaN		0	27557
+ct3_100_tubula_1a_77	4757	5653	ct3_100_tubula_1a_77_4	-	27557			hypothetical protein		hypothetical_protein	NaN		0	27557
+ct3_100_tubula_1a_77	5683	6963	ct3_100_tubula_1a_77_5	-	27557		PDB:1Z19_B	Integrase	common_virus_hmm	common_virus	NaN		0	27557
+ct3_100_tubula_1a_77	7034	8203	ct3_100_tubula_1a_77_6	+	27557		COG2256	Replication-associated recombination protein RarA (DNA-dependent ATPase) [Replication, recombination and repair]. 	mmseqs_cdd	nonviral_gene	NaN		0	27557
+ct3_100_tubula_1a_77	8270	9586	ct3_100_tubula_1a_77_7	+	27557		PRK05431	seryl-tRNA synthetase; Provisional	mmseqs_cdd	nonviral_gene	NaN		0	27557
+ct3_100_tubula_1a_77	9810	10400	ct3_100_tubula_1a_77_8	+	27557		PDB:1ZR4_E	resolvase,-site-specific-recombination	common_virus_hmm	common_virus	NaN		0	27557
+ct3_100_tubula_1a_77	10420	10698	ct3_100_tubula_1a_77_9	+	27557			hypothetical protein		hypothetical_protein	NaN		0	27557
+ct3_100_tubula_1a_77	10695	11630	ct3_100_tubula_1a_77_10	-	27557		PFAM:PF05840.12	Rep-protein	rep_hall_hmm	common_virus	NaN		0	27557
+ct3_100_tubula_1a_77	12148	13461	ct3_100_tubula_1a_77_11	-	27557		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	27557
+ct3_100_tubula_1a_77	13466	13795	ct3_100_tubula_1a_77_12	-	27557		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	27557
+ct3_100_tubula_1a_77	13808	15331	ct3_100_tubula_1a_77_13	-	27557		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	27557
+ct3_100_tubula_1a_77	15406	15624	ct3_100_tubula_1a_77_14	-	27557		PFAM:PF10389.8	virion-structural-protein	phrogs_hmm	hypothetical_protein	NaN		0	27557
+ct3_100_tubula_1a_77	15627	15875	ct3_100_tubula_1a_77_15	-	27557		PFAM:PF17091.4	Tail-G7P-protein	hallmark_hmm	common_virus	NaN		0	27557
+ct3_100_tubula_1a_77	15878	16087	ct3_100_tubula_1a_77_16	-	27557			hypothetical protein		hypothetical_protein	NaN		0	27557
+ct3_100_tubula_1a_77	16087	16296	ct3_100_tubula_1a_77_17	-	27557			hypothetical protein		hypothetical_protein	NaN		0	27557
+ct3_100_tubula_1a_77	16296	16574	ct3_100_tubula_1a_77_18	-	27557			hypothetical protein		hypothetical_protein	NaN		0	27557
+ct3_100_tubula_1a_77	16584	16829	ct3_100_tubula_1a_77_19	-	27557			hypothetical protein		hypothetical_protein	NaN		0	27557
+ct3_100_tubula_1a_77	16829	17155	ct3_100_tubula_1a_77_20	-	27557		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	27557
+ct3_100_tubula_1a_77	17348	17638	ct3_100_tubula_1a_77_21	+	27557		PFAM:PF10078.8	transcriptional-regulator	phrogs_hmm	hypothetical_protein	NaN		0	27557
+ct3_100_tubula_1a_77	18232	18558	ct3_100_tubula_1a_77_22	+	27557			hypothetical protein		hypothetical_protein	NaN		0	27557
+ct3_100_tubula_1a_77	18604	18966	ct3_100_tubula_1a_77_23	+	27557		PFAM:PF13148.5	DNA-helicase	phrogs_hmm	hypothetical_protein	NaN		0	27557
+ct3_100_tubula_1a_77	19035	20021	ct3_100_tubula_1a_77_24	-	27557		PFAM:PF13701.5	Transposase-DDE-domain-protein	common_virus_hmm	common_virus	NaN		0	27557
+ct3_100_tubula_1a_77	20051	20173	ct3_100_tubula_1a_77_25	-	27557			hypothetical protein		hypothetical_protein	NaN		0	27557
+ct3_100_tubula_1a_77	20188	20637	ct3_100_tubula_1a_77_26	-	27557		PDB:3SZ4_A	Exonuclease	common_virus_hmm	common_virus	NaN		0	27557
+ct3_100_tubula_1a_77	20607	20843	ct3_100_tubula_1a_77_27	-	27557			hypothetical protein		hypothetical_protein	NaN		0	27557
+ct3_100_tubula_1a_77	21403	22353	ct3_100_tubula_1a_77_28	+	27557		TIGR01845	efflux transporter, outer membrane factor (OMF) lipoprotein, NodT family. Members of this model comprise a subfamily of the Outer Membrane Factor (TCDB 1.B.17) porins. OMF proteins operate in conjunction with a primary transporter of the RND, MFS, ABC, or PET systems, and a MFP (membrane fusion protein) to tranport substrates across membranes. The complex thus formed allows transport (export) of various solutes (heavy metal cations; drugs, oligosaccharides, proteins, etc.) across the two envelopes of the Gram-negative bacterial cell envelope in a single energy-coupled step. Current data suggest that the OMF (and not the MFP) is largely responsible for the formation of both the trans-outer membrane and trans-periplasmic channels. The roles played by the MFP have yet to be determined. [Cellular processes, Detoxification, Transport and binding proteins, Porins]	mmseqs_cdd	nonviral_gene	NaN		0	27557
+ct3_100_tubula_1a_77	22346	23455	ct3_100_tubula_1a_77_29	+	27557		TIGR01730	RND family efflux transporter, MFP subunit. This model represents the MFP (membrane fusion protein) component of the RND family of transporters. RND refers to Resistance, Nodulation, and cell Division. It is, in part, a subfamily of pfam00529 (Pfam release 7.5) but hits substantial numbers of proteins missed by that model. The related HlyD secretion protein, for which pfam00529 is named, is outside the scope of this model. Attributed functions imply outward transport. These functions include nodulation, acriflavin resistance, heavy metal efflux, and multidrug resistance proteins. Most members of this family are found in Gram-negative bacteria. The proposed function of MFP proteins is to bring the inner and outer membranes together and enable transport to the outside of the outer membrane. Note, however, that a few members of this family are found in Gram-positive bacteria, where there is no outer membrane. [Transport and binding proteins, Unknown substrate]	mmseqs_cdd	nonviral_gene	NaN		0	27557
+ct3_100_tubula_1a_77	23452	26553	ct3_100_tubula_1a_77_30	+	27557		COG0841	Multidrug efflux pump subunit AcrB [Defense mechanisms]. 	mmseqs_cdd	nonviral_gene	NaN		0	27557
+ct3_100_tubula_1a_77	26550	26933	ct3_100_tubula_1a_77_31	+	27557			hypothetical protein		hypothetical_protein	NaN		0	27557
+ct3_100_tubula_1a_77	27009	27452	ct3_100_tubula_1a_77_32	+	27557		cd07385	Bacillus subtilis YkuE and related proteins, C-terminal metallophosphatase domain. YkuE is an uncharacterized Bacillus subtilis protein with a C-terminal metallophosphatase domain and an N-terminal twin-arginine (RR) motif. An RR-signal peptide derived from the Bacillus subtilis YkuE protein can direct Tat-dependent secretion of agarase in Streptomyces lividans. This is an indication that YkuE is transported by the Bacillus subtilis Tat (Twin-arginine translocation) pathway machinery.  YkuE belongs to the metallophosphatase (MPP) superfamily.  MPPs are functionally diverse, but all share a conserved domain with an active site consisting of two metal ions (usually manganese, iron, or zinc) coordinated with octahedral geometry by a cage of histidine, aspartate, and asparagine residues. The MPP superfamily includes: Mre11/SbcD-like exonucleases, Dbr1-like RNA lariat debranching enzymes, YfcE-like phosphodiesterases, purple acid phosphatases (PAPs), YbbF-like UDP-2,3-diacylglucosamine hydrolases, and acid sphingomyelinases (ASMases).  The conserved domain is a double beta-sheet sandwich with a di-metal active site made up of residues located at the C-terminal side of the sheets. This domain is thought to allow for productive metal coordination.	mmseqs_cdd	nonviral_gene	NaN		0	27557
+ct3_100_tubula_1a_78	1	831	ct3_100_tubula_1a_78_1	+	6407		PFAM:PF05144.13	Phage-replication-protein	rep_hall_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_78	843	1106	ct3_100_tubula_1a_78_2	+	6407		PDB:1GVP_A	Rep-protein	rep_hall_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_78	1301	1522	ct3_100_tubula_1a_78_3	+	6407		CDD:PHA00025	major-coat-protein	hallmark_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_78	1579	2853	ct3_100_tubula_1a_78_4	+	6407		CDD:pfam05357	Filamentous-Minor-Coat-Protein-	hallmark_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_78	2856	3194	ct3_100_tubula_1a_78_5	+	6407		CDD:PHA00094	minor-coat-protein	hallmark_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_78	3196	4242	ct3_100_tubula_1a_78_6	+	6407		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_78	4220	5500	ct3_100_tubula_1a_78_7	+	6407		PDB:5WQ8_J	Type-II-secretion-system-protein	common_virus_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_78	6123	6407	ct3_100_tubula_1a_78_8	+	6407		PFAM:PF05144.13	Phage-replication-protein	rep_hall_hmm	common_virus	NaN		0	6407
+ct3_100_tubula_1a_79	1	327	ct3_100_tubula_1a_79_1	+	7679		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	7679
+ct3_100_tubula_1a_79	380	580	ct3_100_tubula_1a_79_2	+	7679			hypothetical protein		hypothetical_protein	NaN		0	7679
+ct3_100_tubula_1a_79	580	876	ct3_100_tubula_1a_79_3	+	7679			hypothetical protein		hypothetical_protein	NaN		0	7679
+ct3_100_tubula_1a_79	876	1085	ct3_100_tubula_1a_79_4	+	7679			hypothetical protein		hypothetical_protein	NaN		0	7679
+ct3_100_tubula_1a_79	1085	1294	ct3_100_tubula_1a_79_5	+	7679			hypothetical protein		hypothetical_protein	NaN		0	7679
+ct3_100_tubula_1a_79	1297	1545	ct3_100_tubula_1a_79_6	+	7679		PFAM:PF17091.4	Tail-G7P-protein	hallmark_hmm	common_virus	NaN		0	7679
+ct3_100_tubula_1a_79	1548	1772	ct3_100_tubula_1a_79_7	+	7679		PFAM:PF10389.8	virion-structural-protein	phrogs_hmm	hypothetical_protein	NaN		0	7679
+ct3_100_tubula_1a_79	1856	3388	ct3_100_tubula_1a_79_8	+	7679		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	7679
+ct3_100_tubula_1a_79	3401	3730	ct3_100_tubula_1a_79_9	+	7679		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	7679
+ct3_100_tubula_1a_79	3735	5057	ct3_100_tubula_1a_79_10	+	7679		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	7679
+ct3_100_tubula_1a_79	5144	5863	ct3_100_tubula_1a_79_11	+	7679		PFAM:PF10723.8	Replication-regulatory-protein-RepB	rep_hall_hmm	common_virus	NaN		0	7679
+ct3_100_tubula_1a_79	6305	7225	ct3_100_tubula_1a_79_12	+	7679		PFAM:PF05840.12	Rep-protein	rep_hall_hmm	common_virus	NaN		0	7679
+ct3_100_tubula_1a_79	7234	7524	ct3_100_tubula_1a_79_13	-	7679		PFAM:PF10078.8	transcriptional-regulator	phrogs_hmm	hypothetical_protein	NaN		0	7679
+ct3_100_tubula_1a_8	1	291	ct3_100_tubula_1a_8_1	-	13152		PFAM:PF10078.8	transcriptional-regulator	phrogs_hmm	hypothetical_protein	NaN		0	13152
+ct3_100_tubula_1a_8	484	810	ct3_100_tubula_1a_8_2	+	13152		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	13152
+ct3_100_tubula_1a_8	810	1055	ct3_100_tubula_1a_8_3	+	13152			hypothetical protein		hypothetical_protein	NaN		0	13152
+ct3_100_tubula_1a_8	1065	1343	ct3_100_tubula_1a_8_4	+	13152			hypothetical protein		hypothetical_protein	NaN		0	13152
+ct3_100_tubula_1a_8	1343	1552	ct3_100_tubula_1a_8_5	+	13152			hypothetical protein		hypothetical_protein	NaN		0	13152
+ct3_100_tubula_1a_8	1552	1761	ct3_100_tubula_1a_8_6	+	13152			hypothetical protein		hypothetical_protein	NaN		0	13152
+ct3_100_tubula_1a_8	1764	2012	ct3_100_tubula_1a_8_7	+	13152		PFAM:PF17091.4	Tail-G7P-protein	hallmark_hmm	common_virus	NaN		0	13152
+ct3_100_tubula_1a_8	2015	2233	ct3_100_tubula_1a_8_8	+	13152		PFAM:PF10389.8	virion-structural-protein	phrogs_hmm	hypothetical_protein	NaN		0	13152
+ct3_100_tubula_1a_8	2308	3831	ct3_100_tubula_1a_8_9	+	13152		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	13152
+ct3_100_tubula_1a_8	3844	4173	ct3_100_tubula_1a_8_10	+	13152		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	13152
+ct3_100_tubula_1a_8	4178	5491	ct3_100_tubula_1a_8_11	+	13152		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	13152
+ct3_100_tubula_1a_8	6009	6944	ct3_100_tubula_1a_8_12	+	13152		PFAM:PF05840.12	Rep-protein	rep_hall_hmm	common_virus	NaN		0	13152
+ct3_100_tubula_1a_8	6941	7219	ct3_100_tubula_1a_8_13	-	13152			hypothetical protein		hypothetical_protein	NaN		0	13152
+ct3_100_tubula_1a_8	7239	7829	ct3_100_tubula_1a_8_14	-	13152		PDB:1ZR4_E	resolvase,-site-specific-recombination	common_virus_hmm	common_virus	NaN		0	13152
+ct3_100_tubula_1a_8	8053	9369	ct3_100_tubula_1a_8_15	-	13152		PRK05431	seryl-tRNA synthetase; Provisional	mmseqs_cdd	nonviral_gene	NaN		0	13152
+ct3_100_tubula_1a_8	9436	10488	ct3_100_tubula_1a_8_16	-	13152		COG2256	Replication-associated recombination protein RarA (DNA-dependent ATPase) [Replication, recombination and repair]. 	mmseqs_cdd	nonviral_gene	NaN		0	13152
+ct3_100_tubula_1a_8	10676	11956	ct3_100_tubula_1a_8_17	+	13152		PDB:1Z19_B	Integrase	common_virus_hmm	common_virus	NaN		0	13152
+ct3_100_tubula_1a_8	11986	12882	ct3_100_tubula_1a_8_18	+	13152			hypothetical protein		hypothetical_protein	NaN		0	13152
+ct3_100_tubula_1a_80	1	1356	ct3_100_tubula_1a_80_1	+	6312		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	6312
+ct3_100_tubula_1a_80	1612	1863	ct3_100_tubula_1a_80_2	+	6312			hypothetical protein		hypothetical_protein	NaN		0	6312
+ct3_100_tubula_1a_80	1873	3219	ct3_100_tubula_1a_80_3	+	6312		PFAM:PF05144.13	Phage-replication-protein	rep_hall_hmm	common_virus	NaN		0	6312
+ct3_100_tubula_1a_80	3271	3546	ct3_100_tubula_1a_80_4	+	6312		PDB:1GVP_A	Rep-protein	rep_hall_hmm	common_virus	NaN		0	6312
+ct3_100_tubula_1a_80	3925	4194	ct3_100_tubula_1a_80_5	+	6312			hypothetical protein		hypothetical_protein	NaN		0	6312
+ct3_100_tubula_1a_80	4197	4412	ct3_100_tubula_1a_80_6	+	6312		CDD:pfam10389	filamentous-major-capsid-protein-B	hallmark_hmm	common_virus	NaN		0	6312
+ct3_100_tubula_1a_80	4553	5938	ct3_100_tubula_1a_80_7	+	6312		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	6312
+ct3_100_tubula_1a_80	5947	6309	ct3_100_tubula_1a_80_8	+	6312		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	6312
+ct3_100_tubula_1a_81	285	1181	ct3_100_tubula_1a_81_1	-	13166			hypothetical protein		hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_81	1211	2491	ct3_100_tubula_1a_81_2	-	13166		PDB:1Z19_B	Integrase	common_virus_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_81	2679	3731	ct3_100_tubula_1a_81_3	+	13166		COG2256	Replication-associated recombination protein RarA (DNA-dependent ATPase) [Replication, recombination and repair]. 	mmseqs_cdd	nonviral_gene	NaN		0	13166
+ct3_100_tubula_1a_81	3798	5114	ct3_100_tubula_1a_81_4	+	13166		PRK05431	seryl-tRNA synthetase; Provisional	mmseqs_cdd	nonviral_gene	NaN		0	13166
+ct3_100_tubula_1a_81	5338	5928	ct3_100_tubula_1a_81_5	+	13166		PDB:1ZR4_E	resolvase,-site-specific-recombination	common_virus_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_81	5948	6226	ct3_100_tubula_1a_81_6	+	13166			hypothetical protein		hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_81	6223	7158	ct3_100_tubula_1a_81_7	-	13166		PFAM:PF05840.12	Rep-protein	rep_hall_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_81	7676	8989	ct3_100_tubula_1a_81_8	-	13166		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_81	8994	9323	ct3_100_tubula_1a_81_9	-	13166		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_81	9336	10859	ct3_100_tubula_1a_81_10	-	13166		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_81	10934	11152	ct3_100_tubula_1a_81_11	-	13166		PFAM:PF10389.8	virion-structural-protein	phrogs_hmm	hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_81	11155	11403	ct3_100_tubula_1a_81_12	-	13166		PFAM:PF17091.4	Tail-G7P-protein	hallmark_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_81	11406	11615	ct3_100_tubula_1a_81_13	-	13166			hypothetical protein		hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_81	11615	11824	ct3_100_tubula_1a_81_14	-	13166			hypothetical protein		hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_81	11824	12102	ct3_100_tubula_1a_81_15	-	13166			hypothetical protein		hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_81	12112	12357	ct3_100_tubula_1a_81_16	-	13166			hypothetical protein		hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_81	12357	12683	ct3_100_tubula_1a_81_17	-	13166		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_81	12876	13166	ct3_100_tubula_1a_81_18	+	13166		PFAM:PF10078.8	transcriptional-regulator	phrogs_hmm	hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_82	1	825	ct3_100_tubula_1a_82_1	+	5715		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	5715
+ct3_100_tubula_1a_82	1331	1516	ct3_100_tubula_1a_82_2	-	5715			hypothetical protein		hypothetical_protein	NaN		0	5715
+ct3_100_tubula_1a_82	1643	2779	ct3_100_tubula_1a_82_3	+	5715		PFAM:PF05144.13	Phage-replication-protein	rep_hall_hmm	common_virus	NaN		0	5715
+ct3_100_tubula_1a_82	2776	3192	ct3_100_tubula_1a_82_4	+	5715			hypothetical protein		hypothetical_protein	NaN		0	5715
+ct3_100_tubula_1a_82	3203	3487	ct3_100_tubula_1a_82_5	+	5715		PDB:1GVP_A	Rep-protein	rep_hall_hmm	common_virus	NaN		0	5715
+ct3_100_tubula_1a_82	3503	3610	ct3_100_tubula_1a_82_6	+	5715			hypothetical protein		hypothetical_protein	NaN		0	5715
+ct3_100_tubula_1a_82	3607	3735	ct3_100_tubula_1a_82_7	+	5715			hypothetical protein		hypothetical_protein	NaN		0	5715
+ct3_100_tubula_1a_82	3747	3980	ct3_100_tubula_1a_82_8	+	5715		CDD:PHA00025	major-coat-protein	hallmark_hmm	common_virus	NaN		0	5715
+ct3_100_tubula_1a_82	4063	5385	ct3_100_tubula_1a_82_9	+	5715			hypothetical protein		hypothetical_protein	NaN		0	5715
+ct3_100_tubula_1a_82	5385	5714	ct3_100_tubula_1a_82_10	+	5715		CDD:PHA00094	minor-coat-protein	hallmark_hmm	common_virus	NaN		0	5715
+ct3_100_tubula_1a_83	1	1152	ct3_100_tubula_1a_83_1	+	6346		PFAM:PF01446.16	Plasmid-like-replication-protein	rep_hall_hmm	common_virus	NaN		0	6346
+ct3_100_tubula_1a_83	1220	1477	ct3_100_tubula_1a_83_2	+	6346		PDB:1PFS_B	PF3-SINGLE-STRANDED-DNA-BINDING-PROTEI	common_virus_hmm	common_virus	NaN		0	6346
+ct3_100_tubula_1a_83	1661	1795	ct3_100_tubula_1a_83_3	+	6346			hypothetical protein		hypothetical_protein	NaN		0	6346
+ct3_100_tubula_1a_83	1890	3452	ct3_100_tubula_1a_83_4	+	6346		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	6346
+ct3_100_tubula_1a_83	3445	3726	ct3_100_tubula_1a_83_5	+	6346		CDD:PHA02508	putative-minor-coat-protein	hallmark_hmm	common_virus	NaN		0	6346
+ct3_100_tubula_1a_83	3839	4102	ct3_100_tubula_1a_83_6	+	6346			hypothetical protein		hypothetical_protein	NaN		0	6346
+ct3_100_tubula_1a_83	4110	5069	ct3_100_tubula_1a_83_7	+	6346		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	6346
+ct3_100_tubula_1a_83	5083	6279	ct3_100_tubula_1a_83_8	+	6346		PDB:5WQ8_J	Type-II-secretion-system-protein	common_virus_hmm	common_virus	NaN		0	6346
+ct3_100_tubula_1a_84	3	365	ct3_100_tubula_1a_84_1	+	8529		PHA01082	putative transcription regulator	mmseqs_cdd	common_virus	NaN		0	8529
+ct3_100_tubula_1a_84	435	1274	ct3_100_tubula_1a_84_2	-	8529			hypothetical protein		hypothetical_protein	NaN		0	8529
+ct3_100_tubula_1a_84	1298	1732	ct3_100_tubula_1a_84_3	-	8529			hypothetical protein		hypothetical_protein	NaN		0	8529
+ct3_100_tubula_1a_84	2246	2389	ct3_100_tubula_1a_84_4	-	8529			hypothetical protein		hypothetical_protein	NaN		0	8529
+ct3_100_tubula_1a_84	2389	3774	ct3_100_tubula_1a_84_5	-	8529		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	8529
+ct3_100_tubula_1a_84	3779	4123	ct3_100_tubula_1a_84_6	-	8529		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	8529
+ct3_100_tubula_1a_84	4125	5405	ct3_100_tubula_1a_84_7	-	8529		PFAM:PF05616.12	minor-head-protein;-receptor-binding	phrogs_hmm	hypothetical_protein	NaN		0	8529
+ct3_100_tubula_1a_84	5809	6054	ct3_100_tubula_1a_84_8	-	8529		PFAM:PF05356.10	Major-Filamentous-Coat-protein	hallmark_hmm	common_virus	NaN		0	8529
+ct3_100_tubula_1a_84	6060	6290	ct3_100_tubula_1a_84_9	-	8529		PFAM:PF17091.4	Tail-G7P-protein	hallmark_hmm	common_virus	NaN		0	8529
+ct3_100_tubula_1a_84	6294	6653	ct3_100_tubula_1a_84_10	-	8529		pfam06950	Protein of unknown function (DUF1293). This family consists of several bacterial and phage proteins of around 115 residues in length. The function of this family is unknown.	mmseqs_cdd	nonviral_gene	NaN		0	8529
+ct3_100_tubula_1a_84	6657	7805	ct3_100_tubula_1a_84_11	-	8529		PFAM:PF02486.18	Replication-initiation-factor	rep_hall_hmm	common_virus	NaN		0	8529
+ct3_100_tubula_1a_84	7789	8004	ct3_100_tubula_1a_84_12	-	8529			hypothetical protein		hypothetical_protein	NaN		0	8529
+ct3_100_tubula_1a_84	8161	8529	ct3_100_tubula_1a_84_13	+	8529		PDB:4IA8_B	helix-turn-helix-protein	common_virus_hmm	common_virus	NaN		0	8529
+ct3_100_tubula_1a_85	1	291	ct3_100_tubula_1a_85_1	-	13152		PFAM:PF10078.8	transcriptional-regulator	phrogs_hmm	hypothetical_protein	NaN		0	13152
+ct3_100_tubula_1a_85	484	810	ct3_100_tubula_1a_85_2	+	13152		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	13152
+ct3_100_tubula_1a_85	810	1055	ct3_100_tubula_1a_85_3	+	13152			hypothetical protein		hypothetical_protein	NaN		0	13152
+ct3_100_tubula_1a_85	1065	1343	ct3_100_tubula_1a_85_4	+	13152			hypothetical protein		hypothetical_protein	NaN		0	13152
+ct3_100_tubula_1a_85	1343	1552	ct3_100_tubula_1a_85_5	+	13152			hypothetical protein		hypothetical_protein	NaN		0	13152
+ct3_100_tubula_1a_85	1552	1761	ct3_100_tubula_1a_85_6	+	13152			hypothetical protein		hypothetical_protein	NaN		0	13152
+ct3_100_tubula_1a_85	1764	2012	ct3_100_tubula_1a_85_7	+	13152		PFAM:PF17091.4	Tail-G7P-protein	hallmark_hmm	common_virus	NaN		0	13152
+ct3_100_tubula_1a_85	2015	2233	ct3_100_tubula_1a_85_8	+	13152		PFAM:PF10389.8	virion-structural-protein	phrogs_hmm	hypothetical_protein	NaN		0	13152
+ct3_100_tubula_1a_85	2308	3831	ct3_100_tubula_1a_85_9	+	13152		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	13152
+ct3_100_tubula_1a_85	3844	4173	ct3_100_tubula_1a_85_10	+	13152		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	13152
+ct3_100_tubula_1a_85	4178	5491	ct3_100_tubula_1a_85_11	+	13152		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	13152
+ct3_100_tubula_1a_85	6009	6944	ct3_100_tubula_1a_85_12	+	13152		PFAM:PF05840.12	Rep-protein	rep_hall_hmm	common_virus	NaN		0	13152
+ct3_100_tubula_1a_85	6941	7219	ct3_100_tubula_1a_85_13	-	13152			hypothetical protein		hypothetical_protein	NaN		0	13152
+ct3_100_tubula_1a_85	7239	7829	ct3_100_tubula_1a_85_14	-	13152		PDB:1ZR4_E	resolvase,-site-specific-recombination	common_virus_hmm	common_virus	NaN		0	13152
+ct3_100_tubula_1a_85	8053	9369	ct3_100_tubula_1a_85_15	-	13152		PRK05431	seryl-tRNA synthetase; Provisional	mmseqs_cdd	nonviral_gene	NaN		0	13152
+ct3_100_tubula_1a_85	9436	10488	ct3_100_tubula_1a_85_16	-	13152		COG2256	Replication-associated recombination protein RarA (DNA-dependent ATPase) [Replication, recombination and repair]. 	mmseqs_cdd	nonviral_gene	NaN		0	13152
+ct3_100_tubula_1a_85	10676	11956	ct3_100_tubula_1a_85_17	+	13152		PDB:1Z19_B	Integrase	common_virus_hmm	common_virus	NaN		0	13152
+ct3_100_tubula_1a_85	11986	12882	ct3_100_tubula_1a_85_18	+	13152			hypothetical protein		hypothetical_protein	NaN		0	13152
+ct3_100_tubula_1a_86	1	393	ct3_100_tubula_1a_86_1	-	6779		PDB:4IA8_B	helix-turn-helix-protein	common_virus_hmm	common_virus	NaN		0	6779
+ct3_100_tubula_1a_86	509	715	ct3_100_tubula_1a_86_2	+	6779			hypothetical protein		hypothetical_protein	NaN		0	6779
+ct3_100_tubula_1a_86	715	1842	ct3_100_tubula_1a_86_3	+	6779		PFAM:PF02486.18	Replication-initiation-factor	rep_hall_hmm	common_virus	NaN		0	6779
+ct3_100_tubula_1a_86	1847	2158	ct3_100_tubula_1a_86_4	+	6779		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	6779
+ct3_100_tubula_1a_86	2225	2425	ct3_100_tubula_1a_86_5	+	6779		PFAM:PF10389.8	coat-protein-B	hallmark_hmm	common_virus	NaN		0	6779
+ct3_100_tubula_1a_86	2425	2760	ct3_100_tubula_1a_86_6	+	6779			hypothetical protein		hypothetical_protein	NaN		0	6779
+ct3_100_tubula_1a_86	2840	4120	ct3_100_tubula_1a_86_7	+	6779		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	6779
+ct3_100_tubula_1a_86	4117	4392	ct3_100_tubula_1a_86_8	+	6779		CDD:PHA02508	putative-minor-coat-protein	hallmark_hmm	common_virus	NaN		0	6779
+ct3_100_tubula_1a_86	4389	5483	ct3_100_tubula_1a_86_9	+	6779		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	6779
+ct3_100_tubula_1a_86	5588	6304	ct3_100_tubula_1a_86_10	+	6779		PFAM:PF10723.8	Replication-regulatory-protein-RepB	rep_hall_hmm	common_virus	NaN		0	6779
+ct3_100_tubula_1a_86	6348	6779	ct3_100_tubula_1a_86_11	+	6779		pfam01724	Domain of unknown function DUF29. This family consists of various hypothetical proteins from cyanobacteria, none of which are functionally described. The aligned region is approximately 120-140 amino acids long corresponding to almost the entire length of the proteins in the family. Structure 3fcn is a small protein that has a novel all-alpha fold. The N-terminal helical hairpin is likely to function as a dimerization module. This protein is a member of PFam family pfam01724. The function of this protein is unknown. One protein sequence contains a fusion of this protein and a DnaB domain, suggesting a possible role in DNA helicase activity (hypothetical). Dali hits have low Z and high rmsd, suggesting probably only topological similarities (not functional relevance) (details derived from TOPSAN). The family has several highly conserved sequence motifs, including YD/ExD, DxxNVxEEIE, and CPY/F/W, as well as conserved tryptophans.	mmseqs_cdd	nonviral_gene	NaN		0	6779
+ct3_100_tubula_1a_87	48	224	ct3_100_tubula_1a_87_1	-	4815			hypothetical protein		hypothetical_protein	NaN		0	4815
+ct3_100_tubula_1a_87	224	469	ct3_100_tubula_1a_87_2	-	4815		PDB:1PFS_B	PF3-SINGLE-STRANDED-DNA-BINDING-PROTEI	common_virus_hmm	common_virus	NaN		0	4815
+ct3_100_tubula_1a_87	462	1352	ct3_100_tubula_1a_87_3	-	4815		PDB:4CIJ_B	Rep-protein	rep_hall_hmm	common_virus	NaN		0	4815
+ct3_100_tubula_1a_87	1464	1955	ct3_100_tubula_1a_87_4	-	4815			hypothetical protein		hypothetical_protein	NaN		0	4815
+ct3_100_tubula_1a_87	2022	2933	ct3_100_tubula_1a_87_5	-	4815		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	4815
+ct3_100_tubula_1a_87	2930	3211	ct3_100_tubula_1a_87_6	-	4815		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	4815
+ct3_100_tubula_1a_87	3204	4673	ct3_100_tubula_1a_87_7	-	4815		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	4815
+ct3_100_tubula_1a_87	4716	4814	ct3_100_tubula_1a_87_8	-	4815			hypothetical protein		hypothetical_protein	NaN		0	4815
+ct3_100_tubula_1a_88	2	439	ct3_100_tubula_1a_88_1	-	4914		PFAM:PF02486.18	replication-initiation-protein	phrogs_hmm	hypothetical_protein	NaN		0	4914
+ct3_100_tubula_1a_88	721	1344	ct3_100_tubula_1a_88_2	-	4914		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	4914
+ct3_100_tubula_1a_88	1762	2394	ct3_100_tubula_1a_88_3	-	4914			hypothetical protein		hypothetical_protein	NaN		0	4914
+ct3_100_tubula_1a_88	2391	2558	ct3_100_tubula_1a_88_4	-	4914			hypothetical protein		hypothetical_protein	NaN		0	4914
+ct3_100_tubula_1a_88	2552	2683	ct3_100_tubula_1a_88_5	-	4914			hypothetical protein		hypothetical_protein	NaN		0	4914
+ct3_100_tubula_1a_88	2680	3813	ct3_100_tubula_1a_88_6	-	4914		UniProtKB:G5CUF1_9VIRU	Protein-C-	common_virus_hmm	common_virus	NaN		0	4914
+ct3_100_tubula_1a_88	3991	4233	ct3_100_tubula_1a_88_7	-	4914			hypothetical protein		hypothetical_protein	NaN		0	4914
+ct3_100_tubula_1a_88	4211	4912	ct3_100_tubula_1a_88_8	-	4914		PFAM:PF02486.18	replication-initiation-protein	phrogs_hmm	hypothetical_protein	NaN		0	4914
+ct3_100_tubula_1a_89	1	207	ct3_100_tubula_1a_89_1	+	6386			hypothetical protein		hypothetical_protein	NaN		0	6386
+ct3_100_tubula_1a_89	207	1328	ct3_100_tubula_1a_89_2	+	6386		PFAM:PF02486.18	Replication-initiation-factor	rep_hall_hmm	common_virus	NaN		0	6386
+ct3_100_tubula_1a_89	1339	1650	ct3_100_tubula_1a_89_3	+	6386		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	6386
+ct3_100_tubula_1a_89	1717	1917	ct3_100_tubula_1a_89_4	+	6386		PFAM:PF10389.8	coat-protein-B	hallmark_hmm	common_virus	NaN		0	6386
+ct3_100_tubula_1a_89	1917	2252	ct3_100_tubula_1a_89_5	+	6386			hypothetical protein		hypothetical_protein	NaN		0	6386
+ct3_100_tubula_1a_89	2332	3612	ct3_100_tubula_1a_89_6	+	6386		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	6386
+ct3_100_tubula_1a_89	3609	3884	ct3_100_tubula_1a_89_7	+	6386		CDD:PHA02508	putative-minor-coat-protein	hallmark_hmm	common_virus	NaN		0	6386
+ct3_100_tubula_1a_89	3881	4975	ct3_100_tubula_1a_89_8	+	6386		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	6386
+ct3_100_tubula_1a_89	5080	5379	ct3_100_tubula_1a_89_9	+	6386		PFAM:PF10723.8	Replication-regulatory-protein-RepB	rep_hall_hmm	common_virus	NaN		0	6386
+ct3_100_tubula_1a_89	5555	5833	ct3_100_tubula_1a_89_10	+	6386			hypothetical protein		hypothetical_protein	NaN		0	6386
+ct3_100_tubula_1a_89	5780	6250	ct3_100_tubula_1a_89_11	-	6386		PDB:4IA8_B	helix-turn-helix-protein	common_virus_hmm	common_virus	NaN		0	6386
+ct3_100_tubula_1a_9	1	1101	ct3_100_tubula_1a_9_1	+	8614		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	8614
+ct3_100_tubula_1a_9	1365	1553	ct3_100_tubula_1a_9_2	+	8614			hypothetical protein		hypothetical_protein	NaN		0	8614
+ct3_100_tubula_1a_9	1815	2789	ct3_100_tubula_1a_9_3	+	8614		PFAM:PF01548.16	Transposase	common_virus_hmm	common_virus	NaN		0	8614
+ct3_100_tubula_1a_9	2974	3210	ct3_100_tubula_1a_9_4	+	8614			hypothetical protein		hypothetical_protein	NaN		0	8614
+ct3_100_tubula_1a_9	3207	4610	ct3_100_tubula_1a_9_5	+	8614		PFAM:PF02486.18	Replication-initiation-factor	rep_hall_hmm	common_virus	NaN		0	8614
+ct3_100_tubula_1a_9	4600	4929	ct3_100_tubula_1a_9_6	+	8614		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	8614
+ct3_100_tubula_1a_9	4940	5152	ct3_100_tubula_1a_9_7	+	8614			hypothetical protein		hypothetical_protein	NaN		0	8614
+ct3_100_tubula_1a_9	5262	5471	ct3_100_tubula_1a_9_8	+	8614		PFAM:PF10389.8	major-head-protein	phrogs_hmm	hypothetical_protein	NaN		0	8614
+ct3_100_tubula_1a_9	5526	5798	ct3_100_tubula_1a_9_9	+	8614			hypothetical protein		hypothetical_protein	NaN		0	8614
+ct3_100_tubula_1a_9	5798	6076	ct3_100_tubula_1a_9_10	+	8614			hypothetical protein		hypothetical_protein	NaN		0	8614
+ct3_100_tubula_1a_9	6099	7829	ct3_100_tubula_1a_9_11	+	8614		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	8614
+ct3_100_tubula_1a_9	7910	8137	ct3_100_tubula_1a_9_12	+	8614			hypothetical protein		hypothetical_protein	NaN		0	8614
+ct3_100_tubula_1a_9	8236	8517	ct3_100_tubula_1a_9_13	+	8614		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	8614
+ct3_100_tubula_1a_90	1	564	ct3_100_tubula_1a_90_1	+	1982		PDB:4CIJ_B	Rep-protein	rep_hall_hmm	common_virus	NaN		0	1982
+ct3_100_tubula_1a_90	974	1222	ct3_100_tubula_1a_90_2	+	1982			hypothetical protein		hypothetical_protein	NaN		0	1982
+ct3_100_tubula_1a_90	1227	1466	ct3_100_tubula_1a_90_3	+	1982			hypothetical protein		hypothetical_protein	NaN		0	1982
+ct3_100_tubula_1a_90	1466	1654	ct3_100_tubula_1a_90_4	+	1982			hypothetical protein		hypothetical_protein	NaN		0	1982
+ct3_100_tubula_1a_90	1738	1917	ct3_100_tubula_1a_90_5	+	1982			hypothetical protein		hypothetical_protein	NaN		0	1982
+ct3_100_tubula_1a_91	1	255	ct3_100_tubula_1a_91_1	+	8942		PFAM:PF17091.4	Tail-G7P-protein	hallmark_hmm	common_virus	NaN		0	8942
+ct3_100_tubula_1a_91	258	479	ct3_100_tubula_1a_91_2	+	8942		PFAM:PF10389.8	virion-structural-protein	phrogs_hmm	hypothetical_protein	NaN		0	8942
+ct3_100_tubula_1a_91	555	2090	ct3_100_tubula_1a_91_3	+	8942		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	8942
+ct3_100_tubula_1a_91	2103	2432	ct3_100_tubula_1a_91_4	+	8942		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	8942
+ct3_100_tubula_1a_91	2437	3759	ct3_100_tubula_1a_91_5	+	8942		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	8942
+ct3_100_tubula_1a_91	3756	4043	ct3_100_tubula_1a_91_6	-	8942			hypothetical protein		hypothetical_protein	NaN		0	8942
+ct3_100_tubula_1a_91	4644	5579	ct3_100_tubula_1a_91_7	+	8942		PFAM:PF05840.12	Rep-protein	rep_hall_hmm	common_virus	NaN		0	8942
+ct3_100_tubula_1a_91	5587	6300	ct3_100_tubula_1a_91_8	-	8942			hypothetical protein		hypothetical_protein	NaN		0	8942
+ct3_100_tubula_1a_91	6327	6917	ct3_100_tubula_1a_91_9	-	8942		PDB:1ZR4_E	resolvase,-site-specific-recombination	common_virus_hmm	common_virus	NaN		0	8942
+ct3_100_tubula_1a_91	7020	7316	ct3_100_tubula_1a_91_10	-	8942		PFAM:PF10078.8	HTH-DNA-binding-protein	phrogs_hmm	hypothetical_protein	NaN		0	8942
+ct3_100_tubula_1a_91	7426	7752	ct3_100_tubula_1a_91_11	+	8942		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	8942
+ct3_100_tubula_1a_91	7827	7997	ct3_100_tubula_1a_91_12	+	8942			hypothetical protein		hypothetical_protein	NaN		0	8942
+ct3_100_tubula_1a_91	8022	8219	ct3_100_tubula_1a_91_13	+	8942			hypothetical protein		hypothetical_protein	NaN		0	8942
+ct3_100_tubula_1a_91	8219	8530	ct3_100_tubula_1a_91_14	+	8942			hypothetical protein		hypothetical_protein	NaN		0	8942
+ct3_100_tubula_1a_91	8530	8739	ct3_100_tubula_1a_91_15	+	8942			hypothetical protein		hypothetical_protein	NaN		0	8942
+ct3_100_tubula_1a_91	8739	8942	ct3_100_tubula_1a_91_16	+	8942			hypothetical protein		hypothetical_protein	NaN		0	8942
+ct3_100_tubula_1a_92	418	588	ct3_100_tubula_1a_92_1	+	6924			hypothetical protein		hypothetical_protein	NaN		0	6924
+ct3_100_tubula_1a_92	761	1192	ct3_100_tubula_1a_92_2	-	6924		pfam01724	Domain of unknown function DUF29. This family consists of various hypothetical proteins from cyanobacteria, none of which are functionally described. The aligned region is approximately 120-140 amino acids long corresponding to almost the entire length of the proteins in the family. Structure 3fcn is a small protein that has a novel all-alpha fold. The N-terminal helical hairpin is likely to function as a dimerization module. This protein is a member of PFam family pfam01724. The function of this protein is unknown. One protein sequence contains a fusion of this protein and a DnaB domain, suggesting a possible role in DNA helicase activity (hypothetical). Dali hits have low Z and high rmsd, suggesting probably only topological similarities (not functional relevance) (details derived from TOPSAN). The family has several highly conserved sequence motifs, including YD/ExD, DxxNVxEEIE, and CPY/F/W, as well as conserved tryptophans.	mmseqs_cdd	nonviral_gene	NaN		0	6924
+ct3_100_tubula_1a_92	1274	1891	ct3_100_tubula_1a_92_3	-	6924		PFAM:PF10723.8	Replication-regulatory-protein-RepB	rep_hall_hmm	common_virus	NaN		0	6924
+ct3_100_tubula_1a_92	1977	3131	ct3_100_tubula_1a_92_4	-	6924		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	6924
+ct3_100_tubula_1a_92	3139	3456	ct3_100_tubula_1a_92_5	-	6924		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	6924
+ct3_100_tubula_1a_92	3456	4889	ct3_100_tubula_1a_92_6	-	6924		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	6924
+ct3_100_tubula_1a_92	5030	5233	ct3_100_tubula_1a_92_7	-	6924		PDB:2IFO_A	Filamentous-Major-Coat-protein	hallmark_hmm	common_virus	NaN		0	6924
+ct3_100_tubula_1a_92	5238	5471	ct3_100_tubula_1a_92_8	-	6924		PDB:2IFO_A	Filamenous-Major-Coat-protein	hallmark_hmm	common_virus	NaN		0	6924
+ct3_100_tubula_1a_92	5473	5784	ct3_100_tubula_1a_92_9	-	6924		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	6924
+ct3_100_tubula_1a_92	5788	6720	ct3_100_tubula_1a_92_10	-	6924		PFAM:PF02486.18	Replication-initiation-factor	rep_hall_hmm	common_virus	NaN		0	6924
+ct3_100_tubula_1a_92	6862	6924	ct3_100_tubula_1a_92_11	+	6924			hypothetical protein		hypothetical_protein	NaN		0	6924
+ct3_100_tubula_1a_93	3	71	ct3_100_tubula_1a_93_1	+	4916			hypothetical protein		hypothetical_protein	NaN		0	4916
+ct3_100_tubula_1a_93	209	1381	ct3_100_tubula_1a_93_2	+	4916		UniProtKB:G5CUF1_9VIRU	Protein-C-	common_virus_hmm	common_virus	NaN		0	4916
+ct3_100_tubula_1a_93	1378	1509	ct3_100_tubula_1a_93_3	+	4916			hypothetical protein		hypothetical_protein	NaN		0	4916
+ct3_100_tubula_1a_93	1503	1676	ct3_100_tubula_1a_93_4	+	4916			hypothetical protein		hypothetical_protein	NaN		0	4916
+ct3_100_tubula_1a_93	1660	2301	ct3_100_tubula_1a_93_5	+	4916			hypothetical protein		hypothetical_protein	NaN		0	4916
+ct3_100_tubula_1a_93	2715	3338	ct3_100_tubula_1a_93_6	+	4916		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	4916
+ct3_100_tubula_1a_93	3622	4767	ct3_100_tubula_1a_93_7	+	4916		PFAM:PF02486.18	Replication-initiation-factor	rep_hall_hmm	common_virus	NaN		0	4916
+ct3_100_tubula_1a_93	4745	4915	ct3_100_tubula_1a_93_8	+	4916		PFAM:PF07459.10	RstB-sensor-of-two-protein-system	phrogs_hmm	hypothetical_protein	NaN		0	4916
+ct3_100_tubula_1a_94	66	362	ct3_100_tubula_1a_94_1	+	7045		PFAM:PF02303.16	single-strand-DNA-binding-protein	phrogs_hmm	hypothetical_protein	NaN		0	7045
+ct3_100_tubula_1a_94	366	569	ct3_100_tubula_1a_94_2	+	7045		PDB:2IFO_A	Filamenous-Major-Coat-protein	hallmark_hmm	common_virus	NaN		0	7045
+ct3_100_tubula_1a_94	581	811	ct3_100_tubula_1a_94_3	+	7045		PDB:2IFO_A	Filamentous-Major-Coat-protein	hallmark_hmm	common_virus	NaN		0	7045
+ct3_100_tubula_1a_94	949	2412	ct3_100_tubula_1a_94_4	+	7045		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	7045
+ct3_100_tubula_1a_94	2412	2741	ct3_100_tubula_1a_94_5	+	7045		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	7045
+ct3_100_tubula_1a_94	2741	3682	ct3_100_tubula_1a_94_6	+	7045		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	7045
+ct3_100_tubula_1a_94	3625	4014	ct3_100_tubula_1a_94_7	+	7045		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	7045
+ct3_100_tubula_1a_94	4016	4663	ct3_100_tubula_1a_94_8	+	7045		PRK13882	conjugal transfer protein TrbP; Provisional	mmseqs_cdd	nonviral_gene	NaN		0	7045
+ct3_100_tubula_1a_94	4918	5400	ct3_100_tubula_1a_94_9	-	7045		PFAM:PF10078.8	transcriptional-regulator	phrogs_hmm	hypothetical_protein	NaN		0	7045
+ct3_100_tubula_1a_94	5752	5937	ct3_100_tubula_1a_94_10	+	7045			hypothetical protein		hypothetical_protein	NaN		0	7045
+ct3_100_tubula_1a_94	5934	6074	ct3_100_tubula_1a_94_11	+	7045			hypothetical protein		hypothetical_protein	NaN		0	7045
+ct3_100_tubula_1a_94	6064	6783	ct3_100_tubula_1a_94_12	+	7045		PFAM:PF01446.16	Plasmid-replication-protein	rep_hall_hmm	common_virus	NaN		0	7045
+ct3_100_tubula_1a_94	6765	6986	ct3_100_tubula_1a_94_13	-	7045			hypothetical protein		hypothetical_protein	NaN		0	7045
+ct3_100_tubula_1a_95	1	291	ct3_100_tubula_1a_95_1	+	8454			hypothetical protein		hypothetical_protein	NaN		0	8454
+ct3_100_tubula_1a_95	294	392	ct3_100_tubula_1a_95_2	+	8454		UniProtKB:G7P_BPIF1	minor-coat-protein	hallmark_hmm	common_virus	NaN		0	8454
+ct3_100_tubula_1a_95	389	487	ct3_100_tubula_1a_95_3	+	8454		UniProt:tr|R9TEZ3_9VIRU	Minor-coat-protein-	hallmark_hmm	common_virus	NaN		0	8454
+ct3_100_tubula_1a_95	484	708	ct3_100_tubula_1a_95_4	+	8454		CDD:PHA00025	major-coat-protein	hallmark_hmm	common_virus	NaN		0	8454
+ct3_100_tubula_1a_95	776	2158	ct3_100_tubula_1a_95_5	+	8454		CDD:pfam05357	Filamentous-Minor-Coat-Protein-	hallmark_hmm	common_virus	NaN		0	8454
+ct3_100_tubula_1a_95	2161	2502	ct3_100_tubula_1a_95_6	+	8454		CDD:PHA00094	minor-coat-protein	hallmark_hmm	common_virus	NaN		0	8454
+ct3_100_tubula_1a_95	2502	3563	ct3_100_tubula_1a_95_7	+	8454		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	8454
+ct3_100_tubula_1a_95	3544	4833	ct3_100_tubula_1a_95_8	+	8454		PDB:5WQ8_J	Type-II-secretion-system-protein	common_virus_hmm	common_virus	NaN		0	8454
+ct3_100_tubula_1a_95	4820	5008	ct3_100_tubula_1a_95_9	-	8454			hypothetical protein		hypothetical_protein	NaN		0	8454
+ct3_100_tubula_1a_95	5119	5310	ct3_100_tubula_1a_95_10	-	8454			hypothetical protein		hypothetical_protein	NaN		0	8454
+ct3_100_tubula_1a_95	6040	7086	ct3_100_tubula_1a_95_11	+	8454		PDB:5U30_A	endonuclease	common_virus_hmm	common_virus	NaN		0	8454
+ct3_100_tubula_1a_95	7316	7537	ct3_100_tubula_1a_95_12	+	8454		PFAM:PF05144.13	replication-protein	phrogs_hmm	hypothetical_protein	NaN		0	8454
+ct3_100_tubula_1a_95	7494	8432	ct3_100_tubula_1a_95_13	+	8454		PFAM:PF05144.13	Phage-replication-protein	rep_hall_hmm	common_virus	NaN		0	8454
+ct3_100_tubula_1a_96	1	93	ct3_100_tubula_1a_96_1	+	5466			hypothetical protein		hypothetical_protein	NaN		0	5466
+ct3_100_tubula_1a_96	230	1408	ct3_100_tubula_1a_96_2	+	5466		UniProtKB:G5CUF1_9VIRU	Protein-C-	common_virus_hmm	common_virus	NaN		0	5466
+ct3_100_tubula_1a_96	1405	1536	ct3_100_tubula_1a_96_3	+	5466			hypothetical protein		hypothetical_protein	NaN		0	5466
+ct3_100_tubula_1a_96	1530	1703	ct3_100_tubula_1a_96_4	+	5466			hypothetical protein		hypothetical_protein	NaN		0	5466
+ct3_100_tubula_1a_96	1696	2331	ct3_100_tubula_1a_96_5	+	5466			hypothetical protein		hypothetical_protein	NaN		0	5466
+ct3_100_tubula_1a_96	2742	3365	ct3_100_tubula_1a_96_6	+	5466		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	5466
+ct3_100_tubula_1a_96	3449	3655	ct3_100_tubula_1a_96_7	-	5466			hypothetical protein		hypothetical_protein	NaN		0	5466
+ct3_100_tubula_1a_96	3661	3846	ct3_100_tubula_1a_96_8	-	5466			hypothetical protein		hypothetical_protein	NaN		0	5466
+ct3_100_tubula_1a_96	4194	5339	ct3_100_tubula_1a_96_9	+	5466		PFAM:PF02486.18	Replication-initiation-factor	rep_hall_hmm	common_virus	NaN		0	5466
+ct3_100_tubula_1a_96	5317	5466	ct3_100_tubula_1a_96_10	+	5466		PFAM:PF07459.10	RstB-sensor-of-two-protein-system	phrogs_hmm	hypothetical_protein	NaN		0	5466
+ct3_100_tubula_1a_97	14	1378	ct3_100_tubula_1a_97_1	-	6117		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	6117
+ct3_100_tubula_1a_97	1381	1725	ct3_100_tubula_1a_97_2	-	6117		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	6117
+ct3_100_tubula_1a_97	1725	3038	ct3_100_tubula_1a_97_3	-	6117			hypothetical protein		hypothetical_protein	NaN		0	6117
+ct3_100_tubula_1a_97	3173	3391	ct3_100_tubula_1a_97_4	-	6117		PFAM:PF05356.10	Major-Filamentous-Coat-protein	hallmark_hmm	common_virus	NaN		0	6117
+ct3_100_tubula_1a_97	3665	4003	ct3_100_tubula_1a_97_5	-	6117		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	6117
+ct3_100_tubula_1a_97	4005	5084	ct3_100_tubula_1a_97_6	-	6117		PFAM:PF02486.18	Replication-initiation-factor	rep_hall_hmm	common_virus	NaN		0	6117
+ct3_100_tubula_1a_97	5221	5415	ct3_100_tubula_1a_97_7	+	6117			hypothetical protein		hypothetical_protein	NaN		0	6117
+ct3_100_tubula_1a_98	1	1167	ct3_100_tubula_1a_98_1	+	7564		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	7564
+ct3_100_tubula_1a_98	1465	2421	ct3_100_tubula_1a_98_2	+	7564		PFAM:PF01548.16	Transposase	common_virus_hmm	common_virus	NaN		0	7564
+ct3_100_tubula_1a_98	2643	2873	ct3_100_tubula_1a_98_3	+	7564			hypothetical protein		hypothetical_protein	NaN		0	7564
+ct3_100_tubula_1a_98	2839	4197	ct3_100_tubula_1a_98_4	+	7564		PFAM:PF02486.18	Replication-initiation-factor	rep_hall_hmm	common_virus	NaN		0	7564
+ct3_100_tubula_1a_98	4210	4521	ct3_100_tubula_1a_98_5	+	7564		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	7564
+ct3_100_tubula_1a_98	4535	4738	ct3_100_tubula_1a_98_6	+	7564			hypothetical protein		hypothetical_protein	NaN		0	7564
+ct3_100_tubula_1a_98	4824	5042	ct3_100_tubula_1a_98_7	+	7564		PFAM:PF10389.8	coat-protein-B	hallmark_hmm	common_virus	NaN		0	7564
+ct3_100_tubula_1a_98	5110	5388	ct3_100_tubula_1a_98_8	+	7564			hypothetical protein		hypothetical_protein	NaN		0	7564
+ct3_100_tubula_1a_98	5510	5830	ct3_100_tubula_1a_98_9	+	7564			hypothetical protein		hypothetical_protein	NaN		0	7564
+ct3_100_tubula_1a_98	5775	7271	ct3_100_tubula_1a_98_10	+	7564		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	7564
+ct3_100_tubula_1a_98	7275	7562	ct3_100_tubula_1a_98_11	+	7564		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	7564
+ct3_100_tubula_1a_99	285	1181	ct3_100_tubula_1a_99_1	-	13166			hypothetical protein		hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_99	1211	2491	ct3_100_tubula_1a_99_2	-	13166		PDB:1Z19_B	Integrase	common_virus_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_99	2679	3731	ct3_100_tubula_1a_99_3	+	13166		COG2256	Replication-associated recombination protein RarA (DNA-dependent ATPase) [Replication, recombination and repair]. 	mmseqs_cdd	nonviral_gene	NaN		0	13166
+ct3_100_tubula_1a_99	3798	5114	ct3_100_tubula_1a_99_4	+	13166		PRK05431	seryl-tRNA synthetase; Provisional	mmseqs_cdd	nonviral_gene	NaN		0	13166
+ct3_100_tubula_1a_99	5338	5928	ct3_100_tubula_1a_99_5	+	13166		PDB:1ZR4_E	resolvase,-site-specific-recombination	common_virus_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_99	5948	6226	ct3_100_tubula_1a_99_6	+	13166			hypothetical protein		hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_99	6223	7158	ct3_100_tubula_1a_99_7	-	13166		PFAM:PF05840.12	Rep-protein	rep_hall_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_99	7676	8989	ct3_100_tubula_1a_99_8	-	13166		PFAM:PF05707.11	Zonular-occludens-toxin-(Zot)	hallmark_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_99	8994	9323	ct3_100_tubula_1a_99_9	-	13166		PFAM:PF10734.8	Minor-Head-Virion-Protein	hallmark_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_99	9336	10859	ct3_100_tubula_1a_99_10	-	13166		PFAM:PF05616.12	attachment-protein	common_virus_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_99	10934	11152	ct3_100_tubula_1a_99_11	-	13166		PFAM:PF10389.8	virion-structural-protein	phrogs_hmm	hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_99	11155	11403	ct3_100_tubula_1a_99_12	-	13166		PFAM:PF17091.4	Tail-G7P-protein	hallmark_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_99	11406	11615	ct3_100_tubula_1a_99_13	-	13166			hypothetical protein		hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_99	11615	11824	ct3_100_tubula_1a_99_14	-	13166			hypothetical protein		hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_99	11824	12102	ct3_100_tubula_1a_99_15	-	13166			hypothetical protein		hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_99	12112	12357	ct3_100_tubula_1a_99_16	-	13166			hypothetical protein		hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_99	12357	12683	ct3_100_tubula_1a_99_17	-	13166		PFAM:PF07459.10	RstB-protein	common_virus_hmm	common_virus	NaN		0	13166
+ct3_100_tubula_1a_99	12876	13166	ct3_100_tubula_1a_99_18	+	13166		PFAM:PF10078.8	transcriptional-regulator	phrogs_hmm	hypothetical_protein	NaN		0	13166
+ct3_100_tubula_1a_85	7885	7971	tRNA-Ser	-	13152		tRNAscan-SE score: 78.6	Ser	tRNAscan-SE		NaN		0	13152
+ct3_100_tubula_1a_93	113	186	tRNA-Gln	+	4916		tRNAscan-SE score: 56.9	Gln	tRNAscan-SE		NaN		0	4916
+ct3_100_tubula_1a_96	134	207	tRNA-Gln	+	5466		tRNAscan-SE score: 58.8	Gln	tRNAscan-SE		NaN		0	5466
+ct3_100_tubula_1a_65	7885	7971	tRNA-Ser	-	13152		tRNAscan-SE score: 78.6	Ser	tRNAscan-SE		NaN		0	13152
+ct3_100_tubula_1a_34	4587	4661	tRNA-Thr	+	5424		tRNAscan-SE score: 39.5	Thr	tRNAscan-SE		NaN		0	5424
+ct3_100_tubula_1a_50	5196	5285	tRNA-Ser	+	13166		tRNAscan-SE score: 78.6	Ser	tRNAscan-SE		NaN		0	13166
+ct3_100_tubula_1a_99	5196	5285	tRNA-Ser	+	13166		tRNAscan-SE score: 78.6	Ser	tRNAscan-SE		NaN		0	13166
+ct3_100_tubula_1a_88	3871	3944	tRNA-Gln	-	4914		tRNAscan-SE score: 63.1	Gln	tRNAscan-SE		NaN		0	4914
+ct3_100_tubula_1a_31	405	478	tRNA-Gln	+	5368		tRNAscan-SE score: 56.1	Gln	tRNAscan-SE		NaN		0	5368
+ct3_100_tubula_1a_8	7885	7971	tRNA-Ser	-	13152		tRNAscan-SE score: 78.6	Ser	tRNAscan-SE		NaN		0	13152
+ct3_100_tubula_1a_2	3856	3929	tRNA-Gln	-	5748		tRNAscan-SE score: 49.6	Gln	tRNAscan-SE		NaN		0	5748
+ct3_100_tubula_1a_58	5196	5285	tRNA-Ser	+	13166		tRNAscan-SE score: 78.6	Ser	tRNAscan-SE		NaN		0	13166
+ct3_100_tubula_1a_38	7885	7971	tRNA-Ser	-	13152		tRNAscan-SE score: 78.6	Ser	tRNAscan-SE		NaN		0	13152
+ct3_100_tubula_1a_26	19732	19821	tRNA-Ser	+	31014		tRNAscan-SE score: 81.5	Ser	tRNAscan-SE		NaN		0	31014
+ct3_100_tubula_1a_35	1836	1909	tRNA-Gln	+	5210		tRNAscan-SE score: 60.8	Gln	tRNAscan-SE		NaN		0	5210
+ct3_100_tubula_1a_77	9668	9757	tRNA-Ser	+	27557		tRNAscan-SE score: 78.6	Ser	tRNAscan-SE		NaN		0	27557
+ct3_100_tubula_1a_63	5196	5285	tRNA-Ser	+	13166		tRNAscan-SE score: 78.6	Ser	tRNAscan-SE		NaN		0	13166
+ct3_100_tubula_1a_67	5196	5285	tRNA-Ser	+	13166		tRNAscan-SE score: 78.6	Ser	tRNAscan-SE		NaN		0	13166
+ct3_100_tubula_1a_81	5196	5285	tRNA-Ser	+	13166		tRNAscan-SE score: 78.6	Ser	tRNAscan-SE		NaN		0	13166
+ct3_100_tubula_1a_5	5196	5285	tRNA-Ser	+	13166		tRNAscan-SE score: 78.6	Ser	tRNAscan-SE		NaN		0	13166
+ct3_100_tubula_1a_68	9966	10060	tRNA-Sup	-	10061		tRNAscan-SE score: 46.0	Sup	tRNAscan-SE		NaN		0	10061
