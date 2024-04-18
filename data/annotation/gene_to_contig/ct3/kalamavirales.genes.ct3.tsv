@@ -1,0 +1,1256 @@
+contig	gene_start	gene_stop	gene_name	gene_orient	contig_length	dtr_seq	evidence_acession	evidence_description	Evidence_source	vscore_category	chunk_name	chunk_length	chunk_start	chunk_stop
+ct3_kalam_2a_1	589	927	ct3_kalam_2a_1_1	+	14852		PDB:1Z9F_A	Single-stranded-DNA-binding-protein	common_virus_hmm	common_virus	NaN		0	14852
+ct3_kalam_2a_1	942	1127	ct3_kalam_2a_1_2	+	14852			hypothetical protein		hypothetical_protein	NaN		0	14852
+ct3_kalam_2a_1	1173	1922	ct3_kalam_2a_1_3	+	14852			hypothetical protein		hypothetical_protein	NaN		0	14852
+ct3_kalam_2a_1	1885	3960	ct3_kalam_2a_1_4	+	14852		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	14852
+ct3_kalam_2a_1	3957	4175	ct3_kalam_2a_1_5	+	14852			hypothetical protein		hypothetical_protein	NaN		0	14852
+ct3_kalam_2a_1	4165	4365	ct3_kalam_2a_1_6	+	14852		PFAM:PF04358.12	transcriptional-repressor	phrogs_hmm	hypothetical_protein	NaN		0	14852
+ct3_kalam_2a_1	4379	4516	ct3_kalam_2a_1_7	+	14852			hypothetical protein		hypothetical_protein	NaN		0	14852
+ct3_kalam_2a_1	4485	4739	ct3_kalam_2a_1_8	+	14852			hypothetical protein		hypothetical_protein	NaN		0	14852
+ct3_kalam_2a_1	4876	5082	ct3_kalam_2a_1_9	+	14852			hypothetical protein		hypothetical_protein	NaN		0	14852
+ct3_kalam_2a_1	5293	6030	ct3_kalam_2a_1_10	+	14852			hypothetical protein		hypothetical_protein	NaN		0	14852
+ct3_kalam_2a_1	6087	6395	ct3_kalam_2a_1_11	+	14852			hypothetical protein		hypothetical_protein	NaN		0	14852
+ct3_kalam_2a_1	6376	7014	ct3_kalam_2a_1_12	+	14852		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	14852
+ct3_kalam_2a_1	7328	7582	ct3_kalam_2a_1_13	+	14852			hypothetical protein		hypothetical_protein	NaN		0	14852
+ct3_kalam_2a_1	7582	8652	ct3_kalam_2a_1_14	+	14852		PDB:3J31_H	penton-base-protein	hallmark_hmm	common_virus	NaN		0	14852
+ct3_kalam_2a_1	8694	8924	ct3_kalam_2a_1_15	+	14852			hypothetical protein		hypothetical_protein	NaN		0	14852
+ct3_kalam_2a_1	8928	9119	ct3_kalam_2a_1_16	+	14852		PFAM:PF12841.6	holin	phrogs_hmm	hypothetical_protein	NaN		0	14852
+ct3_kalam_2a_1	9203	9628	ct3_kalam_2a_1_17	+	14852			hypothetical protein		hypothetical_protein	NaN		0	14852
+ct3_kalam_2a_1	9798	9944	ct3_kalam_2a_1_18	+	14852			hypothetical protein		hypothetical_protein	NaN		0	14852
+ct3_kalam_2a_1	9956	10231	ct3_kalam_2a_1_19	+	14852		UniProtKB:B6RT55_9VIRU	Minor-capsid-protein-	hallmark_hmm	common_virus	NaN		0	14852
+ct3_kalam_2a_1	10235	10849	ct3_kalam_2a_1_20	+	14852			hypothetical protein		hypothetical_protein	NaN		0	14852
+ct3_kalam_2a_1	10849	11601	ct3_kalam_2a_1_21	+	14852		COG1705	Flagellum-specific peptidoglycan hydrolase FlgJ [Cell wall/membrane/envelope biogenesis, Cell motility]. 	mmseqs_cdd	nonviral_gene	NaN		0	14852
+ct3_kalam_2a_1	11540	12061	ct3_kalam_2a_1_22	+	14852		PFAM:PF08291.10	pentameric-base-spike-protein	phrogs_hmm	hypothetical_protein	NaN		0	14852
+ct3_kalam_2a_1	12074	12967	ct3_kalam_2a_1_23	+	14852			hypothetical protein		hypothetical_protein	NaN		0	14852
+ct3_kalam_2a_1	12971	13849	ct3_kalam_2a_1_24	+	14852			hypothetical protein		hypothetical_protein	NaN		0	14852
+ct3_kalam_2a_1	13857	14654	ct3_kalam_2a_1_25	+	14852		PDB:5EMI_A	Cell-wall-hydrolase-autolysin	common_virus_hmm	common_virus	NaN		0	14852
+ct3_kalam_2a_10	355	531	ct3_kalam_2a_10_1	+	14844		PFAM:PF13591.5	excisionase	phrogs_hmm	hypothetical_protein	NaN		0	14844
+ct3_kalam_2a_10	547	1047	ct3_kalam_2a_10_2	+	14844		PFAM:PF17427.1	Single-stranded-DNA-binding-protein	common_virus_hmm	common_virus	NaN		0	14844
+ct3_kalam_2a_10	1119	1343	ct3_kalam_2a_10_3	+	14844			hypothetical protein		hypothetical_protein	NaN		0	14844
+ct3_kalam_2a_10	1402	2139	ct3_kalam_2a_10_4	+	14844			hypothetical protein		hypothetical_protein	NaN		0	14844
+ct3_kalam_2a_10	2087	4330	ct3_kalam_2a_10_5	+	14844		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	14844
+ct3_kalam_2a_10	4347	4547	ct3_kalam_2a_10_6	+	14844		PFAM:PF04358.12	transcriptional-repressor	phrogs_hmm	hypothetical_protein	NaN		0	14844
+ct3_kalam_2a_10	4561	4737	ct3_kalam_2a_10_7	+	14844			hypothetical protein		hypothetical_protein	NaN		0	14844
+ct3_kalam_2a_10	4820	5074	ct3_kalam_2a_10_8	+	14844			hypothetical protein		hypothetical_protein	NaN		0	14844
+ct3_kalam_2a_10	5243	5989	ct3_kalam_2a_10_9	+	14844			hypothetical protein		hypothetical_protein	NaN		0	14844
+ct3_kalam_2a_10	6335	6973	ct3_kalam_2a_10_10	+	14844		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	14844
+ct3_kalam_2a_10	7406	7675	ct3_kalam_2a_10_11	+	14844			hypothetical protein		hypothetical_protein	NaN		0	14844
+ct3_kalam_2a_10	7675	8745	ct3_kalam_2a_10_12	+	14844		PDB:3J31_H	Major-Capsid-Protein	hallmark_hmm	common_virus	NaN		0	14844
+ct3_kalam_2a_10	8787	9017	ct3_kalam_2a_10_13	+	14844			hypothetical protein		hypothetical_protein	NaN		0	14844
+ct3_kalam_2a_10	9021	9179	ct3_kalam_2a_10_14	+	14844		PFAM:PF12841.6	holin	phrogs_hmm	hypothetical_protein	NaN		0	14844
+ct3_kalam_2a_10	9253	9684	ct3_kalam_2a_10_15	+	14844			hypothetical protein		hypothetical_protein	NaN		0	14844
+ct3_kalam_2a_10	9854	10000	ct3_kalam_2a_10_16	+	14844			hypothetical protein		hypothetical_protein	NaN		0	14844
+ct3_kalam_2a_10	10012	10287	ct3_kalam_2a_10_17	+	14844		UniProtKB:B6RT55_9VIRU	Minor-capsid-protein-	hallmark_hmm	common_virus	NaN		0	14844
+ct3_kalam_2a_10	10291	10905	ct3_kalam_2a_10_18	+	14844			hypothetical protein		hypothetical_protein	NaN		0	14844
+ct3_kalam_2a_10	10909	11661	ct3_kalam_2a_10_19	+	14844		COG1705	Flagellum-specific peptidoglycan hydrolase FlgJ [Cell wall/membrane/envelope biogenesis, Cell motility]. 	mmseqs_cdd	nonviral_gene	NaN		0	14844
+ct3_kalam_2a_10	11600	12121	ct3_kalam_2a_10_20	+	14844		PFAM:PF08291.10	pentameric-base-spike-protein	phrogs_hmm	hypothetical_protein	NaN		0	14844
+ct3_kalam_2a_10	12135	13028	ct3_kalam_2a_10_21	+	14844			hypothetical protein		hypothetical_protein	NaN		0	14844
+ct3_kalam_2a_10	13032	13913	ct3_kalam_2a_10_22	+	14844			hypothetical protein		hypothetical_protein	NaN		0	14844
+ct3_kalam_2a_10	13855	14721	ct3_kalam_2a_10_23	+	14844		PDB:5EMI_A	Cell-wall-hydrolase-autolysin	common_virus_hmm	common_virus	NaN		0	14844
+ct3_kalam_2a_11	358	534	ct3_kalam_2a_11_1	+	14935		PFAM:PF13591.5	excisionase	phrogs_hmm	hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_11	550	1053	ct3_kalam_2a_11_2	+	14935		PFAM:PF17427.1	Single-stranded-DNA-binding-protein	common_virus_hmm	common_virus	NaN		0	14935
+ct3_kalam_2a_11	1125	1349	ct3_kalam_2a_11_3	+	14935			hypothetical protein		hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_11	1408	2145	ct3_kalam_2a_11_4	+	14935			hypothetical protein		hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_11	2129	4336	ct3_kalam_2a_11_5	+	14935		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	14935
+ct3_kalam_2a_11	4352	4552	ct3_kalam_2a_11_6	+	14935		PFAM:PF04358.12	transcriptional-repressor	phrogs_hmm	hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_11	4566	4718	ct3_kalam_2a_11_7	+	14935			hypothetical protein		hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_11	4693	4833	ct3_kalam_2a_11_8	+	14935			hypothetical protein		hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_11	4952	5125	ct3_kalam_2a_11_9	+	14935			hypothetical protein		hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_11	5138	5575	ct3_kalam_2a_11_10	+	14935			hypothetical protein		hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_11	5993	6235	ct3_kalam_2a_11_11	+	14935			hypothetical protein		hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_11	6204	6512	ct3_kalam_2a_11_12	+	14935			hypothetical protein		hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_11	6493	7131	ct3_kalam_2a_11_13	+	14935		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	14935
+ct3_kalam_2a_11	7445	7699	ct3_kalam_2a_11_14	+	14935			hypothetical protein		hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_11	7699	8769	ct3_kalam_2a_11_15	+	14935		PDB:3J31_H	penton-base-protein	hallmark_hmm	common_virus	NaN		0	14935
+ct3_kalam_2a_11	8811	9041	ct3_kalam_2a_11_16	+	14935			hypothetical protein		hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_11	9045	9251	ct3_kalam_2a_11_17	+	14935		PFAM:PF12841.6	holin	phrogs_hmm	hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_11	9331	9762	ct3_kalam_2a_11_18	+	14935			hypothetical protein		hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_11	9932	10078	ct3_kalam_2a_11_19	+	14935			hypothetical protein		hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_11	10090	10365	ct3_kalam_2a_11_20	+	14935		UniProtKB:B6RT55_9VIRU	Minor-capsid-protein-	hallmark_hmm	common_virus	NaN		0	14935
+ct3_kalam_2a_11	10369	10983	ct3_kalam_2a_11_21	+	14935			hypothetical protein		hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_11	10983	11735	ct3_kalam_2a_11_22	+	14935		COG1705	Flagellum-specific peptidoglycan hydrolase FlgJ [Cell wall/membrane/envelope biogenesis, Cell motility]. 	mmseqs_cdd	nonviral_gene	NaN		0	14935
+ct3_kalam_2a_11	11674	12195	ct3_kalam_2a_11_23	+	14935		PFAM:PF08291.10	pentameric-base-spike-protein	phrogs_hmm	hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_11	12208	13122	ct3_kalam_2a_11_24	+	14935			hypothetical protein		hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_11	13126	14007	ct3_kalam_2a_11_25	+	14935			hypothetical protein		hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_11	14023	14820	ct3_kalam_2a_11_26	+	14935		PDB:5EMI_A	Cell-wall-hydrolase-autolysin	common_virus_hmm	common_virus	NaN		0	14935
+ct3_kalam_2a_12	233	1012	ct3_kalam_2a_12_1	+	14927			hypothetical protein		hypothetical_protein	NaN		0	14927
+ct3_kalam_2a_12	1016	2677	ct3_kalam_2a_12_2	+	14927		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	14927
+ct3_kalam_2a_12	2679	3128	ct3_kalam_2a_12_3	+	14927		CDD:pfam11860	N-acetylmuramidase	common_virus_hmm	common_virus	NaN		0	14927
+ct3_kalam_2a_12	3128	4903	ct3_kalam_2a_12_4	+	14927		PDB:1N7V_A	Adsorption-protein	common_virus_hmm	common_virus	NaN		0	14927
+ct3_kalam_2a_12	4907	5287	ct3_kalam_2a_12_5	+	14927		PFAM:PF08949.9	major-spike-protein	phrogs_hmm	nonviral_gene	NaN		0	14927
+ct3_kalam_2a_12	5287	6309	ct3_kalam_2a_12_6	+	14927		PFAM:PF08949.9	major-spike-protein	phrogs_hmm	nonviral_gene	NaN		0	14927
+ct3_kalam_2a_12	6328	6588	ct3_kalam_2a_12_7	+	14927			hypothetical protein		hypothetical_protein	NaN		0	14927
+ct3_kalam_2a_12	6578	6784	ct3_kalam_2a_12_8	+	14927			hypothetical protein		hypothetical_protein	NaN		0	14927
+ct3_kalam_2a_12	6784	7284	ct3_kalam_2a_12_9	+	14927			hypothetical protein		hypothetical_protein	NaN		0	14927
+ct3_kalam_2a_12	7317	7640	ct3_kalam_2a_12_10	+	14927		UniProtKB:Q3T4U8_BPPRD	Assembly-protein	common_virus_hmm	common_virus	NaN		0	14927
+ct3_kalam_2a_12	7637	8320	ct3_kalam_2a_12_11	+	14927		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	14927
+ct3_kalam_2a_12	8332	8460	ct3_kalam_2a_12_12	+	14927			hypothetical protein		hypothetical_protein	NaN		0	14927
+ct3_kalam_2a_12	8460	8588	ct3_kalam_2a_12_13	+	14927			hypothetical protein		hypothetical_protein	NaN		0	14927
+ct3_kalam_2a_12	8595	9782	ct3_kalam_2a_12_14	+	14927		CDD:pfam09018	Major-Capsid-Protein	hallmark_hmm	common_virus	NaN		0	14927
+ct3_kalam_2a_12	9801	9944	ct3_kalam_2a_12_15	+	14927			hypothetical protein		hypothetical_protein	NaN		0	14927
+ct3_kalam_2a_12	10168	10440	ct3_kalam_2a_12_16	+	14927			hypothetical protein		hypothetical_protein	NaN		0	14927
+ct3_kalam_2a_12	10440	10604	ct3_kalam_2a_12_17	+	14927		PFAM:PF11087.7	membrane-DNA-delivery-protein	common_virus_hmm	common_virus	NaN		0	14927
+ct3_kalam_2a_12	10617	10823	ct3_kalam_2a_12_18	+	14927		PFAM:PF11087.7	membrane-DNA-delivery-protein	common_virus_hmm	common_virus	NaN		0	14927
+ct3_kalam_2a_12	10833	11087	ct3_kalam_2a_12_19	+	14927		CDD:pfam09300	minor-capsid	hallmark_hmm	common_virus	NaN		0	14927
+ct3_kalam_2a_12	11202	11825	ct3_kalam_2a_12_20	+	14927			hypothetical protein		hypothetical_protein	NaN		0	14927
+ct3_kalam_2a_12	11836	12189	ct3_kalam_2a_12_21	+	14927		pfam09301	Domain of unknown function (DUF1970). Members of this family consist of various uncharacterized viral hypothetical proteins.	mmseqs_cdd	nonviral_gene	NaN		0	14927
+ct3_kalam_2a_12	12190	12987	ct3_kalam_2a_12_22	+	14927		pfam01464	Transglycosylase SLT domain. This family is distantly related to pfam00062. Members are found in phages, type II, type III and type IV secretion systems.	mmseqs_cdd	common_virus	NaN		0	14927
+ct3_kalam_2a_12	12984	13337	ct3_kalam_2a_12_23	+	14927		PFAM:PF05106.11	holin	phrogs_hmm	hypothetical_protein	NaN		0	14927
+ct3_kalam_2a_12	13330	13692	ct3_kalam_2a_12_24	+	14927		PFAM:PF10828.7	Rz-like-spanin	phrogs_hmm	hypothetical_protein	NaN		0	14927
+ct3_kalam_2a_12	13848	14132	ct3_kalam_2a_12_25	-	14927			hypothetical protein		hypothetical_protein	NaN		0	14927
+ct3_kalam_2a_12	14205	14687	ct3_kalam_2a_12_26	-	14927			hypothetical protein		hypothetical_protein	NaN		0	14927
+ct3_kalam_2a_13	295	465	ct3_kalam_2a_13_1	+	10565			hypothetical protein		hypothetical_protein	NaN		0	10565
+ct3_kalam_2a_13	608	733	ct3_kalam_2a_13_2	+	10565			hypothetical protein		hypothetical_protein	NaN		0	10565
+ct3_kalam_2a_13	733	876	ct3_kalam_2a_13_3	+	10565			hypothetical protein		hypothetical_protein	NaN		0	10565
+ct3_kalam_2a_13	1417	1572	ct3_kalam_2a_13_4	+	10565			hypothetical protein		hypothetical_protein	NaN		0	10565
+ct3_kalam_2a_13	1557	1988	ct3_kalam_2a_13_5	+	10565			hypothetical protein		hypothetical_protein	NaN		0	10565
+ct3_kalam_2a_13	2326	3369	ct3_kalam_2a_13_6	+	10565		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	10565
+ct3_kalam_2a_13	3444	4004	ct3_kalam_2a_13_7	+	10565		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	10565
+ct3_kalam_2a_13	4001	4189	ct3_kalam_2a_13_8	+	10565			hypothetical protein		hypothetical_protein	NaN		0	10565
+ct3_kalam_2a_13	4345	4698	ct3_kalam_2a_13_9	+	10565			hypothetical protein		hypothetical_protein	NaN		0	10565
+ct3_kalam_2a_13	4698	4823	ct3_kalam_2a_13_10	+	10565			hypothetical protein		hypothetical_protein	NaN		0	10565
+ct3_kalam_2a_13	4820	4945	ct3_kalam_2a_13_11	+	10565			hypothetical protein		hypothetical_protein	NaN		0	10565
+ct3_kalam_2a_13	4945	5283	ct3_kalam_2a_13_12	+	10565			hypothetical protein		hypothetical_protein	NaN		0	10565
+ct3_kalam_2a_13	5264	5941	ct3_kalam_2a_13_13	+	10565		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	10565
+ct3_kalam_2a_13	6024	6332	ct3_kalam_2a_13_14	+	10565			hypothetical protein		hypothetical_protein	NaN		0	10565
+ct3_kalam_2a_13	6407	6847	ct3_kalam_2a_13_15	+	10565			hypothetical protein		hypothetical_protein	NaN		0	10565
+ct3_kalam_2a_13	6862	7014	ct3_kalam_2a_13_16	+	10565			hypothetical protein		hypothetical_protein	NaN		0	10565
+ct3_kalam_2a_13	7028	7195	ct3_kalam_2a_13_17	+	10565			hypothetical protein		hypothetical_protein	NaN		0	10565
+ct3_kalam_2a_13	7206	7526	ct3_kalam_2a_13_18	+	10565			hypothetical protein		hypothetical_protein	NaN		0	10565
+ct3_kalam_2a_13	7523	7795	ct3_kalam_2a_13_19	+	10565			hypothetical protein		hypothetical_protein	NaN		0	10565
+ct3_kalam_2a_13	7808	8551	ct3_kalam_2a_13_20	+	10565			hypothetical protein		hypothetical_protein	NaN		0	10565
+ct3_kalam_2a_13	8564	9397	ct3_kalam_2a_13_21	+	10565			hypothetical protein		hypothetical_protein	NaN		0	10565
+ct3_kalam_2a_13	9413	10417	ct3_kalam_2a_13_22	+	10565			hypothetical protein		hypothetical_protein	NaN		0	10565
+ct3_kalam_2a_14	295	465	ct3_kalam_2a_14_1	+	10562			hypothetical protein		hypothetical_protein	NaN		0	10562
+ct3_kalam_2a_14	608	733	ct3_kalam_2a_14_2	+	10562			hypothetical protein		hypothetical_protein	NaN		0	10562
+ct3_kalam_2a_14	733	876	ct3_kalam_2a_14_3	+	10562			hypothetical protein		hypothetical_protein	NaN		0	10562
+ct3_kalam_2a_14	870	1025	ct3_kalam_2a_14_4	+	10562			hypothetical protein		hypothetical_protein	NaN		0	10562
+ct3_kalam_2a_14	1417	1986	ct3_kalam_2a_14_5	+	10562			hypothetical protein		hypothetical_protein	NaN		0	10562
+ct3_kalam_2a_14	2324	4003	ct3_kalam_2a_14_6	+	10562		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	10562
+ct3_kalam_2a_14	4000	4188	ct3_kalam_2a_14_7	+	10562			hypothetical protein		hypothetical_protein	NaN		0	10562
+ct3_kalam_2a_14	4344	4562	ct3_kalam_2a_14_8	+	10562			hypothetical protein		hypothetical_protein	NaN		0	10562
+ct3_kalam_2a_14	4821	4946	ct3_kalam_2a_14_9	+	10562			hypothetical protein		hypothetical_protein	NaN		0	10562
+ct3_kalam_2a_14	4946	5284	ct3_kalam_2a_14_10	+	10562			hypothetical protein		hypothetical_protein	NaN		0	10562
+ct3_kalam_2a_14	5265	5942	ct3_kalam_2a_14_11	+	10562		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	10562
+ct3_kalam_2a_14	6023	6331	ct3_kalam_2a_14_12	+	10562			hypothetical protein		hypothetical_protein	NaN		0	10562
+ct3_kalam_2a_14	6406	6846	ct3_kalam_2a_14_13	+	10562			hypothetical protein		hypothetical_protein	NaN		0	10562
+ct3_kalam_2a_14	6861	7013	ct3_kalam_2a_14_14	+	10562			hypothetical protein		hypothetical_protein	NaN		0	10562
+ct3_kalam_2a_14	7027	7194	ct3_kalam_2a_14_15	+	10562			hypothetical protein		hypothetical_protein	NaN		0	10562
+ct3_kalam_2a_14	7205	7525	ct3_kalam_2a_14_16	+	10562			hypothetical protein		hypothetical_protein	NaN		0	10562
+ct3_kalam_2a_14	7522	7794	ct3_kalam_2a_14_17	+	10562			hypothetical protein		hypothetical_protein	NaN		0	10562
+ct3_kalam_2a_14	7807	8535	ct3_kalam_2a_14_18	+	10562			hypothetical protein		hypothetical_protein	NaN		0	10562
+ct3_kalam_2a_14	8561	9394	ct3_kalam_2a_14_19	+	10562			hypothetical protein		hypothetical_protein	NaN		0	10562
+ct3_kalam_2a_14	9410	10414	ct3_kalam_2a_14_20	+	10562			hypothetical protein		hypothetical_protein	NaN		0	10562
+ct3_kalam_2a_15	295	465	ct3_kalam_2a_15_1	+	10564			hypothetical protein		hypothetical_protein	NaN		0	10564
+ct3_kalam_2a_15	608	733	ct3_kalam_2a_15_2	+	10564			hypothetical protein		hypothetical_protein	NaN		0	10564
+ct3_kalam_2a_15	733	876	ct3_kalam_2a_15_3	+	10564			hypothetical protein		hypothetical_protein	NaN		0	10564
+ct3_kalam_2a_15	870	1025	ct3_kalam_2a_15_4	+	10564			hypothetical protein		hypothetical_protein	NaN		0	10564
+ct3_kalam_2a_15	1417	1986	ct3_kalam_2a_15_5	+	10564			hypothetical protein		hypothetical_protein	NaN		0	10564
+ct3_kalam_2a_15	2324	3367	ct3_kalam_2a_15_6	+	10564		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	10564
+ct3_kalam_2a_15	3442	4002	ct3_kalam_2a_15_7	+	10564		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	10564
+ct3_kalam_2a_15	3999	4187	ct3_kalam_2a_15_8	+	10564			hypothetical protein		hypothetical_protein	NaN		0	10564
+ct3_kalam_2a_15	4344	4697	ct3_kalam_2a_15_9	+	10564			hypothetical protein		hypothetical_protein	NaN		0	10564
+ct3_kalam_2a_15	4697	4822	ct3_kalam_2a_15_10	+	10564			hypothetical protein		hypothetical_protein	NaN		0	10564
+ct3_kalam_2a_15	4819	4944	ct3_kalam_2a_15_11	+	10564			hypothetical protein		hypothetical_protein	NaN		0	10564
+ct3_kalam_2a_15	4944	5282	ct3_kalam_2a_15_12	+	10564			hypothetical protein		hypothetical_protein	NaN		0	10564
+ct3_kalam_2a_15	5263	5940	ct3_kalam_2a_15_13	+	10564		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	10564
+ct3_kalam_2a_15	6021	6329	ct3_kalam_2a_15_14	+	10564			hypothetical protein		hypothetical_protein	NaN		0	10564
+ct3_kalam_2a_15	6404	6844	ct3_kalam_2a_15_15	+	10564			hypothetical protein		hypothetical_protein	NaN		0	10564
+ct3_kalam_2a_15	6859	7011	ct3_kalam_2a_15_16	+	10564			hypothetical protein		hypothetical_protein	NaN		0	10564
+ct3_kalam_2a_15	7025	7192	ct3_kalam_2a_15_17	+	10564			hypothetical protein		hypothetical_protein	NaN		0	10564
+ct3_kalam_2a_15	7203	7523	ct3_kalam_2a_15_18	+	10564			hypothetical protein		hypothetical_protein	NaN		0	10564
+ct3_kalam_2a_15	7520	7792	ct3_kalam_2a_15_19	+	10564			hypothetical protein		hypothetical_protein	NaN		0	10564
+ct3_kalam_2a_15	7805	8032	ct3_kalam_2a_15_20	+	10564			hypothetical protein		hypothetical_protein	NaN		0	10564
+ct3_kalam_2a_15	8137	8550	ct3_kalam_2a_15_21	+	10564			hypothetical protein		hypothetical_protein	NaN		0	10564
+ct3_kalam_2a_15	8563	9396	ct3_kalam_2a_15_22	+	10564			hypothetical protein		hypothetical_protein	NaN		0	10564
+ct3_kalam_2a_15	9412	10416	ct3_kalam_2a_15_23	+	10564			hypothetical protein		hypothetical_protein	NaN		0	10564
+ct3_kalam_2a_16	4	150	ct3_kalam_2a_16_1	-	13756			hypothetical protein		hypothetical_protein	NaN		0	13756
+ct3_kalam_2a_16	141	317	ct3_kalam_2a_16_2	-	13756			hypothetical protein		hypothetical_protein	NaN		0	13756
+ct3_kalam_2a_16	440	757	ct3_kalam_2a_16_3	-	13756			hypothetical protein		hypothetical_protein	NaN		0	13756
+ct3_kalam_2a_16	932	1144	ct3_kalam_2a_16_4	+	13756			hypothetical protein		hypothetical_protein	NaN		0	13756
+ct3_kalam_2a_16	1184	1753	ct3_kalam_2a_16_5	+	13756			hypothetical protein		hypothetical_protein	NaN		0	13756
+ct3_kalam_2a_16	1792	1998	ct3_kalam_2a_16_6	+	13756			hypothetical protein		hypothetical_protein	NaN		0	13756
+ct3_kalam_2a_16	2059	2760	ct3_kalam_2a_16_7	+	13756		PDB:2FJR_A	Repressor-protein-CI	common_virus_hmm	common_virus	NaN		0	13756
+ct3_kalam_2a_16	2776	5046	ct3_kalam_2a_16_8	+	13756		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	13756
+ct3_kalam_2a_16	5175	6215	ct3_kalam_2a_16_9	+	13756			hypothetical protein		hypothetical_protein	NaN		0	13756
+ct3_kalam_2a_16	6282	6890	ct3_kalam_2a_16_10	+	13756		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	13756
+ct3_kalam_2a_16	6911	7060	ct3_kalam_2a_16_11	+	13756			hypothetical protein		hypothetical_protein	NaN		0	13756
+ct3_kalam_2a_16	7096	8139	ct3_kalam_2a_16_12	+	13756		PDB:3J31_H	Major-Capsid-Protein	hallmark_hmm	common_virus	NaN		0	13756
+ct3_kalam_2a_16	8174	8389	ct3_kalam_2a_16_13	+	13756			hypothetical protein		hypothetical_protein	NaN		0	13756
+ct3_kalam_2a_16	8393	8581	ct3_kalam_2a_16_14	+	13756		PFAM:PF12841.6	holin	phrogs_hmm	hypothetical_protein	NaN		0	13756
+ct3_kalam_2a_16	8586	8786	ct3_kalam_2a_16_15	+	13756			hypothetical protein		hypothetical_protein	NaN		0	13756
+ct3_kalam_2a_16	8945	9103	ct3_kalam_2a_16_16	+	13756			hypothetical protein		hypothetical_protein	NaN		0	13756
+ct3_kalam_2a_16	9103	9357	ct3_kalam_2a_16_17	+	13756			hypothetical protein		hypothetical_protein	NaN		0	13756
+ct3_kalam_2a_16	9354	10340	ct3_kalam_2a_16_18	+	13756			hypothetical protein		hypothetical_protein	NaN		0	13756
+ct3_kalam_2a_16	10340	11101	ct3_kalam_2a_16_19	+	13756		COG1705	Flagellum-specific peptidoglycan hydrolase FlgJ [Cell wall/membrane/envelope biogenesis, Cell motility]. 	mmseqs_cdd	nonviral_gene	NaN		0	13756
+ct3_kalam_2a_16	11101	11604	ct3_kalam_2a_16_20	+	13756			hypothetical protein		hypothetical_protein	NaN		0	13756
+ct3_kalam_2a_16	11632	11730	ct3_kalam_2a_16_21	+	13756			hypothetical protein		hypothetical_protein	NaN		0	13756
+ct3_kalam_2a_16	11727	12473	ct3_kalam_2a_16_22	+	13756		COG1705	Flagellum-specific peptidoglycan hydrolase FlgJ [Cell wall/membrane/envelope biogenesis, Cell motility]. 	mmseqs_cdd	nonviral_gene	NaN		0	13756
+ct3_kalam_2a_16	12479	13246	ct3_kalam_2a_16_23	+	13756		PFAM:PF15254.5	minor-head-protein	phrogs_hmm	hypothetical_protein	NaN		0	13756
+ct3_kalam_2a_16	13258	13488	ct3_kalam_2a_16_24	+	13756			hypothetical protein		hypothetical_protein	NaN		0	13756
+ct3_kalam_2a_16	13488	13640	ct3_kalam_2a_16_25	+	13756			hypothetical protein		hypothetical_protein	NaN		0	13756
+ct3_kalam_2a_17	282	440	ct3_kalam_2a_17_1	-	15438			hypothetical protein		hypothetical_protein	NaN		0	15438
+ct3_kalam_2a_17	430	738	ct3_kalam_2a_17_2	-	15438			hypothetical protein		hypothetical_protein	NaN		0	15438
+ct3_kalam_2a_17	1103	1456	ct3_kalam_2a_17_3	-	15438			hypothetical protein		hypothetical_protein	NaN		0	15438
+ct3_kalam_2a_17	1479	3569	ct3_kalam_2a_17_4	-	15438		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	15438
+ct3_kalam_2a_17	3566	4246	ct3_kalam_2a_17_5	-	15438			hypothetical protein		hypothetical_protein	NaN		0	15438
+ct3_kalam_2a_17	4332	4784	ct3_kalam_2a_17_6	-	15438			hypothetical protein		hypothetical_protein	NaN		0	15438
+ct3_kalam_2a_17	4938	5420	ct3_kalam_2a_17_7	+	15438			hypothetical protein		hypothetical_protein	NaN		0	15438
+ct3_kalam_2a_17	5423	5920	ct3_kalam_2a_17_8	+	15438			hypothetical protein		hypothetical_protein	NaN		0	15438
+ct3_kalam_2a_17	5926	6615	ct3_kalam_2a_17_9	+	15438		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	15438
+ct3_kalam_2a_17	6689	6844	ct3_kalam_2a_17_10	+	15438			hypothetical protein		hypothetical_protein	NaN		0	15438
+ct3_kalam_2a_17	6881	8002	ct3_kalam_2a_17_11	+	15438		PDB:2BBD_D	capsid-protein	hallmark_hmm	common_virus	NaN		0	15438
+ct3_kalam_2a_17	8009	8281	ct3_kalam_2a_17_12	+	15438			hypothetical protein		hypothetical_protein	NaN		0	15438
+ct3_kalam_2a_17	8398	9030	ct3_kalam_2a_17_13	+	15438		pfam01551	Peptidase family M23. Members of this family are zinc metallopeptidases with a range of specificities. The peptidase family M23 is included in this family, these are Gly-Gly endopeptidases. Peptidase family M23 are also endopeptidases. This family also includes some bacterial lipoproteins for which no proteolytic activity has been demonstrated. This family also includes leukocyte cell-derived chemotaxin 2 (LECT2) proteins. LECT2 is a liver-specific protein which is thought to be linked to hepatocyte growth although the exact function of this protein is unknown.	mmseqs_cdd	common_virus	NaN		0	15438
+ct3_kalam_2a_17	9030	9341	ct3_kalam_2a_17_14	+	15438			hypothetical protein		hypothetical_protein	NaN		0	15438
+ct3_kalam_2a_17	9396	9545	ct3_kalam_2a_17_15	+	15438			hypothetical protein		hypothetical_protein	NaN		0	15438
+ct3_kalam_2a_17	9557	9976	ct3_kalam_2a_17_16	+	15438			hypothetical protein		hypothetical_protein	NaN		0	15438
+ct3_kalam_2a_17	9973	10623	ct3_kalam_2a_17_17	+	15438			hypothetical protein		hypothetical_protein	NaN		0	15438
+ct3_kalam_2a_17	10620	10853	ct3_kalam_2a_17_18	+	15438			hypothetical protein		hypothetical_protein	NaN		0	15438
+ct3_kalam_2a_17	10837	11040	ct3_kalam_2a_17_19	+	15438			hypothetical protein		hypothetical_protein	NaN		0	15438
+ct3_kalam_2a_17	11040	11276	ct3_kalam_2a_17_20	+	15438			hypothetical protein		hypothetical_protein	NaN		0	15438
+ct3_kalam_2a_17	11276	11719	ct3_kalam_2a_17_21	+	15438			hypothetical protein		hypothetical_protein	NaN		0	15438
+ct3_kalam_2a_17	11719	12096	ct3_kalam_2a_17_22	+	15438			hypothetical protein		hypothetical_protein	NaN		0	15438
+ct3_kalam_2a_17	12096	13268	ct3_kalam_2a_17_23	+	15438			hypothetical protein		hypothetical_protein	NaN		0	15438
+ct3_kalam_2a_17	13265	13591	ct3_kalam_2a_17_24	+	15438			hypothetical protein		hypothetical_protein	NaN		0	15438
+ct3_kalam_2a_17	13572	13787	ct3_kalam_2a_17_25	+	15438			hypothetical protein		hypothetical_protein	NaN		0	15438
+ct3_kalam_2a_17	13784	14479	ct3_kalam_2a_17_26	+	15438			hypothetical protein		hypothetical_protein	NaN		0	15438
+ct3_kalam_2a_17	14501	14761	ct3_kalam_2a_17_27	+	15438			hypothetical protein		hypothetical_protein	NaN		0	15438
+ct3_kalam_2a_18	283	447	ct3_kalam_2a_18_1	-	15636			hypothetical protein		hypothetical_protein	NaN		0	15636
+ct3_kalam_2a_18	437	787	ct3_kalam_2a_18_2	-	15636			hypothetical protein		hypothetical_protein	NaN		0	15636
+ct3_kalam_2a_18	729	890	ct3_kalam_2a_18_3	-	15636			hypothetical protein		hypothetical_protein	NaN		0	15636
+ct3_kalam_2a_18	1044	1190	ct3_kalam_2a_18_4	-	15636			hypothetical protein		hypothetical_protein	NaN		0	15636
+ct3_kalam_2a_18	1255	1608	ct3_kalam_2a_18_5	-	15636			hypothetical protein		hypothetical_protein	NaN		0	15636
+ct3_kalam_2a_18	1631	3721	ct3_kalam_2a_18_6	-	15636		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	15636
+ct3_kalam_2a_18	3718	4398	ct3_kalam_2a_18_7	-	15636			hypothetical protein		hypothetical_protein	NaN		0	15636
+ct3_kalam_2a_18	4484	4930	ct3_kalam_2a_18_8	-	15636			hypothetical protein		hypothetical_protein	NaN		0	15636
+ct3_kalam_2a_18	5084	5566	ct3_kalam_2a_18_9	+	15636			hypothetical protein		hypothetical_protein	NaN		0	15636
+ct3_kalam_2a_18	5569	6066	ct3_kalam_2a_18_10	+	15636			hypothetical protein		hypothetical_protein	NaN		0	15636
+ct3_kalam_2a_18	6072	6761	ct3_kalam_2a_18_11	+	15636		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	15636
+ct3_kalam_2a_18	6835	6990	ct3_kalam_2a_18_12	+	15636			hypothetical protein		hypothetical_protein	NaN		0	15636
+ct3_kalam_2a_18	7027	8148	ct3_kalam_2a_18_13	+	15636		PDB:2BBD_D	capsid-protein	hallmark_hmm	common_virus	NaN		0	15636
+ct3_kalam_2a_18	8155	8427	ct3_kalam_2a_18_14	+	15636			hypothetical protein		hypothetical_protein	NaN		0	15636
+ct3_kalam_2a_18	8544	9176	ct3_kalam_2a_18_15	+	15636		pfam01551	Peptidase family M23. Members of this family are zinc metallopeptidases with a range of specificities. The peptidase family M23 is included in this family, these are Gly-Gly endopeptidases. Peptidase family M23 are also endopeptidases. This family also includes some bacterial lipoproteins for which no proteolytic activity has been demonstrated. This family also includes leukocyte cell-derived chemotaxin 2 (LECT2) proteins. LECT2 is a liver-specific protein which is thought to be linked to hepatocyte growth although the exact function of this protein is unknown.	mmseqs_cdd	common_virus	NaN		0	15636
+ct3_kalam_2a_18	9176	9487	ct3_kalam_2a_18_16	+	15636			hypothetical protein		hypothetical_protein	NaN		0	15636
+ct3_kalam_2a_18	9542	9691	ct3_kalam_2a_18_17	+	15636			hypothetical protein		hypothetical_protein	NaN		0	15636
+ct3_kalam_2a_18	9703	10122	ct3_kalam_2a_18_18	+	15636			hypothetical protein		hypothetical_protein	NaN		0	15636
+ct3_kalam_2a_18	10119	10769	ct3_kalam_2a_18_19	+	15636			hypothetical protein		hypothetical_protein	NaN		0	15636
+ct3_kalam_2a_18	10766	10999	ct3_kalam_2a_18_20	+	15636			hypothetical protein		hypothetical_protein	NaN		0	15636
+ct3_kalam_2a_18	10983	11186	ct3_kalam_2a_18_21	+	15636			hypothetical protein		hypothetical_protein	NaN		0	15636
+ct3_kalam_2a_18	11186	11422	ct3_kalam_2a_18_22	+	15636			hypothetical protein		hypothetical_protein	NaN		0	15636
+ct3_kalam_2a_18	11422	11865	ct3_kalam_2a_18_23	+	15636			hypothetical protein		hypothetical_protein	NaN		0	15636
+ct3_kalam_2a_18	11865	12260	ct3_kalam_2a_18_24	+	15636			hypothetical protein		hypothetical_protein	NaN		0	15636
+ct3_kalam_2a_18	12260	13432	ct3_kalam_2a_18_25	+	15636			hypothetical protein		hypothetical_protein	NaN		0	15636
+ct3_kalam_2a_18	13429	13755	ct3_kalam_2a_18_26	+	15636			hypothetical protein		hypothetical_protein	NaN		0	15636
+ct3_kalam_2a_18	13736	13951	ct3_kalam_2a_18_27	+	15636			hypothetical protein		hypothetical_protein	NaN		0	15636
+ct3_kalam_2a_18	13948	14643	ct3_kalam_2a_18_28	+	15636			hypothetical protein		hypothetical_protein	NaN		0	15636
+ct3_kalam_2a_18	14665	14922	ct3_kalam_2a_18_29	+	15636			hypothetical protein		hypothetical_protein	NaN		0	15636
+ct3_kalam_2a_18	15340	15549	ct3_kalam_2a_18_30	-	15636			hypothetical protein		hypothetical_protein	NaN		0	15636
+ct3_kalam_2a_19	265	444	ct3_kalam_2a_19_1	-	18373			hypothetical protein		hypothetical_protein	NaN		0	18373
+ct3_kalam_2a_19	445	639	ct3_kalam_2a_19_2	-	18373			hypothetical protein		hypothetical_protein	NaN		0	18373
+ct3_kalam_2a_19	636	929	ct3_kalam_2a_19_3	-	18373		cd11533	Nucleoside Triphosphate Pyrophosphohydrolase (EC 3.6.1.8) MazG-like domain found in uncharacterized protein from Archaeoglobus fulgidus (Af0060) and its bacterial homologs. This family includes an uncharacterized protein from Archaeoglobus fulgidus (Af0060) and its homologs from bacteria. Although its biological role remains unclear, Af0060 shows high sequence similarity to the dimeric 2-deoxyuridine 5'-triphosphate nucleotidohydrolase (dUTP pyrophosphatase or dUTPase) and NTP-PPase MazG proteins. However, unlike typical tandem-domain MazG proteins, members in this family consist of a single MazG-like domain that contains a well conserved divalent ion-binding motif EXX[E/D].	mmseqs_cdd	common_virus	NaN		0	18373
+ct3_kalam_2a_19	926	1342	ct3_kalam_2a_19_4	-	18373		PFAM:PF07509.10	secreted-protein	phrogs_hmm	hypothetical_protein	NaN		0	18373
+ct3_kalam_2a_19	1342	1677	ct3_kalam_2a_19_5	-	18373			hypothetical protein		hypothetical_protein	NaN		0	18373
+ct3_kalam_2a_19	1659	1850	ct3_kalam_2a_19_6	-	18373			hypothetical protein		hypothetical_protein	NaN		0	18373
+ct3_kalam_2a_19	2027	2413	ct3_kalam_2a_19_7	-	18373			hypothetical protein		hypothetical_protein	NaN		0	18373
+ct3_kalam_2a_19	2449	2706	ct3_kalam_2a_19_8	-	18373			hypothetical protein		hypothetical_protein	NaN		0	18373
+ct3_kalam_2a_19	3169	3492	ct3_kalam_2a_19_9	-	18373			hypothetical protein		hypothetical_protein	NaN		0	18373
+ct3_kalam_2a_19	3699	5846	ct3_kalam_2a_19_10	-	18373		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	18373
+ct3_kalam_2a_19	6268	6690	ct3_kalam_2a_19_11	-	18373		PDB:3EIV_D	Single-stranded-DNA-binding-protein	common_virus_hmm	common_virus	NaN		0	18373
+ct3_kalam_2a_19	6864	7238	ct3_kalam_2a_19_12	+	18373			hypothetical protein		hypothetical_protein	NaN		0	18373
+ct3_kalam_2a_19	7238	7813	ct3_kalam_2a_19_13	+	18373			hypothetical protein		hypothetical_protein	NaN		0	18373
+ct3_kalam_2a_19	7806	8594	ct3_kalam_2a_19_14	+	18373		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	18373
+ct3_kalam_2a_19	8610	8747	ct3_kalam_2a_19_15	+	18373			hypothetical protein		hypothetical_protein	NaN		0	18373
+ct3_kalam_2a_19	8762	9943	ct3_kalam_2a_19_16	+	18373		PDB:2BBD_D	capsid-protein	hallmark_hmm	common_virus	NaN		0	18373
+ct3_kalam_2a_19	9957	10112	ct3_kalam_2a_19_17	+	18373			hypothetical protein		hypothetical_protein	NaN		0	18373
+ct3_kalam_2a_19	10131	10247	ct3_kalam_2a_19_18	+	18373			hypothetical protein		hypothetical_protein	NaN		0	18373
+ct3_kalam_2a_19	10254	10589	ct3_kalam_2a_19_19	+	18373			hypothetical protein		hypothetical_protein	NaN		0	18373
+ct3_kalam_2a_19	10579	10728	ct3_kalam_2a_19_20	+	18373		PFAM:PF11087.7	membrane-DNA-delivery-protein	common_virus_hmm	common_virus	NaN		0	18373
+ct3_kalam_2a_19	10737	11450	ct3_kalam_2a_19_21	+	18373			hypothetical protein		hypothetical_protein	NaN		0	18373
+ct3_kalam_2a_19	11453	12169	ct3_kalam_2a_19_22	+	18373		PFAM:PF06995.10	endolysin	phrogs_hmm	hypothetical_protein	NaN		0	18373
+ct3_kalam_2a_19	12267	12464	ct3_kalam_2a_19_23	+	18373			hypothetical protein		hypothetical_protein	NaN		0	18373
+ct3_kalam_2a_19	12475	13125	ct3_kalam_2a_19_24	+	18373		PDB:2RSC_A	Lysozyme	common_virus_hmm	common_virus	NaN		0	18373
+ct3_kalam_2a_19	13125	13364	ct3_kalam_2a_19_25	+	18373			hypothetical protein		hypothetical_protein	NaN		0	18373
+ct3_kalam_2a_19	13361	13510	ct3_kalam_2a_19_26	+	18373		PFAM:PF11087.7	membrane-DNA-delivery-protein	common_virus_hmm	common_virus	NaN		0	18373
+ct3_kalam_2a_19	13507	13770	ct3_kalam_2a_19_27	+	18373			hypothetical protein		hypothetical_protein	NaN		0	18373
+ct3_kalam_2a_19	13773	14453	ct3_kalam_2a_19_28	+	18373		PDB:2RSC_A	Lysozyme	common_virus_hmm	common_virus	NaN		0	18373
+ct3_kalam_2a_19	14425	14706	ct3_kalam_2a_19_29	+	18373			hypothetical protein		hypothetical_protein	NaN		0	18373
+ct3_kalam_2a_19	14709	15305	ct3_kalam_2a_19_30	+	18373			hypothetical protein		hypothetical_protein	NaN		0	18373
+ct3_kalam_2a_19	15302	15643	ct3_kalam_2a_19_31	+	18373			hypothetical protein		hypothetical_protein	NaN		0	18373
+ct3_kalam_2a_19	15645	16880	ct3_kalam_2a_19_32	+	18373			hypothetical protein		hypothetical_protein	NaN		0	18373
+ct3_kalam_2a_19	16891	17667	ct3_kalam_2a_19_33	+	18373		PFAM:PF01510.24	endolysin	phrogs_hmm	hypothetical_protein	NaN		0	18373
+ct3_kalam_2a_19	17664	17990	ct3_kalam_2a_19_34	+	18373			hypothetical protein		hypothetical_protein	NaN		0	18373
+ct3_kalam_2a_19	17980	18162	ct3_kalam_2a_19_35	+	18373			hypothetical protein		hypothetical_protein	NaN		0	18373
+ct3_kalam_2a_2	590	928	ct3_kalam_2a_2_1	+	14444		PDB:1Z9F_A	Single-stranded-DNA-binding-protein	common_virus_hmm	common_virus	NaN		0	14444
+ct3_kalam_2a_2	943	1128	ct3_kalam_2a_2_2	+	14444			hypothetical protein		hypothetical_protein	NaN		0	14444
+ct3_kalam_2a_2	1174	1923	ct3_kalam_2a_2_3	+	14444			hypothetical protein		hypothetical_protein	NaN		0	14444
+ct3_kalam_2a_2	1886	3961	ct3_kalam_2a_2_4	+	14444		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	14444
+ct3_kalam_2a_2	3958	4176	ct3_kalam_2a_2_5	+	14444			hypothetical protein		hypothetical_protein	NaN		0	14444
+ct3_kalam_2a_2	4166	4366	ct3_kalam_2a_2_6	+	14444		PFAM:PF04358.12	transcriptional-repressor	phrogs_hmm	hypothetical_protein	NaN		0	14444
+ct3_kalam_2a_2	4610	5047	ct3_kalam_2a_2_7	+	14444			hypothetical protein		hypothetical_protein	NaN		0	14444
+ct3_kalam_2a_2	4875	5429	ct3_kalam_2a_2_8	-	14444			hypothetical protein		hypothetical_protein	NaN		0	14444
+ct3_kalam_2a_2	5465	5707	ct3_kalam_2a_2_9	+	14444			hypothetical protein		hypothetical_protein	NaN		0	14444
+ct3_kalam_2a_2	5965	6603	ct3_kalam_2a_2_10	+	14444		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	14444
+ct3_kalam_2a_2	6455	6832	ct3_kalam_2a_2_11	-	14444			hypothetical protein		hypothetical_protein	NaN		0	14444
+ct3_kalam_2a_2	6916	7185	ct3_kalam_2a_2_12	+	14444			hypothetical protein		hypothetical_protein	NaN		0	14444
+ct3_kalam_2a_2	7185	8255	ct3_kalam_2a_2_13	+	14444		PDB:3J31_H	Major-Capsid-Protein	hallmark_hmm	common_virus	NaN		0	14444
+ct3_kalam_2a_2	8297	8527	ct3_kalam_2a_2_14	+	14444			hypothetical protein		hypothetical_protein	NaN		0	14444
+ct3_kalam_2a_2	8531	8689	ct3_kalam_2a_2_15	+	14444		PFAM:PF12841.6	holin	phrogs_hmm	hypothetical_protein	NaN		0	14444
+ct3_kalam_2a_2	8763	9194	ct3_kalam_2a_2_16	+	14444			hypothetical protein		hypothetical_protein	NaN		0	14444
+ct3_kalam_2a_2	9364	9510	ct3_kalam_2a_2_17	+	14444			hypothetical protein		hypothetical_protein	NaN		0	14444
+ct3_kalam_2a_2	9522	9797	ct3_kalam_2a_2_18	+	14444		UniProtKB:B6RT55_9VIRU	Minor-capsid-protein-	hallmark_hmm	common_virus	NaN		0	14444
+ct3_kalam_2a_2	9801	10418	ct3_kalam_2a_2_19	+	14444		UniProtKB:S0A0V9_9CAUD	structural-protein	hallmark_hmm	common_virus	NaN		0	14444
+ct3_kalam_2a_2	10423	11175	ct3_kalam_2a_2_20	+	14444		COG1705	Flagellum-specific peptidoglycan hydrolase FlgJ [Cell wall/membrane/envelope biogenesis, Cell motility]. 	mmseqs_cdd	nonviral_gene	NaN		0	14444
+ct3_kalam_2a_2	11114	11635	ct3_kalam_2a_2_21	+	14444		PFAM:PF08291.10	pentameric-base-spike-protein	phrogs_hmm	hypothetical_protein	NaN		0	14444
+ct3_kalam_2a_2	11648	12541	ct3_kalam_2a_2_22	+	14444			hypothetical protein		hypothetical_protein	NaN		0	14444
+ct3_kalam_2a_2	12545	13429	ct3_kalam_2a_2_23	+	14444			hypothetical protein		hypothetical_protein	NaN		0	14444
+ct3_kalam_2a_2	13443	14234	ct3_kalam_2a_2_24	+	14444		PDB:5EMI_A	Cell-wall-hydrolase-autolysin	common_virus_hmm	common_virus	NaN		0	14444
+ct3_kalam_2a_20	3	515	ct3_kalam_2a_20_1	+	14342			hypothetical protein		hypothetical_protein	NaN		0	14342
+ct3_kalam_2a_20	521	763	ct3_kalam_2a_20_2	+	14342			hypothetical protein		hypothetical_protein	NaN		0	14342
+ct3_kalam_2a_20	1313	1666	ct3_kalam_2a_20_3	-	14342		PFAM:PF05106.11	holin	phrogs_hmm	hypothetical_protein	NaN		0	14342
+ct3_kalam_2a_20	1663	2472	ct3_kalam_2a_20_4	-	14342		pfam01464	Transglycosylase SLT domain. This family is distantly related to pfam00062. Members are found in phages, type II, type III and type IV secretion systems.	mmseqs_cdd	common_virus	NaN		0	14342
+ct3_kalam_2a_20	2550	2825	ct3_kalam_2a_20_5	-	14342		pfam09301	Domain of unknown function (DUF1970). Members of this family consist of various uncharacterized viral hypothetical proteins.	mmseqs_cdd	nonviral_gene	NaN		0	14342
+ct3_kalam_2a_20	2836	3459	ct3_kalam_2a_20_6	-	14342			hypothetical protein		hypothetical_protein	NaN		0	14342
+ct3_kalam_2a_20	3574	3828	ct3_kalam_2a_20_7	-	14342		CDD:pfam09300	minor-capsid	hallmark_hmm	common_virus	NaN		0	14342
+ct3_kalam_2a_20	3838	4044	ct3_kalam_2a_20_8	-	14342		PFAM:PF11087.7	membrane-DNA-delivery-protein	common_virus_hmm	common_virus	NaN		0	14342
+ct3_kalam_2a_20	4057	4221	ct3_kalam_2a_20_9	-	14342		PFAM:PF11087.7	membrane-DNA-delivery-protein	common_virus_hmm	common_virus	NaN		0	14342
+ct3_kalam_2a_20	4715	4858	ct3_kalam_2a_20_10	-	14342			hypothetical protein		hypothetical_protein	NaN		0	14342
+ct3_kalam_2a_20	4876	5238	ct3_kalam_2a_20_11	-	14342		CDD:pfam09018	Major-Capsid-Protein	hallmark_hmm	common_virus	NaN		0	14342
+ct3_kalam_2a_20	5337	6062	ct3_kalam_2a_20_12	-	14342		CDD:pfam09018	Major-Capsid-Protein	hallmark_hmm	common_virus	NaN		0	14342
+ct3_kalam_2a_20	6069	6197	ct3_kalam_2a_20_13	-	14342			hypothetical protein		hypothetical_protein	NaN		0	14342
+ct3_kalam_2a_20	6197	6325	ct3_kalam_2a_20_14	-	14342			hypothetical protein		hypothetical_protein	NaN		0	14342
+ct3_kalam_2a_20	6411	7019	ct3_kalam_2a_20_15	-	14342		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	14342
+ct3_kalam_2a_20	7016	7219	ct3_kalam_2a_20_16	-	14342		UniProtKB:Q3T4U8_BPPRD	Assembly-protein	common_virus_hmm	common_virus	NaN		0	14342
+ct3_kalam_2a_20	7363	7605	ct3_kalam_2a_20_17	-	14342			hypothetical protein		hypothetical_protein	NaN		0	14342
+ct3_kalam_2a_20	7690	7866	ct3_kalam_2a_20_18	-	14342			hypothetical protein		hypothetical_protein	NaN		0	14342
+ct3_kalam_2a_20	7866	8072	ct3_kalam_2a_20_19	-	14342			hypothetical protein		hypothetical_protein	NaN		0	14342
+ct3_kalam_2a_20	8062	8322	ct3_kalam_2a_20_20	-	14342			hypothetical protein		hypothetical_protein	NaN		0	14342
+ct3_kalam_2a_20	8341	8646	ct3_kalam_2a_20_21	-	14342		PFAM:PF08949.9	major-spike-protein	phrogs_hmm	nonviral_gene	NaN		0	14342
+ct3_kalam_2a_20	8664	9362	ct3_kalam_2a_20_22	-	14342		PFAM:PF08949.9	major-spike-protein	phrogs_hmm	nonviral_gene	NaN		0	14342
+ct3_kalam_2a_20	9362	9616	ct3_kalam_2a_20_23	-	14342		PFAM:PF08949.9	major-spike-protein	phrogs_hmm	nonviral_gene	NaN		0	14342
+ct3_kalam_2a_20	9613	9741	ct3_kalam_2a_20_24	-	14342		pfam08948	Domain of unknown function (DUF1859). This domain has no known function. It is predominantly found in the N-terminus of bacteriophage spike proteins.	mmseqs_cdd	nonviral_gene	NaN		0	14342
+ct3_kalam_2a_20	9989	10417	ct3_kalam_2a_20_25	-	14342		PDB:1N7V_A	Adsorption-protein	common_virus_hmm	common_virus	NaN		0	14342
+ct3_kalam_2a_20	11087	11494	ct3_kalam_2a_20_26	-	14342		PDB:1N7V_A	Adsorption-protein	common_virus_hmm	common_virus	NaN		0	14342
+ct3_kalam_2a_20	11494	11943	ct3_kalam_2a_20_27	-	14342		CDD:pfam11860	N-acetylmuramidase	common_virus_hmm	common_virus	NaN		0	14342
+ct3_kalam_2a_20	11945	12922	ct3_kalam_2a_20_28	-	14342		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	14342
+ct3_kalam_2a_20	12957	13325	ct3_kalam_2a_20_29	-	14342		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	14342
+ct3_kalam_2a_20	13374	13598	ct3_kalam_2a_20_30	-	14342			hypothetical protein		hypothetical_protein	NaN		0	14342
+ct3_kalam_2a_20	13602	14342	ct3_kalam_2a_20_31	-	14342			hypothetical protein		hypothetical_protein	NaN		0	14342
+ct3_kalam_2a_21	128	295	ct3_kalam_2a_21_1	-	15471			hypothetical protein		hypothetical_protein	NaN		0	15471
+ct3_kalam_2a_21	309	467	ct3_kalam_2a_21_2	-	15471			hypothetical protein		hypothetical_protein	NaN		0	15471
+ct3_kalam_2a_21	457	765	ct3_kalam_2a_21_3	-	15471			hypothetical protein		hypothetical_protein	NaN		0	15471
+ct3_kalam_2a_21	919	1065	ct3_kalam_2a_21_4	-	15471			hypothetical protein		hypothetical_protein	NaN		0	15471
+ct3_kalam_2a_21	1130	1483	ct3_kalam_2a_21_5	-	15471			hypothetical protein		hypothetical_protein	NaN		0	15471
+ct3_kalam_2a_21	1506	3557	ct3_kalam_2a_21_6	-	15471		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	15471
+ct3_kalam_2a_21	3554	4234	ct3_kalam_2a_21_7	-	15471			hypothetical protein		hypothetical_protein	NaN		0	15471
+ct3_kalam_2a_21	4320	4766	ct3_kalam_2a_21_8	-	15471			hypothetical protein		hypothetical_protein	NaN		0	15471
+ct3_kalam_2a_21	4920	5402	ct3_kalam_2a_21_9	+	15471			hypothetical protein		hypothetical_protein	NaN		0	15471
+ct3_kalam_2a_21	5405	5905	ct3_kalam_2a_21_10	+	15471			hypothetical protein		hypothetical_protein	NaN		0	15471
+ct3_kalam_2a_21	5912	6601	ct3_kalam_2a_21_11	+	15471		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	15471
+ct3_kalam_2a_21	6675	6830	ct3_kalam_2a_21_12	+	15471			hypothetical protein		hypothetical_protein	NaN		0	15471
+ct3_kalam_2a_21	6867	7988	ct3_kalam_2a_21_13	+	15471		PDB:2BBD_D	capsid-protein	hallmark_hmm	common_virus	NaN		0	15471
+ct3_kalam_2a_21	7995	8267	ct3_kalam_2a_21_14	+	15471			hypothetical protein		hypothetical_protein	NaN		0	15471
+ct3_kalam_2a_21	8384	9016	ct3_kalam_2a_21_15	+	15471		pfam01551	Peptidase family M23. Members of this family are zinc metallopeptidases with a range of specificities. The peptidase family M23 is included in this family, these are Gly-Gly endopeptidases. Peptidase family M23 are also endopeptidases. This family also includes some bacterial lipoproteins for which no proteolytic activity has been demonstrated. This family also includes leukocyte cell-derived chemotaxin 2 (LECT2) proteins. LECT2 is a liver-specific protein which is thought to be linked to hepatocyte growth although the exact function of this protein is unknown.	mmseqs_cdd	common_virus	NaN		0	15471
+ct3_kalam_2a_21	9016	9327	ct3_kalam_2a_21_16	+	15471			hypothetical protein		hypothetical_protein	NaN		0	15471
+ct3_kalam_2a_21	9382	9531	ct3_kalam_2a_21_17	+	15471			hypothetical protein		hypothetical_protein	NaN		0	15471
+ct3_kalam_2a_21	9543	9962	ct3_kalam_2a_21_18	+	15471			hypothetical protein		hypothetical_protein	NaN		0	15471
+ct3_kalam_2a_21	9959	10609	ct3_kalam_2a_21_19	+	15471			hypothetical protein		hypothetical_protein	NaN		0	15471
+ct3_kalam_2a_21	10606	10839	ct3_kalam_2a_21_20	+	15471			hypothetical protein		hypothetical_protein	NaN		0	15471
+ct3_kalam_2a_21	10823	11026	ct3_kalam_2a_21_21	+	15471			hypothetical protein		hypothetical_protein	NaN		0	15471
+ct3_kalam_2a_21	11026	11262	ct3_kalam_2a_21_22	+	15471			hypothetical protein		hypothetical_protein	NaN		0	15471
+ct3_kalam_2a_21	11262	11705	ct3_kalam_2a_21_23	+	15471			hypothetical protein		hypothetical_protein	NaN		0	15471
+ct3_kalam_2a_21	11705	12082	ct3_kalam_2a_21_24	+	15471			hypothetical protein		hypothetical_protein	NaN		0	15471
+ct3_kalam_2a_21	12082	13254	ct3_kalam_2a_21_25	+	15471			hypothetical protein		hypothetical_protein	NaN		0	15471
+ct3_kalam_2a_21	13251	13577	ct3_kalam_2a_21_26	+	15471			hypothetical protein		hypothetical_protein	NaN		0	15471
+ct3_kalam_2a_21	13558	13773	ct3_kalam_2a_21_27	+	15471			hypothetical protein		hypothetical_protein	NaN		0	15471
+ct3_kalam_2a_21	13770	14465	ct3_kalam_2a_21_28	+	15471			hypothetical protein		hypothetical_protein	NaN		0	15471
+ct3_kalam_2a_21	14487	14735	ct3_kalam_2a_21_29	+	15471			hypothetical protein		hypothetical_protein	NaN		0	15471
+ct3_kalam_2a_22	121	336	ct3_kalam_2a_22_1	-	15488			hypothetical protein		hypothetical_protein	NaN		0	15488
+ct3_kalam_2a_22	350	508	ct3_kalam_2a_22_2	-	15488			hypothetical protein		hypothetical_protein	NaN		0	15488
+ct3_kalam_2a_22	498	806	ct3_kalam_2a_22_3	-	15488			hypothetical protein		hypothetical_protein	NaN		0	15488
+ct3_kalam_2a_22	960	1106	ct3_kalam_2a_22_4	-	15488			hypothetical protein		hypothetical_protein	NaN		0	15488
+ct3_kalam_2a_22	1171	1524	ct3_kalam_2a_22_5	-	15488			hypothetical protein		hypothetical_protein	NaN		0	15488
+ct3_kalam_2a_22	1547	3598	ct3_kalam_2a_22_6	-	15488		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	15488
+ct3_kalam_2a_22	3595	4275	ct3_kalam_2a_22_7	-	15488			hypothetical protein		hypothetical_protein	NaN		0	15488
+ct3_kalam_2a_22	4361	4807	ct3_kalam_2a_22_8	-	15488			hypothetical protein		hypothetical_protein	NaN		0	15488
+ct3_kalam_2a_22	4961	5443	ct3_kalam_2a_22_9	+	15488			hypothetical protein		hypothetical_protein	NaN		0	15488
+ct3_kalam_2a_22	5446	5943	ct3_kalam_2a_22_10	+	15488			hypothetical protein		hypothetical_protein	NaN		0	15488
+ct3_kalam_2a_22	5949	6638	ct3_kalam_2a_22_11	+	15488		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	15488
+ct3_kalam_2a_22	6712	6867	ct3_kalam_2a_22_12	+	15488			hypothetical protein		hypothetical_protein	NaN		0	15488
+ct3_kalam_2a_22	6904	8025	ct3_kalam_2a_22_13	+	15488		PDB:2BBD_D	capsid-protein	hallmark_hmm	common_virus	NaN		0	15488
+ct3_kalam_2a_22	8032	8304	ct3_kalam_2a_22_14	+	15488			hypothetical protein		hypothetical_protein	NaN		0	15488
+ct3_kalam_2a_22	8421	9053	ct3_kalam_2a_22_15	+	15488		pfam01551	Peptidase family M23. Members of this family are zinc metallopeptidases with a range of specificities. The peptidase family M23 is included in this family, these are Gly-Gly endopeptidases. Peptidase family M23 are also endopeptidases. This family also includes some bacterial lipoproteins for which no proteolytic activity has been demonstrated. This family also includes leukocyte cell-derived chemotaxin 2 (LECT2) proteins. LECT2 is a liver-specific protein which is thought to be linked to hepatocyte growth although the exact function of this protein is unknown.	mmseqs_cdd	common_virus	NaN		0	15488
+ct3_kalam_2a_22	9053	9364	ct3_kalam_2a_22_16	+	15488			hypothetical protein		hypothetical_protein	NaN		0	15488
+ct3_kalam_2a_22	9419	9568	ct3_kalam_2a_22_17	+	15488			hypothetical protein		hypothetical_protein	NaN		0	15488
+ct3_kalam_2a_22	9580	9999	ct3_kalam_2a_22_18	+	15488			hypothetical protein		hypothetical_protein	NaN		0	15488
+ct3_kalam_2a_22	9996	10646	ct3_kalam_2a_22_19	+	15488			hypothetical protein		hypothetical_protein	NaN		0	15488
+ct3_kalam_2a_22	10643	10876	ct3_kalam_2a_22_20	+	15488			hypothetical protein		hypothetical_protein	NaN		0	15488
+ct3_kalam_2a_22	10860	11063	ct3_kalam_2a_22_21	+	15488			hypothetical protein		hypothetical_protein	NaN		0	15488
+ct3_kalam_2a_22	11063	11299	ct3_kalam_2a_22_22	+	15488			hypothetical protein		hypothetical_protein	NaN		0	15488
+ct3_kalam_2a_22	11299	11742	ct3_kalam_2a_22_23	+	15488			hypothetical protein		hypothetical_protein	NaN		0	15488
+ct3_kalam_2a_22	11742	12122	ct3_kalam_2a_22_24	+	15488			hypothetical protein		hypothetical_protein	NaN		0	15488
+ct3_kalam_2a_22	12122	13294	ct3_kalam_2a_22_25	+	15488			hypothetical protein		hypothetical_protein	NaN		0	15488
+ct3_kalam_2a_22	13291	13617	ct3_kalam_2a_22_26	+	15488			hypothetical protein		hypothetical_protein	NaN		0	15488
+ct3_kalam_2a_22	13598	13813	ct3_kalam_2a_22_27	+	15488			hypothetical protein		hypothetical_protein	NaN		0	15488
+ct3_kalam_2a_22	13810	14505	ct3_kalam_2a_22_28	+	15488			hypothetical protein		hypothetical_protein	NaN		0	15488
+ct3_kalam_2a_22	14527	14775	ct3_kalam_2a_22_29	+	15488			hypothetical protein		hypothetical_protein	NaN		0	15488
+ct3_kalam_2a_23	162	941	ct3_kalam_2a_23_1	+	14800			hypothetical protein		hypothetical_protein	NaN		0	14800
+ct3_kalam_2a_23	945	2606	ct3_kalam_2a_23_2	+	14800		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	14800
+ct3_kalam_2a_23	2608	3057	ct3_kalam_2a_23_3	+	14800		CDD:pfam11860	N-acetylmuramidase	common_virus_hmm	common_virus	NaN		0	14800
+ct3_kalam_2a_23	3057	4832	ct3_kalam_2a_23_4	+	14800		PDB:1N7V_A	Adsorption-protein	common_virus_hmm	common_virus	NaN		0	14800
+ct3_kalam_2a_23	4836	5216	ct3_kalam_2a_23_5	+	14800		PFAM:PF08949.9	major-spike-protein	phrogs_hmm	nonviral_gene	NaN		0	14800
+ct3_kalam_2a_23	5216	6238	ct3_kalam_2a_23_6	+	14800		PFAM:PF08949.9	major-spike-protein	phrogs_hmm	nonviral_gene	NaN		0	14800
+ct3_kalam_2a_23	6257	6517	ct3_kalam_2a_23_7	+	14800			hypothetical protein		hypothetical_protein	NaN		0	14800
+ct3_kalam_2a_23	6507	6713	ct3_kalam_2a_23_8	+	14800			hypothetical protein		hypothetical_protein	NaN		0	14800
+ct3_kalam_2a_23	6713	7213	ct3_kalam_2a_23_9	+	14800			hypothetical protein		hypothetical_protein	NaN		0	14800
+ct3_kalam_2a_23	7246	7569	ct3_kalam_2a_23_10	+	14800		UniProtKB:Q3T4U8_BPPRD	Assembly-protein	common_virus_hmm	common_virus	NaN		0	14800
+ct3_kalam_2a_23	7566	8249	ct3_kalam_2a_23_11	+	14800		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	14800
+ct3_kalam_2a_23	8261	8389	ct3_kalam_2a_23_12	+	14800			hypothetical protein		hypothetical_protein	NaN		0	14800
+ct3_kalam_2a_23	8389	8517	ct3_kalam_2a_23_13	+	14800			hypothetical protein		hypothetical_protein	NaN		0	14800
+ct3_kalam_2a_23	8523	9710	ct3_kalam_2a_23_14	+	14800		CDD:pfam09018	Major-Capsid-Protein	hallmark_hmm	common_virus	NaN		0	14800
+ct3_kalam_2a_23	9729	9872	ct3_kalam_2a_23_15	+	14800			hypothetical protein		hypothetical_protein	NaN		0	14800
+ct3_kalam_2a_23	10096	10368	ct3_kalam_2a_23_16	+	14800			hypothetical protein		hypothetical_protein	NaN		0	14800
+ct3_kalam_2a_23	10368	10532	ct3_kalam_2a_23_17	+	14800		PFAM:PF11087.7	membrane-DNA-delivery-protein	common_virus_hmm	common_virus	NaN		0	14800
+ct3_kalam_2a_23	10545	10751	ct3_kalam_2a_23_18	+	14800		PFAM:PF11087.7	membrane-DNA-delivery-protein	common_virus_hmm	common_virus	NaN		0	14800
+ct3_kalam_2a_23	10761	11015	ct3_kalam_2a_23_19	+	14800		CDD:pfam09300	minor-capsid	hallmark_hmm	common_virus	NaN		0	14800
+ct3_kalam_2a_23	11130	11753	ct3_kalam_2a_23_20	+	14800			hypothetical protein		hypothetical_protein	NaN		0	14800
+ct3_kalam_2a_23	11764	12117	ct3_kalam_2a_23_21	+	14800		pfam09301	Domain of unknown function (DUF1970). Members of this family consist of various uncharacterized viral hypothetical proteins.	mmseqs_cdd	nonviral_gene	NaN		0	14800
+ct3_kalam_2a_23	12118	12927	ct3_kalam_2a_23_22	+	14800		pfam01464	Transglycosylase SLT domain. This family is distantly related to pfam00062. Members are found in phages, type II, type III and type IV secretion systems.	mmseqs_cdd	common_virus	NaN		0	14800
+ct3_kalam_2a_23	12924	13277	ct3_kalam_2a_23_23	+	14800		PFAM:PF05106.11	holin	phrogs_hmm	hypothetical_protein	NaN		0	14800
+ct3_kalam_2a_23	13270	13632	ct3_kalam_2a_23_24	+	14800		PFAM:PF10828.7	Rz-like-spanin	phrogs_hmm	hypothetical_protein	NaN		0	14800
+ct3_kalam_2a_23	13788	14072	ct3_kalam_2a_23_25	-	14800			hypothetical protein		hypothetical_protein	NaN		0	14800
+ct3_kalam_2a_23	14145	14627	ct3_kalam_2a_23_26	-	14800			hypothetical protein		hypothetical_protein	NaN		0	14800
+ct3_kalam_2a_23	14730	14798	ct3_kalam_2a_23_27	+	14800			hypothetical protein		hypothetical_protein	NaN		0	14800
+ct3_kalam_2a_24	282	440	ct3_kalam_2a_24_1	-	15460			hypothetical protein		hypothetical_protein	NaN		0	15460
+ct3_kalam_2a_24	430	738	ct3_kalam_2a_24_2	-	15460			hypothetical protein		hypothetical_protein	NaN		0	15460
+ct3_kalam_2a_24	892	1038	ct3_kalam_2a_24_3	-	15460			hypothetical protein		hypothetical_protein	NaN		0	15460
+ct3_kalam_2a_24	1103	1456	ct3_kalam_2a_24_4	-	15460			hypothetical protein		hypothetical_protein	NaN		0	15460
+ct3_kalam_2a_24	1479	3569	ct3_kalam_2a_24_5	-	15460		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	15460
+ct3_kalam_2a_24	3566	4246	ct3_kalam_2a_24_6	-	15460			hypothetical protein		hypothetical_protein	NaN		0	15460
+ct3_kalam_2a_24	4332	4784	ct3_kalam_2a_24_7	-	15460			hypothetical protein		hypothetical_protein	NaN		0	15460
+ct3_kalam_2a_24	4938	5420	ct3_kalam_2a_24_8	+	15460			hypothetical protein		hypothetical_protein	NaN		0	15460
+ct3_kalam_2a_24	5423	5920	ct3_kalam_2a_24_9	+	15460			hypothetical protein		hypothetical_protein	NaN		0	15460
+ct3_kalam_2a_24	5917	6615	ct3_kalam_2a_24_10	+	15460		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	15460
+ct3_kalam_2a_24	6689	6844	ct3_kalam_2a_24_11	+	15460			hypothetical protein		hypothetical_protein	NaN		0	15460
+ct3_kalam_2a_24	6881	8002	ct3_kalam_2a_24_12	+	15460		PDB:2BBD_D	capsid-protein	hallmark_hmm	common_virus	NaN		0	15460
+ct3_kalam_2a_24	8009	8281	ct3_kalam_2a_24_13	+	15460			hypothetical protein		hypothetical_protein	NaN		0	15460
+ct3_kalam_2a_24	8398	9030	ct3_kalam_2a_24_14	+	15460		pfam01551	Peptidase family M23. Members of this family are zinc metallopeptidases with a range of specificities. The peptidase family M23 is included in this family, these are Gly-Gly endopeptidases. Peptidase family M23 are also endopeptidases. This family also includes some bacterial lipoproteins for which no proteolytic activity has been demonstrated. This family also includes leukocyte cell-derived chemotaxin 2 (LECT2) proteins. LECT2 is a liver-specific protein which is thought to be linked to hepatocyte growth although the exact function of this protein is unknown.	mmseqs_cdd	common_virus	NaN		0	15460
+ct3_kalam_2a_24	9030	9341	ct3_kalam_2a_24_15	+	15460			hypothetical protein		hypothetical_protein	NaN		0	15460
+ct3_kalam_2a_24	9396	9545	ct3_kalam_2a_24_16	+	15460			hypothetical protein		hypothetical_protein	NaN		0	15460
+ct3_kalam_2a_24	9557	9976	ct3_kalam_2a_24_17	+	15460			hypothetical protein		hypothetical_protein	NaN		0	15460
+ct3_kalam_2a_24	9973	10623	ct3_kalam_2a_24_18	+	15460			hypothetical protein		hypothetical_protein	NaN		0	15460
+ct3_kalam_2a_24	10620	10853	ct3_kalam_2a_24_19	+	15460			hypothetical protein		hypothetical_protein	NaN		0	15460
+ct3_kalam_2a_24	10837	11040	ct3_kalam_2a_24_20	+	15460			hypothetical protein		hypothetical_protein	NaN		0	15460
+ct3_kalam_2a_24	11040	11276	ct3_kalam_2a_24_21	+	15460			hypothetical protein		hypothetical_protein	NaN		0	15460
+ct3_kalam_2a_24	11276	11719	ct3_kalam_2a_24_22	+	15460			hypothetical protein		hypothetical_protein	NaN		0	15460
+ct3_kalam_2a_24	11719	12096	ct3_kalam_2a_24_23	+	15460			hypothetical protein		hypothetical_protein	NaN		0	15460
+ct3_kalam_2a_24	12096	13268	ct3_kalam_2a_24_24	+	15460			hypothetical protein		hypothetical_protein	NaN		0	15460
+ct3_kalam_2a_24	13265	13591	ct3_kalam_2a_24_25	+	15460			hypothetical protein		hypothetical_protein	NaN		0	15460
+ct3_kalam_2a_24	13572	13787	ct3_kalam_2a_24_26	+	15460			hypothetical protein		hypothetical_protein	NaN		0	15460
+ct3_kalam_2a_24	13784	14479	ct3_kalam_2a_24_27	+	15460			hypothetical protein		hypothetical_protein	NaN		0	15460
+ct3_kalam_2a_24	14501	14761	ct3_kalam_2a_24_28	+	15460			hypothetical protein		hypothetical_protein	NaN		0	15460
+ct3_kalam_2a_25	589	927	ct3_kalam_2a_25_1	+	14852		PDB:1Z9F_A	Single-stranded-DNA-binding-protein	common_virus_hmm	common_virus	NaN		0	14852
+ct3_kalam_2a_25	942	1127	ct3_kalam_2a_25_2	+	14852			hypothetical protein		hypothetical_protein	NaN		0	14852
+ct3_kalam_2a_25	1173	1922	ct3_kalam_2a_25_3	+	14852			hypothetical protein		hypothetical_protein	NaN		0	14852
+ct3_kalam_2a_25	1885	3960	ct3_kalam_2a_25_4	+	14852		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	14852
+ct3_kalam_2a_25	3957	4175	ct3_kalam_2a_25_5	+	14852			hypothetical protein		hypothetical_protein	NaN		0	14852
+ct3_kalam_2a_25	4165	4365	ct3_kalam_2a_25_6	+	14852		PFAM:PF04358.12	transcriptional-repressor	phrogs_hmm	hypothetical_protein	NaN		0	14852
+ct3_kalam_2a_25	4379	4516	ct3_kalam_2a_25_7	+	14852			hypothetical protein		hypothetical_protein	NaN		0	14852
+ct3_kalam_2a_25	4485	4739	ct3_kalam_2a_25_8	+	14852			hypothetical protein		hypothetical_protein	NaN		0	14852
+ct3_kalam_2a_25	4876	5082	ct3_kalam_2a_25_9	+	14852			hypothetical protein		hypothetical_protein	NaN		0	14852
+ct3_kalam_2a_25	5293	6030	ct3_kalam_2a_25_10	+	14852			hypothetical protein		hypothetical_protein	NaN		0	14852
+ct3_kalam_2a_25	6087	6395	ct3_kalam_2a_25_11	+	14852			hypothetical protein		hypothetical_protein	NaN		0	14852
+ct3_kalam_2a_25	6376	7014	ct3_kalam_2a_25_12	+	14852		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	14852
+ct3_kalam_2a_25	7328	7582	ct3_kalam_2a_25_13	+	14852			hypothetical protein		hypothetical_protein	NaN		0	14852
+ct3_kalam_2a_25	7582	8652	ct3_kalam_2a_25_14	+	14852		PDB:3J31_H	penton-base-protein	hallmark_hmm	common_virus	NaN		0	14852
+ct3_kalam_2a_25	8694	8924	ct3_kalam_2a_25_15	+	14852			hypothetical protein		hypothetical_protein	NaN		0	14852
+ct3_kalam_2a_25	8928	9119	ct3_kalam_2a_25_16	+	14852		PFAM:PF12841.6	holin	phrogs_hmm	hypothetical_protein	NaN		0	14852
+ct3_kalam_2a_25	9203	9628	ct3_kalam_2a_25_17	+	14852			hypothetical protein		hypothetical_protein	NaN		0	14852
+ct3_kalam_2a_25	9798	9944	ct3_kalam_2a_25_18	+	14852			hypothetical protein		hypothetical_protein	NaN		0	14852
+ct3_kalam_2a_25	9956	10231	ct3_kalam_2a_25_19	+	14852		UniProtKB:B6RT55_9VIRU	Minor-capsid-protein-	hallmark_hmm	common_virus	NaN		0	14852
+ct3_kalam_2a_25	10235	10849	ct3_kalam_2a_25_20	+	14852			hypothetical protein		hypothetical_protein	NaN		0	14852
+ct3_kalam_2a_25	10849	11601	ct3_kalam_2a_25_21	+	14852		COG1705	Flagellum-specific peptidoglycan hydrolase FlgJ [Cell wall/membrane/envelope biogenesis, Cell motility]. 	mmseqs_cdd	nonviral_gene	NaN		0	14852
+ct3_kalam_2a_25	11540	12061	ct3_kalam_2a_25_22	+	14852		PFAM:PF08291.10	pentameric-base-spike-protein	phrogs_hmm	hypothetical_protein	NaN		0	14852
+ct3_kalam_2a_25	12074	12967	ct3_kalam_2a_25_23	+	14852			hypothetical protein		hypothetical_protein	NaN		0	14852
+ct3_kalam_2a_25	12971	13849	ct3_kalam_2a_25_24	+	14852			hypothetical protein		hypothetical_protein	NaN		0	14852
+ct3_kalam_2a_25	13857	14654	ct3_kalam_2a_25_25	+	14852		PDB:5EMI_A	Cell-wall-hydrolase-autolysin	common_virus_hmm	common_virus	NaN		0	14852
+ct3_kalam_2a_26	590	928	ct3_kalam_2a_26_1	+	14444		PDB:1Z9F_A	Single-stranded-DNA-binding-protein	common_virus_hmm	common_virus	NaN		0	14444
+ct3_kalam_2a_26	943	1128	ct3_kalam_2a_26_2	+	14444			hypothetical protein		hypothetical_protein	NaN		0	14444
+ct3_kalam_2a_26	1174	1923	ct3_kalam_2a_26_3	+	14444			hypothetical protein		hypothetical_protein	NaN		0	14444
+ct3_kalam_2a_26	1886	3961	ct3_kalam_2a_26_4	+	14444		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	14444
+ct3_kalam_2a_26	3958	4176	ct3_kalam_2a_26_5	+	14444			hypothetical protein		hypothetical_protein	NaN		0	14444
+ct3_kalam_2a_26	4166	4366	ct3_kalam_2a_26_6	+	14444		PFAM:PF04358.12	transcriptional-repressor	phrogs_hmm	hypothetical_protein	NaN		0	14444
+ct3_kalam_2a_26	4610	5047	ct3_kalam_2a_26_7	+	14444			hypothetical protein		hypothetical_protein	NaN		0	14444
+ct3_kalam_2a_26	4875	5429	ct3_kalam_2a_26_8	-	14444			hypothetical protein		hypothetical_protein	NaN		0	14444
+ct3_kalam_2a_26	5465	5707	ct3_kalam_2a_26_9	+	14444			hypothetical protein		hypothetical_protein	NaN		0	14444
+ct3_kalam_2a_26	5965	6603	ct3_kalam_2a_26_10	+	14444		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	14444
+ct3_kalam_2a_26	6455	6832	ct3_kalam_2a_26_11	-	14444			hypothetical protein		hypothetical_protein	NaN		0	14444
+ct3_kalam_2a_26	6916	7185	ct3_kalam_2a_26_12	+	14444			hypothetical protein		hypothetical_protein	NaN		0	14444
+ct3_kalam_2a_26	7185	8255	ct3_kalam_2a_26_13	+	14444		PDB:3J31_H	Major-Capsid-Protein	hallmark_hmm	common_virus	NaN		0	14444
+ct3_kalam_2a_26	8297	8527	ct3_kalam_2a_26_14	+	14444			hypothetical protein		hypothetical_protein	NaN		0	14444
+ct3_kalam_2a_26	8531	8689	ct3_kalam_2a_26_15	+	14444		PFAM:PF12841.6	holin	phrogs_hmm	hypothetical_protein	NaN		0	14444
+ct3_kalam_2a_26	8763	9194	ct3_kalam_2a_26_16	+	14444			hypothetical protein		hypothetical_protein	NaN		0	14444
+ct3_kalam_2a_26	9364	9510	ct3_kalam_2a_26_17	+	14444			hypothetical protein		hypothetical_protein	NaN		0	14444
+ct3_kalam_2a_26	9522	9797	ct3_kalam_2a_26_18	+	14444		UniProtKB:B6RT55_9VIRU	Minor-capsid-protein-	hallmark_hmm	common_virus	NaN		0	14444
+ct3_kalam_2a_26	9801	10418	ct3_kalam_2a_26_19	+	14444		UniProtKB:S0A0V9_9CAUD	structural-protein	hallmark_hmm	common_virus	NaN		0	14444
+ct3_kalam_2a_26	10423	11175	ct3_kalam_2a_26_20	+	14444		COG1705	Flagellum-specific peptidoglycan hydrolase FlgJ [Cell wall/membrane/envelope biogenesis, Cell motility]. 	mmseqs_cdd	nonviral_gene	NaN		0	14444
+ct3_kalam_2a_26	11114	11635	ct3_kalam_2a_26_21	+	14444		PFAM:PF08291.10	pentameric-base-spike-protein	phrogs_hmm	hypothetical_protein	NaN		0	14444
+ct3_kalam_2a_26	11648	12541	ct3_kalam_2a_26_22	+	14444			hypothetical protein		hypothetical_protein	NaN		0	14444
+ct3_kalam_2a_26	12545	13429	ct3_kalam_2a_26_23	+	14444			hypothetical protein		hypothetical_protein	NaN		0	14444
+ct3_kalam_2a_26	13443	14234	ct3_kalam_2a_26_24	+	14444		PDB:5EMI_A	Cell-wall-hydrolase-autolysin	common_virus_hmm	common_virus	NaN		0	14444
+ct3_kalam_2a_27	119	337	ct3_kalam_2a_27_1	-	15494			hypothetical protein		hypothetical_protein	NaN		0	15494
+ct3_kalam_2a_27	351	509	ct3_kalam_2a_27_2	-	15494			hypothetical protein		hypothetical_protein	NaN		0	15494
+ct3_kalam_2a_27	499	807	ct3_kalam_2a_27_3	-	15494			hypothetical protein		hypothetical_protein	NaN		0	15494
+ct3_kalam_2a_27	961	1107	ct3_kalam_2a_27_4	-	15494			hypothetical protein		hypothetical_protein	NaN		0	15494
+ct3_kalam_2a_27	1172	1525	ct3_kalam_2a_27_5	-	15494			hypothetical protein		hypothetical_protein	NaN		0	15494
+ct3_kalam_2a_27	1548	3599	ct3_kalam_2a_27_6	-	15494		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	15494
+ct3_kalam_2a_27	3596	4276	ct3_kalam_2a_27_7	-	15494			hypothetical protein		hypothetical_protein	NaN		0	15494
+ct3_kalam_2a_27	4362	4808	ct3_kalam_2a_27_8	-	15494			hypothetical protein		hypothetical_protein	NaN		0	15494
+ct3_kalam_2a_27	4962	5444	ct3_kalam_2a_27_9	+	15494			hypothetical protein		hypothetical_protein	NaN		0	15494
+ct3_kalam_2a_27	5447	5944	ct3_kalam_2a_27_10	+	15494			hypothetical protein		hypothetical_protein	NaN		0	15494
+ct3_kalam_2a_27	5950	6639	ct3_kalam_2a_27_11	+	15494		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	15494
+ct3_kalam_2a_27	6713	6868	ct3_kalam_2a_27_12	+	15494			hypothetical protein		hypothetical_protein	NaN		0	15494
+ct3_kalam_2a_27	6905	8026	ct3_kalam_2a_27_13	+	15494		PDB:2BBD_D	capsid-protein	hallmark_hmm	common_virus	NaN		0	15494
+ct3_kalam_2a_27	8033	8305	ct3_kalam_2a_27_14	+	15494			hypothetical protein		hypothetical_protein	NaN		0	15494
+ct3_kalam_2a_27	8422	9054	ct3_kalam_2a_27_15	+	15494		pfam01551	Peptidase family M23. Members of this family are zinc metallopeptidases with a range of specificities. The peptidase family M23 is included in this family, these are Gly-Gly endopeptidases. Peptidase family M23 are also endopeptidases. This family also includes some bacterial lipoproteins for which no proteolytic activity has been demonstrated. This family also includes leukocyte cell-derived chemotaxin 2 (LECT2) proteins. LECT2 is a liver-specific protein which is thought to be linked to hepatocyte growth although the exact function of this protein is unknown.	mmseqs_cdd	common_virus	NaN		0	15494
+ct3_kalam_2a_27	9054	9365	ct3_kalam_2a_27_16	+	15494			hypothetical protein		hypothetical_protein	NaN		0	15494
+ct3_kalam_2a_27	9420	9569	ct3_kalam_2a_27_17	+	15494			hypothetical protein		hypothetical_protein	NaN		0	15494
+ct3_kalam_2a_27	9581	10000	ct3_kalam_2a_27_18	+	15494			hypothetical protein		hypothetical_protein	NaN		0	15494
+ct3_kalam_2a_27	9997	10647	ct3_kalam_2a_27_19	+	15494			hypothetical protein		hypothetical_protein	NaN		0	15494
+ct3_kalam_2a_27	10644	10877	ct3_kalam_2a_27_20	+	15494			hypothetical protein		hypothetical_protein	NaN		0	15494
+ct3_kalam_2a_27	10861	11064	ct3_kalam_2a_27_21	+	15494			hypothetical protein		hypothetical_protein	NaN		0	15494
+ct3_kalam_2a_27	11064	11300	ct3_kalam_2a_27_22	+	15494			hypothetical protein		hypothetical_protein	NaN		0	15494
+ct3_kalam_2a_27	11300	11743	ct3_kalam_2a_27_23	+	15494			hypothetical protein		hypothetical_protein	NaN		0	15494
+ct3_kalam_2a_27	11743	12123	ct3_kalam_2a_27_24	+	15494			hypothetical protein		hypothetical_protein	NaN		0	15494
+ct3_kalam_2a_27	12123	13295	ct3_kalam_2a_27_25	+	15494			hypothetical protein		hypothetical_protein	NaN		0	15494
+ct3_kalam_2a_27	13292	13618	ct3_kalam_2a_27_26	+	15494			hypothetical protein		hypothetical_protein	NaN		0	15494
+ct3_kalam_2a_27	13599	13814	ct3_kalam_2a_27_27	+	15494			hypothetical protein		hypothetical_protein	NaN		0	15494
+ct3_kalam_2a_27	13811	14506	ct3_kalam_2a_27_28	+	15494			hypothetical protein		hypothetical_protein	NaN		0	15494
+ct3_kalam_2a_27	14528	14776	ct3_kalam_2a_27_29	+	15494			hypothetical protein		hypothetical_protein	NaN		0	15494
+ct3_kalam_2a_28	263	442	ct3_kalam_2a_28_1	-	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_28	442	681	ct3_kalam_2a_28_2	-	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_28	681	974	ct3_kalam_2a_28_3	-	18251		cd11533	Nucleoside Triphosphate Pyrophosphohydrolase (EC 3.6.1.8) MazG-like domain found in uncharacterized protein from Archaeoglobus fulgidus (Af0060) and its bacterial homologs. This family includes an uncharacterized protein from Archaeoglobus fulgidus (Af0060) and its homologs from bacteria. Although its biological role remains unclear, Af0060 shows high sequence similarity to the dimeric 2-deoxyuridine 5'-triphosphate nucleotidohydrolase (dUTP pyrophosphatase or dUTPase) and NTP-PPase MazG proteins. However, unlike typical tandem-domain MazG proteins, members in this family consist of a single MazG-like domain that contains a well conserved divalent ion-binding motif EXX[E/D].	mmseqs_cdd	common_virus	NaN		0	18251
+ct3_kalam_2a_28	971	1381	ct3_kalam_2a_28_4	-	18251		PFAM:PF07509.10	secreted-protein	phrogs_hmm	hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_28	1383	1715	ct3_kalam_2a_28_5	-	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_28	1697	1888	ct3_kalam_2a_28_6	-	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_28	2064	2450	ct3_kalam_2a_28_7	-	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_28	2500	2751	ct3_kalam_2a_28_8	-	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_28	3075	3413	ct3_kalam_2a_28_9	-	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_28	3622	5760	ct3_kalam_2a_28_10	-	18251		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	18251
+ct3_kalam_2a_28	6182	6604	ct3_kalam_2a_28_11	-	18251		PDB:3EIV_D	Single-stranded-DNA-binding-protein	common_virus_hmm	common_virus	NaN		0	18251
+ct3_kalam_2a_28	6778	7158	ct3_kalam_2a_28_12	+	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_28	7155	7730	ct3_kalam_2a_28_13	+	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_28	7723	8511	ct3_kalam_2a_28_14	+	18251		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	18251
+ct3_kalam_2a_28	8527	8664	ct3_kalam_2a_28_15	+	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_28	8679	9860	ct3_kalam_2a_28_16	+	18251		PDB:2BBD_D	capsid-protein	hallmark_hmm	common_virus	NaN		0	18251
+ct3_kalam_2a_28	9874	10029	ct3_kalam_2a_28_17	+	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_28	10049	10165	ct3_kalam_2a_28_18	+	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_28	10165	10515	ct3_kalam_2a_28_19	+	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_28	10512	10661	ct3_kalam_2a_28_20	+	18251		PFAM:PF11087.7	membrane-DNA-delivery-protein	common_virus_hmm	common_virus	NaN		0	18251
+ct3_kalam_2a_28	10670	11386	ct3_kalam_2a_28_21	+	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_28	11390	12106	ct3_kalam_2a_28_22	+	18251		PFAM:PF06995.10	endolysin	phrogs_hmm	hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_28	12123	12293	ct3_kalam_2a_28_23	+	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_28	12305	12973	ct3_kalam_2a_28_24	+	18251		PDB:2RSC_A	Lysozyme	common_virus_hmm	common_virus	NaN		0	18251
+ct3_kalam_2a_28	12973	13212	ct3_kalam_2a_28_25	+	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_28	13209	13358	ct3_kalam_2a_28_26	+	18251		PFAM:PF11087.7	membrane-DNA-delivery-protein	common_virus_hmm	common_virus	NaN		0	18251
+ct3_kalam_2a_28	13355	13621	ct3_kalam_2a_28_27	+	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_28	13624	14304	ct3_kalam_2a_28_28	+	18251		PDB:2RSC_A	Lysozyme	common_virus_hmm	common_virus	NaN		0	18251
+ct3_kalam_2a_28	14276	14557	ct3_kalam_2a_28_29	+	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_28	14560	15156	ct3_kalam_2a_28_30	+	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_28	15153	15491	ct3_kalam_2a_28_31	+	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_28	15493	16752	ct3_kalam_2a_28_32	+	18251		PFAM:PF15425.5	tail-protein	phrogs_hmm	hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_28	16763	17539	ct3_kalam_2a_28_33	+	18251		PFAM:PF01510.24	endolysin	phrogs_hmm	hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_28	17536	17871	ct3_kalam_2a_28_34	+	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_28	17861	18037	ct3_kalam_2a_28_35	+	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_29	444	680	ct3_kalam_2a_29_1	-	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_29	685	978	ct3_kalam_2a_29_2	-	18266		cd11533	Nucleoside Triphosphate Pyrophosphohydrolase (EC 3.6.1.8) MazG-like domain found in uncharacterized protein from Archaeoglobus fulgidus (Af0060) and its bacterial homologs. This family includes an uncharacterized protein from Archaeoglobus fulgidus (Af0060) and its homologs from bacteria. Although its biological role remains unclear, Af0060 shows high sequence similarity to the dimeric 2-deoxyuridine 5'-triphosphate nucleotidohydrolase (dUTP pyrophosphatase or dUTPase) and NTP-PPase MazG proteins. However, unlike typical tandem-domain MazG proteins, members in this family consist of a single MazG-like domain that contains a well conserved divalent ion-binding motif EXX[E/D].	mmseqs_cdd	common_virus	NaN		0	18266
+ct3_kalam_2a_29	981	1388	ct3_kalam_2a_29_3	-	18266		PFAM:PF07509.10	secreted-protein	phrogs_hmm	hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_29	1390	1746	ct3_kalam_2a_29_4	-	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_29	1739	1921	ct3_kalam_2a_29_5	-	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_29	2099	2485	ct3_kalam_2a_29_6	-	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_29	2527	2781	ct3_kalam_2a_29_7	-	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_29	3107	3430	ct3_kalam_2a_29_8	-	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_29	3637	5784	ct3_kalam_2a_29_9	-	18266		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	18266
+ct3_kalam_2a_29	6206	6628	ct3_kalam_2a_29_10	-	18266		PDB:3EIV_D	Single-stranded-DNA-binding-protein	common_virus_hmm	common_virus	NaN		0	18266
+ct3_kalam_2a_29	6802	7179	ct3_kalam_2a_29_11	+	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_29	7176	7751	ct3_kalam_2a_29_12	+	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_29	7744	8529	ct3_kalam_2a_29_13	+	18266		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	18266
+ct3_kalam_2a_29	8545	8682	ct3_kalam_2a_29_14	+	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_29	8697	9878	ct3_kalam_2a_29_15	+	18266		PDB:2BBD_D	capsid-protein	hallmark_hmm	common_virus	NaN		0	18266
+ct3_kalam_2a_29	9892	10047	ct3_kalam_2a_29_16	+	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_29	10067	10183	ct3_kalam_2a_29_17	+	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_29	10190	10525	ct3_kalam_2a_29_18	+	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_29	10515	10664	ct3_kalam_2a_29_19	+	18266		PFAM:PF11087.7	membrane-DNA-delivery-protein	common_virus_hmm	common_virus	NaN		0	18266
+ct3_kalam_2a_29	10673	11386	ct3_kalam_2a_29_20	+	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_29	11390	12106	ct3_kalam_2a_29_21	+	18266		PFAM:PF06995.10	endolysin	phrogs_hmm	hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_29	12123	12311	ct3_kalam_2a_29_22	+	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_29	12322	12990	ct3_kalam_2a_29_23	+	18266		PDB:2RSC_A	Lysozyme	common_virus_hmm	common_virus	NaN		0	18266
+ct3_kalam_2a_29	12990	13229	ct3_kalam_2a_29_24	+	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_29	13372	13635	ct3_kalam_2a_29_25	+	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_29	13638	14318	ct3_kalam_2a_29_26	+	18266		PDB:2RSC_A	Lysozyme	common_virus_hmm	common_virus	NaN		0	18266
+ct3_kalam_2a_29	14290	14571	ct3_kalam_2a_29_27	+	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_29	14574	15170	ct3_kalam_2a_29_28	+	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_29	15167	15508	ct3_kalam_2a_29_29	+	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_29	15510	16760	ct3_kalam_2a_29_30	+	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_29	16771	17556	ct3_kalam_2a_29_31	+	18266		PFAM:PF01510.24	endolysin	phrogs_hmm	hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_29	17553	17888	ct3_kalam_2a_29_32	+	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_29	17878	18054	ct3_kalam_2a_29_33	+	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_3	263	442	ct3_kalam_2a_3_1	-	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_3	442	681	ct3_kalam_2a_3_2	-	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_3	681	974	ct3_kalam_2a_3_3	-	18251		cd11533	Nucleoside Triphosphate Pyrophosphohydrolase (EC 3.6.1.8) MazG-like domain found in uncharacterized protein from Archaeoglobus fulgidus (Af0060) and its bacterial homologs. This family includes an uncharacterized protein from Archaeoglobus fulgidus (Af0060) and its homologs from bacteria. Although its biological role remains unclear, Af0060 shows high sequence similarity to the dimeric 2-deoxyuridine 5'-triphosphate nucleotidohydrolase (dUTP pyrophosphatase or dUTPase) and NTP-PPase MazG proteins. However, unlike typical tandem-domain MazG proteins, members in this family consist of a single MazG-like domain that contains a well conserved divalent ion-binding motif EXX[E/D].	mmseqs_cdd	common_virus	NaN		0	18251
+ct3_kalam_2a_3	971	1381	ct3_kalam_2a_3_4	-	18251		PFAM:PF07509.10	secreted-protein	phrogs_hmm	hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_3	1383	1715	ct3_kalam_2a_3_5	-	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_3	1697	1888	ct3_kalam_2a_3_6	-	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_3	2064	2450	ct3_kalam_2a_3_7	-	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_3	2500	2751	ct3_kalam_2a_3_8	-	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_3	3075	3413	ct3_kalam_2a_3_9	-	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_3	3622	5760	ct3_kalam_2a_3_10	-	18251		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	18251
+ct3_kalam_2a_3	6182	6604	ct3_kalam_2a_3_11	-	18251		PDB:3EIV_D	Single-stranded-DNA-binding-protein	common_virus_hmm	common_virus	NaN		0	18251
+ct3_kalam_2a_3	6778	7158	ct3_kalam_2a_3_12	+	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_3	7155	7730	ct3_kalam_2a_3_13	+	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_3	7723	8511	ct3_kalam_2a_3_14	+	18251		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	18251
+ct3_kalam_2a_3	8527	8664	ct3_kalam_2a_3_15	+	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_3	8679	9860	ct3_kalam_2a_3_16	+	18251		PDB:2BBD_D	capsid-protein	hallmark_hmm	common_virus	NaN		0	18251
+ct3_kalam_2a_3	9874	10029	ct3_kalam_2a_3_17	+	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_3	10049	10165	ct3_kalam_2a_3_18	+	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_3	10165	10515	ct3_kalam_2a_3_19	+	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_3	10512	10661	ct3_kalam_2a_3_20	+	18251		PFAM:PF11087.7	membrane-DNA-delivery-protein	common_virus_hmm	common_virus	NaN		0	18251
+ct3_kalam_2a_3	10670	11386	ct3_kalam_2a_3_21	+	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_3	11390	12106	ct3_kalam_2a_3_22	+	18251		PFAM:PF06995.10	endolysin	phrogs_hmm	hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_3	12123	12293	ct3_kalam_2a_3_23	+	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_3	12305	12973	ct3_kalam_2a_3_24	+	18251		PDB:2RSC_A	Lysozyme	common_virus_hmm	common_virus	NaN		0	18251
+ct3_kalam_2a_3	12973	13212	ct3_kalam_2a_3_25	+	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_3	13209	13358	ct3_kalam_2a_3_26	+	18251		PFAM:PF11087.7	membrane-DNA-delivery-protein	common_virus_hmm	common_virus	NaN		0	18251
+ct3_kalam_2a_3	13355	13621	ct3_kalam_2a_3_27	+	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_3	13624	14304	ct3_kalam_2a_3_28	+	18251		PDB:2RSC_A	Lysozyme	common_virus_hmm	common_virus	NaN		0	18251
+ct3_kalam_2a_3	14276	14557	ct3_kalam_2a_3_29	+	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_3	14560	15156	ct3_kalam_2a_3_30	+	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_3	15153	15491	ct3_kalam_2a_3_31	+	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_3	15493	16752	ct3_kalam_2a_3_32	+	18251		PFAM:PF15425.5	tail-protein	phrogs_hmm	hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_3	16763	17539	ct3_kalam_2a_3_33	+	18251		PFAM:PF01510.24	endolysin	phrogs_hmm	hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_3	17536	17871	ct3_kalam_2a_3_34	+	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_3	17861	18037	ct3_kalam_2a_3_35	+	18251			hypothetical protein		hypothetical_protein	NaN		0	18251
+ct3_kalam_2a_30	85	618	ct3_kalam_2a_30_1	+	11129			hypothetical protein		hypothetical_protein	NaN		0	11129
+ct3_kalam_2a_30	615	902	ct3_kalam_2a_30_2	+	11129			hypothetical protein		hypothetical_protein	NaN		0	11129
+ct3_kalam_2a_30	908	1102	ct3_kalam_2a_30_3	+	11129			hypothetical protein		hypothetical_protein	NaN		0	11129
+ct3_kalam_2a_30	1113	1496	ct3_kalam_2a_30_4	+	11129			hypothetical protein		hypothetical_protein	NaN		0	11129
+ct3_kalam_2a_30	1557	1775	ct3_kalam_2a_30_5	+	11129			hypothetical protein		hypothetical_protein	NaN		0	11129
+ct3_kalam_2a_30	1784	2731	ct3_kalam_2a_30_6	+	11129			hypothetical protein		hypothetical_protein	NaN		0	11129
+ct3_kalam_2a_30	2728	3243	ct3_kalam_2a_30_7	+	11129		cd06583	Peptidoglycan recognition proteins (PGRPs) are pattern recognition receptors that bind, and in certain cases, hydrolyze peptidoglycans (PGNs) of bacterial cell walls. PGRPs have been divided into three classes: short PGRPs (PGRP-S), that are small (20 kDa) extracellular proteins; intermediate PGRPs (PGRP-I) that are 40-45 kDa and are predicted to be transmembrane proteins; and long PGRPs (PGRP-L), up to 90 kDa, which may be either intracellular or transmembrane. Several structures of PGRPs are known in insects and mammals, some bound with substrates like Muramyl Tripeptide (MTP) or Tracheal Cytotoxin (TCT). The substrate binding site is conserved in PGRP-LCx, PGRP-LE, and PGRP-Ialpha proteins. This family includes Zn-dependent N-Acetylmuramoyl-L-alanine Amidase, EC:3.5.1.28. This enzyme cleaves the amide bond between N-acetylmuramoyl and L-amino acids, preferentially D-lactyl-L-Ala, in bacterial cell walls. The structure for the bacteriophage T7 lysozyme shows that two of the conserved histidines and a cysteine are zinc binding residues. Site-directed mutagenesis of T7 lysozyme indicates that two conserved residues, a Tyr and a Lys, are important for amidase activity.	mmseqs_cdd	common_virus	NaN		0	11129
+ct3_kalam_2a_30	3259	3507	ct3_kalam_2a_30_8	+	11129			hypothetical protein		hypothetical_protein	NaN		0	11129
+ct3_kalam_2a_30	3510	3731	ct3_kalam_2a_30_9	+	11129			hypothetical protein		hypothetical_protein	NaN		0	11129
+ct3_kalam_2a_30	3736	3921	ct3_kalam_2a_30_10	+	11129			hypothetical protein		hypothetical_protein	NaN		0	11129
+ct3_kalam_2a_30	3908	4270	ct3_kalam_2a_30_11	+	11129			hypothetical protein		hypothetical_protein	NaN		0	11129
+ct3_kalam_2a_30	4574	4801	ct3_kalam_2a_30_12	+	11129			hypothetical protein		hypothetical_protein	NaN		0	11129
+ct3_kalam_2a_30	4770	5387	ct3_kalam_2a_30_13	+	11129		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	11129
+ct3_kalam_2a_30	5401	6426	ct3_kalam_2a_30_14	+	11129		PDB:2BBD_D	Major-Capsid-protein	hallmark_hmm	common_virus	NaN		0	11129
+ct3_kalam_2a_30	6440	6814	ct3_kalam_2a_30_15	+	11129			hypothetical protein		hypothetical_protein	NaN		0	11129
+ct3_kalam_2a_30	6823	6996	ct3_kalam_2a_30_16	+	11129			hypothetical protein		hypothetical_protein	NaN		0	11129
+ct3_kalam_2a_30	7125	7277	ct3_kalam_2a_30_17	+	11129			hypothetical protein		hypothetical_protein	NaN		0	11129
+ct3_kalam_2a_30	7288	7602	ct3_kalam_2a_30_18	+	11129			hypothetical protein		hypothetical_protein	NaN		0	11129
+ct3_kalam_2a_30	7592	8071	ct3_kalam_2a_30_19	+	11129			hypothetical protein		hypothetical_protein	NaN		0	11129
+ct3_kalam_2a_30	8074	8547	ct3_kalam_2a_30_20	+	11129			hypothetical protein		hypothetical_protein	NaN		0	11129
+ct3_kalam_2a_30	8550	8801	ct3_kalam_2a_30_21	+	11129			hypothetical protein		hypothetical_protein	NaN		0	11129
+ct3_kalam_2a_30	8786	9343	ct3_kalam_2a_30_22	+	11129			hypothetical protein		hypothetical_protein	NaN		0	11129
+ct3_kalam_2a_30	9340	9771	ct3_kalam_2a_30_23	+	11129			hypothetical protein		hypothetical_protein	NaN		0	11129
+ct3_kalam_2a_30	9768	10577	ct3_kalam_2a_30_24	+	11129		PDB:4DIV_C	Distal-Tail-protein	hallmark_hmm	common_virus	NaN		0	11129
+ct3_kalam_2a_30	10574	10867	ct3_kalam_2a_30_25	+	11129			hypothetical protein		hypothetical_protein	NaN		0	11129
+ct3_kalam_2a_30	10860	11111	ct3_kalam_2a_30_26	+	11129		PFAM:PF16778.4	Tail-assembly-chaperone	hallmark_hmm	common_virus	NaN		0	11129
+ct3_kalam_2a_31	328	2007	ct3_kalam_2a_31_1	-	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_31	2007	3692	ct3_kalam_2a_31_2	-	16523		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	16523
+ct3_kalam_2a_31	3707	4522	ct3_kalam_2a_31_3	-	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_31	4667	5719	ct3_kalam_2a_31_4	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_31	5723	5983	ct3_kalam_2a_31_5	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_31	5976	6200	ct3_kalam_2a_31_6	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_31	6220	6729	ct3_kalam_2a_31_7	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_31	6774	7001	ct3_kalam_2a_31_8	+	16523		UniProtKB:Q3T4U8_BPPRD	Assembly-protein	common_virus_hmm	common_virus	NaN		0	16523
+ct3_kalam_2a_31	7001	7678	ct3_kalam_2a_31_9	+	16523		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	16523
+ct3_kalam_2a_31	7678	7800	ct3_kalam_2a_31_10	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_31	7802	7942	ct3_kalam_2a_31_11	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_31	7955	9154	ct3_kalam_2a_31_12	+	16523		PDB:1W8X_I	Major-Capsid-Protein	hallmark_hmm	common_virus	NaN		0	16523
+ct3_kalam_2a_31	9158	9349	ct3_kalam_2a_31_13	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_31	9355	9471	ct3_kalam_2a_31_14	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_31	9496	9684	ct3_kalam_2a_31_15	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_31	9694	9957	ct3_kalam_2a_31_16	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_31	9958	10125	ct3_kalam_2a_31_17	+	16523		PFAM:PF11087.7	membrane-DNA-delivery-protein	common_virus_hmm	common_virus	NaN		0	16523
+ct3_kalam_2a_31	10130	10345	ct3_kalam_2a_31_18	+	16523		PFAM:PF11087.7	membrane-DNA-delivery-protein	common_virus_hmm	common_virus	NaN		0	16523
+ct3_kalam_2a_31	10359	10649	ct3_kalam_2a_31_19	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_31	10646	11188	ct3_kalam_2a_31_20	+	16523		PFAM:PF05707.11	CTXphi-Zot-like-toxin	phrogs_hmm	hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_31	11190	11375	ct3_kalam_2a_31_21	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_31	11385	11984	ct3_kalam_2a_31_22	+	16523		cd13403	membrane-bound lytic murein transglycosylase F (MLTF) and similar proteins. This subfamily includes membrane-bound lytic murein transglycosylase F (MltF, murein lyase F) that degrades murein glycan strands. It is responsible for catalyzing the release of 1,6-anhydromuropeptides from peptidoglycan. Lytic transglycosylase catalyzes the cleavage of the beta-1,4-glycosidic bond between N-acetylmuramic acid (MurNAc) and N-acetyl-D-glucosamine (GlcNAc) as do goose-type lysozymes. However, in addition, it also makes a new glycosidic bond with the C6 hydroxyl group of the same muramic acid residue.	mmseqs_cdd	nonviral_gene	NaN		0	16523
+ct3_kalam_2a_31	11981	12388	ct3_kalam_2a_31_23	+	16523		CDD:PHA02564	virion-protein	hallmark_hmm	common_virus	NaN		0	16523
+ct3_kalam_2a_31	12385	12798	ct3_kalam_2a_31_24	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_31	12809	13039	ct3_kalam_2a_31_25	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_31	13276	13953	ct3_kalam_2a_31_26	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_31	14001	14207	ct3_kalam_2a_31_27	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_31	14204	14371	ct3_kalam_2a_31_28	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_31	14361	14606	ct3_kalam_2a_31_29	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_31	14599	14778	ct3_kalam_2a_31_30	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_31	15043	15210	ct3_kalam_2a_31_31	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_31	15207	15344	ct3_kalam_2a_31_32	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_31	15839	16132	ct3_kalam_2a_31_33	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_32	295	465	ct3_kalam_2a_32_1	+	10567			hypothetical protein		hypothetical_protein	NaN		0	10567
+ct3_kalam_2a_32	608	733	ct3_kalam_2a_32_2	+	10567			hypothetical protein		hypothetical_protein	NaN		0	10567
+ct3_kalam_2a_32	733	876	ct3_kalam_2a_32_3	+	10567			hypothetical protein		hypothetical_protein	NaN		0	10567
+ct3_kalam_2a_32	870	1025	ct3_kalam_2a_32_4	+	10567			hypothetical protein		hypothetical_protein	NaN		0	10567
+ct3_kalam_2a_32	1167	1445	ct3_kalam_2a_32_5	+	10567			hypothetical protein		hypothetical_protein	NaN		0	10567
+ct3_kalam_2a_32	1417	2151	ct3_kalam_2a_32_6	+	10567			hypothetical protein		hypothetical_protein	NaN		0	10567
+ct3_kalam_2a_32	2325	3392	ct3_kalam_2a_32_7	+	10567		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	10567
+ct3_kalam_2a_32	3442	4002	ct3_kalam_2a_32_8	+	10567		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	10567
+ct3_kalam_2a_32	3999	4187	ct3_kalam_2a_32_9	+	10567			hypothetical protein		hypothetical_protein	NaN		0	10567
+ct3_kalam_2a_32	4344	4697	ct3_kalam_2a_32_10	+	10567			hypothetical protein		hypothetical_protein	NaN		0	10567
+ct3_kalam_2a_32	4697	4822	ct3_kalam_2a_32_11	+	10567			hypothetical protein		hypothetical_protein	NaN		0	10567
+ct3_kalam_2a_32	4819	4944	ct3_kalam_2a_32_12	+	10567			hypothetical protein		hypothetical_protein	NaN		0	10567
+ct3_kalam_2a_32	4944	5282	ct3_kalam_2a_32_13	+	10567			hypothetical protein		hypothetical_protein	NaN		0	10567
+ct3_kalam_2a_32	5263	5871	ct3_kalam_2a_32_14	+	10567		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	10567
+ct3_kalam_2a_32	6020	6328	ct3_kalam_2a_32_15	+	10567			hypothetical protein		hypothetical_protein	NaN		0	10567
+ct3_kalam_2a_32	6403	6843	ct3_kalam_2a_32_16	+	10567			hypothetical protein		hypothetical_protein	NaN		0	10567
+ct3_kalam_2a_32	6858	7010	ct3_kalam_2a_32_17	+	10567			hypothetical protein		hypothetical_protein	NaN		0	10567
+ct3_kalam_2a_32	7024	7191	ct3_kalam_2a_32_18	+	10567			hypothetical protein		hypothetical_protein	NaN		0	10567
+ct3_kalam_2a_32	7202	7522	ct3_kalam_2a_32_19	+	10567			hypothetical protein		hypothetical_protein	NaN		0	10567
+ct3_kalam_2a_32	7519	7791	ct3_kalam_2a_32_20	+	10567			hypothetical protein		hypothetical_protein	NaN		0	10567
+ct3_kalam_2a_32	7804	8547	ct3_kalam_2a_32_21	+	10567			hypothetical protein		hypothetical_protein	NaN		0	10567
+ct3_kalam_2a_32	8560	9393	ct3_kalam_2a_32_22	+	10567			hypothetical protein		hypothetical_protein	NaN		0	10567
+ct3_kalam_2a_32	9409	10413	ct3_kalam_2a_32_23	+	10567			hypothetical protein		hypothetical_protein	NaN		0	10567
+ct3_kalam_2a_33	90	359	ct3_kalam_2a_33_1	-	17253			hypothetical protein		hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_33	617	892	ct3_kalam_2a_33_2	-	17253			hypothetical protein		hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_33	1011	1247	ct3_kalam_2a_33_3	-	17253			hypothetical protein		hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_33	1254	1679	ct3_kalam_2a_33_4	-	17253			hypothetical protein		hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_33	1731	2018	ct3_kalam_2a_33_5	-	17253			hypothetical protein		hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_33	2015	4072	ct3_kalam_2a_33_6	-	17253		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	17253
+ct3_kalam_2a_33	4245	4781	ct3_kalam_2a_33_7	-	17253			hypothetical protein		hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_33	4865	5299	ct3_kalam_2a_33_8	+	17253			hypothetical protein		hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_33	5296	5793	ct3_kalam_2a_33_9	+	17253			hypothetical protein		hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_33	5747	6499	ct3_kalam_2a_33_10	+	17253		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	17253
+ct3_kalam_2a_33	6503	6637	ct3_kalam_2a_33_11	+	17253			hypothetical protein		hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_33	6654	7796	ct3_kalam_2a_33_12	+	17253		PDB:2BBD_D	capsid-protein	hallmark_hmm	common_virus	NaN		0	17253
+ct3_kalam_2a_33	7937	8059	ct3_kalam_2a_33_13	+	17253			hypothetical protein		hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_33	8133	8378	ct3_kalam_2a_33_14	-	17253			hypothetical protein		hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_33	8510	9184	ct3_kalam_2a_33_15	+	17253			hypothetical protein		hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_33	9181	10167	ct3_kalam_2a_33_16	+	17253		PRK11198	LysM domain/BON superfamily protein; Provisional	mmseqs_cdd	nonviral_gene	NaN		0	17253
+ct3_kalam_2a_33	10177	10395	ct3_kalam_2a_33_17	+	17253			hypothetical protein		hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_33	10419	10586	ct3_kalam_2a_33_18	+	17253			hypothetical protein		hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_33	10595	11254	ct3_kalam_2a_33_19	+	17253		PDB:2RSC_A	Lysozyme	common_virus_hmm	common_virus	NaN		0	17253
+ct3_kalam_2a_33	11251	11715	ct3_kalam_2a_33_20	+	17253			hypothetical protein		hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_33	11712	12053	ct3_kalam_2a_33_21	+	17253			hypothetical protein		hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_33	12053	12712	ct3_kalam_2a_33_22	+	17253		NF038345	peptidoglycan hydrolase RipC. RipC is a peptidoglycan hydrolase, found in species such as Mycobacterium tuberculosis, that is activated by conformation change sent as a signal by the cell division-regulating transporter-like complex FtsEX. Members of this family are distinguished from more distant homologs by a Pro/Gly-rich region.	mmseqs_cdd	nonviral_gene	NaN		0	17253
+ct3_kalam_2a_33	12705	12992	ct3_kalam_2a_33_23	+	17253			hypothetical protein		hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_33	12992	13621	ct3_kalam_2a_33_24	+	17253			hypothetical protein		hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_33	13618	14049	ct3_kalam_2a_33_25	+	17253			hypothetical protein		hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_33	14049	15284	ct3_kalam_2a_33_26	+	17253		PFAM:PF00386.20	minor-tail-protein	phrogs_hmm	hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_33	15291	15974	ct3_kalam_2a_33_27	+	17253		PDB:3WH1_A	Chitinase-	common_virus_hmm	common_virus	NaN		0	17253
+ct3_kalam_2a_33	16327	16605	ct3_kalam_2a_33_28	+	17253			hypothetical protein		hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_33	16874	17161	ct3_kalam_2a_33_29	+	17253			hypothetical protein		hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_34	116	913	ct3_kalam_2a_34_1	-	14961		PDB:5EMI_A	Cell-wall-hydrolase-autolysin	common_virus_hmm	common_virus	NaN		0	14961
+ct3_kalam_2a_34	929	1810	ct3_kalam_2a_34_2	-	14961			hypothetical protein		hypothetical_protein	NaN		0	14961
+ct3_kalam_2a_34	1814	2728	ct3_kalam_2a_34_3	-	14961			hypothetical protein		hypothetical_protein	NaN		0	14961
+ct3_kalam_2a_34	2741	3262	ct3_kalam_2a_34_4	-	14961		PFAM:PF08291.10	pentameric-base-spike-protein	phrogs_hmm	hypothetical_protein	NaN		0	14961
+ct3_kalam_2a_34	3201	3953	ct3_kalam_2a_34_5	-	14961		COG1705	Flagellum-specific peptidoglycan hydrolase FlgJ [Cell wall/membrane/envelope biogenesis, Cell motility]. 	mmseqs_cdd	nonviral_gene	NaN		0	14961
+ct3_kalam_2a_34	3953	4567	ct3_kalam_2a_34_6	-	14961			hypothetical protein		hypothetical_protein	NaN		0	14961
+ct3_kalam_2a_34	4571	4846	ct3_kalam_2a_34_7	-	14961		UniProtKB:B6RT55_9VIRU	Minor-capsid-protein-	hallmark_hmm	common_virus	NaN		0	14961
+ct3_kalam_2a_34	4858	5004	ct3_kalam_2a_34_8	-	14961			hypothetical protein		hypothetical_protein	NaN		0	14961
+ct3_kalam_2a_34	5174	5605	ct3_kalam_2a_34_9	-	14961			hypothetical protein		hypothetical_protein	NaN		0	14961
+ct3_kalam_2a_34	5685	5891	ct3_kalam_2a_34_10	-	14961		PFAM:PF12841.6	holin	phrogs_hmm	hypothetical_protein	NaN		0	14961
+ct3_kalam_2a_34	5895	6125	ct3_kalam_2a_34_11	-	14961			hypothetical protein		hypothetical_protein	NaN		0	14961
+ct3_kalam_2a_34	6167	7237	ct3_kalam_2a_34_12	-	14961		PDB:3J31_H	penton-base-protein	hallmark_hmm	common_virus	NaN		0	14961
+ct3_kalam_2a_34	7237	7491	ct3_kalam_2a_34_13	-	14961			hypothetical protein		hypothetical_protein	NaN		0	14961
+ct3_kalam_2a_34	7805	8443	ct3_kalam_2a_34_14	-	14961		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	14961
+ct3_kalam_2a_34	8424	8732	ct3_kalam_2a_34_15	-	14961			hypothetical protein		hypothetical_protein	NaN		0	14961
+ct3_kalam_2a_34	8701	8943	ct3_kalam_2a_34_16	-	14961			hypothetical protein		hypothetical_protein	NaN		0	14961
+ct3_kalam_2a_34	9361	9798	ct3_kalam_2a_34_17	-	14961			hypothetical protein		hypothetical_protein	NaN		0	14961
+ct3_kalam_2a_34	9811	9984	ct3_kalam_2a_34_18	-	14961			hypothetical protein		hypothetical_protein	NaN		0	14961
+ct3_kalam_2a_34	10103	10243	ct3_kalam_2a_34_19	-	14961			hypothetical protein		hypothetical_protein	NaN		0	14961
+ct3_kalam_2a_34	10218	10370	ct3_kalam_2a_34_20	-	14961			hypothetical protein		hypothetical_protein	NaN		0	14961
+ct3_kalam_2a_34	10384	10584	ct3_kalam_2a_34_21	-	14961		PFAM:PF04358.12	transcriptional-repressor	phrogs_hmm	hypothetical_protein	NaN		0	14961
+ct3_kalam_2a_34	10600	12807	ct3_kalam_2a_34_22	-	14961		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	14961
+ct3_kalam_2a_34	12791	13528	ct3_kalam_2a_34_23	-	14961			hypothetical protein		hypothetical_protein	NaN		0	14961
+ct3_kalam_2a_34	13587	13811	ct3_kalam_2a_34_24	-	14961			hypothetical protein		hypothetical_protein	NaN		0	14961
+ct3_kalam_2a_34	13883	14386	ct3_kalam_2a_34_25	-	14961		PFAM:PF17427.1	Single-stranded-DNA-binding-protein	common_virus_hmm	common_virus	NaN		0	14961
+ct3_kalam_2a_34	14402	14578	ct3_kalam_2a_34_26	-	14961		PFAM:PF13591.5	excisionase	phrogs_hmm	hypothetical_protein	NaN		0	14961
+ct3_kalam_2a_35	396	569	ct3_kalam_2a_35_1	+	14319			hypothetical protein		hypothetical_protein	NaN		0	14319
+ct3_kalam_2a_35	598	1188	ct3_kalam_2a_35_2	+	14319			hypothetical protein		hypothetical_protein	NaN		0	14319
+ct3_kalam_2a_35	1219	1557	ct3_kalam_2a_35_3	+	14319		PFAM:PF06926.10	replisome-organiser-protein	rep_hall_hmm	common_virus	NaN		0	14319
+ct3_kalam_2a_35	1690	1965	ct3_kalam_2a_35_4	+	14319			hypothetical protein		hypothetical_protein	NaN		0	14319
+ct3_kalam_2a_35	1958	2161	ct3_kalam_2a_35_5	+	14319			hypothetical protein		hypothetical_protein	NaN		0	14319
+ct3_kalam_2a_35	2121	2471	ct3_kalam_2a_35_6	+	14319			hypothetical protein		hypothetical_protein	NaN		0	14319
+ct3_kalam_2a_35	2474	3019	ct3_kalam_2a_35_7	+	14319			hypothetical protein		hypothetical_protein	NaN		0	14319
+ct3_kalam_2a_35	3125	3763	ct3_kalam_2a_35_8	+	14319		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	14319
+ct3_kalam_2a_35	3938	4081	ct3_kalam_2a_35_9	+	14319		UniProt:tr|S5YC85_9VIRU	DNA-packaging-protein	hallmark_hmm	common_virus	NaN		0	14319
+ct3_kalam_2a_35	4081	5142	ct3_kalam_2a_35_10	+	14319		PDB:3J31_H	Major-Capsid-Protein	hallmark_hmm	common_virus	NaN		0	14319
+ct3_kalam_2a_35	5191	5415	ct3_kalam_2a_35_11	+	14319			hypothetical protein		hypothetical_protein	NaN		0	14319
+ct3_kalam_2a_35	5421	5600	ct3_kalam_2a_35_12	+	14319		PFAM:PF12841.6	holin	phrogs_hmm	hypothetical_protein	NaN		0	14319
+ct3_kalam_2a_35	5677	6150	ct3_kalam_2a_35_13	+	14319			hypothetical protein		hypothetical_protein	NaN		0	14319
+ct3_kalam_2a_35	6147	6323	ct3_kalam_2a_35_14	+	14319			hypothetical protein		hypothetical_protein	NaN		0	14319
+ct3_kalam_2a_35	6323	6469	ct3_kalam_2a_35_15	+	14319			hypothetical protein		hypothetical_protein	NaN		0	14319
+ct3_kalam_2a_35	6482	6757	ct3_kalam_2a_35_16	+	14319		UniProtKB:B6RT55_9VIRU	Minor-capsid-protein-	hallmark_hmm	common_virus	NaN		0	14319
+ct3_kalam_2a_35	6761	7402	ct3_kalam_2a_35_17	+	14319			hypothetical protein		hypothetical_protein	NaN		0	14319
+ct3_kalam_2a_35	7402	8058	ct3_kalam_2a_35_18	+	14319		COG1705	Flagellum-specific peptidoglycan hydrolase FlgJ [Cell wall/membrane/envelope biogenesis, Cell motility]. 	mmseqs_cdd	nonviral_gene	NaN		0	14319
+ct3_kalam_2a_35	8055	8582	ct3_kalam_2a_35_19	+	14319		PFAM:PF08291.10	pentameric-base-spike-protein	phrogs_hmm	hypothetical_protein	NaN		0	14319
+ct3_kalam_2a_35	8593	9468	ct3_kalam_2a_35_20	+	14319			hypothetical protein		hypothetical_protein	NaN		0	14319
+ct3_kalam_2a_35	9472	9825	ct3_kalam_2a_35_21	+	14319			hypothetical protein		hypothetical_protein	NaN		0	14319
+ct3_kalam_2a_35	9838	10194	ct3_kalam_2a_35_22	+	14319			hypothetical protein		hypothetical_protein	NaN		0	14319
+ct3_kalam_2a_35	10196	10342	ct3_kalam_2a_35_23	+	14319			hypothetical protein		hypothetical_protein	NaN		0	14319
+ct3_kalam_2a_35	10344	10985	ct3_kalam_2a_35_24	+	14319		PDB:2MXZ_A	L-alanyl-D-glutamate-peptidase-endolysin	common_virus_hmm	common_virus	NaN		0	14319
+ct3_kalam_2a_35	11342	14038	ct3_kalam_2a_35_25	-	14319		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	14319
+ct3_kalam_2a_36	411	563	ct3_kalam_2a_36_1	+	14398		PFAM:PF10013.8	excisionase-and-transcriptional-regulator	phrogs_hmm	hypothetical_protein	NaN		0	14398
+ct3_kalam_2a_36	556	1098	ct3_kalam_2a_36_2	+	14398		PFAM:PF17427.1	Single-stranded-DNA-binding-protein	common_virus_hmm	common_virus	NaN		0	14398
+ct3_kalam_2a_36	1163	1393	ct3_kalam_2a_36_3	+	14398			hypothetical protein		hypothetical_protein	NaN		0	14398
+ct3_kalam_2a_36	1456	2157	ct3_kalam_2a_36_4	+	14398			hypothetical protein		hypothetical_protein	NaN		0	14398
+ct3_kalam_2a_36	2141	4366	ct3_kalam_2a_36_5	+	14398		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	14398
+ct3_kalam_2a_36	4368	4571	ct3_kalam_2a_36_6	+	14398		PFAM:PF04358.12	transcriptional-repressor	phrogs_hmm	hypothetical_protein	NaN		0	14398
+ct3_kalam_2a_36	4587	4724	ct3_kalam_2a_36_7	+	14398			hypothetical protein		hypothetical_protein	NaN		0	14398
+ct3_kalam_2a_36	4827	5060	ct3_kalam_2a_36_8	+	14398			hypothetical protein		hypothetical_protein	NaN		0	14398
+ct3_kalam_2a_36	5073	5246	ct3_kalam_2a_36_9	+	14398			hypothetical protein		hypothetical_protein	NaN		0	14398
+ct3_kalam_2a_36	5243	5587	ct3_kalam_2a_36_10	+	14398			hypothetical protein		hypothetical_protein	NaN		0	14398
+ct3_kalam_2a_36	5581	6135	ct3_kalam_2a_36_11	+	14398			hypothetical protein		hypothetical_protein	NaN		0	14398
+ct3_kalam_2a_36	6241	6879	ct3_kalam_2a_36_12	+	14398		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	14398
+ct3_kalam_2a_36	7196	8260	ct3_kalam_2a_36_13	+	14398		PDB:3J31_H	penton-base-protein	hallmark_hmm	common_virus	NaN		0	14398
+ct3_kalam_2a_36	8306	8530	ct3_kalam_2a_36_14	+	14398			hypothetical protein		hypothetical_protein	NaN		0	14398
+ct3_kalam_2a_36	8542	8706	ct3_kalam_2a_36_15	+	14398		PFAM:PF12841.6	holin	phrogs_hmm	hypothetical_protein	NaN		0	14398
+ct3_kalam_2a_36	8783	9256	ct3_kalam_2a_36_16	+	14398			hypothetical protein		hypothetical_protein	NaN		0	14398
+ct3_kalam_2a_36	9256	9432	ct3_kalam_2a_36_17	+	14398			hypothetical protein		hypothetical_protein	NaN		0	14398
+ct3_kalam_2a_36	9432	9578	ct3_kalam_2a_36_18	+	14398			hypothetical protein		hypothetical_protein	NaN		0	14398
+ct3_kalam_2a_36	9591	9866	ct3_kalam_2a_36_19	+	14398		UniProtKB:B6RT55_9VIRU	Minor-capsid-protein-	hallmark_hmm	common_virus	NaN		0	14398
+ct3_kalam_2a_36	9870	10502	ct3_kalam_2a_36_20	+	14398			hypothetical protein		hypothetical_protein	NaN		0	14398
+ct3_kalam_2a_36	10502	11158	ct3_kalam_2a_36_21	+	14398		COG1705	Flagellum-specific peptidoglycan hydrolase FlgJ [Cell wall/membrane/envelope biogenesis, Cell motility]. 	mmseqs_cdd	nonviral_gene	NaN		0	14398
+ct3_kalam_2a_36	11155	11682	ct3_kalam_2a_36_22	+	14398		PFAM:PF08291.10	pentameric-base-spike-protein	phrogs_hmm	hypothetical_protein	NaN		0	14398
+ct3_kalam_2a_36	11819	12607	ct3_kalam_2a_36_23	+	14398			hypothetical protein		hypothetical_protein	NaN		0	14398
+ct3_kalam_2a_36	12611	13012	ct3_kalam_2a_36_24	+	14398			hypothetical protein		hypothetical_protein	NaN		0	14398
+ct3_kalam_2a_36	13027	13383	ct3_kalam_2a_36_25	+	14398			hypothetical protein		hypothetical_protein	NaN		0	14398
+ct3_kalam_2a_36	13400	13534	ct3_kalam_2a_36_26	+	14398			hypothetical protein		hypothetical_protein	NaN		0	14398
+ct3_kalam_2a_36	13536	14294	ct3_kalam_2a_36_27	+	14398		PDB:5EMI_A	Cell-wall-hydrolase-autolysin	common_virus_hmm	common_virus	NaN		0	14398
+ct3_kalam_2a_37	234	1013	ct3_kalam_2a_37_1	+	14935			hypothetical protein		hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_37	1017	2678	ct3_kalam_2a_37_2	+	14935		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	14935
+ct3_kalam_2a_37	2680	3129	ct3_kalam_2a_37_3	+	14935		CDD:pfam11860	N-acetylmuramidase	common_virus_hmm	common_virus	NaN		0	14935
+ct3_kalam_2a_37	3129	4904	ct3_kalam_2a_37_4	+	14935		PDB:1N7V_A	Adsorption-protein	common_virus_hmm	common_virus	NaN		0	14935
+ct3_kalam_2a_37	4908	5288	ct3_kalam_2a_37_5	+	14935		PFAM:PF08949.9	major-spike-protein	phrogs_hmm	nonviral_gene	NaN		0	14935
+ct3_kalam_2a_37	5288	6310	ct3_kalam_2a_37_6	+	14935		PFAM:PF08949.9	major-spike-protein	phrogs_hmm	nonviral_gene	NaN		0	14935
+ct3_kalam_2a_37	6329	6580	ct3_kalam_2a_37_7	+	14935			hypothetical protein		hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_37	6570	6776	ct3_kalam_2a_37_8	+	14935			hypothetical protein		hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_37	6776	7276	ct3_kalam_2a_37_9	+	14935			hypothetical protein		hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_37	7309	7632	ct3_kalam_2a_37_10	+	14935		UniProtKB:Q3T4U8_BPPRD	Assembly-protein	common_virus_hmm	common_virus	NaN		0	14935
+ct3_kalam_2a_37	7629	8312	ct3_kalam_2a_37_11	+	14935		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	14935
+ct3_kalam_2a_37	8324	8452	ct3_kalam_2a_37_12	+	14935			hypothetical protein		hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_37	8452	8580	ct3_kalam_2a_37_13	+	14935			hypothetical protein		hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_37	8587	9774	ct3_kalam_2a_37_14	+	14935		CDD:pfam09018	Major-Capsid-Protein	hallmark_hmm	common_virus	NaN		0	14935
+ct3_kalam_2a_37	9793	9936	ct3_kalam_2a_37_15	+	14935			hypothetical protein		hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_37	10160	10432	ct3_kalam_2a_37_16	+	14935			hypothetical protein		hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_37	10432	10596	ct3_kalam_2a_37_17	+	14935		PFAM:PF11087.7	membrane-DNA-delivery-protein	common_virus_hmm	common_virus	NaN		0	14935
+ct3_kalam_2a_37	10609	10815	ct3_kalam_2a_37_18	+	14935		PFAM:PF11087.7	membrane-DNA-delivery-protein	common_virus_hmm	common_virus	NaN		0	14935
+ct3_kalam_2a_37	10825	11079	ct3_kalam_2a_37_19	+	14935		CDD:pfam09300	minor-capsid	hallmark_hmm	common_virus	NaN		0	14935
+ct3_kalam_2a_37	11194	11817	ct3_kalam_2a_37_20	+	14935			hypothetical protein		hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_37	11828	12181	ct3_kalam_2a_37_21	+	14935		pfam09301	Domain of unknown function (DUF1970). Members of this family consist of various uncharacterized viral hypothetical proteins.	mmseqs_cdd	nonviral_gene	NaN		0	14935
+ct3_kalam_2a_37	12182	12991	ct3_kalam_2a_37_22	+	14935		pfam01464	Transglycosylase SLT domain. This family is distantly related to pfam00062. Members are found in phages, type II, type III and type IV secretion systems.	mmseqs_cdd	common_virus	NaN		0	14935
+ct3_kalam_2a_37	12988	13341	ct3_kalam_2a_37_23	+	14935		PFAM:PF05106.11	holin	phrogs_hmm	hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_37	13334	13699	ct3_kalam_2a_37_24	+	14935		PFAM:PF10828.7	Rz-like-spanin	phrogs_hmm	hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_37	13855	14139	ct3_kalam_2a_37_25	-	14935			hypothetical protein		hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_37	14212	14694	ct3_kalam_2a_37_26	-	14935			hypothetical protein		hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_38	235	1014	ct3_kalam_2a_38_1	+	14937			hypothetical protein		hypothetical_protein	NaN		0	14937
+ct3_kalam_2a_38	1018	2679	ct3_kalam_2a_38_2	+	14937		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	14937
+ct3_kalam_2a_38	2681	3130	ct3_kalam_2a_38_3	+	14937		CDD:pfam11860	N-acetylmuramidase	common_virus_hmm	common_virus	NaN		0	14937
+ct3_kalam_2a_38	3130	4905	ct3_kalam_2a_38_4	+	14937		PDB:1N7V_A	Adsorption-protein	common_virus_hmm	common_virus	NaN		0	14937
+ct3_kalam_2a_38	4909	5289	ct3_kalam_2a_38_5	+	14937		PFAM:PF08949.9	major-spike-protein	phrogs_hmm	nonviral_gene	NaN		0	14937
+ct3_kalam_2a_38	5289	6311	ct3_kalam_2a_38_6	+	14937		PFAM:PF08949.9	major-spike-protein	phrogs_hmm	nonviral_gene	NaN		0	14937
+ct3_kalam_2a_38	6330	6581	ct3_kalam_2a_38_7	+	14937			hypothetical protein		hypothetical_protein	NaN		0	14937
+ct3_kalam_2a_38	6571	6777	ct3_kalam_2a_38_8	+	14937			hypothetical protein		hypothetical_protein	NaN		0	14937
+ct3_kalam_2a_38	6777	7277	ct3_kalam_2a_38_9	+	14937			hypothetical protein		hypothetical_protein	NaN		0	14937
+ct3_kalam_2a_38	7310	7633	ct3_kalam_2a_38_10	+	14937		UniProtKB:Q3T4U8_BPPRD	Assembly-protein	common_virus_hmm	common_virus	NaN		0	14937
+ct3_kalam_2a_38	7630	8313	ct3_kalam_2a_38_11	+	14937		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	14937
+ct3_kalam_2a_38	8325	8453	ct3_kalam_2a_38_12	+	14937			hypothetical protein		hypothetical_protein	NaN		0	14937
+ct3_kalam_2a_38	8453	8581	ct3_kalam_2a_38_13	+	14937			hypothetical protein		hypothetical_protein	NaN		0	14937
+ct3_kalam_2a_38	8588	9775	ct3_kalam_2a_38_14	+	14937		CDD:pfam09018	Major-Capsid-Protein	hallmark_hmm	common_virus	NaN		0	14937
+ct3_kalam_2a_38	9794	9937	ct3_kalam_2a_38_15	+	14937			hypothetical protein		hypothetical_protein	NaN		0	14937
+ct3_kalam_2a_38	10161	10433	ct3_kalam_2a_38_16	+	14937			hypothetical protein		hypothetical_protein	NaN		0	14937
+ct3_kalam_2a_38	10433	10597	ct3_kalam_2a_38_17	+	14937		PFAM:PF11087.7	membrane-DNA-delivery-protein	common_virus_hmm	common_virus	NaN		0	14937
+ct3_kalam_2a_38	10610	10816	ct3_kalam_2a_38_18	+	14937		PFAM:PF11087.7	membrane-DNA-delivery-protein	common_virus_hmm	common_virus	NaN		0	14937
+ct3_kalam_2a_38	10826	11080	ct3_kalam_2a_38_19	+	14937		CDD:pfam09300	minor-capsid	hallmark_hmm	common_virus	NaN		0	14937
+ct3_kalam_2a_38	11195	11818	ct3_kalam_2a_38_20	+	14937			hypothetical protein		hypothetical_protein	NaN		0	14937
+ct3_kalam_2a_38	11829	12182	ct3_kalam_2a_38_21	+	14937		pfam09301	Domain of unknown function (DUF1970). Members of this family consist of various uncharacterized viral hypothetical proteins.	mmseqs_cdd	nonviral_gene	NaN		0	14937
+ct3_kalam_2a_38	12183	12992	ct3_kalam_2a_38_22	+	14937		pfam01464	Transglycosylase SLT domain. This family is distantly related to pfam00062. Members are found in phages, type II, type III and type IV secretion systems.	mmseqs_cdd	common_virus	NaN		0	14937
+ct3_kalam_2a_38	12989	13342	ct3_kalam_2a_38_23	+	14937		PFAM:PF05106.11	holin	phrogs_hmm	hypothetical_protein	NaN		0	14937
+ct3_kalam_2a_38	13335	13700	ct3_kalam_2a_38_24	+	14937		PFAM:PF10828.7	Rz-like-spanin	phrogs_hmm	hypothetical_protein	NaN		0	14937
+ct3_kalam_2a_38	13856	14140	ct3_kalam_2a_38_25	-	14937			hypothetical protein		hypothetical_protein	NaN		0	14937
+ct3_kalam_2a_38	14213	14695	ct3_kalam_2a_38_26	-	14937			hypothetical protein		hypothetical_protein	NaN		0	14937
+ct3_kalam_2a_39	234	1013	ct3_kalam_2a_39_1	+	14954			hypothetical protein		hypothetical_protein	NaN		0	14954
+ct3_kalam_2a_39	1017	2678	ct3_kalam_2a_39_2	+	14954		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	14954
+ct3_kalam_2a_39	2680	3129	ct3_kalam_2a_39_3	+	14954		CDD:pfam11860	N-acetylmuramidase	common_virus_hmm	common_virus	NaN		0	14954
+ct3_kalam_2a_39	3129	4919	ct3_kalam_2a_39_4	+	14954		PDB:1N7V_A	Adsorption-protein	common_virus_hmm	common_virus	NaN		0	14954
+ct3_kalam_2a_39	4923	5303	ct3_kalam_2a_39_5	+	14954		PFAM:PF08949.9	major-spike-protein	phrogs_hmm	nonviral_gene	NaN		0	14954
+ct3_kalam_2a_39	5303	6325	ct3_kalam_2a_39_6	+	14954		PFAM:PF08949.9	major-spike-protein	phrogs_hmm	nonviral_gene	NaN		0	14954
+ct3_kalam_2a_39	6344	6604	ct3_kalam_2a_39_7	+	14954			hypothetical protein		hypothetical_protein	NaN		0	14954
+ct3_kalam_2a_39	6594	6800	ct3_kalam_2a_39_8	+	14954			hypothetical protein		hypothetical_protein	NaN		0	14954
+ct3_kalam_2a_39	6800	7300	ct3_kalam_2a_39_9	+	14954			hypothetical protein		hypothetical_protein	NaN		0	14954
+ct3_kalam_2a_39	7333	7656	ct3_kalam_2a_39_10	+	14954		UniProtKB:Q3T4U8_BPPRD	Assembly-protein	common_virus_hmm	common_virus	NaN		0	14954
+ct3_kalam_2a_39	7653	8336	ct3_kalam_2a_39_11	+	14954		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	14954
+ct3_kalam_2a_39	8348	8476	ct3_kalam_2a_39_12	+	14954			hypothetical protein		hypothetical_protein	NaN		0	14954
+ct3_kalam_2a_39	8476	8604	ct3_kalam_2a_39_13	+	14954			hypothetical protein		hypothetical_protein	NaN		0	14954
+ct3_kalam_2a_39	8611	9798	ct3_kalam_2a_39_14	+	14954		CDD:pfam09018	Major-Capsid-Protein	hallmark_hmm	common_virus	NaN		0	14954
+ct3_kalam_2a_39	9817	9960	ct3_kalam_2a_39_15	+	14954			hypothetical protein		hypothetical_protein	NaN		0	14954
+ct3_kalam_2a_39	10184	10456	ct3_kalam_2a_39_16	+	14954			hypothetical protein		hypothetical_protein	NaN		0	14954
+ct3_kalam_2a_39	10456	10620	ct3_kalam_2a_39_17	+	14954		PFAM:PF11087.7	membrane-DNA-delivery-protein	common_virus_hmm	common_virus	NaN		0	14954
+ct3_kalam_2a_39	10633	10839	ct3_kalam_2a_39_18	+	14954		PFAM:PF11087.7	membrane-DNA-delivery-protein	common_virus_hmm	common_virus	NaN		0	14954
+ct3_kalam_2a_39	10849	11103	ct3_kalam_2a_39_19	+	14954		CDD:pfam09300	minor-capsid	hallmark_hmm	common_virus	NaN		0	14954
+ct3_kalam_2a_39	11218	11841	ct3_kalam_2a_39_20	+	14954			hypothetical protein		hypothetical_protein	NaN		0	14954
+ct3_kalam_2a_39	11852	12205	ct3_kalam_2a_39_21	+	14954		pfam09301	Domain of unknown function (DUF1970). Members of this family consist of various uncharacterized viral hypothetical proteins.	mmseqs_cdd	nonviral_gene	NaN		0	14954
+ct3_kalam_2a_39	12206	13015	ct3_kalam_2a_39_22	+	14954		pfam01464	Transglycosylase SLT domain. This family is distantly related to pfam00062. Members are found in phages, type II, type III and type IV secretion systems.	mmseqs_cdd	common_virus	NaN		0	14954
+ct3_kalam_2a_39	13012	13365	ct3_kalam_2a_39_23	+	14954		PFAM:PF05106.11	holin	phrogs_hmm	hypothetical_protein	NaN		0	14954
+ct3_kalam_2a_39	13358	13720	ct3_kalam_2a_39_24	+	14954		PFAM:PF10828.7	Rz-like-spanin	phrogs_hmm	hypothetical_protein	NaN		0	14954
+ct3_kalam_2a_39	13876	14160	ct3_kalam_2a_39_25	-	14954			hypothetical protein		hypothetical_protein	NaN		0	14954
+ct3_kalam_2a_39	14233	14712	ct3_kalam_2a_39_26	-	14954			hypothetical protein		hypothetical_protein	NaN		0	14954
+ct3_kalam_2a_4	444	680	ct3_kalam_2a_4_1	-	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_4	685	978	ct3_kalam_2a_4_2	-	18266		cd11533	Nucleoside Triphosphate Pyrophosphohydrolase (EC 3.6.1.8) MazG-like domain found in uncharacterized protein from Archaeoglobus fulgidus (Af0060) and its bacterial homologs. This family includes an uncharacterized protein from Archaeoglobus fulgidus (Af0060) and its homologs from bacteria. Although its biological role remains unclear, Af0060 shows high sequence similarity to the dimeric 2-deoxyuridine 5'-triphosphate nucleotidohydrolase (dUTP pyrophosphatase or dUTPase) and NTP-PPase MazG proteins. However, unlike typical tandem-domain MazG proteins, members in this family consist of a single MazG-like domain that contains a well conserved divalent ion-binding motif EXX[E/D].	mmseqs_cdd	common_virus	NaN		0	18266
+ct3_kalam_2a_4	981	1388	ct3_kalam_2a_4_3	-	18266		PFAM:PF07509.10	secreted-protein	phrogs_hmm	hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_4	1390	1746	ct3_kalam_2a_4_4	-	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_4	1739	1921	ct3_kalam_2a_4_5	-	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_4	2099	2485	ct3_kalam_2a_4_6	-	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_4	2527	2781	ct3_kalam_2a_4_7	-	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_4	3107	3430	ct3_kalam_2a_4_8	-	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_4	3637	5784	ct3_kalam_2a_4_9	-	18266		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	18266
+ct3_kalam_2a_4	6206	6628	ct3_kalam_2a_4_10	-	18266		PDB:3EIV_D	Single-stranded-DNA-binding-protein	common_virus_hmm	common_virus	NaN		0	18266
+ct3_kalam_2a_4	6802	7179	ct3_kalam_2a_4_11	+	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_4	7176	7751	ct3_kalam_2a_4_12	+	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_4	7744	8529	ct3_kalam_2a_4_13	+	18266		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	18266
+ct3_kalam_2a_4	8545	8682	ct3_kalam_2a_4_14	+	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_4	8697	9878	ct3_kalam_2a_4_15	+	18266		PDB:2BBD_D	capsid-protein	hallmark_hmm	common_virus	NaN		0	18266
+ct3_kalam_2a_4	9892	10047	ct3_kalam_2a_4_16	+	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_4	10067	10183	ct3_kalam_2a_4_17	+	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_4	10190	10525	ct3_kalam_2a_4_18	+	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_4	10515	10664	ct3_kalam_2a_4_19	+	18266		PFAM:PF11087.7	membrane-DNA-delivery-protein	common_virus_hmm	common_virus	NaN		0	18266
+ct3_kalam_2a_4	10673	11386	ct3_kalam_2a_4_20	+	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_4	11390	12106	ct3_kalam_2a_4_21	+	18266		PFAM:PF06995.10	endolysin	phrogs_hmm	hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_4	12123	12311	ct3_kalam_2a_4_22	+	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_4	12322	12990	ct3_kalam_2a_4_23	+	18266		PDB:2RSC_A	Lysozyme	common_virus_hmm	common_virus	NaN		0	18266
+ct3_kalam_2a_4	12990	13229	ct3_kalam_2a_4_24	+	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_4	13372	13635	ct3_kalam_2a_4_25	+	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_4	13638	14318	ct3_kalam_2a_4_26	+	18266		PDB:2RSC_A	Lysozyme	common_virus_hmm	common_virus	NaN		0	18266
+ct3_kalam_2a_4	14290	14571	ct3_kalam_2a_4_27	+	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_4	14574	15170	ct3_kalam_2a_4_28	+	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_4	15167	15508	ct3_kalam_2a_4_29	+	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_4	15510	16760	ct3_kalam_2a_4_30	+	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_4	16771	17556	ct3_kalam_2a_4_31	+	18266		PFAM:PF01510.24	endolysin	phrogs_hmm	hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_4	17553	17888	ct3_kalam_2a_4_32	+	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_4	17878	18054	ct3_kalam_2a_4_33	+	18266			hypothetical protein		hypothetical_protein	NaN		0	18266
+ct3_kalam_2a_40	233	1012	ct3_kalam_2a_40_1	+	14939			hypothetical protein		hypothetical_protein	NaN		0	14939
+ct3_kalam_2a_40	1016	2677	ct3_kalam_2a_40_2	+	14939		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	14939
+ct3_kalam_2a_40	2679	3128	ct3_kalam_2a_40_3	+	14939		CDD:pfam11860	N-acetylmuramidase	common_virus_hmm	common_virus	NaN		0	14939
+ct3_kalam_2a_40	3128	4903	ct3_kalam_2a_40_4	+	14939		PDB:1N7V_A	Adsorption-protein	common_virus_hmm	common_virus	NaN		0	14939
+ct3_kalam_2a_40	4907	5287	ct3_kalam_2a_40_5	+	14939		PFAM:PF08949.9	major-spike-protein	phrogs_hmm	nonviral_gene	NaN		0	14939
+ct3_kalam_2a_40	5287	6309	ct3_kalam_2a_40_6	+	14939		PFAM:PF08949.9	major-spike-protein	phrogs_hmm	nonviral_gene	NaN		0	14939
+ct3_kalam_2a_40	6328	6588	ct3_kalam_2a_40_7	+	14939			hypothetical protein		hypothetical_protein	NaN		0	14939
+ct3_kalam_2a_40	6578	6784	ct3_kalam_2a_40_8	+	14939			hypothetical protein		hypothetical_protein	NaN		0	14939
+ct3_kalam_2a_40	6784	7284	ct3_kalam_2a_40_9	+	14939			hypothetical protein		hypothetical_protein	NaN		0	14939
+ct3_kalam_2a_40	7317	7640	ct3_kalam_2a_40_10	+	14939		UniProtKB:Q3T4U8_BPPRD	Assembly-protein	common_virus_hmm	common_virus	NaN		0	14939
+ct3_kalam_2a_40	7637	8320	ct3_kalam_2a_40_11	+	14939		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	14939
+ct3_kalam_2a_40	8332	8460	ct3_kalam_2a_40_12	+	14939			hypothetical protein		hypothetical_protein	NaN		0	14939
+ct3_kalam_2a_40	8460	8588	ct3_kalam_2a_40_13	+	14939			hypothetical protein		hypothetical_protein	NaN		0	14939
+ct3_kalam_2a_40	8595	9782	ct3_kalam_2a_40_14	+	14939		CDD:pfam09018	Major-Capsid-Protein	hallmark_hmm	common_virus	NaN		0	14939
+ct3_kalam_2a_40	9801	9944	ct3_kalam_2a_40_15	+	14939			hypothetical protein		hypothetical_protein	NaN		0	14939
+ct3_kalam_2a_40	10168	10440	ct3_kalam_2a_40_16	+	14939			hypothetical protein		hypothetical_protein	NaN		0	14939
+ct3_kalam_2a_40	10440	10604	ct3_kalam_2a_40_17	+	14939		PFAM:PF11087.7	membrane-DNA-delivery-protein	common_virus_hmm	common_virus	NaN		0	14939
+ct3_kalam_2a_40	10617	10823	ct3_kalam_2a_40_18	+	14939		PFAM:PF11087.7	membrane-DNA-delivery-protein	common_virus_hmm	common_virus	NaN		0	14939
+ct3_kalam_2a_40	10833	11087	ct3_kalam_2a_40_19	+	14939		CDD:pfam09300	minor-capsid	hallmark_hmm	common_virus	NaN		0	14939
+ct3_kalam_2a_40	11202	11825	ct3_kalam_2a_40_20	+	14939			hypothetical protein		hypothetical_protein	NaN		0	14939
+ct3_kalam_2a_40	11836	12189	ct3_kalam_2a_40_21	+	14939		pfam09301	Domain of unknown function (DUF1970). Members of this family consist of various uncharacterized viral hypothetical proteins.	mmseqs_cdd	nonviral_gene	NaN		0	14939
+ct3_kalam_2a_40	12190	12999	ct3_kalam_2a_40_22	+	14939		pfam01464	Transglycosylase SLT domain. This family is distantly related to pfam00062. Members are found in phages, type II, type III and type IV secretion systems.	mmseqs_cdd	common_virus	NaN		0	14939
+ct3_kalam_2a_40	12996	13349	ct3_kalam_2a_40_23	+	14939		PFAM:PF05106.11	holin	phrogs_hmm	hypothetical_protein	NaN		0	14939
+ct3_kalam_2a_40	13342	13704	ct3_kalam_2a_40_24	+	14939		PFAM:PF10828.7	Rz-like-spanin	phrogs_hmm	hypothetical_protein	NaN		0	14939
+ct3_kalam_2a_40	13860	14144	ct3_kalam_2a_40_25	-	14939			hypothetical protein		hypothetical_protein	NaN		0	14939
+ct3_kalam_2a_40	14217	14699	ct3_kalam_2a_40_26	-	14939			hypothetical protein		hypothetical_protein	NaN		0	14939
+ct3_kalam_2a_41	234	1013	ct3_kalam_2a_41_1	+	14942			hypothetical protein		hypothetical_protein	NaN		0	14942
+ct3_kalam_2a_41	1017	2678	ct3_kalam_2a_41_2	+	14942		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	14942
+ct3_kalam_2a_41	2680	3129	ct3_kalam_2a_41_3	+	14942		CDD:pfam11860	N-acetylmuramidase	common_virus_hmm	common_virus	NaN		0	14942
+ct3_kalam_2a_41	3129	4904	ct3_kalam_2a_41_4	+	14942		PDB:1N7V_A	Adsorption-protein	common_virus_hmm	common_virus	NaN		0	14942
+ct3_kalam_2a_41	4908	5288	ct3_kalam_2a_41_5	+	14942		PFAM:PF08949.9	major-spike-protein	phrogs_hmm	nonviral_gene	NaN		0	14942
+ct3_kalam_2a_41	5288	6310	ct3_kalam_2a_41_6	+	14942		PFAM:PF08949.9	major-spike-protein	phrogs_hmm	nonviral_gene	NaN		0	14942
+ct3_kalam_2a_41	6329	6589	ct3_kalam_2a_41_7	+	14942			hypothetical protein		hypothetical_protein	NaN		0	14942
+ct3_kalam_2a_41	6579	6785	ct3_kalam_2a_41_8	+	14942			hypothetical protein		hypothetical_protein	NaN		0	14942
+ct3_kalam_2a_41	6785	7285	ct3_kalam_2a_41_9	+	14942			hypothetical protein		hypothetical_protein	NaN		0	14942
+ct3_kalam_2a_41	7318	7641	ct3_kalam_2a_41_10	+	14942		UniProtKB:Q3T4U8_BPPRD	Assembly-protein	common_virus_hmm	common_virus	NaN		0	14942
+ct3_kalam_2a_41	7638	8321	ct3_kalam_2a_41_11	+	14942		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	14942
+ct3_kalam_2a_41	8333	8461	ct3_kalam_2a_41_12	+	14942			hypothetical protein		hypothetical_protein	NaN		0	14942
+ct3_kalam_2a_41	8461	8589	ct3_kalam_2a_41_13	+	14942			hypothetical protein		hypothetical_protein	NaN		0	14942
+ct3_kalam_2a_41	8596	9783	ct3_kalam_2a_41_14	+	14942		CDD:pfam09018	Major-Capsid-Protein	hallmark_hmm	common_virus	NaN		0	14942
+ct3_kalam_2a_41	9802	9945	ct3_kalam_2a_41_15	+	14942			hypothetical protein		hypothetical_protein	NaN		0	14942
+ct3_kalam_2a_41	10169	10441	ct3_kalam_2a_41_16	+	14942			hypothetical protein		hypothetical_protein	NaN		0	14942
+ct3_kalam_2a_41	10441	10605	ct3_kalam_2a_41_17	+	14942		PFAM:PF11087.7	membrane-DNA-delivery-protein	common_virus_hmm	common_virus	NaN		0	14942
+ct3_kalam_2a_41	10618	10824	ct3_kalam_2a_41_18	+	14942		PFAM:PF11087.7	membrane-DNA-delivery-protein	common_virus_hmm	common_virus	NaN		0	14942
+ct3_kalam_2a_41	10834	11088	ct3_kalam_2a_41_19	+	14942		CDD:pfam09300	minor-capsid	hallmark_hmm	common_virus	NaN		0	14942
+ct3_kalam_2a_41	11203	11826	ct3_kalam_2a_41_20	+	14942			hypothetical protein		hypothetical_protein	NaN		0	14942
+ct3_kalam_2a_41	11837	12190	ct3_kalam_2a_41_21	+	14942		pfam09301	Domain of unknown function (DUF1970). Members of this family consist of various uncharacterized viral hypothetical proteins.	mmseqs_cdd	nonviral_gene	NaN		0	14942
+ct3_kalam_2a_41	12191	13000	ct3_kalam_2a_41_22	+	14942		pfam01464	Transglycosylase SLT domain. This family is distantly related to pfam00062. Members are found in phages, type II, type III and type IV secretion systems.	mmseqs_cdd	common_virus	NaN		0	14942
+ct3_kalam_2a_41	12997	13350	ct3_kalam_2a_41_23	+	14942		PFAM:PF05106.11	holin	phrogs_hmm	hypothetical_protein	NaN		0	14942
+ct3_kalam_2a_41	13343	13705	ct3_kalam_2a_41_24	+	14942		PFAM:PF10828.7	Rz-like-spanin	phrogs_hmm	hypothetical_protein	NaN		0	14942
+ct3_kalam_2a_41	13861	14145	ct3_kalam_2a_41_25	-	14942			hypothetical protein		hypothetical_protein	NaN		0	14942
+ct3_kalam_2a_41	14218	14700	ct3_kalam_2a_41_26	-	14942			hypothetical protein		hypothetical_protein	NaN		0	14942
+ct3_kalam_2a_42	233	1012	ct3_kalam_2a_42_1	+	14927			hypothetical protein		hypothetical_protein	NaN		0	14927
+ct3_kalam_2a_42	1016	2677	ct3_kalam_2a_42_2	+	14927		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	14927
+ct3_kalam_2a_42	2679	3128	ct3_kalam_2a_42_3	+	14927		CDD:pfam11860	N-acetylmuramidase	common_virus_hmm	common_virus	NaN		0	14927
+ct3_kalam_2a_42	3128	4903	ct3_kalam_2a_42_4	+	14927		PDB:1N7V_A	Adsorption-protein	common_virus_hmm	common_virus	NaN		0	14927
+ct3_kalam_2a_42	4907	5287	ct3_kalam_2a_42_5	+	14927		PFAM:PF08949.9	major-spike-protein	phrogs_hmm	nonviral_gene	NaN		0	14927
+ct3_kalam_2a_42	5287	6309	ct3_kalam_2a_42_6	+	14927		PFAM:PF08949.9	major-spike-protein	phrogs_hmm	nonviral_gene	NaN		0	14927
+ct3_kalam_2a_42	6328	6588	ct3_kalam_2a_42_7	+	14927			hypothetical protein		hypothetical_protein	NaN		0	14927
+ct3_kalam_2a_42	6578	6784	ct3_kalam_2a_42_8	+	14927			hypothetical protein		hypothetical_protein	NaN		0	14927
+ct3_kalam_2a_42	6784	7284	ct3_kalam_2a_42_9	+	14927			hypothetical protein		hypothetical_protein	NaN		0	14927
+ct3_kalam_2a_42	7317	7640	ct3_kalam_2a_42_10	+	14927		UniProtKB:Q3T4U8_BPPRD	Assembly-protein	common_virus_hmm	common_virus	NaN		0	14927
+ct3_kalam_2a_42	7637	8320	ct3_kalam_2a_42_11	+	14927		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	14927
+ct3_kalam_2a_42	8332	8460	ct3_kalam_2a_42_12	+	14927			hypothetical protein		hypothetical_protein	NaN		0	14927
+ct3_kalam_2a_42	8460	8588	ct3_kalam_2a_42_13	+	14927			hypothetical protein		hypothetical_protein	NaN		0	14927
+ct3_kalam_2a_42	8595	9782	ct3_kalam_2a_42_14	+	14927		CDD:pfam09018	Major-Capsid-Protein	hallmark_hmm	common_virus	NaN		0	14927
+ct3_kalam_2a_42	9801	9944	ct3_kalam_2a_42_15	+	14927			hypothetical protein		hypothetical_protein	NaN		0	14927
+ct3_kalam_2a_42	10168	10440	ct3_kalam_2a_42_16	+	14927			hypothetical protein		hypothetical_protein	NaN		0	14927
+ct3_kalam_2a_42	10440	10604	ct3_kalam_2a_42_17	+	14927		PFAM:PF11087.7	membrane-DNA-delivery-protein	common_virus_hmm	common_virus	NaN		0	14927
+ct3_kalam_2a_42	10617	10823	ct3_kalam_2a_42_18	+	14927		PFAM:PF11087.7	membrane-DNA-delivery-protein	common_virus_hmm	common_virus	NaN		0	14927
+ct3_kalam_2a_42	10833	11087	ct3_kalam_2a_42_19	+	14927		CDD:pfam09300	minor-capsid	hallmark_hmm	common_virus	NaN		0	14927
+ct3_kalam_2a_42	11202	11825	ct3_kalam_2a_42_20	+	14927			hypothetical protein		hypothetical_protein	NaN		0	14927
+ct3_kalam_2a_42	11836	12189	ct3_kalam_2a_42_21	+	14927		pfam09301	Domain of unknown function (DUF1970). Members of this family consist of various uncharacterized viral hypothetical proteins.	mmseqs_cdd	nonviral_gene	NaN		0	14927
+ct3_kalam_2a_42	12190	12987	ct3_kalam_2a_42_22	+	14927		pfam01464	Transglycosylase SLT domain. This family is distantly related to pfam00062. Members are found in phages, type II, type III and type IV secretion systems.	mmseqs_cdd	common_virus	NaN		0	14927
+ct3_kalam_2a_42	12984	13337	ct3_kalam_2a_42_23	+	14927		PFAM:PF05106.11	holin	phrogs_hmm	hypothetical_protein	NaN		0	14927
+ct3_kalam_2a_42	13330	13692	ct3_kalam_2a_42_24	+	14927		PFAM:PF10828.7	Rz-like-spanin	phrogs_hmm	hypothetical_protein	NaN		0	14927
+ct3_kalam_2a_42	13848	14132	ct3_kalam_2a_42_25	-	14927			hypothetical protein		hypothetical_protein	NaN		0	14927
+ct3_kalam_2a_42	14205	14687	ct3_kalam_2a_42_26	-	14927			hypothetical protein		hypothetical_protein	NaN		0	14927
+ct3_kalam_2a_43	355	531	ct3_kalam_2a_43_1	+	14844		PFAM:PF13591.5	excisionase	phrogs_hmm	hypothetical_protein	NaN		0	14844
+ct3_kalam_2a_43	547	1047	ct3_kalam_2a_43_2	+	14844		PFAM:PF17427.1	Single-stranded-DNA-binding-protein	common_virus_hmm	common_virus	NaN		0	14844
+ct3_kalam_2a_43	1119	1343	ct3_kalam_2a_43_3	+	14844			hypothetical protein		hypothetical_protein	NaN		0	14844
+ct3_kalam_2a_43	1402	2139	ct3_kalam_2a_43_4	+	14844			hypothetical protein		hypothetical_protein	NaN		0	14844
+ct3_kalam_2a_43	2087	4330	ct3_kalam_2a_43_5	+	14844		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	14844
+ct3_kalam_2a_43	4347	4547	ct3_kalam_2a_43_6	+	14844		PFAM:PF04358.12	transcriptional-repressor	phrogs_hmm	hypothetical_protein	NaN		0	14844
+ct3_kalam_2a_43	4561	4737	ct3_kalam_2a_43_7	+	14844			hypothetical protein		hypothetical_protein	NaN		0	14844
+ct3_kalam_2a_43	4820	5074	ct3_kalam_2a_43_8	+	14844			hypothetical protein		hypothetical_protein	NaN		0	14844
+ct3_kalam_2a_43	5243	5989	ct3_kalam_2a_43_9	+	14844			hypothetical protein		hypothetical_protein	NaN		0	14844
+ct3_kalam_2a_43	6335	6973	ct3_kalam_2a_43_10	+	14844		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	14844
+ct3_kalam_2a_43	7406	7675	ct3_kalam_2a_43_11	+	14844			hypothetical protein		hypothetical_protein	NaN		0	14844
+ct3_kalam_2a_43	7675	8745	ct3_kalam_2a_43_12	+	14844		PDB:3J31_H	Major-Capsid-Protein	hallmark_hmm	common_virus	NaN		0	14844
+ct3_kalam_2a_43	8787	9017	ct3_kalam_2a_43_13	+	14844			hypothetical protein		hypothetical_protein	NaN		0	14844
+ct3_kalam_2a_43	9021	9179	ct3_kalam_2a_43_14	+	14844		PFAM:PF12841.6	holin	phrogs_hmm	hypothetical_protein	NaN		0	14844
+ct3_kalam_2a_43	9253	9684	ct3_kalam_2a_43_15	+	14844			hypothetical protein		hypothetical_protein	NaN		0	14844
+ct3_kalam_2a_43	9854	10000	ct3_kalam_2a_43_16	+	14844			hypothetical protein		hypothetical_protein	NaN		0	14844
+ct3_kalam_2a_43	10012	10287	ct3_kalam_2a_43_17	+	14844		UniProtKB:B6RT55_9VIRU	Minor-capsid-protein-	hallmark_hmm	common_virus	NaN		0	14844
+ct3_kalam_2a_43	10291	10905	ct3_kalam_2a_43_18	+	14844			hypothetical protein		hypothetical_protein	NaN		0	14844
+ct3_kalam_2a_43	10909	11661	ct3_kalam_2a_43_19	+	14844		COG1705	Flagellum-specific peptidoglycan hydrolase FlgJ [Cell wall/membrane/envelope biogenesis, Cell motility]. 	mmseqs_cdd	nonviral_gene	NaN		0	14844
+ct3_kalam_2a_43	11600	12121	ct3_kalam_2a_43_20	+	14844		PFAM:PF08291.10	pentameric-base-spike-protein	phrogs_hmm	hypothetical_protein	NaN		0	14844
+ct3_kalam_2a_43	12135	13028	ct3_kalam_2a_43_21	+	14844			hypothetical protein		hypothetical_protein	NaN		0	14844
+ct3_kalam_2a_43	13032	13913	ct3_kalam_2a_43_22	+	14844			hypothetical protein		hypothetical_protein	NaN		0	14844
+ct3_kalam_2a_43	13855	14721	ct3_kalam_2a_43_23	+	14844		PDB:5EMI_A	Cell-wall-hydrolase-autolysin	common_virus_hmm	common_virus	NaN		0	14844
+ct3_kalam_2a_44	236	1015	ct3_kalam_2a_44_1	+	14946			hypothetical protein		hypothetical_protein	NaN		0	14946
+ct3_kalam_2a_44	1019	2680	ct3_kalam_2a_44_2	+	14946		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	14946
+ct3_kalam_2a_44	2682	3131	ct3_kalam_2a_44_3	+	14946		CDD:pfam11860	N-acetylmuramidase	common_virus_hmm	common_virus	NaN		0	14946
+ct3_kalam_2a_44	3131	4906	ct3_kalam_2a_44_4	+	14946		PDB:1N7V_A	Adsorption-protein	common_virus_hmm	common_virus	NaN		0	14946
+ct3_kalam_2a_44	4910	5290	ct3_kalam_2a_44_5	+	14946		PFAM:PF08949.9	major-spike-protein	phrogs_hmm	nonviral_gene	NaN		0	14946
+ct3_kalam_2a_44	5290	6312	ct3_kalam_2a_44_6	+	14946		PFAM:PF08949.9	major-spike-protein	phrogs_hmm	nonviral_gene	NaN		0	14946
+ct3_kalam_2a_44	6331	6591	ct3_kalam_2a_44_7	+	14946			hypothetical protein		hypothetical_protein	NaN		0	14946
+ct3_kalam_2a_44	6581	6787	ct3_kalam_2a_44_8	+	14946			hypothetical protein		hypothetical_protein	NaN		0	14946
+ct3_kalam_2a_44	6787	7287	ct3_kalam_2a_44_9	+	14946			hypothetical protein		hypothetical_protein	NaN		0	14946
+ct3_kalam_2a_44	7320	7643	ct3_kalam_2a_44_10	+	14946		UniProtKB:Q3T4U8_BPPRD	Assembly-protein	common_virus_hmm	common_virus	NaN		0	14946
+ct3_kalam_2a_44	7640	8323	ct3_kalam_2a_44_11	+	14946		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	14946
+ct3_kalam_2a_44	8335	8463	ct3_kalam_2a_44_12	+	14946			hypothetical protein		hypothetical_protein	NaN		0	14946
+ct3_kalam_2a_44	8463	8591	ct3_kalam_2a_44_13	+	14946			hypothetical protein		hypothetical_protein	NaN		0	14946
+ct3_kalam_2a_44	8598	9785	ct3_kalam_2a_44_14	+	14946		CDD:pfam09018	Major-Capsid-Protein	hallmark_hmm	common_virus	NaN		0	14946
+ct3_kalam_2a_44	9804	9947	ct3_kalam_2a_44_15	+	14946			hypothetical protein		hypothetical_protein	NaN		0	14946
+ct3_kalam_2a_44	10171	10443	ct3_kalam_2a_44_16	+	14946			hypothetical protein		hypothetical_protein	NaN		0	14946
+ct3_kalam_2a_44	10443	10607	ct3_kalam_2a_44_17	+	14946		PFAM:PF11087.7	membrane-DNA-delivery-protein	common_virus_hmm	common_virus	NaN		0	14946
+ct3_kalam_2a_44	10620	10826	ct3_kalam_2a_44_18	+	14946		PFAM:PF11087.7	membrane-DNA-delivery-protein	common_virus_hmm	common_virus	NaN		0	14946
+ct3_kalam_2a_44	10836	11090	ct3_kalam_2a_44_19	+	14946		CDD:pfam09300	minor-capsid	hallmark_hmm	common_virus	NaN		0	14946
+ct3_kalam_2a_44	11205	11828	ct3_kalam_2a_44_20	+	14946			hypothetical protein		hypothetical_protein	NaN		0	14946
+ct3_kalam_2a_44	11839	12192	ct3_kalam_2a_44_21	+	14946		pfam09301	Domain of unknown function (DUF1970). Members of this family consist of various uncharacterized viral hypothetical proteins.	mmseqs_cdd	nonviral_gene	NaN		0	14946
+ct3_kalam_2a_44	12193	13002	ct3_kalam_2a_44_22	+	14946		pfam01464	Transglycosylase SLT domain. This family is distantly related to pfam00062. Members are found in phages, type II, type III and type IV secretion systems.	mmseqs_cdd	common_virus	NaN		0	14946
+ct3_kalam_2a_44	12999	13352	ct3_kalam_2a_44_23	+	14946		PFAM:PF05106.11	holin	phrogs_hmm	hypothetical_protein	NaN		0	14946
+ct3_kalam_2a_44	13345	13707	ct3_kalam_2a_44_24	+	14946		PFAM:PF10828.7	Rz-like-spanin	phrogs_hmm	hypothetical_protein	NaN		0	14946
+ct3_kalam_2a_44	13863	14147	ct3_kalam_2a_44_25	-	14946			hypothetical protein		hypothetical_protein	NaN		0	14946
+ct3_kalam_2a_44	14220	14702	ct3_kalam_2a_44_26	-	14946			hypothetical protein		hypothetical_protein	NaN		0	14946
+ct3_kalam_2a_45	358	534	ct3_kalam_2a_45_1	+	14935		PFAM:PF13591.5	excisionase	phrogs_hmm	hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_45	550	1053	ct3_kalam_2a_45_2	+	14935		PFAM:PF17427.1	Single-stranded-DNA-binding-protein	common_virus_hmm	common_virus	NaN		0	14935
+ct3_kalam_2a_45	1125	1349	ct3_kalam_2a_45_3	+	14935			hypothetical protein		hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_45	1408	2145	ct3_kalam_2a_45_4	+	14935			hypothetical protein		hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_45	2129	4336	ct3_kalam_2a_45_5	+	14935		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	14935
+ct3_kalam_2a_45	4352	4552	ct3_kalam_2a_45_6	+	14935		PFAM:PF04358.12	transcriptional-repressor	phrogs_hmm	hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_45	4566	4718	ct3_kalam_2a_45_7	+	14935			hypothetical protein		hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_45	4693	4833	ct3_kalam_2a_45_8	+	14935			hypothetical protein		hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_45	4952	5125	ct3_kalam_2a_45_9	+	14935			hypothetical protein		hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_45	5138	5575	ct3_kalam_2a_45_10	+	14935			hypothetical protein		hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_45	5993	6235	ct3_kalam_2a_45_11	+	14935			hypothetical protein		hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_45	6204	6512	ct3_kalam_2a_45_12	+	14935			hypothetical protein		hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_45	6493	7131	ct3_kalam_2a_45_13	+	14935		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	14935
+ct3_kalam_2a_45	7445	7699	ct3_kalam_2a_45_14	+	14935			hypothetical protein		hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_45	7699	8769	ct3_kalam_2a_45_15	+	14935		PDB:3J31_H	penton-base-protein	hallmark_hmm	common_virus	NaN		0	14935
+ct3_kalam_2a_45	8811	9041	ct3_kalam_2a_45_16	+	14935			hypothetical protein		hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_45	9045	9251	ct3_kalam_2a_45_17	+	14935		PFAM:PF12841.6	holin	phrogs_hmm	hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_45	9331	9762	ct3_kalam_2a_45_18	+	14935			hypothetical protein		hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_45	9932	10078	ct3_kalam_2a_45_19	+	14935			hypothetical protein		hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_45	10090	10365	ct3_kalam_2a_45_20	+	14935		UniProtKB:B6RT55_9VIRU	Minor-capsid-protein-	hallmark_hmm	common_virus	NaN		0	14935
+ct3_kalam_2a_45	10369	10983	ct3_kalam_2a_45_21	+	14935			hypothetical protein		hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_45	10983	11735	ct3_kalam_2a_45_22	+	14935		COG1705	Flagellum-specific peptidoglycan hydrolase FlgJ [Cell wall/membrane/envelope biogenesis, Cell motility]. 	mmseqs_cdd	nonviral_gene	NaN		0	14935
+ct3_kalam_2a_45	11674	12195	ct3_kalam_2a_45_23	+	14935		PFAM:PF08291.10	pentameric-base-spike-protein	phrogs_hmm	hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_45	12208	13122	ct3_kalam_2a_45_24	+	14935			hypothetical protein		hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_45	13126	14007	ct3_kalam_2a_45_25	+	14935			hypothetical protein		hypothetical_protein	NaN		0	14935
+ct3_kalam_2a_45	14023	14820	ct3_kalam_2a_45_26	+	14935		PDB:5EMI_A	Cell-wall-hydrolase-autolysin	common_virus_hmm	common_virus	NaN		0	14935
+ct3_kalam_2a_46	356	532	ct3_kalam_2a_46_1	+	14931		PFAM:PF13591.5	excisionase	phrogs_hmm	hypothetical_protein	NaN		0	14931
+ct3_kalam_2a_46	548	1051	ct3_kalam_2a_46_2	+	14931		PFAM:PF17427.1	Single-stranded-DNA-binding-protein	common_virus_hmm	common_virus	NaN		0	14931
+ct3_kalam_2a_46	1123	1347	ct3_kalam_2a_46_3	+	14931			hypothetical protein		hypothetical_protein	NaN		0	14931
+ct3_kalam_2a_46	1406	2143	ct3_kalam_2a_46_4	+	14931			hypothetical protein		hypothetical_protein	NaN		0	14931
+ct3_kalam_2a_46	2127	4334	ct3_kalam_2a_46_5	+	14931		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	14931
+ct3_kalam_2a_46	4350	4550	ct3_kalam_2a_46_6	+	14931		PFAM:PF04358.12	transcriptional-repressor	phrogs_hmm	hypothetical_protein	NaN		0	14931
+ct3_kalam_2a_46	4564	4716	ct3_kalam_2a_46_7	+	14931			hypothetical protein		hypothetical_protein	NaN		0	14931
+ct3_kalam_2a_46	4691	4831	ct3_kalam_2a_46_8	+	14931			hypothetical protein		hypothetical_protein	NaN		0	14931
+ct3_kalam_2a_46	4950	5123	ct3_kalam_2a_46_9	+	14931			hypothetical protein		hypothetical_protein	NaN		0	14931
+ct3_kalam_2a_46	5136	5573	ct3_kalam_2a_46_10	+	14931			hypothetical protein		hypothetical_protein	NaN		0	14931
+ct3_kalam_2a_46	5991	6233	ct3_kalam_2a_46_11	+	14931			hypothetical protein		hypothetical_protein	NaN		0	14931
+ct3_kalam_2a_46	6202	6510	ct3_kalam_2a_46_12	+	14931			hypothetical protein		hypothetical_protein	NaN		0	14931
+ct3_kalam_2a_46	6491	7129	ct3_kalam_2a_46_13	+	14931		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	14931
+ct3_kalam_2a_46	7443	7697	ct3_kalam_2a_46_14	+	14931			hypothetical protein		hypothetical_protein	NaN		0	14931
+ct3_kalam_2a_46	7697	8767	ct3_kalam_2a_46_15	+	14931		PDB:3J31_H	penton-base-protein	hallmark_hmm	common_virus	NaN		0	14931
+ct3_kalam_2a_46	8809	9039	ct3_kalam_2a_46_16	+	14931			hypothetical protein		hypothetical_protein	NaN		0	14931
+ct3_kalam_2a_46	9043	9249	ct3_kalam_2a_46_17	+	14931		PFAM:PF12841.6	holin	phrogs_hmm	hypothetical_protein	NaN		0	14931
+ct3_kalam_2a_46	9329	9760	ct3_kalam_2a_46_18	+	14931			hypothetical protein		hypothetical_protein	NaN		0	14931
+ct3_kalam_2a_46	9930	10076	ct3_kalam_2a_46_19	+	14931			hypothetical protein		hypothetical_protein	NaN		0	14931
+ct3_kalam_2a_46	10088	10363	ct3_kalam_2a_46_20	+	14931		UniProtKB:B6RT55_9VIRU	Minor-capsid-protein-	hallmark_hmm	common_virus	NaN		0	14931
+ct3_kalam_2a_46	10367	10981	ct3_kalam_2a_46_21	+	14931			hypothetical protein		hypothetical_protein	NaN		0	14931
+ct3_kalam_2a_46	10981	11733	ct3_kalam_2a_46_22	+	14931		COG1705	Flagellum-specific peptidoglycan hydrolase FlgJ [Cell wall/membrane/envelope biogenesis, Cell motility]. 	mmseqs_cdd	nonviral_gene	NaN		0	14931
+ct3_kalam_2a_46	11672	12193	ct3_kalam_2a_46_23	+	14931		PFAM:PF08291.10	pentameric-base-spike-protein	phrogs_hmm	hypothetical_protein	NaN		0	14931
+ct3_kalam_2a_46	12206	13120	ct3_kalam_2a_46_24	+	14931			hypothetical protein		hypothetical_protein	NaN		0	14931
+ct3_kalam_2a_46	13124	14005	ct3_kalam_2a_46_25	+	14931			hypothetical protein		hypothetical_protein	NaN		0	14931
+ct3_kalam_2a_46	14021	14818	ct3_kalam_2a_46_26	+	14931		PDB:5EMI_A	Cell-wall-hydrolase-autolysin	common_virus_hmm	common_virus	NaN		0	14931
+ct3_kalam_2a_5	90	359	ct3_kalam_2a_5_1	-	17253			hypothetical protein		hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_5	617	892	ct3_kalam_2a_5_2	-	17253			hypothetical protein		hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_5	1011	1247	ct3_kalam_2a_5_3	-	17253			hypothetical protein		hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_5	1254	1679	ct3_kalam_2a_5_4	-	17253			hypothetical protein		hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_5	1731	2018	ct3_kalam_2a_5_5	-	17253			hypothetical protein		hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_5	2015	4072	ct3_kalam_2a_5_6	-	17253		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	17253
+ct3_kalam_2a_5	4245	4781	ct3_kalam_2a_5_7	-	17253			hypothetical protein		hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_5	4865	5299	ct3_kalam_2a_5_8	+	17253			hypothetical protein		hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_5	5296	5793	ct3_kalam_2a_5_9	+	17253			hypothetical protein		hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_5	5747	6499	ct3_kalam_2a_5_10	+	17253		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	17253
+ct3_kalam_2a_5	6503	6637	ct3_kalam_2a_5_11	+	17253			hypothetical protein		hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_5	6654	7796	ct3_kalam_2a_5_12	+	17253		PDB:2BBD_D	capsid-protein	hallmark_hmm	common_virus	NaN		0	17253
+ct3_kalam_2a_5	7937	8059	ct3_kalam_2a_5_13	+	17253			hypothetical protein		hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_5	8133	8378	ct3_kalam_2a_5_14	-	17253			hypothetical protein		hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_5	8510	9184	ct3_kalam_2a_5_15	+	17253			hypothetical protein		hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_5	9181	10167	ct3_kalam_2a_5_16	+	17253		PRK11198	LysM domain/BON superfamily protein; Provisional	mmseqs_cdd	nonviral_gene	NaN		0	17253
+ct3_kalam_2a_5	10177	10395	ct3_kalam_2a_5_17	+	17253			hypothetical protein		hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_5	10419	10586	ct3_kalam_2a_5_18	+	17253			hypothetical protein		hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_5	10595	11254	ct3_kalam_2a_5_19	+	17253		PDB:2RSC_A	Lysozyme	common_virus_hmm	common_virus	NaN		0	17253
+ct3_kalam_2a_5	11251	11715	ct3_kalam_2a_5_20	+	17253			hypothetical protein		hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_5	11712	12053	ct3_kalam_2a_5_21	+	17253			hypothetical protein		hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_5	12053	12712	ct3_kalam_2a_5_22	+	17253		NF038345	peptidoglycan hydrolase RipC. RipC is a peptidoglycan hydrolase, found in species such as Mycobacterium tuberculosis, that is activated by conformation change sent as a signal by the cell division-regulating transporter-like complex FtsEX. Members of this family are distinguished from more distant homologs by a Pro/Gly-rich region.	mmseqs_cdd	nonviral_gene	NaN		0	17253
+ct3_kalam_2a_5	12705	12992	ct3_kalam_2a_5_23	+	17253			hypothetical protein		hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_5	12992	13621	ct3_kalam_2a_5_24	+	17253			hypothetical protein		hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_5	13618	14049	ct3_kalam_2a_5_25	+	17253			hypothetical protein		hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_5	14049	15284	ct3_kalam_2a_5_26	+	17253		PFAM:PF00386.20	minor-tail-protein	phrogs_hmm	hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_5	15291	15974	ct3_kalam_2a_5_27	+	17253		PDB:3WH1_A	Chitinase-	common_virus_hmm	common_virus	NaN		0	17253
+ct3_kalam_2a_5	16327	16605	ct3_kalam_2a_5_28	+	17253			hypothetical protein		hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_5	16874	17161	ct3_kalam_2a_5_29	+	17253			hypothetical protein		hypothetical_protein	NaN		0	17253
+ct3_kalam_2a_6	328	2007	ct3_kalam_2a_6_1	-	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_6	2007	3692	ct3_kalam_2a_6_2	-	16523		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	16523
+ct3_kalam_2a_6	3707	4522	ct3_kalam_2a_6_3	-	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_6	4667	5719	ct3_kalam_2a_6_4	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_6	5723	5983	ct3_kalam_2a_6_5	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_6	5976	6200	ct3_kalam_2a_6_6	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_6	6220	6729	ct3_kalam_2a_6_7	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_6	6774	7001	ct3_kalam_2a_6_8	+	16523		UniProtKB:Q3T4U8_BPPRD	Assembly-protein	common_virus_hmm	common_virus	NaN		0	16523
+ct3_kalam_2a_6	7001	7678	ct3_kalam_2a_6_9	+	16523		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	16523
+ct3_kalam_2a_6	7678	7800	ct3_kalam_2a_6_10	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_6	7802	7942	ct3_kalam_2a_6_11	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_6	7955	9154	ct3_kalam_2a_6_12	+	16523		PDB:1W8X_I	Major-Capsid-Protein	hallmark_hmm	common_virus	NaN		0	16523
+ct3_kalam_2a_6	9158	9349	ct3_kalam_2a_6_13	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_6	9355	9471	ct3_kalam_2a_6_14	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_6	9496	9684	ct3_kalam_2a_6_15	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_6	9694	9957	ct3_kalam_2a_6_16	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_6	9958	10125	ct3_kalam_2a_6_17	+	16523		PFAM:PF11087.7	membrane-DNA-delivery-protein	common_virus_hmm	common_virus	NaN		0	16523
+ct3_kalam_2a_6	10130	10345	ct3_kalam_2a_6_18	+	16523		PFAM:PF11087.7	membrane-DNA-delivery-protein	common_virus_hmm	common_virus	NaN		0	16523
+ct3_kalam_2a_6	10359	10649	ct3_kalam_2a_6_19	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_6	10646	11188	ct3_kalam_2a_6_20	+	16523		PFAM:PF05707.11	CTXphi-Zot-like-toxin	phrogs_hmm	hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_6	11190	11375	ct3_kalam_2a_6_21	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_6	11385	11984	ct3_kalam_2a_6_22	+	16523		cd13403	membrane-bound lytic murein transglycosylase F (MLTF) and similar proteins. This subfamily includes membrane-bound lytic murein transglycosylase F (MltF, murein lyase F) that degrades murein glycan strands. It is responsible for catalyzing the release of 1,6-anhydromuropeptides from peptidoglycan. Lytic transglycosylase catalyzes the cleavage of the beta-1,4-glycosidic bond between N-acetylmuramic acid (MurNAc) and N-acetyl-D-glucosamine (GlcNAc) as do goose-type lysozymes. However, in addition, it also makes a new glycosidic bond with the C6 hydroxyl group of the same muramic acid residue.	mmseqs_cdd	nonviral_gene	NaN		0	16523
+ct3_kalam_2a_6	11981	12388	ct3_kalam_2a_6_23	+	16523		CDD:PHA02564	virion-protein	hallmark_hmm	common_virus	NaN		0	16523
+ct3_kalam_2a_6	12385	12798	ct3_kalam_2a_6_24	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_6	12809	13039	ct3_kalam_2a_6_25	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_6	13276	13953	ct3_kalam_2a_6_26	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_6	14001	14207	ct3_kalam_2a_6_27	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_6	14204	14371	ct3_kalam_2a_6_28	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_6	14361	14606	ct3_kalam_2a_6_29	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_6	14599	14778	ct3_kalam_2a_6_30	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_6	15043	15210	ct3_kalam_2a_6_31	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_6	15207	15344	ct3_kalam_2a_6_32	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_6	15839	16132	ct3_kalam_2a_6_33	+	16523			hypothetical protein		hypothetical_protein	NaN		0	16523
+ct3_kalam_2a_7	396	569	ct3_kalam_2a_7_1	+	14319			hypothetical protein		hypothetical_protein	NaN		0	14319
+ct3_kalam_2a_7	598	1188	ct3_kalam_2a_7_2	+	14319			hypothetical protein		hypothetical_protein	NaN		0	14319
+ct3_kalam_2a_7	1219	1557	ct3_kalam_2a_7_3	+	14319		PFAM:PF06926.10	replisome-organiser-protein	rep_hall_hmm	common_virus	NaN		0	14319
+ct3_kalam_2a_7	1690	1965	ct3_kalam_2a_7_4	+	14319			hypothetical protein		hypothetical_protein	NaN		0	14319
+ct3_kalam_2a_7	1958	2161	ct3_kalam_2a_7_5	+	14319			hypothetical protein		hypothetical_protein	NaN		0	14319
+ct3_kalam_2a_7	2121	2471	ct3_kalam_2a_7_6	+	14319			hypothetical protein		hypothetical_protein	NaN		0	14319
+ct3_kalam_2a_7	2474	3019	ct3_kalam_2a_7_7	+	14319			hypothetical protein		hypothetical_protein	NaN		0	14319
+ct3_kalam_2a_7	3125	3763	ct3_kalam_2a_7_8	+	14319		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	14319
+ct3_kalam_2a_7	3938	4081	ct3_kalam_2a_7_9	+	14319		UniProt:tr|S5YC85_9VIRU	DNA-packaging-protein	hallmark_hmm	common_virus	NaN		0	14319
+ct3_kalam_2a_7	4081	5142	ct3_kalam_2a_7_10	+	14319		PDB:3J31_H	Major-Capsid-Protein	hallmark_hmm	common_virus	NaN		0	14319
+ct3_kalam_2a_7	5191	5415	ct3_kalam_2a_7_11	+	14319			hypothetical protein		hypothetical_protein	NaN		0	14319
+ct3_kalam_2a_7	5421	5600	ct3_kalam_2a_7_12	+	14319		PFAM:PF12841.6	holin	phrogs_hmm	hypothetical_protein	NaN		0	14319
+ct3_kalam_2a_7	5677	6150	ct3_kalam_2a_7_13	+	14319			hypothetical protein		hypothetical_protein	NaN		0	14319
+ct3_kalam_2a_7	6147	6323	ct3_kalam_2a_7_14	+	14319			hypothetical protein		hypothetical_protein	NaN		0	14319
+ct3_kalam_2a_7	6323	6469	ct3_kalam_2a_7_15	+	14319			hypothetical protein		hypothetical_protein	NaN		0	14319
+ct3_kalam_2a_7	6482	6757	ct3_kalam_2a_7_16	+	14319		UniProtKB:B6RT55_9VIRU	Minor-capsid-protein-	hallmark_hmm	common_virus	NaN		0	14319
+ct3_kalam_2a_7	6761	7402	ct3_kalam_2a_7_17	+	14319			hypothetical protein		hypothetical_protein	NaN		0	14319
+ct3_kalam_2a_7	7402	8058	ct3_kalam_2a_7_18	+	14319		COG1705	Flagellum-specific peptidoglycan hydrolase FlgJ [Cell wall/membrane/envelope biogenesis, Cell motility]. 	mmseqs_cdd	nonviral_gene	NaN		0	14319
+ct3_kalam_2a_7	8055	8582	ct3_kalam_2a_7_19	+	14319		PFAM:PF08291.10	pentameric-base-spike-protein	phrogs_hmm	hypothetical_protein	NaN		0	14319
+ct3_kalam_2a_7	8593	9468	ct3_kalam_2a_7_20	+	14319			hypothetical protein		hypothetical_protein	NaN		0	14319
+ct3_kalam_2a_7	9472	9825	ct3_kalam_2a_7_21	+	14319			hypothetical protein		hypothetical_protein	NaN		0	14319
+ct3_kalam_2a_7	9838	10194	ct3_kalam_2a_7_22	+	14319			hypothetical protein		hypothetical_protein	NaN		0	14319
+ct3_kalam_2a_7	10196	10342	ct3_kalam_2a_7_23	+	14319			hypothetical protein		hypothetical_protein	NaN		0	14319
+ct3_kalam_2a_7	10344	10985	ct3_kalam_2a_7_24	+	14319		PDB:2MXZ_A	L-alanyl-D-glutamate-peptidase-endolysin	common_virus_hmm	common_virus	NaN		0	14319
+ct3_kalam_2a_7	11342	14038	ct3_kalam_2a_7_25	-	14319		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	14319
+ct3_kalam_2a_8	411	563	ct3_kalam_2a_8_1	+	14398		PFAM:PF10013.8	excisionase-and-transcriptional-regulator	phrogs_hmm	hypothetical_protein	NaN		0	14398
+ct3_kalam_2a_8	556	1098	ct3_kalam_2a_8_2	+	14398		PFAM:PF17427.1	Single-stranded-DNA-binding-protein	common_virus_hmm	common_virus	NaN		0	14398
+ct3_kalam_2a_8	1163	1393	ct3_kalam_2a_8_3	+	14398			hypothetical protein		hypothetical_protein	NaN		0	14398
+ct3_kalam_2a_8	1456	2157	ct3_kalam_2a_8_4	+	14398			hypothetical protein		hypothetical_protein	NaN		0	14398
+ct3_kalam_2a_8	2141	4366	ct3_kalam_2a_8_5	+	14398		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	14398
+ct3_kalam_2a_8	4368	4571	ct3_kalam_2a_8_6	+	14398		PFAM:PF04358.12	transcriptional-repressor	phrogs_hmm	hypothetical_protein	NaN		0	14398
+ct3_kalam_2a_8	4587	4724	ct3_kalam_2a_8_7	+	14398			hypothetical protein		hypothetical_protein	NaN		0	14398
+ct3_kalam_2a_8	4827	5060	ct3_kalam_2a_8_8	+	14398			hypothetical protein		hypothetical_protein	NaN		0	14398
+ct3_kalam_2a_8	5073	5246	ct3_kalam_2a_8_9	+	14398			hypothetical protein		hypothetical_protein	NaN		0	14398
+ct3_kalam_2a_8	5243	5587	ct3_kalam_2a_8_10	+	14398			hypothetical protein		hypothetical_protein	NaN		0	14398
+ct3_kalam_2a_8	5581	6135	ct3_kalam_2a_8_11	+	14398			hypothetical protein		hypothetical_protein	NaN		0	14398
+ct3_kalam_2a_8	6241	6879	ct3_kalam_2a_8_12	+	14398		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	14398
+ct3_kalam_2a_8	7196	8260	ct3_kalam_2a_8_13	+	14398		PDB:3J31_H	penton-base-protein	hallmark_hmm	common_virus	NaN		0	14398
+ct3_kalam_2a_8	8306	8530	ct3_kalam_2a_8_14	+	14398			hypothetical protein		hypothetical_protein	NaN		0	14398
+ct3_kalam_2a_8	8542	8706	ct3_kalam_2a_8_15	+	14398		PFAM:PF12841.6	holin	phrogs_hmm	hypothetical_protein	NaN		0	14398
+ct3_kalam_2a_8	8783	9256	ct3_kalam_2a_8_16	+	14398			hypothetical protein		hypothetical_protein	NaN		0	14398
+ct3_kalam_2a_8	9256	9432	ct3_kalam_2a_8_17	+	14398			hypothetical protein		hypothetical_protein	NaN		0	14398
+ct3_kalam_2a_8	9432	9578	ct3_kalam_2a_8_18	+	14398			hypothetical protein		hypothetical_protein	NaN		0	14398
+ct3_kalam_2a_8	9591	9866	ct3_kalam_2a_8_19	+	14398		UniProtKB:B6RT55_9VIRU	Minor-capsid-protein-	hallmark_hmm	common_virus	NaN		0	14398
+ct3_kalam_2a_8	9870	10502	ct3_kalam_2a_8_20	+	14398			hypothetical protein		hypothetical_protein	NaN		0	14398
+ct3_kalam_2a_8	10502	11158	ct3_kalam_2a_8_21	+	14398		COG1705	Flagellum-specific peptidoglycan hydrolase FlgJ [Cell wall/membrane/envelope biogenesis, Cell motility]. 	mmseqs_cdd	nonviral_gene	NaN		0	14398
+ct3_kalam_2a_8	11155	11682	ct3_kalam_2a_8_22	+	14398		PFAM:PF08291.10	pentameric-base-spike-protein	phrogs_hmm	hypothetical_protein	NaN		0	14398
+ct3_kalam_2a_8	11819	12607	ct3_kalam_2a_8_23	+	14398			hypothetical protein		hypothetical_protein	NaN		0	14398
+ct3_kalam_2a_8	12611	13012	ct3_kalam_2a_8_24	+	14398			hypothetical protein		hypothetical_protein	NaN		0	14398
+ct3_kalam_2a_8	13027	13383	ct3_kalam_2a_8_25	+	14398			hypothetical protein		hypothetical_protein	NaN		0	14398
+ct3_kalam_2a_8	13400	13534	ct3_kalam_2a_8_26	+	14398			hypothetical protein		hypothetical_protein	NaN		0	14398
+ct3_kalam_2a_8	13536	14294	ct3_kalam_2a_8_27	+	14398		PDB:5EMI_A	Cell-wall-hydrolase-autolysin	common_virus_hmm	common_virus	NaN		0	14398
+ct3_kalam_2a_9	234	1013	ct3_kalam_2a_9_1	+	14954			hypothetical protein		hypothetical_protein	NaN		0	14954
+ct3_kalam_2a_9	1017	2678	ct3_kalam_2a_9_2	+	14954		PDB:2PYJ_B	DNA-polymerase-B	rep_hall_hmm	common_virus	NaN		0	14954
+ct3_kalam_2a_9	2680	3129	ct3_kalam_2a_9_3	+	14954		CDD:pfam11860	N-acetylmuramidase	common_virus_hmm	common_virus	NaN		0	14954
+ct3_kalam_2a_9	3129	4919	ct3_kalam_2a_9_4	+	14954		PDB:1N7V_A	Adsorption-protein	common_virus_hmm	common_virus	NaN		0	14954
+ct3_kalam_2a_9	4923	5303	ct3_kalam_2a_9_5	+	14954		PFAM:PF08949.9	major-spike-protein	phrogs_hmm	nonviral_gene	NaN		0	14954
+ct3_kalam_2a_9	5303	6325	ct3_kalam_2a_9_6	+	14954		PFAM:PF08949.9	major-spike-protein	phrogs_hmm	nonviral_gene	NaN		0	14954
+ct3_kalam_2a_9	6344	6604	ct3_kalam_2a_9_7	+	14954			hypothetical protein		hypothetical_protein	NaN		0	14954
+ct3_kalam_2a_9	6594	6800	ct3_kalam_2a_9_8	+	14954			hypothetical protein		hypothetical_protein	NaN		0	14954
+ct3_kalam_2a_9	6800	7300	ct3_kalam_2a_9_9	+	14954			hypothetical protein		hypothetical_protein	NaN		0	14954
+ct3_kalam_2a_9	7333	7656	ct3_kalam_2a_9_10	+	14954		UniProtKB:Q3T4U8_BPPRD	Assembly-protein	common_virus_hmm	common_virus	NaN		0	14954
+ct3_kalam_2a_9	7653	8336	ct3_kalam_2a_9_11	+	14954		PDB:4KFU_C	Genome-packaging-NTPase	hallmark_hmm	common_virus	NaN		0	14954
+ct3_kalam_2a_9	8348	8476	ct3_kalam_2a_9_12	+	14954			hypothetical protein		hypothetical_protein	NaN		0	14954
+ct3_kalam_2a_9	8476	8604	ct3_kalam_2a_9_13	+	14954			hypothetical protein		hypothetical_protein	NaN		0	14954
+ct3_kalam_2a_9	8611	9798	ct3_kalam_2a_9_14	+	14954		CDD:pfam09018	Major-Capsid-Protein	hallmark_hmm	common_virus	NaN		0	14954
+ct3_kalam_2a_9	9817	9960	ct3_kalam_2a_9_15	+	14954			hypothetical protein		hypothetical_protein	NaN		0	14954
+ct3_kalam_2a_9	10184	10456	ct3_kalam_2a_9_16	+	14954			hypothetical protein		hypothetical_protein	NaN		0	14954
+ct3_kalam_2a_9	10456	10620	ct3_kalam_2a_9_17	+	14954		PFAM:PF11087.7	membrane-DNA-delivery-protein	common_virus_hmm	common_virus	NaN		0	14954
+ct3_kalam_2a_9	10633	10839	ct3_kalam_2a_9_18	+	14954		PFAM:PF11087.7	membrane-DNA-delivery-protein	common_virus_hmm	common_virus	NaN		0	14954
+ct3_kalam_2a_9	10849	11103	ct3_kalam_2a_9_19	+	14954		CDD:pfam09300	minor-capsid	hallmark_hmm	common_virus	NaN		0	14954
+ct3_kalam_2a_9	11218	11841	ct3_kalam_2a_9_20	+	14954			hypothetical protein		hypothetical_protein	NaN		0	14954
+ct3_kalam_2a_9	11852	12205	ct3_kalam_2a_9_21	+	14954		pfam09301	Domain of unknown function (DUF1970). Members of this family consist of various uncharacterized viral hypothetical proteins.	mmseqs_cdd	nonviral_gene	NaN		0	14954
+ct3_kalam_2a_9	12206	13015	ct3_kalam_2a_9_22	+	14954		pfam01464	Transglycosylase SLT domain. This family is distantly related to pfam00062. Members are found in phages, type II, type III and type IV secretion systems.	mmseqs_cdd	common_virus	NaN		0	14954
+ct3_kalam_2a_9	13012	13365	ct3_kalam_2a_9_23	+	14954		PFAM:PF05106.11	holin	phrogs_hmm	hypothetical_protein	NaN		0	14954
+ct3_kalam_2a_9	13358	13720	ct3_kalam_2a_9_24	+	14954		PFAM:PF10828.7	Rz-like-spanin	phrogs_hmm	hypothetical_protein	NaN		0	14954
+ct3_kalam_2a_9	13876	14160	ct3_kalam_2a_9_25	-	14954			hypothetical protein		hypothetical_protein	NaN		0	14954
+ct3_kalam_2a_9	14233	14712	ct3_kalam_2a_9_26	-	14954			hypothetical protein		hypothetical_protein	NaN		0	14954
+ct3_kalam_2a_28	1933	2004	tRNA-Asn	-	18251		tRNAscan-SE score: 68.4	Asn	tRNAscan-SE		NaN		0	18251
+ct3_kalam_2a_19	1896	1967	tRNA-Asn	-	18373		tRNAscan-SE score: 67.5	Asn	tRNAscan-SE		NaN		0	18373
+ct3_kalam_2a_29	1967	2038	tRNA-Asn	-	18266		tRNAscan-SE score: 70.5	Asn	tRNAscan-SE		NaN		0	18266
+ct3_kalam_2a_3	1933	2004	tRNA-Asn	-	18251		tRNAscan-SE score: 68.4	Asn	tRNAscan-SE		NaN		0	18251
+ct3_kalam_2a_4	1967	2038	tRNA-Asn	-	18266		tRNAscan-SE score: 70.5	Asn	tRNAscan-SE		NaN		0	18266

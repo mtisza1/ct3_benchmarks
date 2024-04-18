@@ -1,0 +1,108 @@
+locus_tag	FOAM	KEGG	COG	CAZy	PHROG	VOG	Best hit	length_bp	e-value	score	EC_number	product
+NC_055062.1_1												Hypothetical
+NC_055062.1_2												Hypothetical
+NC_055062.1_3												Hypothetical
+NC_055062.1_4												Hypothetical
+NC_055062.1_5		K21237			phrog_1907	VOG00710	VOG:VOG00710	534	1.6e-87	286.4		Envelope protein H3
+NC_055062.1_6						VOG20605	VOG:VOG20605	236	4.6e-89	289.9		hypothetical protein
+NC_055062.1_7						VOG20606	VOG:VOG20606	251	4e-109	356.2		hypothetical protein
+NC_055062.1_8						VOG01157	VOG:VOG01157	167	1e-52	167.5		Uncharacterized 36.7 kDa protein in nrdC-mobD intergenic region
+NC_055062.1_9												Hypothetical
+NC_055062.1_10												Hypothetical
+NC_055062.1_11												Hypothetical
+NC_055062.1_12					phrog_8536	VOG20608	VOG:VOG20608	274	1.1e-125	411.1		hypothetical protein
+NC_055062.1_13												Hypothetical
+NC_055062.1_14												Hypothetical
+NC_055062.1_15												Hypothetical
+NC_055062.1_16												Hypothetical
+NC_055062.1_17					phrog_18703	VOG08683	VOG:VOG08683	476	5.7e-210	690.6		hypothetical protein
+NC_055062.1_18					phrog_873	VOG00094	PHROG:phrog_873	156	1.1e-59	194.5		endolysin
+NC_055062.1_19												Hypothetical
+NC_055062.1_20												Hypothetical
+NC_055062.1_21												Hypothetical
+NC_055063.1_1						VOG30114	VOG:VOG30114	75	1.2e-48	156.1		single strand DNA binding protein
+NC_055063.1_2						VOG20602	VOG:VOG20602	70	8.8e-48	153.1		hypothetical protein
+NC_055063.1_3						VOG00642	VOG:VOG00642	205	2.5e-39	126.7		hypothetical protein
+NC_055063.1_4						VOG20603	VOG:VOG20603	113	2.7e-74	239.3		hypothetical protein
+NC_055063.1_5		K21237			phrog_1907	VOG00710	VOG:VOG00710	532	3.7e-90	295.6		Envelope protein H3
+NC_055063.1_6						VOG20605	VOG:VOG20605	192	1.3e-110	360.4		hypothetical protein
+NC_055063.1_7						VOG20606	VOG:VOG20606	239	2.6e-132	432.2		hypothetical protein
+NC_055063.1_8						VOG01157	VOG:VOG01157	178	2.6e-56	182.2		Uncharacterized 36.7 kDa protein in nrdC-mobD intergenic region
+NC_055063.1_9						VOG30113	VOG:VOG30113	76	3e-51	164.2		hypothetical protein
+NC_055063.1_10												Hypothetical
+NC_055063.1_11												Hypothetical
+NC_055063.1_12					phrog_8536	VOG20608	VOG:VOG20608	285	8.5e-145	473.8		hypothetical protein
+NC_055063.1_13						VOG20609	VOG:VOG20609	109	4.4e-57	183.8		E4 ORFC
+NC_055063.1_14						VOG20610	VOG:VOG20610	51	1.1e-33	107.7		hypothetical protein
+NC_055063.1_15						VOG05862	VOG:VOG05862	64	4e-37	118.8		DUF2158 domain-containing protein
+NC_055063.1_16						VOG20612	VOG:VOG20612	120	2.5e-77	249.1		Protein 4
+NC_055063.1_17						VOG20611	VOG:VOG20611	157	5.5e-88	285.5		hypothetical protein
+NC_055063.1_18						VOG20613	VOG:VOG20613	202	2.9e-107	349.2		hypothetical protein
+NC_055063.1_19					phrog_873	VOG00094	PHROG:phrog_873	173	2.9e-33	107.8		endolysin
+NC_055063.1_20						VOG20615	VOG:VOG20615	130	3.4e-64	207.4		hypothetical protein
+NC_055063.1_21						VOG20614	VOG:VOG20614	71	4.9e-42	134.4		hypothetical protein
+NC_055064.1_1												Hypothetical
+NC_055064.1_2						VOG20602	VOG:VOG20602	69	5.1e-47	150.6		hypothetical protein
+NC_055064.1_3												Hypothetical
+NC_055064.1_4					phrog_3600	VOG00642	VOG:VOG00642	206	4.5e-36	116.6		hypothetical protein
+NC_055064.1_5						VOG20603	VOG:VOG20603	111	2.2e-73	236.3		hypothetical protein
+NC_055064.1_6		K21237			phrog_1907	VOG00710	VOG:VOG00710	535	3.8e-88	288.5		Envelope protein H3
+NC_055064.1_7						VOG20605	VOG:VOG20605	192	2e-109	356.6		hypothetical protein
+NC_055064.1_8						VOG20606	VOG:VOG20606	243	3.3e-123	402.4		hypothetical protein
+NC_055064.1_9						VOG01157	VOG:VOG01157	178	3.4e-56	180.7		Uncharacterized 36.7 kDa protein in nrdC-mobD intergenic region
+NC_055064.1_10												Hypothetical
+NC_055064.1_11												Hypothetical
+NC_055064.1_12						VOG20607	VOG:VOG20607	42	7.6e-32	101.6		hypothetical protein
+NC_055064.1_13					phrog_8536	VOG20608	VOG:VOG20608	282	1e-145	476.8		hypothetical protein
+NC_055064.1_14						VOG20609	VOG:VOG20609	109	1.1e-60	195.4		E4 ORFC
+NC_055064.1_15						VOG20610	VOG:VOG20610	50	5.6e-34	108.6		hypothetical protein
+NC_055064.1_16						VOG05862	VOG:VOG05862	63	8.2e-40	127.4		DUF2158 domain-containing protein
+NC_055064.1_17						VOG20612	VOG:VOG20612	120	7.5e-79	254.0		Protein 4
+NC_055064.1_18						VOG20611	VOG:VOG20611	164	7.8e-95	307.8		hypothetical protein
+NC_055064.1_19						VOG20613	VOG:VOG20613	202	6.1e-105	341.6		hypothetical protein
+NC_055064.1_20					phrog_873	VOG00094	PHROG:phrog_873	173	1.6e-36	118.6		endolysin
+NC_055064.1_21						VOG20615	VOG:VOG20615	131	3.6e-65	210.5		hypothetical protein
+NC_055064.1_22						VOG20614	VOG:VOG20614	74	4e-41	131.5		hypothetical protein
+NC_055065.1_1						VOG30114	VOG:VOG30114	81	3.2e-50	161.2		single strand DNA binding protein
+NC_055065.1_2						VOG30106	VOG:VOG30106	62	2.9e-38	122.4		hypothetical protein
+NC_055065.1_3						VOG20602	VOG:VOG20602	85	2.3e-41	132.4		hypothetical protein
+NC_055065.1_4					phrog_3600	VOG00642	VOG:VOG00642	179	1.6e-40	130.9		hypothetical protein
+NC_055065.1_5						VOG20603	VOG:VOG20603	111	5.5e-71	228.7		hypothetical protein
+NC_055065.1_6		K21237			phrog_1907	VOG00710	VOG:VOG00710	532	3.1e-91	299.2		Envelope protein H3
+NC_055065.1_7						VOG20605	VOG:VOG20605	192	1.9e-105	343.6		hypothetical protein
+NC_055065.1_8						VOG20606	VOG:VOG20606	245	1.8e-129	422.9		hypothetical protein
+NC_055065.1_9						VOG01157	VOG:VOG01157	178	2.5e-54	175.3		Uncharacterized 36.7 kDa protein in nrdC-mobD intergenic region
+NC_055065.1_10												Hypothetical
+NC_055065.1_11												Hypothetical
+NC_055065.1_12						VOG20607	VOG:VOG20607	42	4.2e-33	105.7		hypothetical protein
+NC_055065.1_13					phrog_8536	VOG20608	VOG:VOG20608	282	2.2e-149	488.9		hypothetical protein
+NC_055065.1_14						VOG20609	VOG:VOG20609	109	1.2e-62	201.6		E4 ORFC
+NC_055065.1_15						VOG20610	VOG:VOG20610	50	2.7e-33	106.4		hypothetical protein
+NC_055065.1_16						VOG05862	VOG:VOG05862	62	7.3e-38	121.1		DUF2158 domain-containing protein
+NC_055065.1_17						VOG20612	VOG:VOG20612	120	6.1e-78	251.1		Protein 4
+NC_055065.1_18						VOG20611	VOG:VOG20611	190	4.1e-92	292.5		hypothetical protein
+NC_055065.1_19						VOG20613	VOG:VOG20613	225	8.6e-107	347.2		hypothetical protein
+NC_055065.1_20					phrog_873	VOG00094	PHROG:phrog_873	173	5.6e-36	116.7		endolysin
+NC_055065.1_21						VOG20615	VOG:VOG20615	136	2.8e-69	223.8		hypothetical protein
+NC_055065.1_22						VOG20614	VOG:VOG20614	71	1.8e-38	123.0		hypothetical protein
+NC_055066.1_1						VOG20602	VOG:VOG20602	70	9.4e-48	153.0		hypothetical protein
+NC_055066.1_2						VOG00642	VOG:VOG00642	205	2.5e-37	120.5		hypothetical protein
+NC_055066.1_3						VOG20603	VOG:VOG20603	112	2.8e-69	223.1		hypothetical protein
+NC_055066.1_4		K21237			phrog_1907	VOG00710	VOG:VOG00710	532	1.3e-87	287.2		Envelope protein H3
+NC_055066.1_5						VOG20605	VOG:VOG20605	192	1.2e-109	357.3		hypothetical protein
+NC_055066.1_6						VOG20606	VOG:VOG20606	236	5.3e-128	418.1		hypothetical protein
+NC_055066.1_7						VOG01157	VOG:VOG01157	178	1.7e-53	172.3		Uncharacterized 36.7 kDa protein in nrdC-mobD intergenic region
+NC_055066.1_8						VOG30113	VOG:VOG30113	76	8.5e-52	166.0		hypothetical protein
+NC_055066.1_9												Hypothetical
+NC_055066.1_10												Hypothetical
+NC_055066.1_11						VOG20607	VOG:VOG20607	42	2.5e-30	96.7		hypothetical protein
+NC_055066.1_12					phrog_8536	VOG20608	VOG:VOG20608	285	3e-141	462.2		hypothetical protein
+NC_055066.1_13						VOG20609	VOG:VOG20609	109	9e-59	189.2		E4 ORFC
+NC_055066.1_14						VOG20610	VOG:VOG20610	51	9.5e-33	104.7		hypothetical protein
+NC_055066.1_15						VOG05862	VOG:VOG05862	64	1.6e-36	116.8		DUF2158 domain-containing protein
+NC_055066.1_16						VOG20612	VOG:VOG20612	120	1.7e-76	246.4		Protein 4
+NC_055066.1_17						VOG20611	VOG:VOG20611	157	7.2e-82	265.6		hypothetical protein
+NC_055066.1_18						VOG20613	VOG:VOG20613	205	1.8e-111	362.9		hypothetical protein
+NC_055066.1_19					phrog_873	VOG00094	PHROG:phrog_873	173	1.6e-33	108.7		endolysin
+NC_055066.1_20						VOG20615	VOG:VOG20615	129	1.5e-65	211.8		hypothetical protein
+NC_055066.1_21						VOG20614	VOG:VOG20614	73	5e-42	134.4		hypothetical protein

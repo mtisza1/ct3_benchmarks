@@ -1,0 +1,637 @@
+locus_tag	FOAM	KEGG	COG	CAZy	PHROG	VOG	Best hit	length_bp	e-value	score	EC_number	product
+MT310045.1_1					phrog_514	VOG01687	PHROG:phrog_514	527	2e-220	727.9		major head protein
+MT310045.1_2												Hypothetical
+MT310045.1_3					phrog_11693	VOG06975	VOG:VOG06975	256	3.9e-34	114.2		hypothetical protein
+MT310045.1_4					phrog_1642	VOG36852	VOG:VOG36852	177	5.6e-40	131.7		hypothetical protein
+MT310045.1_5					phrog_10695		PHROG:phrog_10695	39	8.9e-19	62.5		hypothetical
+MT310045.1_6					phrog_942	VOG04962	PHROG:phrog_942	306	4.3e-106	350.2		replication initiation protein
+MT310045.1_7					phrog_1670	VOG36856	PHROG:phrog_1670	87	1.6e-25	84.0		DNA binding protein
+MW202567.1_1					phrog_1670	VOG36856	PHROG:phrog_1670	97	6.2e-28	91.7		DNA binding protein
+MW202567.1_2					phrog_514	VOG01687	PHROG:phrog_514	527	1.6e-218	721.6		major head protein
+MW202567.1_3					phrog_11693	VOG06975	PHROG:phrog_11693	194	5.5e-35	116.5		pilot protein for DNA ejection
+MW202567.1_4					phrog_1642	VOG36852	PHROG:phrog_1642	177	7.8e-37	121.5		virion structural protein
+MW202567.1_5												Hypothetical
+MW202567.1_6												Hypothetical
+MW202567.1_7												Hypothetical
+MW202567.1_8					phrog_942	VOG04962	PHROG:phrog_942	296	3.1e-106	350.6		replication initiation protein
+MG945140.1_1					phrog_942	VOG04962	VOG:VOG04962	456	4.6e-29	96.2		hypothetical protein
+MG945140.1_2												Hypothetical
+MG945140.1_3												Hypothetical
+MG945140.1_4					phrog_514, phrog_514	VOG01687, VOG01687	PHROG:phrog_514	852	2.4e-46	80.5		major head protein
+MG945140.1_5												Hypothetical
+MT135450.1_1												Hypothetical
+MT135450.1_2												Hypothetical
+MT135450.1_3												Hypothetical
+MT135450.1_4					phrog_942	VOG04962	VOG:VOG04962	547	6.1e-22	73.2		hypothetical protein
+MT135450.1_5												Hypothetical
+MT135450.1_6												Hypothetical
+MT135450.1_7												Hypothetical
+MH572459.1_1					phrog_514	VOG01687	VOG:VOG01687	530	8.1e-172	567.4		major tail protein
+MH572459.1_2					phrog_942	VOG04962	VOG:VOG04962	287	1.9e-74	246.3		hypothetical protein
+MH572459.1_3												Hypothetical
+MH572459.1_4					phrog_8689	VOG07022	PHROG:phrog_8689	343	3.5e-68	225.3		pilot protein for DNA ejection
+MH572459.1_5												Hypothetical
+MH572459.1_6												Hypothetical
+MT310107.1_1					phrog_514	VOG01687	VOG:VOG01687	451	1.7e-108	358.5		major tail protein
+MT310107.1_2												Hypothetical
+MT310107.1_3												Hypothetical
+MT310107.1_4					phrog_942	VOG04962	PHROG:phrog_942	266	1.2e-63	210.2		replication initiation protein
+MT310107.1_5												Hypothetical
+MK496797.1_1					phrog_514	VOG01687	PHROG:phrog_514	543	2e-219	724.6		major head protein
+MK496797.1_2					phrog_18604	VOG06975	VOG:VOG06975	250	1.6e-20	69.3		hypothetical protein
+MK496797.1_3												Hypothetical
+MK496797.1_4												Hypothetical
+MK496797.1_5					phrog_942	VOG04962	PHROG:phrog_942	358	7.5e-96	316.4		replication initiation protein
+MK496797.1_6												Hypothetical
+MK496797.1_7												Hypothetical
+MK496797.1_8					phrog_1642	VOG36852	PHROG:phrog_1642	156	8.2e-28	92.4		virion structural protein
+MK496708.1_1					phrog_514	VOG01687, VOG01687	PHROG:phrog_514	582	1.8e-122	404.6		major head protein
+MK496708.1_2												Hypothetical
+MK496708.1_3												Hypothetical
+MK496708.1_4												Hypothetical
+MK496708.1_5												Hypothetical
+MK496708.1_6					phrog_942	VOG04962	PHROG:phrog_942	476	3.6e-55	180.8		replication initiation protein
+MK496708.1_7												Hypothetical
+MH572433.1_1					phrog_514	VOG01687	PHROG:phrog_514	526	3.8e-206	680.7		major head protein
+MH572433.1_2					phrog_11693	VOG06975	PHROG:phrog_11693	225	2e-28	95.1		pilot protein for DNA ejection
+MH572433.1_3					phrog_1642	VOG36852	PHROG:phrog_1642	146	1.8e-29	97.9		virion structural protein
+MH572433.1_4					phrog_942	VOG04962	PHROG:phrog_942	320	3.5e-68	225.4		replication initiation protein
+MH572433.1_5												Hypothetical
+MH572433.1_6					phrog_1670	VOG36856	PHROG:phrog_1670	82	1.7e-25	83.9		DNA binding protein
+MH572358.1_1					phrog_514	VOG01687	VOG:VOG01687	488	3.7e-132	436.5		major tail protein
+MH572358.1_2												Hypothetical
+MH572358.1_3					phrog_942	VOG04962	PHROG:phrog_942	316	8.7e-35	115.5		replication initiation protein
+MH572358.1_4												Hypothetical
+MH572358.1_5												Hypothetical
+MG945466.1_1					phrog_942	VOG04962	VOG:VOG04962	308	2.8e-40	133.8		hypothetical protein
+MG945466.1_2												Hypothetical
+MG945466.1_3												Hypothetical
+MG945466.1_4												Hypothetical
+MG945466.1_5					phrog_514	VOG01687	VOG:VOG01687	624	8.2e-100	329.6		major tail protein
+MG945466.1_6												Hypothetical
+MG945466.1_7												Hypothetical
+MG945466.1_8												Hypothetical
+KX266398.1_1					phrog_713	VOG06231	VOG:VOG06231	555	3.6e-300	990.8		unknown similar to AMEV104
+KX266398.1_2					phrog_1465	VOG36865	PHROG:phrog_1465	85	1.1e-49	161.8		terminase
+KX266398.1_3					phrog_1386	VOG36866	VOG:VOG36866	153	9.6e-89	290.3		hypothetical protein
+KX266398.1_4					phrog_514, phrog_514	VOG01687, VOG01687	PHROG:phrog_514	441	1.5e-128	242.6		major head protein
+KX266398.1_5					phrog_1483	VOG36868	PHROG:phrog_1483	178	1.9e-85	280.3		major spike protein
+KX266398.1_6					phrog_1471	VOG36867	PHROG:phrog_1471	338	2.6e-183	603.7		pilot protein for DNA ejection
+MH616715.1_1					phrog_514, phrog_514	VOG01687, VOG01687	VOG:VOG01687	677	3.3e-54	110.7		major tail protein
+MH616715.1_2												Hypothetical
+MH616715.1_3												Hypothetical
+MH616715.1_4					phrog_942	VOG04962	VOG:VOG04962	333	3.8e-32	106.9		hypothetical protein
+MH616715.1_5												Hypothetical
+MH616715.1_6												Hypothetical
+MT208595.1_1					phrog_514	VOG01687	PHROG:phrog_514	528	5e-214	706.7		major head protein
+MT208595.1_2					phrog_27063	VOG06975	PHROG:phrog_27063	283	2.9e-33	110.6		pilot protein for DNA ejection
+MT208595.1_3					phrog_1642	VOG36852	PHROG:phrog_1642	155	6.1e-24	79.9		virion structural protein
+MT208595.1_4					phrog_942	VOG04962	PHROG:phrog_942	340	1.3e-59	196.9		replication initiation protein
+MT208595.1_5					phrog_1670		PHROG:phrog_1670	90	1.9e-19	64.4		DNA binding protein
+MT202150.1_1					phrog_514	VOG01687	PHROG:phrog_514	544	1e-204	676.0		major head protein
+MT202150.1_2												Hypothetical
+MT202150.1_3					phrog_27063	VOG06975	VOG:VOG06975	228	1.4e-36	122.2		hypothetical protein
+MT202150.1_4					phrog_1642	VOG36852	PHROG:phrog_1642	180	9.1e-42	137.7		virion structural protein
+MT202150.1_5												Hypothetical
+MT202150.1_6					phrog_942	VOG04962	PHROG:phrog_942	226	1.9e-82	272.4		replication initiation protein
+MT202150.1_7												Hypothetical
+MT202150.1_8					phrog_1670		PHROG:phrog_1670	87	2.9e-18	60.8		DNA binding protein
+MT310140.1_1					phrog_514	VOG01687	PHROG:phrog_514	526	1.4e-215	711.9		major head protein
+MT310140.1_2					phrog_16516	VOG06975	VOG:VOG06975	221	3.7e-29	97.9		hypothetical protein
+MT310140.1_3					phrog_1642	VOG36852	VOG:VOG36852	194	6.2e-38	125.1		hypothetical protein
+MT310140.1_4												Hypothetical
+MT310140.1_5					phrog_942	VOG04962	PHROG:phrog_942	237	6.7e-80	264.0		replication initiation protein
+MT310140.1_6												Hypothetical
+MT310140.1_7					phrog_1670	VOG36856	PHROG:phrog_1670	89	9e-28	91.1		DNA binding protein
+OM869692.1_1					phrog_514	VOG01687	VOG:VOG01687	581	3.6e-152	502.6		major tail protein
+OM869692.1_2												Hypothetical
+OM869692.1_3												Hypothetical
+OM869692.1_4					phrog_8689	VOG07022	PHROG:phrog_8689	322	3.7e-28	94.3		pilot protein for DNA ejection
+OM869692.1_5												Hypothetical
+OM869692.1_6					phrog_942	VOG04962	VOG:VOG04962	281	1.8e-66	220.0		hypothetical protein
+MT310192.1_1					phrog_514	VOG01687	VOG:VOG01687	523	5.4e-196	647.3		major tail protein
+MT310192.1_2												Hypothetical
+MT310192.1_3					phrog_8689	VOG07022	PHROG:phrog_8689	269	1e-33	97.1		pilot protein for DNA ejection
+MT310192.1_4												Hypothetical
+MT310192.1_5					phrog_942	VOG04962	VOG:VOG04962	274	1.1e-68	227.4		hypothetical protein
+MT310098.1_1					phrog_514	VOG01687	PHROG:phrog_514	542	2.2e-205	678.2		major head protein
+MT310098.1_2					phrog_16516	VOG06975	PHROG:phrog_16516	210	7.6e-33	108.9		minor tail protein
+MT310098.1_3					phrog_1642	VOG36852	PHROG:phrog_1642	147	2.7e-36	120.1		virion structural protein
+MT310098.1_4					phrog_1670	VOG36856	VOG:VOG36856	92	2.3e-27	89.7		hypothetical protein
+MT310098.1_5												Hypothetical
+MT310098.1_6												Hypothetical
+MT310098.1_7					phrog_942	VOG04962	PHROG:phrog_942	329	2.5e-77	255.4		replication initiation protein
+MT310058.1_1					phrog_514	VOG01687	VOG:VOG01687	657	2.8e-38	120.5		major tail protein
+MT310058.1_2												Hypothetical
+MT310058.1_3												Hypothetical
+MT310058.1_4					phrog_942	VOG04962	VOG:VOG04962	347	1.8e-25	84.8		hypothetical protein
+MT310058.1_5												Hypothetical
+MT310058.1_6												Hypothetical
+MT310058.1_7												Hypothetical
+MT310086.1_1					phrog_514	VOG01687	PHROG:phrog_514	518	1.4e-224	741.6		major head protein
+MT310086.1_2					phrog_11693	VOG06975	PHROG:phrog_11693	215	2.9e-29	97.5		pilot protein for DNA ejection
+MT310086.1_3					phrog_1642	VOG36852	VOG:VOG36852	146	5.6e-44	144.8		hypothetical protein
+MT310086.1_4												Hypothetical
+MT310086.1_5					phrog_942	VOG04962	PHROG:phrog_942	308	2.8e-105	347.5		replication initiation protein
+MT310086.1_6					phrog_1670	VOG36856	VOG:VOG36856	89	4e-28	92.2		hypothetical protein
+MH616734.1_1					phrog_514	VOG01687	PHROG:phrog_514	534	2.6e-215	710.9		major head protein
+MH616734.1_2					phrog_11693	VOG06975	VOG:VOG06975	171	3.4e-30	101.3		hypothetical protein
+MH616734.1_3					phrog_1642	VOG36852	VOG:VOG36852	180	3.5e-46	151.9		hypothetical protein
+MH616734.1_4					phrog_942	VOG04962	PHROG:phrog_942	304	5.1e-100	330.2		replication initiation protein
+MH616734.1_5					phrog_1670	VOG36856	VOG:VOG36856	88	1e-28	94.1		hypothetical protein
+MT310160.1_1					phrog_514	VOG01687	PHROG:phrog_514	544	3.5e-39	127.1		major head protein
+MT310160.1_2												Hypothetical
+MT310160.1_3												Hypothetical
+MT310160.1_4												Hypothetical
+MT310160.1_5												Hypothetical
+MT310160.1_6					phrog_942	VOG04962	VOG:VOG04962	325	5.5e-33	109.8		hypothetical protein
+MT310171.1_1					phrog_514	VOG01687	PHROG:phrog_514	532	1.4e-223	738.3		major head protein
+MT310171.1_2					phrog_11693	VOG06975	PHROG:phrog_11693	217	1.5e-36	121.5		pilot protein for DNA ejection
+MT310171.1_3												Hypothetical
+MT310171.1_4					phrog_1642	VOG36852	PHROG:phrog_1642	156	6e-47	154.5		virion structural protein
+MT310171.1_5												Hypothetical
+MT310171.1_6					phrog_942	VOG04962	PHROG:phrog_942	308	4e-87	287.8		replication initiation protein
+MT310171.1_7					phrog_1670		PHROG:phrog_1670	88	7.7e-21	69.0		DNA binding protein
+OM782324.1_1												Hypothetical
+OM782324.1_2												Hypothetical
+OM782324.1_3												Hypothetical
+OM782324.1_4												Hypothetical
+OM782324.1_5		K17733					KEGG:K17733	209	2.1e-19	65.2	3.4.-.-	Peptidoglycan LD-endopeptidase CwlK
+OM782324.1_6					phrog_942	VOG04962	VOG:VOG04962	403	2.8e-37	123.1		hypothetical protein
+MK765587.1_1												Hypothetical
+MK765587.1_2												Hypothetical
+MK765587.1_3		K17733					KEGG:K17733	183	1.4e-20	69.1	3.4.-.-	Peptidoglycan LD-endopeptidase CwlK
+MK765587.1_4					phrog_12600		PHROG:phrog_12600	177	2.2e-55	173.1		hypothetical
+MK765587.1_5					phrog_942	VOG04962	PHROG:phrog_942	357	1.1e-31	105.5		replication initiation protein
+MK765587.1_6												Hypothetical
+MK765587.1_7												Hypothetical
+MK765587.1_8												Hypothetical
+MG945284.1_1												Hypothetical
+MG945284.1_2					phrog_942	VOG04962	PHROG:phrog_942	497	1.9e-39	130.8		replication initiation protein
+MG945284.1_3												Hypothetical
+MG945284.1_4												Hypothetical
+MG945284.1_5												Hypothetical
+MG945284.1_6					phrog_514, phrog_514	VOG01687	VOG:VOG01687	733	6.6e-115	378.7		major tail protein
+MG945284.1_7												Hypothetical
+MT310180.1_1												Hypothetical
+MT310180.1_2					phrog_942	VOG04962	PHROG:phrog_942	336	3.3e-24	80.6		replication initiation protein
+MT310180.1_3												Hypothetical
+MT310180.1_4												Hypothetical
+MT310180.1_5												Hypothetical
+MN862343.1_1					phrog_942	VOG04962	PHROG:phrog_942	274	1.6e-94	312.0		replication initiation protein
+MN862343.1_2					phrog_1670	VOG36856	PHROG:phrog_1670	97	3.7e-24	79.5		DNA binding protein
+MN862343.1_3					phrog_514	VOG01687	PHROG:phrog_514	539	6.7e-223	736.0		major head protein
+MN862343.1_4					phrog_5158	VOG06975	VOG:VOG06975	271	2.5e-35	117.6		hypothetical protein
+MN862343.1_5					phrog_1642	VOG36852	PHROG:phrog_1642	167	1.2e-38	127.5		virion structural protein
+MN862343.1_6												Hypothetical
+MN862343.1_7												Hypothetical
+MT202860.1_1					phrog_514	VOG01687	VOG:VOG01687	519	3.6e-167	552.1		major tail protein
+MT202860.1_2												Hypothetical
+MT202860.1_3												Hypothetical
+MT202860.1_4												Hypothetical
+MT202860.1_5					phrog_942	VOG04962	VOG:VOG04962	270	8.5e-55	181.6		hypothetical protein
+OM154870.1_1					phrog_514	VOG01687	VOG:VOG01687	535	5.8e-192	633.9		major tail protein
+OM154870.1_2					phrog_8689	VOG07022	VOG:VOG07022	203	1.7e-24	80.7		hypothetical protein
+OM154870.1_3												Hypothetical
+OM154870.1_4												Hypothetical
+OM154870.1_5					phrog_942	VOG04962	VOG:VOG04962	268	6.6e-76	251.1		hypothetical protein
+OM154870.1_6												Hypothetical
+OM154870.1_7												Hypothetical
+OQ686943.1_1					phrog_514	VOG01687	VOG:VOG01687	556	8.6e-159	524.4		major tail protein
+OQ686943.1_2												Hypothetical
+OQ686943.1_3												Hypothetical
+OQ686943.1_4					phrog_942	VOG04962	VOG:VOG04962	321	2.7e-40	131.3		hypothetical protein
+OQ686943.1_5					phrog_8689	VOG07022	PHROG:phrog_8689	341	3.9e-31	103.6		pilot protein for DNA ejection
+OQ686943.1_6												Hypothetical
+MT135390.1_1												Hypothetical
+MT135390.1_2					phrog_514		PHROG:phrog_514	831	2.3e-34	67.3		major head protein
+MT135390.1_3												Hypothetical
+MT135390.1_4					phrog_942	VOG04962	PHROG:phrog_942	573	4.1e-23	72.5		replication initiation protein
+MT310267.1_1					phrog_514	VOG01687	PHROG:phrog_514	515	6.1e-224	739.5		major head protein
+MT310267.1_2					phrog_11693	VOG06975	VOG:VOG06975	246	3e-34	114.1		hypothetical protein
+MT310267.1_3												Hypothetical
+MT310267.1_4					phrog_942	VOG04962	PHROG:phrog_942	316	9.5e-105	345.6		replication initiation protein
+MT310267.1_5					phrog_1670	VOG36856	PHROG:phrog_1670	85	5.8e-22	72.6		DNA binding protein
+MT310267.1_6					phrog_1642	VOG36852	PHROG:phrog_1642	143	2.1e-36	120.4		virion structural protein
+OM869550.1_1					phrog_514	VOG01687	PHROG:phrog_514	555	1.7e-233	771.1		major head protein
+OM869550.1_2					phrog_5158	VOG06975	PHROG:phrog_5158	386	2.7e-79	227.0		hypothetical
+OM869550.1_3					phrog_942	VOG04962	PHROG:phrog_942	368	1.7e-105	348.0		replication initiation protein
+OM869550.1_4												Hypothetical
+OM869550.1_5					phrog_1670	VOG36856	PHROG:phrog_1670	91	8.8e-25	81.5		DNA binding protein
+OM869550.1_6					phrog_1642	VOG36852	PHROG:phrog_1642	183	5.4e-43	141.6		virion structural protein
+MT205026.1_1					phrog_514	VOG01687	PHROG:phrog_514	542	1.4e-208	688.9		major head protein
+MT205026.1_2					phrog_27063	VOG06975	VOG:VOG06975	239	4.1e-32	107.5		hypothetical protein
+MT205026.1_3					phrog_1642	VOG36852	PHROG:phrog_1642	154	4.2e-38	125.8		virion structural protein
+MT205026.1_4												Hypothetical
+MT205026.1_5												Hypothetical
+MT205026.1_6					phrog_942	VOG04962	PHROG:phrog_942	297	3.8e-102	337.2		replication initiation protein
+MT205026.1_7					phrog_1670	VOG36856	PHROG:phrog_1670	85	2e-26	86.9		DNA binding protein
+MT202750.1_1					phrog_514	VOG01687	PHROG:phrog_514	534	1.2e-228	755.0		major head protein
+MT202750.1_2					phrog_11693	VOG06975	PHROG:phrog_11693	205	9.2e-28	92.8		pilot protein for DNA ejection
+MT202750.1_3					phrog_1642	VOG36852	PHROG:phrog_1642	150	1.9e-39	130.3		virion structural protein
+MT202750.1_4												Hypothetical
+MT202750.1_5					phrog_942	VOG04962	PHROG:phrog_942	291	2e-110	364.4		replication initiation protein
+MT202750.1_6					phrog_1670	VOG36856	PHROG:phrog_1670	103	3.5e-28	92.4		DNA binding protein
+MK012456.1_1					phrog_11693	VOG06975	PHROG:phrog_11693	254	6.2e-33	109.6		pilot protein for DNA ejection
+MK012456.1_2					phrog_1642	VOG36852	PHROG:phrog_1642	147	1.9e-36	120.5		virion structural protein
+MK012456.1_3					phrog_942	VOG04962	PHROG:phrog_942	307	4.6e-103	340.2		replication initiation protein
+MK012456.1_4					phrog_1670	VOG36856	PHROG:phrog_1670	103	3.2e-26	86.1		DNA binding protein
+MK012456.1_5					phrog_514	VOG01687	PHROG:phrog_514	529	1.8e-229	757.8		major head protein
+MK012456.1_6												Hypothetical
+MG945529.1_1					phrog_942	VOG04962	PHROG:phrog_942	265	4e-57	189.1		replication initiation protein
+MG945529.1_2												Hypothetical
+MG945529.1_3												Hypothetical
+MG945529.1_4					phrog_1670		PHROG:phrog_1670	88	6.6e-20	65.9		DNA binding protein
+MG945529.1_5					phrog_514	VOG01687	PHROG:phrog_514	596	6.3e-170	561.1		major head protein
+MG945529.1_6					phrog_35928	VOG06975	PHROG:phrog_35928	193	1.3e-35	117.5		pilot protein for DNA ejection
+OQ709393.1_1					phrog_514	VOG01687	VOG:VOG01687	627	1.1e-66	220.5		major tail protein
+OQ709393.1_2												Hypothetical
+OQ709393.1_3												Hypothetical
+OQ709393.1_4					phrog_942	VOG04962	PHROG:phrog_942	540	5.2e-36	119.0		replication initiation protein
+OQ709393.1_5												Hypothetical
+OQ709393.1_6		K08640	COG3108		phrog_894	VOG02154	PHROG:phrog_894	142	1.1e-28	95.3		endolysin
+OQ709393.1_7												Hypothetical
+MW697703.1_1					phrog_514	VOG01687	PHROG:phrog_514	535	4.4e-222	733.4		major head protein
+MW697703.1_2					phrog_22637	VOG06975	VOG:VOG06975	274	1.6e-31	105.4		hypothetical protein
+MW697703.1_3					phrog_1642	VOG36852	PHROG:phrog_1642	147	1.1e-38	127.8		virion structural protein
+MW697703.1_4					phrog_942		PHROG:phrog_942	127	2.4e-23	78.3		replication initiation protein
+MW697703.1_5					phrog_1670	VOG36856	PHROG:phrog_1670	78	2e-23	77.2		DNA binding protein
+MT310259.1_1					phrog_514	VOG01687	PHROG:phrog_514	528	8.9e-199	656.4		major head protein
+MT310259.1_2					phrog_16516	VOG06975	PHROG:phrog_16516	208	1.5e-32	108.0		minor tail protein
+MT310259.1_3					phrog_1642	VOG36852	PHROG:phrog_1642	151	1.1e-37	124.6		virion structural protein
+MT310259.1_4					phrog_1670	VOG36856	VOG:VOG36856	96	4.5e-27	88.8		hypothetical protein
+MT310259.1_5												Hypothetical
+MT310259.1_6					phrog_942	VOG04962	VOG:VOG04962	315	1.5e-80	266.3		hypothetical protein
+MT203042.1_1					phrog_514	VOG01687	PHROG:phrog_514	536	2e-221	731.2		major head protein
+MT203042.1_2					phrog_11693	VOG06975	VOG:VOG06975	230	1.4e-28	95.6		hypothetical protein
+MT203042.1_3					phrog_1642	VOG36852	VOG:VOG36852	151	1e-43	143.9		hypothetical protein
+MT203042.1_4												Hypothetical
+MT203042.1_5					phrog_942	VOG04962	PHROG:phrog_942	323	3.4e-104	343.9		replication initiation protein
+MT203042.1_6					phrog_1670	VOG36856	PHROG:phrog_1670	106	1.2e-25	84.2		DNA binding protein
+MH616874.2_1					phrog_514	VOG01687	VOG:VOG01687	691	1.6e-51	109.3		major tail protein
+MH616874.2_2												Hypothetical
+MH616874.2_3												Hypothetical
+MH616874.2_4					phrog_942	VOG04962	VOG:VOG04962	322	9.3e-34	112.4		hypothetical protein
+MH616874.2_5												Hypothetical
+MN988469.1_1												Hypothetical
+MN988469.1_2												Hypothetical
+MN988469.1_3												Hypothetical
+MN988469.1_4					phrog_942	VOG04962	VOG:VOG04962	363	2.6e-41	136.6		hypothetical protein
+MN988469.1_5												Hypothetical
+MH617513.2_1					phrog_514	VOG01687	PHROG:phrog_514	535	6.3e-229	756.0		major head protein
+MH617513.2_2					phrog_22637	VOG06975	VOG:VOG06975	250	9.7e-28	93.2		hypothetical protein
+MH617513.2_3					phrog_1642	VOG36852	VOG:VOG36852	175	4.5e-42	138.5		hypothetical protein
+MH617513.2_4					phrog_942	VOG04962	PHROG:phrog_942	305	2.6e-104	344.3		replication initiation protein
+MH617513.2_5					phrog_1670	VOG36856	PHROG:phrog_1670	87	7.5e-27	88.2		DNA binding protein
+KX266502.1_1					phrog_713	VOG06231	VOG:VOG06231	555	3.6e-300	990.8		unknown similar to AMEV104
+KX266502.1_2					phrog_1465	VOG36865	PHROG:phrog_1465	85	1.1e-49	161.8		terminase
+KX266502.1_3					phrog_1386	VOG36866	VOG:VOG36866	153	9.6e-89	290.3		hypothetical protein
+KX266502.1_4					phrog_514, phrog_514	VOG01687, VOG01687	PHROG:phrog_514	441	1.9e-128	243.5		major head protein
+KX266502.1_5					phrog_1483	VOG36868	PHROG:phrog_1483	178	1.9e-85	280.3		major spike protein
+KX266502.1_6					phrog_1471	VOG36867	PHROG:phrog_1471	338	2.6e-183	603.7		pilot protein for DNA ejection
+MW697659.1_1					phrog_514	VOG01687	PHROG:phrog_514	553	1.6e-201	665.4		major head protein
+MW697659.1_2												Hypothetical
+MW697659.1_3					phrog_22637	VOG06975	VOG:VOG06975	196	1.1e-32	109.3		hypothetical protein
+MW697659.1_4					phrog_1642	VOG36852	PHROG:phrog_1642	151	3.1e-40	132.8		virion structural protein
+MW697659.1_5												Hypothetical
+MW697659.1_6												Hypothetical
+MW697659.1_7					phrog_942	VOG04962	PHROG:phrog_942	301	3.2e-112	370.3		replication initiation protein
+MW697659.1_8					phrog_1670	VOG36856	VOG:VOG36856	93	6.7e-21	69.1		hypothetical protein
+MK496822.1_1					phrog_514	VOG01687	PHROG:phrog_514	553	4.1e-220	726.9		major head protein
+MK496822.1_2					phrog_11693	VOG06975	VOG:VOG06975	275	8.6e-34	112.9		hypothetical protein
+MK496822.1_3					phrog_1642	VOG36852	VOG:VOG36852	145	1.2e-41	137.3		hypothetical protein
+MK496822.1_4												Hypothetical
+MK496822.1_5					phrog_942	VOG04962	PHROG:phrog_942	249	7.5e-58	191.6		replication initiation protein
+MK496822.1_6					phrog_1670	VOG36856	VOG:VOG36856	86	3.1e-25	83.0		hypothetical protein
+MT135405.1_1					phrog_31272	VOG07022	PHROG:phrog_31272	261	2.3e-161	530.7		pilot protein for DNA ejection
+MT135405.1_2												Hypothetical
+MT135405.1_3					phrog_942	VOG04962	VOG:VOG04962	285	3e-85	281.7		hypothetical protein
+MT135405.1_4					phrog_514	VOG01687	VOG:VOG01687	542	7.1e-194	640.3		major tail protein
+MT135405.1_5					phrog_22155	VOG37164	PHROG:phrog_22155	120	4.3e-65	212.3		hypothetical
+MT135405.1_6												Hypothetical
+MT135405.1_7												Hypothetical
+MT135405.1_8												Hypothetical
+MT309977.1_1					phrog_514	VOG01687	VOG:VOG01687	533	1.6e-169	559.9		major tail protein
+MT309977.1_2					phrog_8689	VOG07022	PHROG:phrog_8689	289	3e-37	118.4		pilot protein for DNA ejection
+MT309977.1_3					phrog_942	VOG04962	VOG:VOG04962	276	3.9e-71	235.3		hypothetical protein
+MT309977.1_4												Hypothetical
+MT309977.1_5												Hypothetical
+MH572346.1_1					phrog_514	VOG01687	PHROG:phrog_514	527	9.8e-206	679.5		major head protein
+MH572346.1_2					phrog_16516	VOG06975	VOG:VOG06975	220	5.2e-31	103.7		hypothetical protein
+MH572346.1_3					phrog_1642	VOG36852	PHROG:phrog_1642	146	6e-22	73.3		virion structural protein
+MH572346.1_4												Hypothetical
+MH572346.1_5												Hypothetical
+MH572346.1_6					phrog_942	VOG04962	PHROG:phrog_942	299	2.2e-90	298.5		replication initiation protein
+MH572346.1_7					phrog_1670	VOG36856	PHROG:phrog_1670	88	7.4e-26	85.1		DNA binding protein
+MT135415.1_1												Hypothetical
+MT135415.1_2					phrog_942	VOG04962	VOG:VOG04962	547	1.4e-21	71.9		hypothetical protein
+MT135415.1_3												Hypothetical
+MT135415.1_4												Hypothetical
+MT135415.1_5												Hypothetical
+MT135415.1_6												Hypothetical
+MT135415.1_7					phrog_514	VOG01687	VOG:VOG01687	744	6e-41	126.1		major tail protein
+MT135415.1_8												Hypothetical
+MW697626.1_1					phrog_514	VOG01687	PHROG:phrog_514	527	1.8e-159	526.8		major head protein
+MW697626.1_2					phrog_11693	VOG06975	PHROG:phrog_11693	247	2.7e-28	93.5		pilot protein for DNA ejection
+MW697626.1_3												Hypothetical
+MW697626.1_4												Hypothetical
+MW697626.1_5					phrog_942	VOG04962	PHROG:phrog_942	298	5.2e-80	264.1		replication initiation protein
+MT201511.1_1					phrog_514	VOG01687	PHROG:phrog_514	630	4.3e-200	660.6		major head protein
+MT201511.1_2					phrog_11693	VOG06975	PHROG:phrog_11693	230	7.3e-31	102.3		pilot protein for DNA ejection
+MT201511.1_3												Hypothetical
+MT201511.1_4					phrog_942	VOG04962	PHROG:phrog_942	351	2.9e-95	314.4		replication initiation protein
+MT201511.1_5					phrog_1670	VOG36856	PHROG:phrog_1670	99	7.6e-28	91.4		DNA binding protein
+MT201511.1_6					phrog_1642	VOG36852	PHROG:phrog_1642	135	3e-33	110.2		virion structural protein
+MT201511.1_7												Hypothetical
+NC_007822.1_1												Hypothetical
+NC_007822.1_2												Hypothetical
+NC_007822.1_3												Hypothetical
+NC_007822.1_4					phrog_713	VOG06231	VOG:VOG06231	495	8.1e-239	788.4		unknown similar to AMEV104
+NC_007822.1_5					phrog_1465	VOG36865	VOG:VOG36865	69	2.5e-34	112.6		hypothetical protein
+NC_007822.1_6					phrog_1386	VOG36866	VOG:VOG36866	153	5.9e-88	287.7		hypothetical protein
+NC_007822.1_7					phrog_514, phrog_514	VOG01687, VOG01687	PHROG:phrog_514	428	1.7e-126	244.4		major head protein
+NC_007822.1_8					phrog_1483	VOG36868	VOG:VOG36868	182	6e-78	255.9		hypothetical protein
+NC_007822.1_9					phrog_1471	VOG36867	VOG:VOG36867	326	4e-171	563.7		R-transactivator
+MW149097.1_1					phrog_514	VOG01687	PHROG:phrog_514	591	2.5e-25	83.3		major head protein
+MW149097.1_2												Hypothetical
+MW149097.1_3												Hypothetical
+MW149097.1_4												Hypothetical
+MW149097.1_5												Hypothetical
+MW149097.1_6												Hypothetical
+MW149097.1_7					phrog_942	VOG04962	VOG:VOG04962	363	2.6e-22	73.9		hypothetical protein
+MH616773.2_1					phrog_514	VOG01687	PHROG:phrog_514	527	3.8e-211	697.3		major head protein
+MH616773.2_2					phrog_11693	VOG06975	PHROG:phrog_11693	285	5.2e-32	106.0		pilot protein for DNA ejection
+MH616773.2_3					phrog_1642	VOG36852	PHROG:phrog_1642	200	2.4e-44	145.7		virion structural protein
+MH616773.2_4					phrog_942	VOG04962	PHROG:phrog_942	262	2.1e-85	282.2		replication initiation protein
+MH616773.2_5					phrog_1670	VOG36856	PHROG:phrog_1670	84	9.6e-25	81.5		DNA binding protein
+DQ079876.1_1												Hypothetical
+DQ079876.1_2												Hypothetical
+DQ079876.1_3												Hypothetical
+DQ079876.1_4					phrog_713	VOG06231	VOG:VOG06231	495	4.9e-238	785.8		unknown similar to AMEV104
+DQ079876.1_5					phrog_1465	VOG36865	VOG:VOG36865	69	6.1e-34	111.3		hypothetical protein
+DQ079876.1_6					phrog_1386	VOG36866	VOG:VOG36866	153	5.7e-87	284.5		hypothetical protein
+DQ079876.1_7					phrog_514, phrog_514	VOG01687, VOG01687	PHROG:phrog_514	428	7e-128	246.1		major head protein
+DQ079876.1_8					phrog_1483	VOG36868	VOG:VOG36868	182	3.9e-77	253.2		hypothetical protein
+DQ079876.1_9					phrog_1471	VOG36867	VOG:VOG36867	326	1.8e-173	571.4		R-transactivator
+OP549798.1_1												Hypothetical
+OP549798.1_2												Hypothetical
+OP549798.1_3		K17733					KEGG:K17733	201	7.4e-18	60.1	3.4.-.-	Peptidoglycan LD-endopeptidase CwlK
+OP549798.1_4												Hypothetical
+OP549798.1_5					phrog_942	VOG04962	VOG:VOG04962	427	2.9e-33	110.9		hypothetical protein
+OP549798.1_6												Hypothetical
+OP549798.1_7												Hypothetical
+OP549798.1_8												Hypothetical
+OP549798.1_9												Hypothetical
+KX513877.1_1					phrog_942	VOG04962	PHROG:phrog_942	319	3.4e-97	320.7		replication initiation protein
+KX513877.1_2												Hypothetical
+KX513877.1_3		K08640	COG3108		phrog_894	VOG02154	PHROG:phrog_894	131	1e-42	140.9		endolysin
+KX513877.1_4												Hypothetical
+KX513877.1_5												Hypothetical
+KX513877.1_6					phrog_1670		PHROG:phrog_1670	80	5.1e-19	63.0		DNA binding protein
+KX513877.1_7					phrog_24309		PHROG:phrog_24309	137	3.3e-89	291.2		virion structural protein
+KX513877.1_8					phrog_514	VOG01687	PHROG:phrog_514	560	1.9e-200	662.0		major head protein
+KX513877.1_9					phrog_8742	VOG06975	PHROG:phrog_8742	285	2.8e-127	419.1		pilot protein for DNA ejection
+MW697647.1_1					phrog_514	VOG01687	VOG:VOG01687	488	5e-167	551.7		major tail protein
+MW697647.1_2												Hypothetical
+MW697647.1_3												Hypothetical
+MW697647.1_4												Hypothetical
+MW697647.1_5					phrog_942	VOG04962	VOG:VOG04962	294	4.3e-64	211.9		hypothetical protein
+KP087957.1_1												Hypothetical
+KP087957.1_2												Hypothetical
+KP087957.1_3												Hypothetical
+KP087957.1_4					phrog_1386	VOG36866	VOG:VOG36866	170	1.7e-67	221.2		hypothetical protein
+KP087957.1_5												Hypothetical
+KP087957.1_6												Hypothetical
+KP087957.1_7					phrog_514, phrog_514	VOG01687, VOG01687	VOG:VOG01687	429	4.2e-100	196.9		major tail protein
+KP087957.1_8												Hypothetical
+KP087957.1_9												Hypothetical
+KP087957.1_10												Hypothetical
+KP087957.1_11												Hypothetical
+MG945207.1_1					phrog_942	VOG04962	PHROG:phrog_942	334	1.2e-99	328.9		replication initiation protein
+MG945207.1_2												Hypothetical
+MG945207.1_3												Hypothetical
+MG945207.1_4												Hypothetical
+MG945207.1_5					phrog_1670	VOG36856	PHROG:phrog_1670	82	8e-29	94.6		DNA binding protein
+MG945207.1_6					phrog_1642	VOG36852	PHROG:phrog_1642	172	9.9e-41	134.4		virion structural protein
+MG945207.1_7					phrog_514	VOG01687	PHROG:phrog_514	563	5.5e-233	769.4		major head protein
+MG945207.1_8					phrog_5158	VOG06975	PHROG:phrog_5158	348	2.5e-103	335.0		hypothetical
+MT203174.1_1					phrog_514	VOG01687	PHROG:phrog_514	524	1.7e-221	731.4		major head protein
+MT203174.1_2					phrog_11693	VOG06975	VOG:VOG06975	257	4.5e-34	113.9		hypothetical protein
+MT203174.1_3					phrog_1642	VOG36852	PHROG:phrog_1642	152	7.3e-40	131.7		virion structural protein
+MT203174.1_4												Hypothetical
+MT203174.1_5					phrog_10695	VOG01235	PHROG:phrog_10695	41	1e-21	71.9		hypothetical
+MT203174.1_6					phrog_942	VOG04962	PHROG:phrog_942	349	7.4e-106	349.3		replication initiation protein
+OX614532.1_1					phrog_514	VOG01687	VOG:VOG01687	555	1.5e-74	245.9		major tail protein
+OX614532.1_2												Hypothetical
+OX614532.1_3												Hypothetical
+OX614532.1_4					phrog_942	VOG04962	VOG:VOG04962	330	1.1e-56	187.8		hypothetical protein
+OX614532.1_5												Hypothetical
+OX614532.1_6												Hypothetical
+OX614532.1_7												Hypothetical
+OX614532.1_8												Hypothetical
+OX614532.1_9					phrog_514	VOG01687	VOG:VOG01687	176	3.5e-40	133.0		major tail protein
+KX266628.1_1					phrog_713	VOG06231	VOG:VOG06231	555	3.6e-300	990.8		unknown similar to AMEV104
+KX266628.1_2					phrog_1465	VOG36865	PHROG:phrog_1465	85	1.5e-50	164.5		terminase
+KX266628.1_3					phrog_1386	VOG36866	VOG:VOG36866	153	9.6e-89	290.3		hypothetical protein
+KX266628.1_4					phrog_514, phrog_514	VOG01687, VOG01687	PHROG:phrog_514	441	1.1e-128	243.6		major head protein
+KX266628.1_5					phrog_1483	VOG36868	PHROG:phrog_1483	178	1.9e-85	280.3		major spike protein
+KX266628.1_6					phrog_1471	VOG36867	PHROG:phrog_1471	338	2.6e-183	603.7		pilot protein for DNA ejection
+MN988498.1_1												Hypothetical
+MN988498.1_2												Hypothetical
+MN988498.1_3												Hypothetical
+MN988498.1_4												Hypothetical
+MN988498.1_5												Hypothetical
+MN988498.1_6												Hypothetical
+MN988498.1_7												Hypothetical
+OM154893.1_1					phrog_514	VOG01687	VOG:VOG01687	670	7e-49	103.8		major tail protein
+OM154893.1_2												Hypothetical
+OM154893.1_3												Hypothetical
+OM154893.1_4					phrog_942	VOG04962	VOG:VOG04962	352	3.6e-37	123.5		hypothetical protein
+OM154893.1_5												Hypothetical
+OM154893.1_6												Hypothetical
+MK496755.1_1					phrog_514	VOG01687	PHROG:phrog_514	570	4.7e-82	271.1		major head protein
+MK496755.1_2												Hypothetical
+MK496755.1_3					phrog_942	VOG04962	PHROG:phrog_942	295	3.3e-59	195.8		replication initiation protein
+MK496755.1_4												Hypothetical
+MK496755.1_5												Hypothetical
+KX266561.1_1					phrog_713	VOG06231	VOG:VOG06231	555	3.6e-300	990.8		unknown similar to AMEV104
+KX266561.1_2					phrog_1465	VOG36865	PHROG:phrog_1465	85	7.7e-50	162.3		terminase
+KX266561.1_3					phrog_1386	VOG36866	VOG:VOG36866	153	9.6e-89	290.3		hypothetical protein
+KX266561.1_4					phrog_514, phrog_514	VOG01687, VOG01687	PHROG:phrog_514	441	1e-128	243.6		major head protein
+KX266561.1_5					phrog_1483	VOG36868	PHROG:phrog_1483	178	1.9e-85	280.3		major spike protein
+KX266561.1_6					phrog_1471	VOG36867	PHROG:phrog_1471	338	2.6e-183	603.7		pilot protein for DNA ejection
+MK249198.1_1					phrog_514	VOG01687	PHROG:phrog_514	536	3.3e-223	737.1		major head protein
+MK249198.1_2					phrog_11693	VOG06975	VOG:VOG06975	288	2.9e-32	108.1		hypothetical protein
+MK249198.1_3					phrog_1642	VOG36852	PHROG:phrog_1642	151	3.5e-39	129.5		virion structural protein
+MK249198.1_4												Hypothetical
+MK249198.1_5					phrog_942	VOG04962	PHROG:phrog_942	305	6.7e-102	336.4		replication initiation protein
+MK249198.1_6					phrog_1670	VOG36856	PHROG:phrog_1670	98	1.4e-23	77.7		DNA binding protein
+MW697628.1_1					phrog_514	VOG01687	PHROG:phrog_514	540	9.7e-211	696.0		major head protein
+MW697628.1_2					phrog_11693	VOG06975	PHROG:phrog_11693	182	5.1e-27	90.3		pilot protein for DNA ejection
+MW697628.1_3												Hypothetical
+MW697628.1_4					phrog_942	VOG04962	PHROG:phrog_942	325	1.7e-93	308.8		replication initiation protein
+MW697628.1_5					phrog_1670	VOG36856	PHROG:phrog_1670	84	8.3e-30	97.8		DNA binding protein
+MW697628.1_6					phrog_1642	VOG36852	PHROG:phrog_1642	159	3.7e-38	126.0		virion structural protein
+MH992199.1_1					phrog_942	VOG04962	PHROG:phrog_942	278	2.6e-61	202.6		replication initiation protein
+MH992199.1_2					phrog_514	VOG01687	VOG:VOG01687	507	3.8e-169	558.7		major tail protein
+MH992199.1_3												Hypothetical
+MH992199.1_4												Hypothetical
+MH992199.1_5												Hypothetical
+MH992199.1_6												Hypothetical
+MH622929.2_1					phrog_514	VOG01687	PHROG:phrog_514	533	1.9e-221	731.3		major head protein
+MH622929.2_2					phrog_22637	VOG06975	VOG:VOG06975	274	2.7e-27	87.5		hypothetical protein
+MH622929.2_3					phrog_1642	VOG36852	PHROG:phrog_1642	180	5.5e-37	122.1		virion structural protein
+MH622929.2_4					phrog_942	VOG04962	PHROG:phrog_942	298	1.6e-101	335.1		replication initiation protein
+MH622929.2_5					phrog_1670	VOG36856	PHROG:phrog_1670	75	1.1e-26	87.7		DNA binding protein
+DQ079906.1_1					phrog_713	VOG06231	VOG:VOG06231	555	2.8e-297	981.3		unknown similar to AMEV104
+DQ079906.1_2					phrog_1465	VOG36865	PHROG:phrog_1465	85	2.1e-49	160.9		terminase
+DQ079906.1_3					phrog_1386	VOG36866	VOG:VOG36866	153	9.6e-89	290.3		hypothetical protein
+DQ079906.1_4					phrog_514, phrog_514	VOG01687, VOG01687	PHROG:phrog_514	428	4.7e-127	242.6		major head protein
+DQ079906.1_5					phrog_1483	VOG36868	PHROG:phrog_1483	178	1.5e-84	277.3		major spike protein
+DQ079906.1_6					phrog_1471	VOG36867	PHROG:phrog_1471	338	2e-180	594.2		pilot protein for DNA ejection
+OP376989.1_1					phrog_514	VOG01687	PHROG:phrog_514	536	6.9e-226	746.0		major head protein
+OP376989.1_2					phrog_11693	VOG06975	PHROG:phrog_11693	233	1.1e-33	112.2		pilot protein for DNA ejection
+OP376989.1_3					phrog_1642	VOG36852	PHROG:phrog_1642	142	6.6e-30	99.3		virion structural protein
+OP376989.1_4												Hypothetical
+OP376989.1_5					phrog_942	VOG04962	PHROG:phrog_942	330	2.9e-86	284.8		replication initiation protein
+OP376989.1_6					phrog_1670	VOG36856	PHROG:phrog_1670	88	1.7e-24	80.7		DNA binding protein
+OM154885.1_1					phrog_514, phrog_514	VOG01687, VOG01687	VOG:VOG01687	664	5.3e-54	108.1		major tail protein
+OM154885.1_2												Hypothetical
+OM154885.1_3												Hypothetical
+OM154885.1_4					phrog_942	VOG04962	VOG:VOG04962	349	3.8e-31	101.9		hypothetical protein
+OM154885.1_5												Hypothetical
+OM154885.1_6												Hypothetical
+OM154885.1_7												Hypothetical
+MH992155.1_1					phrog_942	VOG04962	PHROG:phrog_942	295	7.7e-75	247.3		replication initiation protein
+MH992155.1_2					phrog_1670	VOG36856	PHROG:phrog_1670	87	7.6e-21	68.9		DNA binding protein
+MH992155.1_3												Hypothetical
+MH992155.1_4												Hypothetical
+MH992155.1_5					phrog_11693	VOG06975	PHROG:phrog_11693	199	1.1e-31	105.5		pilot protein for DNA ejection
+MH992155.1_6					phrog_514	VOG01687	PHROG:phrog_514	552	2.3e-192	635.1		major head protein
+MT202578.1_1					phrog_514	VOG01687	PHROG:phrog_514	531	6.4e-218	719.7		major head protein
+MT202578.1_2					phrog_1670	VOG36856	PHROG:phrog_1670	95	2.7e-29	96.1		DNA binding protein
+MT202578.1_3					phrog_942	VOG04962	PHROG:phrog_942	320	4.2e-99	327.2		replication initiation protein
+MT202578.1_4					phrog_1642	VOG36852	VOG:VOG36852	168	5e-43	141.6		hypothetical protein
+MT202578.1_5					phrog_11693	VOG06975	PHROG:phrog_11693	242	3.6e-33	110.4		pilot protein for DNA ejection
+MT202578.1_6												Hypothetical
+KX266466.1_1					phrog_713	VOG06231	VOG:VOG06231	555	3.6e-300	990.8		unknown similar to AMEV104
+KX266466.1_2					phrog_1465	VOG36865	PHROG:phrog_1465	85	1.1e-49	161.8		terminase
+KX266466.1_3					phrog_1386	VOG36866	VOG:VOG36866	153	9.6e-89	290.3		hypothetical protein
+KX266466.1_4					phrog_514, phrog_514	VOG01687, VOG01687	PHROG:phrog_514	441	1.1e-128	243.6		major head protein
+KX266466.1_5					phrog_1483	VOG36868	PHROG:phrog_1483	178	1.9e-85	280.3		major spike protein
+KX266466.1_6					phrog_1471	VOG36867	PHROG:phrog_1471	338	2.6e-183	603.7		pilot protein for DNA ejection
+MW697696.1_1					phrog_514	VOG01687	PHROG:phrog_514	529	3.6e-227	750.2		major head protein
+MW697696.1_2					phrog_27063	VOG06975	PHROG:phrog_27063	274	3.8e-33	110.1		pilot protein for DNA ejection
+MW697696.1_3					phrog_1642	VOG36852	VOG:VOG36852	203	2.2e-41	136.5		hypothetical protein
+MW697696.1_4					phrog_942	VOG04962	PHROG:phrog_942	307	5.8e-108	356.3		replication initiation protein
+MW697696.1_5												Hypothetical
+MW697696.1_6												Hypothetical
+MT204803.1_1					phrog_514	VOG01687	VOG:VOG01687	515	4e-177	585.0		major tail protein
+MT204803.1_2					phrog_942	VOG04962	VOG:VOG04962	244	2.3e-61	203.2		hypothetical protein
+MT204803.1_3												Hypothetical
+MT204803.1_4												Hypothetical
+MT204803.1_5					phrog_8689	VOG07022	PHROG:phrog_8689	297	1.7e-60	200.2		pilot protein for DNA ejection
+OM154910.1_1					phrog_514	VOG01687	PHROG:phrog_514	538	6.3e-208	686.5		major head protein
+OM154910.1_2					phrog_22637	VOG06975	VOG:VOG06975	209	2.6e-29	98.5		hypothetical protein
+OM154910.1_3					phrog_1642	VOG36852	PHROG:phrog_1642	156	1.2e-31	104.9		virion structural protein
+OM154910.1_4												Hypothetical
+OM154910.1_5					phrog_942	VOG04962	PHROG:phrog_942	305	3.5e-102	337.3		replication initiation protein
+OM154910.1_6					phrog_1670	VOG36856	PHROG:phrog_1670	91	6.7e-21	69.1		DNA binding protein
+MH649086.2_1					phrog_514	VOG01687	PHROG:phrog_514	536	1.3e-228	754.8		major head protein
+MH649086.2_2					phrog_11693	VOG06975	PHROG:phrog_11693	201	9.5e-32	105.6		pilot protein for DNA ejection
+MH649086.2_3					phrog_1642	VOG36852	PHROG:phrog_1642	154	3.4e-49	161.9		virion structural protein
+MH649086.2_4												Hypothetical
+MH649086.2_5					phrog_942	VOG04962	PHROG:phrog_942	304	1.8e-101	334.9		replication initiation protein
+MH649086.2_6					phrog_1670		PHROG:phrog_1670	87	3.7e-23	76.4		DNA binding protein
+MH552556.2_1					phrog_514	VOG01687	PHROG:phrog_514	705	5.8e-39	87.1		major head protein
+MH552556.2_2												Hypothetical
+MH552556.2_3												Hypothetical
+MH552556.2_4												Hypothetical
+MH552556.2_5												Hypothetical
+MH552556.2_6												Hypothetical
+MH552556.2_7					phrog_942	VOG04962	VOG:VOG04962	390	2.4e-32	106.4		hypothetical protein
+MT310133.1_1					phrog_514	VOG01687	PHROG:phrog_514	527	2e-209	691.5		major head protein
+MT310133.1_2					phrog_11693	VOG06975	VOG:VOG06975	198	5.2e-34	113.8		hypothetical protein
+MT310133.1_3					phrog_1642	VOG36852	PHROG:phrog_1642	161	4.4e-43	142.0		virion structural protein
+MT310133.1_4					phrog_1670	VOG36856	VOG:VOG36856	86	2.1e-28	93.2		hypothetical protein
+MT310133.1_5					phrog_942	VOG04962	PHROG:phrog_942	310	7.7e-83	273.7		replication initiation protein
+MT205181.1_1					phrog_942	VOG04962	VOG:VOG04962	246	3.1e-60	199.5		hypothetical protein
+MT205181.1_2					phrog_514	VOG01687	PHROG:phrog_514	555	2.2e-136	450.6		major head protein
+MT205181.1_3												Hypothetical
+MT205181.1_4												Hypothetical
+MT205181.1_5					phrog_8689	VOG07022	VOG:VOG07022	266	1.4e-24	82.0		hypothetical protein
+MH572517.1_1												Hypothetical
+MH572517.1_2												Hypothetical
+MH572517.1_3												Hypothetical
+MH572517.1_4					phrog_942	VOG04962	PHROG:phrog_942	395	1.6e-31	104.9		replication initiation protein
+MH572517.1_5												Hypothetical
+MG883712.1_1					phrog_942	VOG04962	VOG:VOG04962	451	6.5e-42	138.9		hypothetical protein
+MG883712.1_2		K08640	COG3108		phrog_894	VOG02154	PHROG:phrog_894	129	2.7e-27	90.7		endolysin
+MG883712.1_3					phrog_514	VOG01687	VOG:VOG01687	721	2.4e-116	384.0		major tail protein
+MG883712.1_4												Hypothetical
+MG883712.1_5												Hypothetical
+MH572340.1_1					phrog_514	VOG01687	PHROG:phrog_514	531	2.7e-220	727.4		major head protein
+MH572340.1_2					phrog_11693	VOG06975	PHROG:phrog_11693	175	2e-36	116.4		pilot protein for DNA ejection
+MH572340.1_3					phrog_1642	VOG36852	PHROG:phrog_1642	159	5.6e-42	138.3		virion structural protein
+MH572340.1_4					phrog_942	VOG04962	PHROG:phrog_942	302	9.2e-106	349.1		replication initiation protein
+MH572340.1_5					phrog_1670	VOG36856	PHROG:phrog_1670	125	4.9e-23	75.8		DNA binding protein
+MH992210.1_1					phrog_942	VOG04962	PHROG:phrog_942	245	8.9e-81	267.0		replication initiation protein
+MH992210.1_2					phrog_1670	VOG36856	PHROG:phrog_1670	97	2e-25	83.6		DNA binding protein
+MH992210.1_3					phrog_514	VOG01687	PHROG:phrog_514	539	5e-230	759.5		major head protein
+MH992210.1_4					phrog_11693	VOG06975	PHROG:phrog_11693	285	2.3e-35	117.4		pilot protein for DNA ejection
+MH992210.1_5					phrog_1642	VOG36852	PHROG:phrog_1642	146	4e-38	126.0		virion structural protein
+MH992210.1_6												Hypothetical
+KT264783.1_1					phrog_514	VOG01687	PHROG:phrog_514	558	1e-191	633.2		major head protein
+KT264783.1_2												Hypothetical
+KT264783.1_3												Hypothetical
+KT264783.1_4					phrog_35928	VOG06975	VOG:VOG06975	139	5.1e-27	90.8		hypothetical protein
+KT264783.1_5					phrog_942	VOG04962	PHROG:phrog_942	285	1.8e-81	269.2		replication initiation protein
+KT264783.1_6												Hypothetical
+KT264783.1_7												Hypothetical
+KT264783.1_8												Hypothetical
+MK249215.1_1					phrog_514	VOG01687	VOG:VOG01687	532	7.8e-174	574.1		major tail protein
+MK249215.1_2												Hypothetical
+MK249215.1_3												Hypothetical
+MK249215.1_4					phrog_8689	VOG07022	PHROG:phrog_8689	291	5.5e-36	119.5		pilot protein for DNA ejection
+MK249215.1_5					phrog_942	VOG04962	VOG:VOG04962	281	1.5e-68	226.8		hypothetical protein
+MG883709.1_1					phrog_942	VOG04962	VOG:VOG04962	319	1.4e-36	121.7		hypothetical protein
+MG883709.1_2												Hypothetical
+MG883709.1_3												Hypothetical
+MG883709.1_4												Hypothetical
+MG883709.1_5												Hypothetical
+MG883709.1_6						VOG01687	VOG:VOG01687	365	7.4e-19	62.5		major tail protein
+MG883709.1_7					phrog_514	VOG01687	VOG:VOG01687	286	2.6e-30	100.5		major tail protein
+MG883709.1_8												Hypothetical
+MG883709.1_9												Hypothetical
+KX266615.1_1					phrog_713	VOG06231	VOG:VOG06231	555	3.6e-300	990.8		unknown similar to AMEV104
+KX266615.1_2					phrog_1465	VOG36865	PHROG:phrog_1465	85	1.5e-50	164.5		terminase
+KX266615.1_3					phrog_1386	VOG36866	VOG:VOG36866	153	9.6e-89	290.3		hypothetical protein
+KX266615.1_4					phrog_514, phrog_514	VOG01687, VOG01687	PHROG:phrog_514	441	1.1e-128	243.6		major head protein
+KX266615.1_5					phrog_1483	VOG36868	PHROG:phrog_1483	178	1.9e-85	280.3		major spike protein
+KX266615.1_6					phrog_1471	VOG36867	PHROG:phrog_1471	338	2.6e-183	603.7		pilot protein for DNA ejection
+OM869652.1_1					phrog_514	VOG01687	VOG:VOG01687	616	5e-92	303.8		major tail protein
+OM869652.1_2												Hypothetical
+OM869652.1_3					phrog_8689	VOG07022	VOG:VOG07022	346	3.6e-30	99.2		hypothetical protein
+OM869652.1_4					phrog_942	VOG04962	VOG:VOG04962	434	5.8e-43	142.4		hypothetical protein
+OM869652.1_5		K08640	COG3108		phrog_894	VOG02154	PHROG:phrog_894	159	1.1e-20	69.1		endolysin
+OM869652.1_6					phrog_514	VOG01687	VOG:VOG01687	147	1.4e-37	124.5		major tail protein
+MH617194.1_1					phrog_514	VOG01687	VOG:VOG01687	672	4e-49	111.1		major tail protein
+MH617194.1_2												Hypothetical
+MH617194.1_3												Hypothetical
+MH617194.1_4						VOG04962	VOG:VOG04962	333	1.1e-18	62.6		hypothetical protein
+MH617194.1_5												Hypothetical
+OX614387.1_1												Hypothetical
+OX614387.1_2					phrog_942	VOG04962	PHROG:phrog_942	294	5.5e-78	257.8		replication initiation protein
+OX614387.1_3												Hypothetical
+OX614387.1_4												Hypothetical
+OX614387.1_5					phrog_1642	VOG36852	PHROG:phrog_1642	135	6.6e-33	109.0		virion structural protein
+OX614387.1_6					phrog_514	VOG01687	PHROG:phrog_514	552	7.3e-210	693.1		major head protein
+OX614387.1_7					phrog_18604	VOG06975	PHROG:phrog_18604	304	6.7e-68	223.6		minor tail protein
+OX614387.1_8												Hypothetical
+MN862334.1_1					phrog_942	VOG04962	PHROG:phrog_942	286	4e-81	268.1		replication initiation protein
+MN862334.1_2												Hypothetical
+MN862334.1_3					phrog_514	VOG01687	PHROG:phrog_514	560	1.8e-204	675.2		major head protein
+MN862334.1_4					phrog_5158	VOG06975	VOG:VOG06975	236	2.6e-26	88.5		hypothetical protein
+MN862334.1_5												Hypothetical
+MN862334.1_6												Hypothetical
+MN862334.1_7												Hypothetical
