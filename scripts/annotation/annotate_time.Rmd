@@ -1,0 +1,75 @@
+---
+title: "compare times, various tools/conditions, virus annotation"
+output: html_notebook
+---
+
+load packages
+```{r}
+library(ggplot2)
+library(data.table)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(wesanderson)
+library(lubridate)
+library(readxl)
+library(rprojroot)
+```
+
+
+load run metrics table
+```{r}
+time_metricd_dt <- read_excel(sprintf(
+  "%s/data/time/time_data_redo1.xlsx",
+  find_rstudio_root_file())
+)
+
+time_metricd_dt$time <- as.duration(interval("1899-12-31 00:00:00", time_metricd_dt$time))
+```
+
+```{r}
+pal <- wes_palette("GrandBudapest1", type = "discrete")[c(1,2,3,4)]
+
+pal
+```
+
+```{r}
+time_metric100p <- time_metricd_dt %>%
+  filter(`ORF caller` == "prodigal-gv") %>%
+  mutate(desc = paste0(Taxon, "\n", 
+                       `Number of Virus Seqs`, " genomes")) %>%
+  ggplot(aes(x = desc, y = as.numeric(time, "minutes"),
+             fill = software,
+             label = round(as.numeric(time, "minutes"), digits = 1))) +
+  geom_col(position = "dodge") +
+  geom_text(vjust=-0.5, position=position_dodge(width=0.9),
+            size = 2.5) +
+  #facet_wrap(vars(desc), scales = "free_y") +
+  scale_fill_manual(values = pal) +
+  theme_bw() +
+  ylim(0, 25) +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
+  labs(x = "Software",
+       y = "Run Time (minutes)",
+       title = "Annotation Time (ORF Caller = prodigal-gv)")
+
+time_metric100p
+
+ggsave(time_metric100p,
+       file = sprintf(
+  "%s/charts/annotation_time_prodigalgv.pdf",
+  find_rstudio_root_file()),
+       width = 8, height = 4)
+```
+
+
+
+
+
+
+
+
+
+
+
+

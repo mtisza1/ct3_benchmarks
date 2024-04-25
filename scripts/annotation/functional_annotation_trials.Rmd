@@ -28,6 +28,11 @@ ct3_dir <- sprintf(
 genomad_dir <- sprintf(
   "%s/data/annotation/gene_to_contig/genomad",
   find_rstudio_root_file())
+
+metacerberus_dir <- sprintf(
+  "%s/data/annotation/gene_to_contig/metacerberus",
+  find_rstudio_root_file())
+
 ```
 
 load and combine tables by tool
@@ -150,36 +155,219 @@ for (file in ct3_files){
 
 ```
 
+genomad
+```{r}
+if (exists("gmnd_dataset")){
+  rm(gmnd_dataset)
+}
+
+#file_list <- Sys.glob("*report.txt")
+
+## list of relevant files in the directory
+gnmd_files <- list.files(genomad_dir, pattern = "*.tsv", full.names = TRUE)
+
+
+
+for (file in gnmd_files){
+      
+  # if the merged dataset doesn't exist, create it
+  if (!exists("gmnd_dataset")){
+    
+    tax_label <- basename(file)
+    tax_label <- str_split_i(tax_label, "\\.", 1)[[1]]
+    
+    gmnd_dataset <- fread(file, header=T, sep="\t") %>%
+      mutate(contig = sub("_[^_]+$", "", gene)) %>%
+      group_by(contig) %>%
+      summarize(gene_count = n(),
+                hypo_annotations = 
+                  n_distinct(gene[
+                    is.na(annotation_description)
+                    ]
+                    )) %>%
+      mutate(tool = "genomad",
+             settings = "annotate",
+                 tax_label = str_split_i(tax_label, "_", 1)[1])
+
+  }
+  
+  # if the merged dataset does exist, append to it
+  else if (exists("gmnd_dataset")){
+    
+    tax_label <- basename(file)
+    tax_label <- str_split_i(tax_label, "\\.", 1)[[1]]
+    
+    temp_dataset <- fread(file, header=T, sep="\t") %>%
+      mutate(contig = sub("_[^_]+$", "", gene)) %>%
+      group_by(contig) %>%
+      summarize(gene_count = n(),
+                hypo_annotations = 
+                  n_distinct(gene[
+                    is.na(annotation_description)
+                    ]
+                    )) %>%
+      mutate(tool = "genomad",
+             settings = "annotate",
+                 tax_label = str_split_i(tax_label, "_", 1)[1])
+
+    gmnd_dataset<-rbind(gmnd_dataset, temp_dataset)
+    rm(temp_dataset)
+  }
+}
+
+```
+
+
+metacerberus
+```{r}
+if (exists("metc_dataset")){
+  rm(metc_dataset)
+}
+
+#file_list <- Sys.glob("*report.txt")
+
+## list of relevant files in the directory
+metc_files <- list.files(metacerberus_dir, pattern = "*.tsv", full.names = TRUE)
+
+
+
+for (file in metc_files){
+      
+  # if the merged dataset doesn't exist, create it
+  if (!exists("metc_dataset")){
+    
+    tax_label <- basename(file)
+    tax_label <- str_split_i(tax_label, "\\.", 1)[[1]]
+    
+    metc_dataset <- fread(file, header=T, sep="\t") %>%
+      mutate(contig = sub("_[^_]+$", "", locus_tag)) %>%
+      group_by(contig) %>%
+      summarize(gene_count = n(),
+                hypo_annotations = 
+                  n_distinct(locus_tag[
+                    product %in% c("hypothetical protein",
+                                   "hypothetical",
+                                   "Hypothetical")
+                    ]
+                    )) %>%
+      mutate(tool = "metacereberus",
+             settings = "all DBs",
+                 tax_label = str_split_i(tax_label, "_", 1)[1])
+
+  }
+  
+  # if the merged dataset does exist, append to it
+  else if (exists("metc_dataset")){
+    
+    tax_label <- basename(file)
+    tax_label <- str_split_i(tax_label, "\\.", 1)[[1]]
+    
+    temp_dataset <- fread(file, header=T, sep="\t") %>%
+      mutate(contig = sub("_[^_]+$", "", locus_tag)) %>%
+      group_by(contig) %>%
+      summarize(gene_count = n(),
+                hypo_annotations = 
+                  n_distinct(locus_tag[
+                    product %in% c("hypothetical protein",
+                                   "hypothetical",
+                                   "Hypothetical")
+                    ]
+                    )) %>%
+      mutate(tool = "metacereberus",
+             settings = "all DBs",
+                 tax_label = str_split_i(tax_label, "_", 1)[1])
+
+    metc_dataset<-rbind(metc_dataset, temp_dataset)
+    rm(temp_dataset)
+  }
+}
+
+```
+
 
 
 combine and compare
 ```{r}
-comb_dt <- rbind(ct3_dataset, phar_dataset)
+
+comb_dt <- rbindlist(list(ct3_dataset, phar_dataset, 
+                       gmnd_dataset, metc_dataset))
+
 ```
 
 
 ```{r}
 
-pal <- wes_palette("FantasticFox1", 2, type = "discrete")
+pal <- wes_palette("GrandBudapest1", type = "discrete")[c(1,2,3,4)]
+
 annotp <- comb_dt %>%
-  ggplot(aes(x = tool, y = 1 - (hypo_annotations/gene_count),
-             fill = tool)) +
-  geom_boxplot(outlier.shape = NA) + 
+  mutate(annotated_perc = (1 - (hypo_annotations/gene_count))) %>%
+  filter(tax_label != "tubulavirales") %>%
+  ggplot(aes(tool, annotated_perc)) +
+  geom_boxplot(aes(fill = tool), outlier.shape = NA) + 
   geom_point(color = "grey30") +
   scale_fill_manual(values = pal) + 
   theme_bw() +
   scale_y_continuous(labels = scales::percent) +
   labs(y = "Percentage of genes with\nnon-hypothetical annotation",
        x = "") +
-  stat_compare_means(label = "p.signif") +
+  #stat_compare_means(label = "p.signif") +
+  stat_compare_means(label = "p.signif",
+                     comparisons = 
+                       rev(list(c("Cenote-Taker 3", "genomad"), 
+                            c("Cenote-Taker 3", "metacereberus"),
+                            c("Cenote-Taker 3", "pharokka"),
+                            c("genomad", "metacereberus"),
+                            c("genomad", "pharokka"),
+                            c("metacereberus", "pharokka")
+                            ))) +
   facet_wrap(~tax_label, nrow = 1) +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
 
 annotp
 
-#ggsave(prod100_annotp,
-#       file = "/Users/michaeltisza/mike_tisza/sandbox/annotation_analyses1/annot#_rate_2tools_prod100.pdf")
+ggsave(annotp,
+       file = sprintf(
+  "%s/charts/annotation_rates_by_tool.pdf",
+  find_rstudio_root_file()),
+  width = 8, height = 6)
 ```
+
+```{r}
+comb_dt %>%
+  distinct(tool)
+```
+
+
+
+
+
+```{r}
+autolyk_metc_dt <- fread(sprintf(
+  "%s/data/annotation/gene_to_contig/metacerberus/autolykiviridae_annotation_summary.tsv",
+  find_rstudio_root_file()
+))
+  
+  
+autolyk_metc_dt %>%
+  group_by(product) %>%
+  mutate(product = str_trunc(product, 40)) %>%
+  summarize(n = n())
+```
+
+```{r}
+autolyk_ct3_dt <- fread(sprintf(
+  "%s/data/annotation/gene_to_contig/ct3/autolykiviridae.genes.ct3.tsv",
+  find_rstudio_root_file()
+))
+
+autolyk_ct3_dt %>%
+  group_by(evidence_description) %>%
+  mutate(evidence_description = str_trunc(evidence_description, 40)) %>%
+  summarize(n = n())
+
+```
+
+
 
 ```{r}
 caudo100_comb_dt %>%
