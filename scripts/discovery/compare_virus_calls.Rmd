@@ -1,0 +1,487 @@
+---
+title: "Comparing Cenote-Taker 3 and Genomad Discovery on Long Circular Contigs"
+output: html_notebook
+---
+
+Cenote-Taker 3 and Genomad both can discover viruses in metagenomic data.
+As the field generates more long read-based metagenomic assemblies, more complete virus genomes will be assembled.
+Complete sequences are highly valuable for virus cataloging (compared to incomplete genome fragments)
+
+```{r}
+# load libraries
+library(data.table)
+library(stringr)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(forcats)
+library(rprojroot)
+```
+
+## Functions
+
+```{r}
+#' Tag overlapping windows (≥25 % overlap) with a unique ID
+#' @param df         data.frame / data.table containing window rows
+#' @param contig_col column name holding contig values (default "contig")
+#' @param start_col  column name holding window start (default "start")
+#' @param stop_col   column name holding window stop  (default "stop")
+#' @return           original data with new column `ovl_id`
+assign_overlap_id <- function(df,
+                              contig_col = "contig",
+                              start_col  = "start",
+                              stop_col   = "stop") {
+  stopifnot(contig_col %in% names(df),
+            start_col  %in% names(df),
+            stop_col   %in% names(df))
+  
+  # convert to data.table for efficient in-place ops
+  dt <- as.data.table(df)
+  
+  # standardise working names
+  setnames(dt,
+           c(contig_col, start_col, stop_col),
+           c("contig__", "start__", "stop__"))
+  
+  setorder(dt, contig__, start__, stop__)
+  
+  # helper to tag one contig cluster vectorised over rows
+  tag_one <- function(start_vec, stop_vec) {
+    n <- length(start_vec)
+    grp <- integer(n)
+    cur_tag <- 1L
+    cur_s <- start_vec[1]
+    cur_e <- stop_vec[1]
+    cur_len <- cur_e - cur_s
+    grp[1] <- cur_tag
+    if (n > 1L) {
+      for (i in 2:n) {
+        len_i <- stop_vec[i] - start_vec[i]
+        ovl   <- min(cur_e, stop_vec[i]) - max(cur_s, start_vec[i])
+        if (ovl > 0 &&
+            ovl >= 0.25 * pmin(len_i, cur_len)) {
+          grp[i] <- cur_tag
+          if (stop_vec[i] > cur_e) {
+            cur_e  <- stop_vec[i]
+            cur_len <- cur_e - cur_s
+          }
+        } else {
+          cur_tag <- cur_tag + 1L
+          grp[i]  <- cur_tag
+          cur_s <- start_vec[i]
+          cur_e <- stop_vec[i]
+          cur_len <- cur_e - cur_s
+        }
+      }
+    }
+    grp
+  }
+  
+  dt[, ovl_grp := tag_one(start__, stop__), by = contig__]
+  dt[, ovl_id  := paste0(contig__, "_", ovl_grp)]
+  
+  # restore original column names
+  setnames(dt,
+           c("contig__", "start__", "stop__"),
+           c(contig_col, start_col, stop_col))
+  
+  invisible(dt[])
+}
+
+```
+
+## DRR290133
+
+load tables
+```{r}
+DRR290133_ct_sum_dt <- fread(
+  sprintf(
+    "%s/data/discovery/DRR290133/ct3/ct3_DRR290133_1b_virus_summary.tsv",
+    find_rstudio_root_file()
+  ),
+  header = T
+)
+
+DRR290133_ct3_prune_dt <- fread(
+  sprintf(
+    "%s/data/discovery/DRR290133/ct3/ct3_DRR290133_1b_prune_summary.tsv",
+    find_rstudio_root_file()
+  ),
+  header = T
+) %>%
+  mutate(chunk_ID = paste(contig, chunk_name, sep = "@")) %>%
+  select(c(chunk_ID, contig_length, chunk_start, chunk_stop))
+
+DRR290133_ct_merge_dt <- merge(
+  DRR290133_ct_sum_dt,
+  DRR290133_ct3_prune_dt,
+  by.x = "contig",
+  by.y = "chunk_ID",
+  all.x = T
+) %>%
+  mutate(
+    chunk_start = case_when(
+      is.na(chunk_start) ~ 0,
+      TRUE ~ chunk_start
+    ),
+    chunk_stop = case_when(
+      is.na(chunk_stop) ~ virus_seq_length,
+      TRUE ~ chunk_stop
+    ),
+    input_name = gsub(" \\(.*", "", input_name)
+  )
+
+```
+
+```{r}
+DRR290133_genomad_dt <- fread(
+  sprintf(
+    "%s/data/discovery/DRR290133/genomad/DRR290133_myloasm_1a.circ_with_dtr_virus_summary.tsv",
+    find_rstudio_root_file()
+  ),
+  header = T
+) %>% 
+  separate(seq_name, 
+           sep = "\\|",
+           c("input_name", "provirus")) %>%
+  separate(coordinates, 
+           sep = "-",
+           c("chunk_start", "chunk_stop")) %>%
+  mutate(chunk_start = as.double(chunk_start),
+         chunk_stop = as.double(chunk_stop)) %>%
+  mutate(
+    chunk_start = case_when(
+      is.na(chunk_start) ~ 0,
+      TRUE ~ chunk_start
+    ),
+    chunk_stop = case_when(
+      is.na(chunk_stop) ~ length,
+      TRUE ~ chunk_stop
+    )
+  )
+```
+
+```{r}
+DRR290133_full_dt <- merge(
+  DRR290133_ct_merge_dt,
+  DRR290133_genomad_dt,
+  by = c("input_name", "chunk_start", "chunk_stop"),
+  all = T
+)
+```
+
+```{r}
+DRR290133_view_dt <- DRR290133_full_dt %>%
+  select(c(input_name, chunk_start, chunk_stop,
+           organism, virion_hallmark_count,
+           n_hallmarks, marker_enrichment))
+```
+
+```{r}
+DRR290133_view2_dt <- assign_overlap_id(
+  DRR290133_view_dt,
+  contig_col = "input_name",
+  start_col = "chunk_start",
+  stop_col = "chunk_stop"
+) %>%
+  group_by(ovl_id) %>%
+  summarize(
+    approx_len = max(chunk_stop) - min(chunk_start),
+    min_start = min(chunk_start),
+    max_stop = max(chunk_stop),
+    organism = first(organism, na_rm = T),
+    virion_hallmark_count = first(virion_hallmark_count, na_rm = T),
+    n_hallmarks = first(n_hallmarks, na_rm = T),
+    marker_enrichment = first(marker_enrichment, na_rm = T),
+  )
+```
+
+Cenote-Taker only
+```{r}
+DRR290133_view2_dt %>%
+  filter(is.na(n_hallmarks))
+```
+
+```{r}
+DRR290133_ct3_only_dt <- DRR290133_view2_dt %>%
+  filter(is.na(n_hallmarks)) %>%
+  mutate(
+    input_name = gsub("_[0-9]$", "", ovl_id)
+  ) %>%
+  rename(
+    chunk_start = min_start,
+    chunk_stop = max_stop
+  ) %>%
+  select(c(input_name, chunk_start, chunk_stop))
+
+DRR290133_ct3_contigs <- merge(
+  DRR290133_ct3_only_dt,
+  DRR290133_ct_merge_dt,
+  by = c("input_name", "chunk_start", "chunk_stop")
+) %>%
+  select(c(input_name, contig))
+
+write.table(
+  DRR290133_ct3_contigs$contig,
+  file = sprintf(
+    "%s/data/discovery/DRR290133/ct3/ct3_only_contigs.txt",
+    find_rstudio_root_file()
+  ),
+  col.names = F,
+  row.names = F,
+  quote = F
+)
+
+```
+
+Genomad contigs only
+```{r}
+DRR290133_view2_dt %>%
+  filter(is.na(virion_hallmark_count))
+```
+
+```{r}
+DRR290133_genomad_only_dt <- DRR290133_view2_dt %>%
+  filter(is.na(virion_hallmark_count)) %>%
+  mutate(
+    input_name = gsub("_[0-9]$", "", ovl_id)
+  ) %>%
+  rename(
+    chunk_start = min_start,
+    chunk_stop = max_stop
+  ) %>%
+  select(c(input_name, chunk_start, chunk_stop))
+
+DRR290133_genomad_contigs <- merge(
+  DRR290133_genomad_only_dt,
+  DRR290133_genomad_dt,
+  by = c("input_name", "chunk_start", "chunk_stop")
+) %>%
+  select(c(input_name, provirus)) %>%
+  mutate(
+    contig = paste(input_name, provirus, sep = "|"),
+    contig = gsub("\\|NA", "", contig)
+    )
+
+write.table(
+  DRR290133_genomad_contigs$contig,
+  file = sprintf(
+    "%s/data/discovery/DRR290133/genomad/genomad_only_contigs.txt",
+    find_rstudio_root_file()
+  ),
+  col.names = F,
+  row.names = F,
+  quote = F
+)
+
+```
+
+
+
+```{r}
+DRR290133_view2_dt %>%
+  filter(!is.na(virion_hallmark_count),
+         !is.na(n_hallmarks)
+         )
+```
+
+## ERR10905741
+
+load tables
+```{r}
+ERR10905741_ct_sum_dt <- fread(
+  sprintf(
+    "%s/data/discovery/ERR10905741/ct3/ct3_ERR10905741_1b_virus_summary.tsv",
+    find_rstudio_root_file()
+  ),
+  header = T
+)
+
+ERR10905741_ct3_prune_dt <- fread(
+  sprintf(
+    "%s/data/discovery/ERR10905741/ct3/ct3_ERR10905741_1b_prune_summary.tsv",
+    find_rstudio_root_file()
+  ),
+  header = T
+) %>%
+  mutate(chunk_ID = paste(contig, chunk_name, sep = "@")) %>%
+  select(c(chunk_ID, contig_length, chunk_start, chunk_stop))
+
+ERR10905741_ct_merge_dt <- merge(
+  ERR10905741_ct_sum_dt,
+  ERR10905741_ct3_prune_dt,
+  by.x = "contig",
+  by.y = "chunk_ID",
+  all.x = T
+) %>%
+  mutate(
+    chunk_start = case_when(
+      is.na(chunk_start) ~ 0,
+      TRUE ~ chunk_start
+    ),
+    chunk_stop = case_when(
+      is.na(chunk_stop) ~ virus_seq_length,
+      TRUE ~ chunk_stop
+    ),
+    input_name = gsub(" \\(.*", "", input_name)
+  )
+
+```
+
+```{r}
+ERR10905741_genomad_dt <- fread(
+  sprintf(
+    "%s/data/discovery/ERR10905741/genomad/ERR10905741_myloasm_1a.circ_with_dtr_virus_summary.tsv",
+    find_rstudio_root_file()
+  ),
+  header = T
+) %>% 
+  separate(seq_name, 
+           sep = "\\|",
+           c("input_name", "provirus")) %>%
+  separate(coordinates, 
+           sep = "-",
+           c("chunk_start", "chunk_stop")) %>%
+  mutate(chunk_start = as.double(chunk_start),
+         chunk_stop = as.double(chunk_stop)) %>%
+  mutate(
+    chunk_start = case_when(
+      is.na(chunk_start) ~ 0,
+      TRUE ~ chunk_start
+    ),
+    chunk_stop = case_when(
+      is.na(chunk_stop) ~ length,
+      TRUE ~ chunk_stop
+    )
+  )
+```
+
+```{r}
+ERR10905741_full_dt <- merge(
+  ERR10905741_ct_merge_dt,
+  ERR10905741_genomad_dt,
+  by = c("input_name", "chunk_start", "chunk_stop"),
+  all = T
+)
+```
+
+```{r}
+ERR10905741_view_dt <- ERR10905741_full_dt %>%
+  select(c(input_name, chunk_start, chunk_stop,
+           organism, virion_hallmark_count,
+           n_hallmarks, marker_enrichment))
+
+ 
+```
+
+```{r}
+ERR10905741_view2_dt <- assign_overlap_id(
+  ERR10905741_view_dt,
+  contig_col = "input_name",
+  start_col = "chunk_start",
+  stop_col = "chunk_stop"
+) %>%
+  group_by(ovl_id) %>%
+  summarize(
+    approx_len = max(chunk_stop) - min(chunk_start),
+    min_start = min(chunk_start),
+    max_stop = max(chunk_stop),
+    organism = first(organism, na_rm = T),
+    virion_hallmark_count = first(virion_hallmark_count, na_rm = T),
+    n_hallmarks = first(n_hallmarks, na_rm = T),
+    marker_enrichment = first(marker_enrichment, na_rm = T),
+  )
+```
+
+Cenote-Taker only
+```{r}
+ERR10905741_view2_dt %>%
+  filter(is.na(n_hallmarks))
+```
+
+```{r}
+ERR10905741_ct3_only_dt <- ERR10905741_view2_dt %>%
+  filter(is.na(n_hallmarks)) %>%
+  mutate(
+    input_name = gsub("_[0-9]$", "", ovl_id)
+  ) %>%
+  rename(
+    chunk_start = min_start,
+    chunk_stop = max_stop
+  ) %>%
+  select(c(input_name, chunk_start, chunk_stop))
+
+ERR10905741_ct3_contigs <- merge(
+  ERR10905741_ct3_only_dt,
+  ERR10905741_ct_merge_dt,
+  by = c("input_name", "chunk_start", "chunk_stop")
+) %>%
+  select(c(input_name, contig))
+
+write.table(
+  ERR10905741_ct3_contigs$contig,
+  file = sprintf(
+    "%s/data/discovery/ERR10905741/ct3/ct3_only_contigs.txt",
+    find_rstudio_root_file()
+  ),
+  col.names = F,
+  row.names = F,
+  quote = F
+)
+
+```
+
+Genomad contigs only
+```{r}
+ERR10905741_view2_dt %>%
+  filter(is.na(virion_hallmark_count))
+```
+
+```{r}
+ERR10905741_genomad_only_dt <- ERR10905741_view2_dt %>%
+  filter(is.na(virion_hallmark_count)) %>%
+  mutate(
+    input_name = gsub("_[0-9]$", "", ovl_id)
+  ) %>%
+  rename(
+    chunk_start = min_start,
+    chunk_stop = max_stop
+  ) %>%
+  select(c(input_name, chunk_start, chunk_stop))
+
+ERR10905741_genomad_contigs <- merge(
+  ERR10905741_genomad_only_dt,
+  ERR10905741_genomad_dt,
+  by = c("input_name", "chunk_start", "chunk_stop")
+) %>%
+  select(c(input_name, provirus)) %>%
+  mutate(
+    contig = paste(input_name, provirus, sep = "|"),
+    contig = gsub("\\|NA", "", contig)
+    )
+
+write.table(
+  ERR10905741_genomad_contigs$contig,
+  file = sprintf(
+    "%s/data/discovery/ERR10905741/genomad/genomad_only_contigs.txt",
+    find_rstudio_root_file()
+  ),
+  col.names = F,
+  row.names = F,
+  quote = F
+)
+
+```
+
+```{r}
+ERR10905741_view2_dt %>%
+  filter(!is.na(virion_hallmark_count),
+         !is.na(n_hallmarks)
+         )
+```
+
+
+
+
+
+
