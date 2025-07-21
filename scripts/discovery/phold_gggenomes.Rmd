@@ -55,7 +55,7 @@ phold_prod_dt <- fread(sprintf(
         "major capsid|major head|terminase large|portal", 
         evidence_description, 
         ignore.case = T) ~ 1,
-      TRUE ~ 0.5
+      TRUE ~ 0
     )
     )
 
@@ -89,17 +89,10 @@ DRR290133_ct_phold_prod_dt <- fread(sprintf(
   ),
   sep = "\t",
   header = T) %>%
-  mutate(
-    endf = case_when(strand == "+" ~ end, TRUE ~ start),
-    startf = case_when(strand == "+" ~ start, TRUE ~ end)
-    ) %>%
-  select(-c(start, end)) %>%
   rename(gene_orient = strand,
          evidence_description = product,
          gene_name = cds_id,
          seq_id = contig_id,
-         start = startf,
-         end = endf,
          function_cat = `function`) %>%
   select(
     c("seq_id", "gene_name", 
@@ -116,12 +109,23 @@ DRR290133_ct_phold_prod_dt <- fread(sprintf(
       grepl(
         "major capsid|major head|terminase large|portal", 
         evidence_description, 
-        ignore.case = T) ~ 1,
-      TRUE ~ 0.5
+        ignore.case = T) ~ 0.5,
+      TRUE ~ 0
     ),
     gene_lab_imp = case_when(
-      function_cat %in% c("head and packaging") ~ evidence_description,
-      TRUE ~ NA
+      grepl(
+        "major capsid|major head", 
+        evidence_description, 
+        ignore.case = T) ~ "MCP",
+      grepl(
+        "terminase large", 
+        evidence_description, 
+        ignore.case = T) ~ "TerL",
+      grepl(
+        "portal", 
+        evidence_description, 
+        ignore.case = T) ~ "Portal",
+      TRUE ~ ""
     )
   )
 
@@ -136,7 +140,7 @@ DRR290133_ct_phold_prod_dt %>%
 
 plot gggenomes object
 ```{r}
-pal = wes_palette("FantasticFox1", 10, type = "continuous")
+#pal = wes_palette("FantasticFox1", 10, type = "continuous")
 
 DRR290133_ct_ggg <-  DRR290133_ct_phold_prod_dt %>%
   group_by(seq_id) %>%
@@ -145,11 +149,13 @@ DRR290133_ct_ggg <-  DRR290133_ct_phold_prod_dt %>%
   filter(n_genes <= 200) %>%
   gggenomes() +
   geom_seq() +
-  geom_gene(aes(fill=function_cat, stroke=important_virion), size = 3.5) +
-  geom_gene_tag(aes(label=gene_lab_imp)) +
+  geom_gene(aes(fill=function_cat, stroke=important_virion), size = 3.5, 
+            shape = c(4,1)
+  ) +
+  geom_gene_tag(aes(label=gene_lab_imp), nudge_y = 0.1) +
   geom_bin_label() +
   theme(legend.position = "bottom") +
-  scale_fill_manual(values=pal, na.value="cornsilk3")
+  scale_fill_manual(values=color_map, na.value="cornsilk3")
 
 DRR290133_ct_ggg
 
@@ -203,17 +209,10 @@ DRR290133_gnmd_phold_prod_dt <- fread(sprintf(
   ),
   sep = "\t",
   header = T) %>%
-  mutate(
-    endf = case_when(strand == "+" ~ end, TRUE ~ start),
-    startf = case_when(strand == "+" ~ start, TRUE ~ end)
-    ) %>%
-  select(-c(start, end)) %>%
   rename(gene_orient = strand,
          evidence_description = product,
          gene_name = cds_id,
          seq_id = contig_id,
-         start = startf,
-         end = endf,
          function_cat = `function`) %>%
   select(
     c("seq_id", "gene_name", 
@@ -230,12 +229,23 @@ DRR290133_gnmd_phold_prod_dt <- fread(sprintf(
       grepl(
         "major capsid|major head|terminase large|portal", 
         evidence_description, 
-        ignore.case = T) ~ 1,
-      TRUE ~ 0.5
+        ignore.case = T) ~ 0.5,
+      TRUE ~ 0
     ),
     gene_lab_imp = case_when(
-      function_cat %in% c("head and packaging") ~ evidence_description,
-      TRUE ~ NA
+      grepl(
+        "major capsid|major head", 
+        evidence_description, 
+        ignore.case = T) ~ "MCP",
+      grepl(
+        "terminase large", 
+        evidence_description, 
+        ignore.case = T) ~ "TerL",
+      grepl(
+        "portal", 
+        evidence_description, 
+        ignore.case = T) ~ "Portal",
+      TRUE ~ ""
     )
   )
 
@@ -248,9 +258,29 @@ DRR290133_gnmd_phold_prod_dt %>%
 ```
 
 
+```{r}
+rbind(DRR290133_ct_phold_prod_dt, DRR290133_ct_phold_prod_dt) %>%
+  distinct(function_cat)
+```
+
+```{r}
+color_map = c(
+  "head and packaging" = "#469BEC",
+  "tail" = "#EB8D43",
+  "transcription regulation" = "#DBA662",
+  "DNA, RNA and nucleotide metabolism" = "#F2D56F",
+  "other" = "#DFDED3",
+  "moron, auxiliary metabolic gene and host takeover" = "#A89F8E",
+  "connector" = "#8CBEB1",
+  "lysis" = "#48594E",
+  "integration and excision" = "#9B6981"
+)
+```
+
+
+
 plot gggenomes object
 ```{r}
-pal = wes_palette("FantasticFox1", 10, type = "continuous")
 
 DRR290133_gnmd_ggg <-  DRR290133_gnmd_phold_prod_dt %>%
   group_by(seq_id) %>%
@@ -259,11 +289,13 @@ DRR290133_gnmd_ggg <-  DRR290133_gnmd_phold_prod_dt %>%
   filter(n_genes <= 200) %>%
   gggenomes() +
   geom_seq() +
-  geom_gene(aes(fill=function_cat, stroke=important_virion), size = 3.5) +
-  geom_gene_tag(aes(label=gene_lab_imp)) +
+  geom_gene(aes(fill=function_cat, stroke=important_virion), size = 3.5, 
+            shape = c(4,1)
+  ) +
+  geom_gene_tag(aes(label=gene_lab_imp), nudge_y = 0.1) +
   geom_bin_label() +
   theme(legend.position = "bottom") +
-  scale_fill_manual(values=pal, na.value="cornsilk3")
+  scale_fill_manual(values=color_map, na.value="cornsilk3")
 
 DRR290133_gnmd_ggg
 
@@ -306,6 +338,83 @@ DRR290133_gnmd_phold_prod_dt %>%
        y = "Genome Name") +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
   
+```
+
+
+## phold ERR10905741 cenote-taker prediction only
+load product table and prep for gggenomes
+```{r}
+DRR290133_ct_phold_prod_dt <- fread(sprintf(
+    "%s/data/discovery/DRR290133/phold_annotations/phold_DRR290133_ct3_1/phold_per_cds_predictions.tsv",
+    find_rstudio_root_file()
+  ),
+  sep = "\t",
+  header = T) %>%
+  rename(gene_orient = strand,
+         evidence_description = product,
+         gene_name = cds_id,
+         seq_id = contig_id,
+         function_cat = `function`) %>%
+  select(
+    c("seq_id", "gene_name", 
+      "start", "end", 
+      "gene_orient", "evidence_description", 
+      "function_cat"
+      )
+    ) %>%
+  mutate(
+    evidence_description = na_if(evidence_description,"hypothetical protein"),
+    function_cat  = na_if(function_cat,"unknown function"),
+    function_cat  = na_if(function_cat,""),
+    important_virion = case_when(
+      grepl(
+        "major capsid|major head|terminase large|portal", 
+        evidence_description, 
+        ignore.case = T) ~ 0.5,
+      TRUE ~ 0
+    ),
+    gene_lab_imp = case_when(
+      grepl(
+        "major capsid|major head", 
+        evidence_description, 
+        ignore.case = T) ~ "MCP",
+      grepl(
+        "terminase large", 
+        evidence_description, 
+        ignore.case = T) ~ "TerL",
+      grepl(
+        "portal", 
+        evidence_description, 
+        ignore.case = T) ~ "Portal",
+      TRUE ~ ""
+    )
+  )
+
+```
+
+
+
+plot gggenomes object
+```{r}
+#pal = wes_palette("FantasticFox1", 10, type = "continuous")
+
+DRR290133_ct_ggg <-  DRR290133_ct_phold_prod_dt %>%
+  group_by(seq_id) %>%
+  mutate(n_genes = n()) %>%
+  ungroup() %>%
+  filter(n_genes <= 200) %>%
+  gggenomes() +
+  geom_seq() +
+  geom_gene(aes(fill=function_cat, stroke=important_virion), size = 3.5, 
+            shape = c(4,1)
+  ) +
+  geom_gene_tag(aes(label=gene_lab_imp), nudge_y = 0.1) +
+  geom_bin_label() +
+  theme(legend.position = "bottom") +
+  scale_fill_manual(values=color_map, na.value="cornsilk3")
+
+DRR290133_ct_ggg
+
 ```
 
 
