@@ -61,8 +61,10 @@ time100p <- time_metric100_dt %>%
                         "#591f6e")) +
   theme_bw() +
   theme(
-        legend.position = "none") +
-  labs(#x = "Software",
+    legend.position = "none",
+    axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)
+    ) +
+  labs(x = "",
        y = "Run Time (minutes)",
        #title = "Annotating 100 human gut virus high-quality MAGs from UHGV database"
        )
@@ -72,13 +74,17 @@ time100p
 ggsave(
   time100p,
   file = sprintf("%s/charts/time_100uhgv_bar3.pdf",
-          find_rstudio_root_file())
+          find_rstudio_root_file()),
+  height = 5,
+  width = 3
 )
 
 ggsave(
   time100p,
   file = sprintf("%s/charts/time_100uhgv_bar3.png",
-          find_rstudio_root_file())
+          find_rstudio_root_file()),
+  height = 5,
+  width = 3
 )
 ```
 
@@ -86,15 +92,17 @@ now look at 1000 genomes
 ```{r}
 
 time_metric1000_dt <- time_metricd_dt %>%
-  filter(`run name` %in% c("ct3time_1000uh1", "pharokka_1000uh2")) %>%
-  mutate(tool = case_when(software == "CT2" ~ "Cenote-\nTaker 2",
-                          software == "CT3" ~ "Cenote-Taker 3",
+  filter(`run name` %in% c("gnmd_uhgv1000_time_a",
+                           "ct3time_1000uh1", 
+                           "pharokka_1000uh2")
+         ) %>%
+  mutate(tool = case_when(software == "CT3" ~ "Cenote-Taker 3",
                           TRUE ~ software),
          tool = fct_relevel(tool,  "genomad",
-                                           "metacerberus", 
-                                           "pharokka", 
-                                           "Cenote-Taker 3",
-                                           "phold"))
+                                   "pharokka", 
+                                   "Cenote-Taker 3"
+                            )
+         )
 
 ```
 
@@ -107,26 +115,33 @@ time_1000p <- time_metric1000_dt %>%
   geom_col() +
   geom_text(nudge_y = 2) +
   scale_fill_manual(values = 
-                      c("#E54E21", "#6C8645")) +
+                      c("#0A9F9D", "#E54E21", "#6C8645")) +
   theme_bw() +
   theme(
-        legend.position = "none") +
-  labs(x = "ORF-calling module",
+    legend.position = "none",
+    axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)
+    ) +
+  labs(x = "",
        y = "Run Time (minutes)",
-       title = "Annotating 1000 human gut virus MAGs from UHGV database")
+       #title = "Annotating 1000 human gut virus MAGs from UHGV database"
+       )
 
 time_1000p
 
 ggsave(
   time_1000p,
-  file = sprintf("%s/charts/time_1000uhgv_bar1.pdf",
-          wd)
+  file = sprintf("%s/charts/time_1000uhgv_bar2.pdf",
+          find_rstudio_root_file()),
+  height = 5,
+  width = 3
 )
 
 ggsave(
   time_1000p,
-  file = sprintf("%s/charts/time_1000uhgv_bar1.png",
-          wd)
+  file = sprintf("%s/charts/time_1000uhgv_bar2.png",
+          find_rstudio_root_file()),
+  height = 5,
+  width = 3
 )
 
 ```

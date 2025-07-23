@@ -13,36 +13,43 @@ library(stringr)
 library(wesanderson)
 library(ggpubr)
 library(forcats)
-
+library(rprojroot)
 ```
 
-```{r}
-wd <- "/Users/u241374/Library/CloudStorage/OneDrive-BaylorCollegeofMedicine/virus_annotation_benchmarks/uhgv"
-```
+
 
 load files
 
 ```{r}
 metc_gene_dt <- fread(sprintf(
-  "%s/metc/final_annotation_summary.tsv",
-                              wd))
+  "%s/data/annotation/uhgv/metc/final_annotation_summary.tsv",
+  find_rstudio_root_file()
+  )
+  )
 
 gnmd_gene_dt <- fread(sprintf(
-  "%s/genomad/first_100_uhgv_votus_genes.tsv",
-                              wd))
+  "%s/data/annotation/uhgv/genomad/first_100_uhgv_votus_genes.tsv",
+  find_rstudio_root_file()
+  )
+  )
 
 phar_gene_dt <- fread(sprintf(
- "%s/pharokka/pharokka_cds_final_merged_output.tsv",
-                              wd))
+ "%s/data/annotation/uhgv/pharokka/pharokka_cds_final_merged_output.tsv",
+  find_rstudio_root_file()
+  )
+  )
 
 phold_gene_dt <- fread(sprintf(
-  "%s/phold/phold_per_cds_predictions.tsv",
-  wd
-))
+  "%s/data/annotation/uhgv/phold/phold_per_cds_predictions.tsv",
+  find_rstudio_root_file()
+  )
+  )
 
 ct3_gene_dt<- fread(sprintf(
-  "%s/ct3/final_genes_to_contigs_annotation_summary.tsv",
-                              wd))
+  "%s/data/annotation/uhgv/ct3/final_genes_to_contigs_annotation_summary.tsv",
+  find_rstudio_root_file()
+  )
+  )
 
 
 ```
@@ -128,26 +135,46 @@ hypo_rate_p <- hypo_all_dt %>%
   scale_fill_manual(values = 
                       c("#0A9F9D", "#CEB175", 
                         "#E54E21", "#6C8645", 
-                        "#C18748")) + 
+                        "#591f6e")) + 
+  stat_compare_means(
+    method = "wilcox.test",
+    label = "p.signif",
+    comparisons = list(
+      c("Cenote-Taker 3", "geNomad"),
+      c("Cenote-Taker 3", "Metacerberus"),
+      c("Cenote-Taker 3", "Pharokka"),
+      c("Cenote-Taker 3", "phold")
+    )
+  ) +
   theme_bw() +
   scale_y_continuous(labels = scales::percent) +
   labs(y = "Percentage of genes with\nnon-hypothetical annotation",
-       x = "Annotation Tool",
-       title = "Annotating 100 human gut virus MAGs from UHGV database") +
-  theme(legend.position = "none")
+       x = "",
+       #title = "Annotating 100 human gut virus MAGs from UHGV database"
+       ) +
+  theme(
+    legend.position = "none",
+    axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)
+    )
 
 hypo_rate_p
 
 ggsave(
   hypo_rate_p,
-  file = sprintf("%s/charts/uhgv100_anotation_rate_boxplot1.pdf",
-                 wd)
+  file = sprintf("%s/charts/uhgv100_anotation_rate_boxplot2.pdf",
+                 find_rstudio_root_file()
+                 ),
+  height = 5,
+  width = 3
 )
 
 ggsave(
   hypo_rate_p,
-  file = sprintf("%s/charts/uhgv100_anotation_rate_boxplot1.png",
-                 wd)
+  file = sprintf("%s/charts/uhgv100_anotation_rate_boxplot2.png",
+                 find_rstudio_root_file()
+                 ),
+  height = 5,
+  width = 3
 )
 
 
