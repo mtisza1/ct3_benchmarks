@@ -14,43 +14,36 @@ library(wesanderson)
 library(lubridate)
 library(readxl)
 library(forcats)
-
-```
-
-```{r}
-wd <- "/Users/u241374/Library/CloudStorage/OneDrive-BaylorCollegeofMedicine/virus_annotation_benchmarks/uhgv"
+library(rprojroot)
 ```
 
 
 load run metrics table
 ```{r}
 time_metricd_dt <- read_excel(sprintf(
-  "%s/pipeline_time_data1.xlsx",
-  wd),
+  "%s/data/annotation/uhgv/pipeline_time_data1.xlsx",
+  find_rstudio_root_file()),
   skip = 1)
 
 time_metricd_dt$time <- as.duration(interval("1899-12-31 00:00:00", time_metricd_dt$time))
 ```
 
-```{r}
-pal <- wes_palette("GrandBudapest1", type = "discrete")[c(1,2,3)]
 
-pal
-```
 
 ```{r}
 time_metric100_dt <- time_metricd_dt %>%
   filter(`run name` %in% c("ct3time_100uh2","pharokka_100uh10",
                            "test_phold_uhgv100_1a", "metc_100uhgv_1a",
                            "gnmd_100uhgv_1a")) %>%
-  mutate(tool = case_when(software == "CT2" ~ "Cenote-\nTaker 2",
-                          software == "CT3" ~ "Cenote-Taker 3",
+  mutate(tool = case_when(software == "CT3" ~ "Cenote-Taker 3",
                           TRUE ~ software),
-         tool = fct_relevel(tool,  "genomad",
-                                           "metacerberus", 
-                                           "pharokka", 
-                                           "Cenote-Taker 3",
-                                           "phold"))
+         tool = fct_relevel(tool,
+                            "genomad",
+                            "metacerberus",
+                            "pharokka", 
+                            "Cenote-Taker 3",
+                            "phold")
+         )
 ```
 
 
@@ -64,27 +57,28 @@ time100p <- time_metric100_dt %>%
   geom_text(nudge_y = 3) +
   scale_fill_manual(values = 
                       c("#0A9F9D", "#CEB175", 
-                        "#E54E21", "#6C8645", 
-                        "#C18748")) +
+                        "#E54E21", "#6C8645", #"#C18748", 
+                        "#591f6e")) +
   theme_bw() +
   theme(
         legend.position = "none") +
-  labs(x = "ORF-calling module",
+  labs(#x = "Software",
        y = "Run Time (minutes)",
-       title = "Annotating 100 human gut virus MAGs from UHGV database")
+       #title = "Annotating 100 human gut virus high-quality MAGs from UHGV database"
+       )
 
 time100p
 
 ggsave(
   time100p,
-  file = sprintf("%s/charts/time_100uhgv_bar1.pdf",
-          wd)
+  file = sprintf("%s/charts/time_100uhgv_bar3.pdf",
+          find_rstudio_root_file())
 )
 
 ggsave(
   time100p,
-  file = sprintf("%s/charts/time_100uhgv_bar1.png",
-          wd)
+  file = sprintf("%s/charts/time_100uhgv_bar3.png",
+          find_rstudio_root_file())
 )
 ```
 
