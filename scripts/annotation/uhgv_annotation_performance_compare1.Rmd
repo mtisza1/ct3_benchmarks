@@ -1,0 +1,158 @@
+---
+title: "analyzing hypothetical annotation rate for virus tools"
+output: html_notebook
+---
+
+load packages
+```{r}
+library(ggplot2)
+library(data.table)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(wesanderson)
+library(ggpubr)
+library(forcats)
+
+```
+
+```{r}
+wd <- "/Users/u241374/Library/CloudStorage/OneDrive-BaylorCollegeofMedicine/virus_annotation_benchmarks/uhgv"
+```
+
+load files
+
+```{r}
+metc_gene_dt <- fread(sprintf(
+  "%s/metc/final_annotation_summary.tsv",
+                              wd))
+
+gnmd_gene_dt <- fread(sprintf(
+  "%s/genomad/first_100_uhgv_votus_genes.tsv",
+                              wd))
+
+phar_gene_dt <- fread(sprintf(
+ "%s/pharokka/pharokka_cds_final_merged_output.tsv",
+                              wd))
+
+phold_gene_dt <- fread(sprintf(
+  "%s/phold/phold_per_cds_predictions.tsv",
+  wd
+))
+
+ct3_gene_dt<- fread(sprintf(
+  "%s/ct3/final_genes_to_contigs_annotation_summary.tsv",
+                              wd))
+
+
+```
+
+get non-hypothetical annotation rate
+```{r}
+ct3_annot_rate_dt <- ct3_gene_dt %>%
+  filter(!grepl("tRNA-", gene_name)) %>%
+  group_by(contig) %>%
+  summarize(gene_count = n(),
+            hypo_annotations = n_distinct(gene_name[evidence_description == "hypothetical protein"])) %>%
+  mutate(software = "Cenote-Taker 3")  %>%
+  rename(contigID = contig)
+```
+
+```{r}
+phar_annot_rate_dt <- phar_gene_dt %>%
+  group_by(contig) %>%
+  summarize(gene_count = n(),
+            hypo_annotations = n_distinct(gene[annot == "hypothetical protein"])) %>%
+  mutate(software = "Pharokka") %>%
+  rename(contigID = contig)
+```
+
+
+```{r}
+metc_annot_rate_dt <- metc_gene_dt%>%
+  mutate(contigID = sub("_[^_]+$", "", target)) %>%
+  group_by(contigID) %>%
+  summarize(gene_count = n(),
+            hypo_annotations = 
+              n_distinct(target[grepl("hypothetical|no_annotation", 
+                                         product, 
+                                         ignore.case = T)])) %>%
+  mutate(software = "Metacerberus")
+```
+
+
+```{r}
+gnmd_annot_rate_dt <- gnmd_gene_dt %>%
+  mutate(contigID = sub("_[^_]+$", "", gene)) %>%
+  group_by(contigID) %>%
+  summarize(gene_count = n(),
+            hypo_annotations = 
+              n_distinct(gene[is.na(annotation_description)])) %>%
+  mutate(software = "geNomad") 
+```
+
+```{r}
+phold_annot_rate_dt <- phold_gene_dt %>%
+  group_by(contig_id) %>%
+  summarize(gene_count = n(),
+            hypo_annotations = 
+              n_distinct(cds_id[grepl("hypothetical", 
+                                         product, 
+                                         ignore.case = T)])) %>%
+  mutate(software = "phold") %>%
+  rename(contigID = contig_id)
+```
+
+
+combine and plot
+```{r}
+sum_hypol <- list(ct3_annot_rate_dt, gnmd_annot_rate_dt, 
+                  metc_annot_rate_dt, phar_annot_rate_dt,
+                  phold_annot_rate_dt)
+
+hypo_all_dt <- rbindlist(sum_hypol) %>%
+  mutate(hypo_prop = hypo_annotations/gene_count,
+         software = fct_relevel(software,  "geNomad",
+                                           "Metacerberus", 
+                                           "Pharokka", 
+                                           "Cenote-Taker 3",
+                                           "phold"))
+```
+
+```{r}
+hypo_rate_p <- hypo_all_dt %>%
+  ggplot(aes(x = software, y = 1 - hypo_prop,
+             fill = software)) +
+  geom_boxplot() + 
+  geom_point(color = "grey30") +
+  scale_fill_manual(values = 
+                      c("#0A9F9D", "#CEB175", 
+                        "#E54E21", "#6C8645", 
+                        "#C18748")) + 
+  theme_bw() +
+  scale_y_continuous(labels = scales::percent) +
+  labs(y = "Percentage of genes with\nnon-hypothetical annotation",
+       x = "Annotation Tool",
+       title = "Annotating 100 human gut virus MAGs from UHGV database") +
+  theme(legend.position = "none")
+
+hypo_rate_p
+
+ggsave(
+  hypo_rate_p,
+  file = sprintf("%s/charts/uhgv100_anotation_rate_boxplot1.pdf",
+                 wd)
+)
+
+ggsave(
+  hypo_rate_p,
+  file = sprintf("%s/charts/uhgv100_anotation_rate_boxplot1.png",
+                 wd)
+)
+
+
+```
+
+
+
+

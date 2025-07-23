@@ -18,19 +18,19 @@ library(rprojroot)
 set file paths
 ```{r}
 phar_dir <- sprintf(
-  "%s/data/annotation/gene_to_contig/pharokka",
+  "%s/data/annotation/genbank/gene_to_contig/pharokka",
   find_rstudio_root_file())
 
 ct3_dir <- sprintf(
-  "%s/data/annotation/gene_to_contig/ct3",
+  "%s/data/annotation/genbank/gene_to_contig/ct3",
   find_rstudio_root_file())
 
 genomad_dir <- sprintf(
-  "%s/data/annotation/gene_to_contig/genomad",
+  "%s/data/annotation/genbank/gene_to_contig/genomad",
   find_rstudio_root_file())
 
 metacerberus_dir <- sprintf(
-  "%s/data/annotation/gene_to_contig/metacerberus",
+  "%s/data/annotation/genbank/gene_to_contig/metacerberus",
   find_rstudio_root_file())
 
 ```

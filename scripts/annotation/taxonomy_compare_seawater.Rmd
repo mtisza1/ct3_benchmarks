@@ -1,0 +1,105 @@
+---
+title: "taxonomy classification seawater dtr, ct3 and genomad"
+output: html_notebook
+---
+
+
+load packages
+```{r}
+library(ggplot2)
+library(data.table)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(wesanderson)
+library(ggpubr)
+library(forcats)
+
+```
+
+```{r}
+wd <- "/Users/michaeltisza/Library/CloudStorage/OneDrive-BaylorCollegeofMedicine/virus_annotation_benchmarks/real_data/seawater_dtrs"
+```
+
+load files
+
+```{r}
+
+gnmd_tax_dt <- fread(sprintf(
+  "%s/genomad/seawater_scaffolds_gt1500.dtrs_itr_only.20k_taxonomy.tsv",
+                              wd)) %>%
+  filter(n_genes_with_taxonomy >= 10 | grepl("Malgrand", lineage))
+
+ct3_tax_dt<- fread(sprintf(
+  "%s/ct3/seawater_dtrs_1a_virus_summary.tsv",
+                              wd)) %>%
+  filter(virion_hallmark_count >= 3)
+
+
+```
+
+```{r}
+gnmd_parse_dt <- gnmd_tax_dt %>%
+  select(c(seq_name, lineage)) %>%
+  rename(input_name = seq_name) %>%
+  separate(lineage, sep = ";",
+           into = c("domain", "superkingdom",
+                    "kingdom", "phylum",
+                    "class",
+                    "order", "family",
+                    "genus")) %>%
+  mutate(tool = "geNomad")
+
+```
+
+```{r}
+ct3_parse_dt <- ct3_tax_dt %>%
+  select(c(input_name, taxonomy_hierarchy)) %>%
+  mutate(taxonomy_hierarchy = gsub(";._", ";", 
+                                   taxonomy_hierarchy),
+         taxonomy_hierarchy = gsub("^d_", "", 
+                                   taxonomy_hierarchy),
+         input_name = gsub(" .*", "", input_name)) %>%
+  separate(taxonomy_hierarchy, sep = ";",
+           into = c("domain", "superkingdom",
+                    "kingdom", "phylum",
+                    "class",
+                    "order", "family",
+                    "genus")) %>%
+  mutate(tool = "Cenote-Taker 3")
+
+
+```
+
+```{r}
+both_dt <- rbind(ct3_parse_dt,
+                 gnmd_parse_dt) %>%
+  pivot_longer(!c(input_name, tool),
+               names_to = "tax_level",
+               values_to = "taxon") %>%
+  mutate(taxon = case_when(taxon == "" ~ NA,
+                           TRUE ~ taxon)) %>%
+  mutate(tax_level = fct_relevel(tax_level,
+    c("domain", "superkingdom",
+      "kingdom", "phylum",
+      "class",
+      "order", "family",
+      "genus")
+  )) %>%
+  mutate(input_name = gsub("_length.*", "", input_name))
+```
+
+```{r}
+both_dt %>%
+  ggplot(aes(x = tax_level, y = input_name, fill = taxon)) +
+  geom_tile() +
+  facet_wrap(~tool)
+```
+
+
+
+
+
+
+
+

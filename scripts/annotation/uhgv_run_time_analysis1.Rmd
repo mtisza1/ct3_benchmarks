@@ -1,0 +1,145 @@
+---
+title: "compare times, various tools/conditions, virus annotation"
+output: html_notebook
+---
+
+load packages
+```{r}
+library(ggplot2)
+library(data.table)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(wesanderson)
+library(lubridate)
+library(readxl)
+library(forcats)
+
+```
+
+```{r}
+wd <- "/Users/u241374/Library/CloudStorage/OneDrive-BaylorCollegeofMedicine/virus_annotation_benchmarks/uhgv"
+```
+
+
+load run metrics table
+```{r}
+time_metricd_dt <- read_excel(sprintf(
+  "%s/pipeline_time_data1.xlsx",
+  wd),
+  skip = 1)
+
+time_metricd_dt$time <- as.duration(interval("1899-12-31 00:00:00", time_metricd_dt$time))
+```
+
+```{r}
+pal <- wes_palette("GrandBudapest1", type = "discrete")[c(1,2,3)]
+
+pal
+```
+
+```{r}
+time_metric100_dt <- time_metricd_dt %>%
+  filter(`run name` %in% c("ct3time_100uh2","pharokka_100uh10",
+                           "test_phold_uhgv100_1a", "metc_100uhgv_1a",
+                           "gnmd_100uhgv_1a")) %>%
+  mutate(tool = case_when(software == "CT2" ~ "Cenote-\nTaker 2",
+                          software == "CT3" ~ "Cenote-Taker 3",
+                          TRUE ~ software),
+         tool = fct_relevel(tool,  "genomad",
+                                           "metacerberus", 
+                                           "pharokka", 
+                                           "Cenote-Taker 3",
+                                           "phold"))
+```
+
+
+```{r}
+
+time100p <- time_metric100_dt %>%
+  ggplot(aes(x = tool, y = as.numeric(time, "minutes"),
+             fill = tool,
+             label = round(as.numeric(time, "minutes"), digits = 1))) +
+  geom_col() +
+  geom_text(nudge_y = 3) +
+  scale_fill_manual(values = 
+                      c("#0A9F9D", "#CEB175", 
+                        "#E54E21", "#6C8645", 
+                        "#C18748")) +
+  theme_bw() +
+  theme(
+        legend.position = "none") +
+  labs(x = "ORF-calling module",
+       y = "Run Time (minutes)",
+       title = "Annotating 100 human gut virus MAGs from UHGV database")
+
+time100p
+
+ggsave(
+  time100p,
+  file = sprintf("%s/charts/time_100uhgv_bar1.pdf",
+          wd)
+)
+
+ggsave(
+  time100p,
+  file = sprintf("%s/charts/time_100uhgv_bar1.png",
+          wd)
+)
+```
+
+now look at 1000 genomes
+```{r}
+
+time_metric1000_dt <- time_metricd_dt %>%
+  filter(`run name` %in% c("ct3time_1000uh1", "pharokka_1000uh2")) %>%
+  mutate(tool = case_when(software == "CT2" ~ "Cenote-\nTaker 2",
+                          software == "CT3" ~ "Cenote-Taker 3",
+                          TRUE ~ software),
+         tool = fct_relevel(tool,  "genomad",
+                                           "metacerberus", 
+                                           "pharokka", 
+                                           "Cenote-Taker 3",
+                                           "phold"))
+
+```
+
+
+```{r}
+time_1000p <- time_metric1000_dt %>%
+  ggplot(aes(x = tool, y = as.numeric(time, "minutes"),
+             fill = tool,
+             label = round(as.numeric(time, "minutes"), digits = 1))) +
+  geom_col() +
+  geom_text(nudge_y = 2) +
+  scale_fill_manual(values = 
+                      c("#E54E21", "#6C8645")) +
+  theme_bw() +
+  theme(
+        legend.position = "none") +
+  labs(x = "ORF-calling module",
+       y = "Run Time (minutes)",
+       title = "Annotating 1000 human gut virus MAGs from UHGV database")
+
+time_1000p
+
+ggsave(
+  time_1000p,
+  file = sprintf("%s/charts/time_1000uhgv_bar1.pdf",
+          wd)
+)
+
+ggsave(
+  time_1000p,
+  file = sprintf("%s/charts/time_1000uhgv_bar1.png",
+          wd)
+)
+
+```
+
+
+
+
+
+
+

@@ -1,0 +1,546 @@
+---
+title: "Gut DTRs compare structural annoations"
+output: html_notebook
+---
+
+```{r}
+library(data.table)
+library(stringr)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(forcats)
+library(rprojroot)
+library(ggpubr)
+library(cowplot)
+```
+
+
+```{r}
+metc_gene_dt <- fread(sprintf(
+  "%s/data/annotation/gut_dtrs/metc/final_annotation_summary.tsv",
+  find_rstudio_root_file()
+  )
+)
+
+gnmd_gene_dt <- fread(sprintf(
+  "%s/data/annotation/gut_dtrs/genomad/gut_scaffolds_gt1500.dtrs_only_genes.tsv",
+  find_rstudio_root_file()
+  )
+)
+
+phar_gene_dt <- fread(sprintf(
+ "%s/data/annotation/gut_dtrs/pharokka/pharokka_cds_final_merged_output.tsv",
+  find_rstudio_root_file()
+  )
+)
+ct3_gene_dt<- fread(sprintf(
+  "%s/data/annotation/gut_dtrs/ct3/final_genes_to_contigs_annotation_summary.tsv",
+  find_rstudio_root_file()
+  )
+)
+
+#gut_dtrs_1a_virus_summary.tsv
+ct3_sum_dt<- fread(sprintf(
+  "%s/data/annotation/gut_dtrs/ct3/gut_dtrs_1a_virus_summary.tsv",
+  find_rstudio_root_file()
+  )
+)
+
+phold_gene_dt <- fread(sprintf(
+  "%s/data/annotation/gut_dtrs/phold/phold_per_cds_predictions.tsv",
+  find_rstudio_root_file()
+  )
+)
+
+```
+
+```{r}
+ct3_merge_dt <- merge(ct3_gene_dt, ct3_sum_dt %>% 
+                        select(c(contig, input_name, 
+                                 virion_hallmark_genes,
+                                 virion_hallmark_count)),
+                      by = "contig")
+
+
+ct3_struct_dt <- ct3_merge_dt %>%
+  rename(contigID = input_name) %>%
+  filter(grepl("capsid|terminase|portal|major head protein",
+               evidence_description,
+               ignore.case = T),
+         !grepl("minor|small",
+               evidence_description,
+               ignore.case = T)
+) %>%
+  select(c(contigID, evidence_description)) %>%
+  mutate(software = "Cenote-Taker 3") %>%
+  group_by(contigID, software) %>%
+  summarize(n_capsid = sum(grepl("capsid|major head protein", 
+                                   evidence_description,
+                                   ignore.case = T)),
+            n_terminase = sum(grepl("terminase", 
+                                   evidence_description,
+                                   ignore.case = T)),
+            n_portal = sum(grepl("portal", 
+                                   evidence_description,
+                                   ignore.case = T)))
+
+```
+
+
+
+
+```{r}
+ct3_gene_freq <- ct3_merge_dt %>%
+  group_by(evidence_description) %>%
+  summarize(n = n()) %>%
+  arrange(desc(n))
+```
+
+```{r}
+gnmd_gene_dt %>%
+  group_by(annotation_description) %>%
+  summarize(n = n()) %>%
+  arrange(desc(n))
+```
+
+```{r}
+
+gnmd_struct_dt <- gnmd_gene_dt %>%
+  mutate(contigID = sub("_[^_]+$", "", gene)) %>%
+  filter(grepl("capsid|terminase|portal|major head protein|Bacteriophage head to tail connecting protein",
+               annotation_description,
+               ignore.case = T),
+         !grepl("minor|small",
+               annotation_description,
+               ignore.case = T)
+) %>%
+  select(c(contigID, annotation_description)) %>%
+  mutate(software = "geNomad") %>%
+  group_by(contigID, software) %>%
+  summarize(n_capsid = sum(grepl("capsid|major head protein", 
+                                   annotation_description,
+                                   ignore.case = T)),
+            n_terminase = sum(grepl("terminase", 
+                                   annotation_description,
+                                   ignore.case = T)),
+            n_portal = sum(grepl("portal|head to tail connecting protein", 
+                                   annotation_description,
+                                   ignore.case = T)))
+
+```
+
+```{r}
+phar_gene_dt %>%
+  group_by(annot) %>%
+  summarize(n = n()) %>%
+  arrange(desc(n))
+```
+
+
+```{r}
+phar_struct_dt <-phar_gene_dt %>%
+  rename(contigID = contig) %>%
+  filter(grepl("capsid|terminase|portal|major head protein",
+               annot,
+               ignore.case = T),
+         !grepl("minor|small",
+               annot,
+               ignore.case = T)
+) %>%
+  select(c(contigID, annot)) %>%
+  mutate(software = "Pharokka") %>%
+  group_by(contigID, software) %>%
+  summarize(n_capsid = sum(grepl("capsid|major head protein", 
+                                   annot,
+                                   ignore.case = T)),
+            n_terminase = sum(grepl("terminase", 
+                                   annot,
+                                   ignore.case = T)),
+            n_portal = sum(grepl("portal", 
+                                   annot,
+                                   ignore.case = T)))
+
+```
+
+```{r}
+metc_gene_dt %>%
+  group_by(product) %>%
+  summarize(n = n()) %>%
+  arrange(desc(n))
+```
+
+
+```{r}
+metc_info_dt <- merge(metc_gene_dt %>%
+  mutate(contigID = sub("_[^_]+$", "", target)), 
+                       ct3_sum_dt %>% select(c(contig, input_name)),
+                       by.x = "contigID",
+                       by.y = "contig",
+  all.x = T)
+
+metc_struct_dt <- metc_info_dt %>%
+  filter(grepl("capsid|terminase|portal|major head protein|head to tail connecting protein",
+               product,
+               ignore.case = T),
+         !grepl("minor|small",
+               product,
+               ignore.case = T)
+) %>%
+  mutate(contigID = input_name) %>%
+  select(c(contigID, product)) %>%
+  mutate(software = "Metacerberus") %>%
+  group_by(contigID, software) %>%
+  summarize(n_capsid = sum(grepl("capsid|major head protein", 
+                                   product,
+                                   ignore.case = T)),
+            n_terminase = sum(grepl("terminase", 
+                                   product,
+                                   ignore.case = T)),
+            n_portal = sum(grepl("portal|head to tail connecting protein", 
+                                   product,
+                                   ignore.case = T)))
+
+```
+
+phold
+```{r}
+
+phold_info_dt <- merge(phold_gene_dt, 
+                       ct3_sum_dt %>% select(c(contig, input_name)),
+                       by.x = "contig_id",
+                       by.y = "contig")
+
+```
+
+```{r}
+phold_info_dt %>%
+  group_by(product) %>%
+  summarize(n = n()) %>%
+  arrange(desc(n))
+```
+
+
+
+```{r}
+phold_struct_dt <- phold_info_dt %>%
+  mutate(contigID = input_name) %>%
+  filter(grepl("capsid|terminase|portal|major head protein",
+               product,
+               ignore.case = T),
+         !grepl("minor|small",
+               product,
+               ignore.case = T)
+) %>%
+  select(c(contigID, product)) %>%
+  mutate(software = "phold") %>%
+  group_by(contigID, software) %>%
+  summarize(n_capsid = sum(grepl("capsid|major head protein", 
+                                   product,
+                                   ignore.case = T)),
+            n_terminase = sum(grepl("terminase", 
+                                   product,
+                                   ignore.case = T)),
+            n_portal = sum(grepl("portal", 
+                                   product,
+                                   ignore.case = T)))
+```
+
+
+combine and complete
+```{r}
+sum_structl <- list(ct3_struct_dt, gnmd_struct_dt, 
+                    metc_struct_dt, phar_struct_dt,
+                    phold_struct_dt)
+
+struct_all_dt <- rbindlist(sum_structl) %>%
+  complete(contigID, software,
+           fill = list(n_capsid = 0,
+                       n_terminase = 0,
+                       n_portal = 0)) %>%
+  rename(MCP = n_capsid,
+         TerL = n_terminase,
+         Portal = n_portal) %>%
+  pivot_longer(cols = c("MCP", "TerL", "Portal"),
+               names_to = "structure",
+               values_to = "number_annotated") %>%
+  filter(!contigID %in% 
+           c("SRR5665058_NODE_264_length_6187_cov_4_032523",
+             "SRR5665150_NODE_106_length_12582_cov_37_339181"))
+```
+
+```{r}
+
+
+struct_p <- struct_all_dt %>%
+  mutate(contig_ab = gsub(".*_NODE", "NODE", contigID),
+         contig_ab = gsub("_cov_.*", "", contig_ab),
+         software = fct_relevel(software,  "geNomad",
+                                           "Metacerberus", 
+                                           "Pharokka", 
+                                           "Cenote-Taker 3", 
+                                           "phold")) %>%
+  ggplot(aes(x = structure, y = contig_ab, fill = number_annotated)) +
+  geom_tile() +
+  facet_wrap(~software, 
+             nrow = 1) +
+  theme_bw() +
+  scale_fill_gradientn(
+    colours = c('white', "#91D5DE", "#2E8289", "#103326"), 
+    name = "number\nannotated"
+    ) +
+  labs(x = "",
+       y = "Genomes",
+       #title = "Seawater Virome Complete (Circular) Head-Tail Viruses"
+       ) +
+  theme(
+    axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1),
+    axis.text.y = element_blank(),
+    legend.position = "bottom"
+    ) 
+
+struct_p
+
+ggsave(
+  struct_p,
+  file = sprintf("%s/charts/gut_structure_annotation_tile3.pdf",
+                 find_rstudio_root_file())
+)
+
+ggsave(
+  struct_p,
+  file = sprintf("%s/charts/gut_structure_annotation_tile3.png",
+                 find_rstudio_root_file())
+)
+
+```
+
+
+
+count "perfect" MCP/TerL/Portal annotations 
+```{r}
+essential_perf_dt <- rbindlist(sum_structl) %>%
+  complete(contigID, software,
+           fill = list(n_capsid = 0,
+                       n_terminase = 0,
+                       n_portal = 0)) %>%
+  rename(MCP = n_capsid,
+         TerL = n_terminase,
+         Portal = n_portal) %>%
+  mutate(perfect = case_when(
+    MCP ==1 & TerL == 1 & Portal ==1 ~ TRUE,
+    TRUE ~ FALSE
+  )
+  ) %>%
+  filter(perfect == TRUE) %>%
+  group_by(software) %>%
+  summarize(n_perfect = n())
+
+essential_p <- essential_perf_dt %>%
+  mutate(software = fct_relevel(software,  "geNomad",
+                                           "Metacerberus", 
+                                           "Pharokka", 
+                                           "Cenote-Taker 3", 
+                                           "phold")) %>%
+  ggplot(aes(y = n_perfect, x = software, fill= software)) +
+  geom_col() +
+  geom_text(aes(y = n_perfect, label = n_perfect),
+            nudge_y = 2) +
+  scale_fill_manual(values = 
+                      c("#0A9F9D", "#CEB175", 
+                        "#E54E21", "#6C8645", 
+                        "#591f6e")) + 
+  theme_bw() +
+  labs(
+    y = "Single Copy MCP/TerL/Portal",
+    x = ""
+  ) +
+  theme(
+    legend.position = "none",
+    axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)
+    )
+
+essential_p
+
+ggsave(
+  essential_p,
+  file = sprintf(
+    "%s/charts/gut_essential_genes_perfect.pdf",
+    find_rstudio_root_file()
+  ),
+  height = 5,
+  width = 3
+)
+
+ggsave(
+  essential_p,
+  file = sprintf(
+    "%s/charts/gut_essential_genes_perfect.png",
+    find_rstudio_root_file()
+  ),
+  height = 5,
+  width = 3
+)
+```
+
+
+compare non-hypothetical annotation rate
+```{r}
+ct3_annot_rate_dt <- merge(struct_all_dt %>% distinct(contigID),
+                           ct3_merge_dt,
+                           by.x = "contigID", 
+                           by.y = "input_name") %>%
+  filter(!grepl("tRNA-", gene_name)) %>%
+  group_by(contigID) %>%
+  summarize(gene_count = n(),
+            hypo_annotations = n_distinct(gene_name[evidence_description == "hypothetical protein"])) %>%
+  mutate(software = "Cenote-Taker 3")
+```
+
+```{r}
+phar_annot_rate_dt <- merge(struct_all_dt %>% distinct(contigID),
+                           phar_gene_dt,
+                           by.x = "contigID", 
+                           by.y = "contig") %>%
+  group_by(contigID) %>%
+  summarize(gene_count = n(),
+            hypo_annotations = n_distinct(gene[annot == "hypothetical protein"])) %>%
+  mutate(software = "Pharokka")
+```
+
+
+```{r}
+metc_annot_rate_dt <- merge(struct_all_dt %>% distinct(contigID),
+                           metc_info_dt,
+                           by.x = "contigID", 
+                           by.y = "input_name") %>%
+  group_by(contigID) %>%
+  summarize(gene_count = n(),
+            hypo_annotations = 
+              n_distinct(target[grepl("hypothetical|no_annotation", 
+                                         product, 
+                                         ignore.case = T)])) %>%
+  mutate(software = "Metacerberus")
+```
+
+
+```{r}
+gnmd_annot_rate_dt <- merge(struct_all_dt %>% distinct(contigID),
+                           gnmd_gene_dt %>%
+                             mutate(contigID = 
+                                      sub("_[^_]+$", "", gene)),
+                           by.x = "contigID", 
+                           by.y = "contigID") %>%
+  group_by(contigID) %>%
+  summarize(gene_count = n(),
+            hypo_annotations = 
+              n_distinct(gene[is.na(annotation_description)])) %>%
+  mutate(software = "geNomad")
+```
+
+```{r}
+phold_annot_rate_dt <- merge(struct_all_dt %>% distinct(contigID),
+                           phold_info_dt,
+                           by.x = "contigID", 
+                           by.y = "input_name") %>%
+  group_by(contigID) %>%
+  summarize(gene_count = n(),
+            hypo_annotations = 
+              n_distinct(cds_id[grepl("hypothetical", 
+                                         product, 
+                                         ignore.case = T)])) %>%
+  mutate(software = "phold")
+```
+
+
+combine and plot
+```{r}
+sum_hypol <- list(ct3_annot_rate_dt, gnmd_annot_rate_dt, 
+                  metc_annot_rate_dt, phar_annot_rate_dt,
+                  phold_annot_rate_dt)
+
+hypo_all_dt <- rbindlist(sum_hypol) %>%
+  mutate(hypo_prop = hypo_annotations/gene_count,
+         software = fct_relevel(software,  "geNomad",
+                                           "Metacerberus", 
+                                           "Pharokka", 
+                                           "Cenote-Taker 3",
+                                           "phold"))
+```
+
+```{r}
+hypo_rate_p <- hypo_all_dt %>%
+  ggplot(aes(x = software, y = 1 - hypo_prop,
+             fill = software)) +
+  geom_boxplot() + 
+  geom_point(color = "grey30") +
+  scale_fill_manual(values = 
+                      c("#0A9F9D", "#CEB175", 
+                        "#E54E21", "#6C8645", #"#C18748", 
+                        "#591f6e")) + 
+  stat_compare_means(
+    method = "wilcox.test",
+    label = "p.signif",
+    comparisons = list(
+      c("Cenote-Taker 3", "geNomad"),
+      c("Cenote-Taker 3", "Metacerberus"),
+      c("Cenote-Taker 3", "Pharokka"),
+      c("Cenote-Taker 3", "phold")
+    )
+  ) +
+  theme_bw() +
+  scale_y_continuous(labels = scales::percent) +
+  labs(y = "Percentage of genes with\nnon-hypothetical annotation",
+       x = "",
+       #title = "Seawater Virome Complete (Circular) Head-Tail Viruses, n=242"
+       ) +
+  theme(
+    legend.position = "none",
+    axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)
+    )
+
+hypo_rate_p
+
+ggsave(
+  hypo_rate_p,
+  file = sprintf("%s/charts/gut_nonhypo_box2.pdf",
+                 find_rstudio_root_file())
+)
+
+ggsave(
+  hypo_rate_p,
+  file = sprintf("%s/charts/gut_nonhypo_box2.png",
+                 find_rstudio_root_file())
+)
+
+
+```
+
+
+
+```{r}
+right_side <- cowplot::plot_grid(
+  essential_p, hypo_rate_p,
+  ncol = 1
+)
+#right_side
+all_p <- cowplot::plot_grid(
+  struct_p, right_side,
+  ncol = 2,
+  rel_widths = c(2, 1)
+)
+all_p
+
+ggsave(
+  all_p,
+  file = sprintf(
+    "%s/charts/gut_annot_combined_plots1.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 9,
+  height = 8
+)
+```
+
+
+

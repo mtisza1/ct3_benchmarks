@@ -1,0 +1,177 @@
+---
+title: "Genome annotation comparisons, seawater DTRs"
+output: html_notebook
+---
+
+
+```{r}
+library(gggenomes)
+library(data.table)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(wesanderson)
+```
+
+
+
+```{r}
+wd <- "/Users/u241374/Library/CloudStorage/OneDrive-BaylorCollegeofMedicine/virus_annotation_benchmarks/real_data/seawater_dtrs"
+```
+
+
+```{r}
+pharokka_prod_dt <- fread(sprintf(
+  "%s/pharokka/redo_names/pharokka_cds_final_merged_output.tsv",
+  wd
+  ),
+  header = T, 
+  sep = "\t") %>%
+  select(c("contig", "gene", "start", "stop", "frame", 
+           "annot")) %>%
+  mutate(end = case_when(stop > start ~ stop,
+                         TRUE ~ start),
+         start = case_when(start > stop ~ stop,
+                         TRUE ~ start)) %>%
+  select(-stop) %>%
+  rename(gene_orient = frame,
+         evidence_description = annot,
+         gene_name = gene) %>%
+  mutate(seq_id = "pharokka")
+
+#pharokka_prod_dt
+```
+
+```{r}
+ct3_prod_dt <- fread(sprintf(
+  "%s/ct3/final_genes_to_contigs_annotation_summary.tsv",
+  wd
+  ),
+  sep = "\t",
+  header = T) %>%
+  select(c("contig", "gene_name", "gene_start", "gene_stop", "gene_orient", 
+           "evidence_description")) %>%
+  rename(end = gene_stop,
+         start = gene_start) %>%
+  mutate(evidence_description = gsub("-", " ", evidence_description)) %>%
+  mutate(seq_id = "Cenote-Taker 3")
+
+
+
+```
+
+```{r}
+phold_prod_dt <- fread(sprintf(
+  "%s/phold/phold_per_cds_predictions.tsv",
+  wd
+),
+  sep = "\t",
+  header = T) %>%
+  mutate(endf = case_when(strand == "+" ~ end,
+                         TRUE ~ start),
+         startf = case_when(strand == "+" ~ start,
+                         TRUE ~ end)) %>%
+  select(-c(start, end)) %>%
+  rename(gene_orient = strand,
+         evidence_description = product,
+         gene_name = cds_id,
+         contig = contig_id,
+         start = startf,
+         end = endf) %>%
+  select(c("contig", "gene_name", "start", "end", "gene_orient", 
+           "evidence_description")) %>%
+  mutate(seq_id = "phold")
+
+```
+
+#2-643074_NODE_77_length_44530_cov_4_188906
+
+```{r}
+sea144_dt <- rbind(pharokka_prod_dt,
+                        ct3_prod_dt,
+                        phold_prod_dt) %>%
+  filter(contig %in% c("seawater_dtrs_1a_144")) %>%
+  mutate(evidence_description = na_if(evidence_description,
+                                      "hypothetical protein"))
+```
+
+
+```{r}
+
+pal = wes_palette("FantasticFox1", 50, type = "continuous")
+
+sea_1p <-  sea144_dt %>%
+  mutate(evidence_description = tolower(evidence_description),
+         evidence_description = gsub(" protein", "", evidence_description)
+         ) %>%
+  gggenomes() +
+  geom_seq() +
+  geom_gene(aes(fill=evidence_description)) +
+  geom_gene_tag(aes(label=evidence_description)) +
+  geom_bin_label() +
+  theme(legend.position = "none") +
+  scale_fill_manual(values=pal, na.value="cornsilk3")
+
+sea_1p
+
+
+```
+
+# seawater_dtrs_1a_123
+
+```{r}
+sea123_dt <- rbind(pharokka_prod_dt,
+                        ct3_prod_dt,
+                        phold_prod_dt) %>%
+  filter(contig %in% c("seawater_dtrs_1a_123")) %>%
+  mutate(evidence_description = na_if(evidence_description,
+                                      "hypothetical protein"))
+```
+
+
+```{r}
+
+pal = wes_palette("FantasticFox1", 45, type = "continuous")
+
+sea_123p <-  sea123_dt %>%
+  mutate(evidence_description = tolower(evidence_description),
+         evidence_description = gsub(" protein", "", evidence_description)
+         ) %>%
+  gggenomes() +
+  geom_seq() +
+  geom_gene(aes(fill=evidence_description)) +
+  geom_gene_tag(aes(label=evidence_description)) +
+  geom_bin_label() +
+  theme(legend.position = "none") +
+  scale_fill_manual(values=pal, na.value="cornsilk3")
+
+sea_123p
+
+ggsave(
+  sea_123p,
+  file = sprintf("%s/charts/compare_maps_sea_dtr123.pdf",
+                 wd),
+  width = 10,
+  height = 4
+)
+
+ggsave(
+  sea_123p,
+  file = sprintf("%s/charts/compare_maps_sea_dtr123.png",
+                 wd),
+  width = 10,
+  height = 4
+)
+
+
+```
+
+
+
+
+
+
+
+
+
+
