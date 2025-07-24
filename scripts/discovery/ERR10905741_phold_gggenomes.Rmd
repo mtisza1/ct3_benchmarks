@@ -1,5 +1,5 @@
 ---
-title: "genome plot of phold annotations DRR290133"
+title: "genome plot of phold annotations ERR10905741"
 output: html_notebook
 ---
 
@@ -19,250 +19,6 @@ library(wesanderson)
 
 ```
 
-load table and prep for gggenomes
-```{r}
-phold_prod_dt <- fread(sprintf(
-  "%s/data/discovery/DRR290133/phold_annotations/ct3_DRR290133_1b_294_phold1/phold_per_cds_predictions.tsv",
-  find_rstudio_root_file()
-),
-  sep = "\t",
-  header = T) %>%
-  mutate(
-    endf = case_when(strand == "+" ~ end, TRUE ~ start),
-    startf = case_when(strand == "+" ~ start, TRUE ~ end)
-    ) %>%
-  select(-c(start, end)) %>%
-  rename(gene_orient = strand,
-         evidence_description = product,
-         gene_name = cds_id,
-         seq_name = contig_id,
-         start = startf,
-         end = endf,
-         function_cat = `function`) %>%
-  select(
-    c("seq_name", "gene_name", 
-      "start", "end", 
-      "gene_orient", "evidence_description", 
-      "function_cat"
-      )
-    ) %>%
-  mutate(
-    seq_id = "phold",
-    evidence_description = na_if(evidence_description,"hypothetical protein"),
-    function_cat  = na_if(function_cat,"unknown function"),
-    important_virion = case_when(
-      grepl(
-        "major capsid|major head|terminase large|portal", 
-        evidence_description, 
-        ignore.case = T) ~ 1,
-      TRUE ~ 0
-    )
-    )
-
-```
-
-
-plot gggenomes object
-```{r}
-pal = wes_palette("FantasticFox1", 7, type = "continuous")
-
-phold1_ggg <-  phold_prod_dt %>%
-  gggenomes() +
-  geom_seq() +
-  geom_gene(aes(fill=function_cat, stroke=important_virion), size = 3.5) +
-  geom_gene_tag(aes(label=evidence_description)) +
-  geom_bin_label() +
-  theme(legend.position = "bottom") +
-  scale_fill_manual(values=pal, na.value="cornsilk3")
-
-phold1_ggg
-
-```
-
-
-## phold DRR290133 cenote-taker prediction only
-load product table and prep for gggenomes
-```{r}
-DRR290133_ct_phold_prod_dt <- fread(sprintf(
-    "%s/data/discovery/DRR290133/phold_annotations/phold_DRR290133_ct3_1/phold_per_cds_predictions.tsv",
-    find_rstudio_root_file()
-  ),
-  sep = "\t",
-  header = T) %>%
-  rename(gene_orient = strand,
-         evidence_description = product,
-         gene_name = cds_id,
-         seq_id = contig_id,
-         function_cat = `function`) %>%
-  select(
-    c("seq_id", "gene_name", 
-      "start", "end", 
-      "gene_orient", "evidence_description", 
-      "function_cat"
-      )
-    ) %>%
-  mutate(
-    evidence_description = na_if(evidence_description,"hypothetical protein"),
-    function_cat  = na_if(function_cat,"unknown function"),
-    function_cat  = na_if(function_cat,""),
-    important_virion = case_when(
-      grepl(
-        "major capsid|major head|terminase large|portal", 
-        evidence_description, 
-        ignore.case = T) ~ 0.5,
-      TRUE ~ 0
-    ),
-    gene_lab_imp = case_when(
-      grepl(
-        "major capsid|major head", 
-        evidence_description, 
-        ignore.case = T) ~ "MCP",
-      grepl(
-        "terminase large", 
-        evidence_description, 
-        ignore.case = T) ~ "TerL",
-      grepl(
-        "portal", 
-        evidence_description, 
-        ignore.case = T) ~ "Portal",
-      TRUE ~ ""
-    )
-  )
-
-```
-
-```{r}
-DRR290133_ct_phold_prod_dt %>%
-  group_by(seq_id) %>%
-  summarize(n = n())
-```
-
-
-plot gggenomes object
-```{r}
-#pal = wes_palette("FantasticFox1", 10, type = "continuous")
-
-DRR290133_ct_ggg <-  DRR290133_ct_phold_prod_dt %>%
-  group_by(seq_id) %>%
-  mutate(n_genes = n()) %>%
-  ungroup() %>%
-  filter(n_genes <= 200) %>%
-  gggenomes() +
-  geom_seq() +
-  geom_gene(aes(fill=function_cat, stroke=important_virion), size = 3.5, 
-            shape = c(4,1)
-  ) +
-  geom_gene_tag(aes(label=gene_lab_imp), nudge_y = 0.1) +
-  geom_bin_label() +
-  theme(legend.position = "bottom") +
-  scale_fill_manual(values=color_map, na.value="cornsilk3")
-
-DRR290133_ct_ggg
-
-```
-
-```{r}
-DRR290133_ct_phold_prod_dt %>%
-  complete(seq_id, function_cat) %>%
-  filter(function_cat %in% c("connector", "head and packaging", "tail")) %>%
-  group_by(seq_id, function_cat) %>%
-  summarize(func_count = n()) %>%
-  ggplot(aes(x = seq_id, y = func_count, fill = function_cat)) +
-  geom_col()
-  
-```
-
-
-```{r}
-DRR290133_ct_phold_prod_dt %>%
-  group_by(seq_id) %>%
-  summarize(Major_Capsid = sum(grepl("major head protein", 
-                                   evidence_description,
-                                   ignore.case = T)),
-            Large_Terminase = sum(grepl("terminase large subunit", 
-                                   evidence_description,
-                                   ignore.case = T)),
-            Portal = sum(grepl("portal", 
-                                   evidence_description,
-                                   ignore.case = T))) %>%
-  pivot_longer(cols = c("Major_Capsid", "Large_Terminase", "Portal"),
-               names_to = "structure",
-               values_to = "number_annotated") %>%
-  
-  ggplot(aes(x = structure, y = seq_id, fill = number_annotated)) +
-  geom_tile() +
-  theme_bw() +
-  scale_fill_gradientn(colours = c('white', "#91D5DE", "#2E8289"),
-                       name = "number\nannotated") +
-  labs(x = "",
-       y = "Genome Name") +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
-  
-```
-
-## phold DRR290133 genomad prediction only
-load product table and prep for gggenomes
-```{r}
-DRR290133_gnmd_phold_prod_dt <- fread(sprintf(
-    "%s/data/discovery/DRR290133/phold_annotations/phold_DRR290133_genomad1/phold_per_cds_predictions.tsv",
-    find_rstudio_root_file()
-  ),
-  sep = "\t",
-  header = T) %>%
-  rename(gene_orient = strand,
-         evidence_description = product,
-         gene_name = cds_id,
-         seq_id = contig_id,
-         function_cat = `function`) %>%
-  select(
-    c("seq_id", "gene_name", 
-      "start", "end", 
-      "gene_orient", "evidence_description", 
-      "function_cat"
-      )
-    ) %>%
-  mutate(
-    evidence_description = na_if(evidence_description,"hypothetical protein"),
-    function_cat  = na_if(function_cat,"unknown function"),
-    function_cat  = na_if(function_cat,""),
-    important_virion = case_when(
-      grepl(
-        "major capsid|major head|terminase large|portal", 
-        evidence_description, 
-        ignore.case = T) ~ 0.5,
-      TRUE ~ 0
-    ),
-    gene_lab_imp = case_when(
-      grepl(
-        "major capsid|major head", 
-        evidence_description, 
-        ignore.case = T) ~ "MCP",
-      grepl(
-        "terminase large", 
-        evidence_description, 
-        ignore.case = T) ~ "TerL",
-      grepl(
-        "portal", 
-        evidence_description, 
-        ignore.case = T) ~ "Portal",
-      TRUE ~ ""
-    )
-  )
-
-```
-
-```{r}
-DRR290133_gnmd_phold_prod_dt %>%
-  group_by(seq_id) %>%
-  summarize(n = n())
-```
-
-
-```{r}
-rbind(DRR290133_ct_phold_prod_dt, DRR290133_ct_phold_prod_dt) %>%
-  distinct(function_cat)
-```
-
 ```{r}
 color_map = c(
   "head and packaging" = "#469BEC",
@@ -277,75 +33,11 @@ color_map = c(
 )
 ```
 
-
-
-plot gggenomes object
-```{r}
-
-DRR290133_gnmd_ggg <-  DRR290133_gnmd_phold_prod_dt %>%
-  group_by(seq_id) %>%
-  mutate(n_genes = n()) %>%
-  ungroup() %>%
-  filter(n_genes <= 200) %>%
-  gggenomes() +
-  geom_seq() +
-  geom_gene(aes(fill=function_cat, stroke=important_virion), size = 3.5, 
-            shape = c(4,1)
-  ) +
-  geom_gene_tag(aes(label=gene_lab_imp), nudge_y = 0.1) +
-  geom_bin_label() +
-  theme(legend.position = "bottom") +
-  scale_fill_manual(values=color_map, na.value="cornsilk3")
-
-DRR290133_gnmd_ggg
-
-```
-
-
-```{r}
-DRR290133_gnmd_phold_prod_dt %>%
-  complete(seq_id, function_cat) %>%
-  filter(function_cat %in% c("connector", "head and packaging", "tail")) %>%
-  group_by(seq_id, function_cat) %>%
-  summarize(func_count = n()) %>%
-  ggplot(aes(x = seq_id, y = func_count, fill = function_cat)) +
-  geom_col()
-  
-```
-
-```{r}
-DRR290133_gnmd_phold_prod_dt %>%
-  group_by(seq_id) %>%
-  summarize(Major_Capsid = sum(grepl("major head protein", 
-                                   evidence_description,
-                                   ignore.case = T)),
-            Large_Terminase = sum(grepl("terminase large subunit", 
-                                   evidence_description,
-                                   ignore.case = T)),
-            Portal = sum(grepl("portal", 
-                                   evidence_description,
-                                   ignore.case = T))) %>%
-  pivot_longer(cols = c("Major_Capsid", "Large_Terminase", "Portal"),
-               names_to = "structure",
-               values_to = "number_annotated") %>%
-  
-  ggplot(aes(x = structure, y = seq_id, fill = number_annotated)) +
-  geom_tile() +
-  theme_bw() +
-  scale_fill_gradientn(colours = c('white', "#91D5DE", "#2E8289"),
-                       name = "number\nannotated") +
-  labs(x = "",
-       y = "Genome Name") +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
-  
-```
-
-
 ## phold ERR10905741 cenote-taker prediction only
 load product table and prep for gggenomes
 ```{r}
-DRR290133_ct_phold_prod_dt <- fread(sprintf(
-    "%s/data/discovery/DRR290133/phold_annotations/phold_DRR290133_ct3_1/phold_per_cds_predictions.tsv",
+ERR10905741_ct_phold_prod_dt <- fread(sprintf(
+    "%s/data/discovery/ERR10905741/phold_annotations/phold_ERR10905741_ct3/phold_per_cds_predictions.tsv",
     find_rstudio_root_file()
   ),
   sep = "\t",
@@ -392,13 +84,17 @@ DRR290133_ct_phold_prod_dt <- fread(sprintf(
 
 ```
 
+```{r}
+ERR10905741_ct_phold_prod_dt %>%
+  group_by(seq_id) %>%
+  summarize(n = n())
+```
 
 
 plot gggenomes object
 ```{r}
-#pal = wes_palette("FantasticFox1", 10, type = "continuous")
 
-DRR290133_ct_ggg <-  DRR290133_ct_phold_prod_dt %>%
+ERR10905741_ct_ggg <-  ERR10905741_ct_phold_prod_dt %>%
   group_by(seq_id) %>%
   mutate(n_genes = n()) %>%
   ungroup() %>%
@@ -409,16 +105,212 @@ DRR290133_ct_ggg <-  DRR290133_ct_phold_prod_dt %>%
             shape = c(4,1)
   ) +
   geom_gene_tag(aes(label=gene_lab_imp), nudge_y = 0.1) +
-  geom_bin_label() +
+  #geom_bin_label() +
   theme(legend.position = "bottom") +
   scale_fill_manual(values=color_map, na.value="cornsilk3")
 
-DRR290133_ct_ggg
+ERR10905741_ct_ggg
+
+ggsave(
+  ERR10905741_ct_ggg,
+  file = sprintf(
+    "%s/charts/ERR10905741_ct3_only_phold_maps.shorter.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 9,
+  height = 7
+)
 
 ```
 
+```{r}
+ERR10905741_ct_phold_prod_dt %>%
+  complete(seq_id, function_cat) %>%
+  filter(function_cat %in% c("connector", "head and packaging", "tail")) %>%
+  group_by(seq_id, function_cat) %>%
+  summarize(func_count = n()) %>%
+  ggplot(aes(x = seq_id, y = func_count, fill = function_cat)) +
+  geom_col()
+  
+```
 
 
+```{r}
+ERR10905741_ct_struct_p <- ERR10905741_ct_phold_prod_dt %>%
+  group_by(seq_id) %>%
+  summarize(Major_Capsid = sum(grepl("major head protein", 
+                                   evidence_description,
+                                   ignore.case = T)),
+            Large_Terminase = sum(grepl("terminase large subunit", 
+                                   evidence_description,
+                                   ignore.case = T)),
+            Portal = sum(grepl("portal", 
+                                   evidence_description,
+                                   ignore.case = T))) %>%
+  pivot_longer(cols = c("Major_Capsid", "Large_Terminase", "Portal"),
+               names_to = "structure",
+               values_to = "number_annotated") %>%
+  
+  ggplot(aes(x = structure, y = seq_id, fill = number_annotated)) +
+  geom_tile() +
+  theme_bw() +
+  scale_fill_gradientn(colours = c('white', "#91D5DE", "#2E8289"),
+                       name = "number\nannotated") +
+  labs(x = "",
+       y = "Genome Name") +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+
+ERR10905741_ct_struct_p
+
+ggsave(
+  ERR10905741_ct_struct_p,
+  file = sprintf(
+    "%s/charts/ERR10905741_ct3_only_struct_tiles.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 4,
+  height = 5
+)
+```
 
 
+## phold ERR10905741 genomad prediction only
+load product table and prep for gggenomes
+```{r}
+ERR10905741_gnmd_phold_prod_dt <- fread(sprintf(
+    "%s/data/discovery/ERR10905741/phold_annotations/phold_ERR10905741_gnmd/phold_per_cds_predictions.tsv",
+    find_rstudio_root_file()
+  ),
+  sep = "\t",
+  header = T) %>%
+  rename(gene_orient = strand,
+         evidence_description = product,
+         gene_name = cds_id,
+         seq_id = contig_id,
+         function_cat = `function`) %>%
+  select(
+    c("seq_id", "gene_name", 
+      "start", "end", 
+      "gene_orient", "evidence_description", 
+      "function_cat"
+      )
+    ) %>%
+  mutate(
+    evidence_description = na_if(evidence_description,"hypothetical protein"),
+    function_cat  = na_if(function_cat,"unknown function"),
+    function_cat  = na_if(function_cat,""),
+    important_virion = case_when(
+      grepl(
+        "major capsid|major head|terminase large|portal", 
+        evidence_description, 
+        ignore.case = T) ~ 0.5,
+      TRUE ~ 0
+    ),
+    gene_lab_imp = case_when(
+      grepl(
+        "major capsid|major head", 
+        evidence_description, 
+        ignore.case = T) ~ "MCP",
+      grepl(
+        "terminase large", 
+        evidence_description, 
+        ignore.case = T) ~ "TerL",
+      grepl(
+        "portal", 
+        evidence_description, 
+        ignore.case = T) ~ "Portal",
+      TRUE ~ ""
+    )
+  )
+
+```
+
+```{r}
+ERR10905741_gnmd_phold_prod_dt %>%
+  group_by(seq_id) %>%
+  summarize(n = n())
+```
+
+
+plot gggenomes object
+```{r}
+
+ERR10905741_gnmd_ggg <-  ERR10905741_gnmd_phold_prod_dt %>%
+  group_by(seq_id) %>%
+  mutate(n_genes = n()) %>%
+  ungroup() %>%
+  filter(n_genes <= 50) %>%
+  gggenomes() +
+  geom_seq() +
+  geom_gene(aes(fill=function_cat, stroke=important_virion), size = 2, 
+            shape = c(4,1)
+  ) +
+  geom_gene_tag(aes(label=gene_lab_imp), nudge_y = 0.1) +
+  #geom_bin_label() +
+  theme(legend.position = "bottom") +
+  scale_fill_manual(values=color_map, na.value="cornsilk3")
+
+ERR10905741_gnmd_ggg
+
+ggsave(
+  ERR10905741_gnmd_ggg,
+  file = sprintf(
+    "%s/charts/ERR10905741_gnmd_only_phold_maps.shorter.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 9,
+  height = 12
+)
+
+```
+
+```{r}
+ERR10905741_gnmd_phold_prod_dt %>%
+  complete(seq_id, function_cat) %>%
+  filter(function_cat %in% c("connector", "head and packaging", "tail")) %>%
+  group_by(seq_id, function_cat) %>%
+  summarize(func_count = n()) %>%
+  ggplot(aes(x = seq_id, y = func_count, fill = function_cat)) +
+  geom_col()
+  
+```
+
+
+```{r}
+ERR10905741_gnmd_struct_p <- ERR10905741_gnmd_phold_prod_dt %>%
+  group_by(seq_id) %>%
+  summarize(Major_Capsid = sum(grepl("major head protein", 
+                                   evidence_description,
+                                   ignore.case = T)),
+            Large_Terminase = sum(grepl("terminase large subunit", 
+                                   evidence_description,
+                                   ignore.case = T)),
+            Portal = sum(grepl("portal", 
+                                   evidence_description,
+                                   ignore.case = T))) %>%
+  pivot_longer(cols = c("Major_Capsid", "Large_Terminase", "Portal"),
+               names_to = "structure",
+               values_to = "number_annotated") %>%
+  
+  ggplot(aes(x = structure, y = seq_id, fill = number_annotated)) +
+  geom_tile() +
+  theme_bw() +
+  scale_fill_gradientn(colours = c('white', "#91D5DE", "#2E8289"),
+                       name = "number\nannotated") +
+  labs(x = "",
+       y = "Genome Name") +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+
+ERR10905741_gnmd_struct_p
+
+ggsave(
+  ERR10905741_gnmd_struct_p,
+  file = sprintf(
+    "%s/charts/ERR10905741_gnmd_only_struct_tiles.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 8,
+  height = 5
+)
+```
 
