@@ -19,66 +19,19 @@ library(wesanderson)
 
 ```
 
-load table and prep for gggenomes
 ```{r}
-phold_prod_dt <- fread(sprintf(
-  "%s/data/discovery/DRR290133/phold_annotations/ct3_DRR290133_1b_294_phold1/phold_per_cds_predictions.tsv",
-  find_rstudio_root_file()
-),
-  sep = "\t",
-  header = T) %>%
-  mutate(
-    endf = case_when(strand == "+" ~ end, TRUE ~ start),
-    startf = case_when(strand == "+" ~ start, TRUE ~ end)
-    ) %>%
-  select(-c(start, end)) %>%
-  rename(gene_orient = strand,
-         evidence_description = product,
-         gene_name = cds_id,
-         seq_name = contig_id,
-         start = startf,
-         end = endf,
-         function_cat = `function`) %>%
-  select(
-    c("seq_name", "gene_name", 
-      "start", "end", 
-      "gene_orient", "evidence_description", 
-      "function_cat"
-      )
-    ) %>%
-  mutate(
-    seq_id = "phold",
-    evidence_description = na_if(evidence_description,"hypothetical protein"),
-    function_cat  = na_if(function_cat,"unknown function"),
-    important_virion = case_when(
-      grepl(
-        "major capsid|major head|terminase large|portal", 
-        evidence_description, 
-        ignore.case = T) ~ 1,
-      TRUE ~ 0
-    )
-    )
-
+color_map = c(
+  "head and packaging" = "#469BEC",
+  "tail" = "#EB8D43",
+  "transcription regulation" = "#DBA662",
+  "DNA, RNA and nucleotide metabolism" = "#F2D56F",
+  "other" = "#DFDED3",
+  "moron, auxiliary metabolic gene and host takeover" = "#A89F8E",
+  "connector" = "#8CBEB1",
+  "lysis" = "#48594E",
+  "integration and excision" = "#9B6981"
+)
 ```
-
-
-plot gggenomes object
-```{r}
-pal = wes_palette("FantasticFox1", 7, type = "continuous")
-
-phold1_ggg <-  phold_prod_dt %>%
-  gggenomes() +
-  geom_seq() +
-  geom_gene(aes(fill=function_cat, stroke=important_virion), size = 3.5) +
-  geom_gene_tag(aes(label=evidence_description)) +
-  geom_bin_label() +
-  theme(legend.position = "bottom") +
-  scale_fill_manual(values=pal, na.value="cornsilk3")
-
-phold1_ggg
-
-```
-
 
 ## phold DRR290133 cenote-taker prediction only
 load product table and prep for gggenomes
@@ -152,14 +105,56 @@ DRR290133_ct_ggg <-  DRR290133_ct_phold_prod_dt %>%
   geom_gene(aes(fill=function_cat, stroke=important_virion), size = 3.5, 
             shape = c(4,1)
   ) +
-  geom_gene_tag(aes(label=gene_lab_imp), nudge_y = 0.1) +
-  geom_bin_label() +
+  geom_gene_text(aes(label=gene_lab_imp)) +
+  #geom_bin_label() +
   theme(legend.position = "bottom") +
   scale_fill_manual(values=color_map, na.value="cornsilk3")
 
 DRR290133_ct_ggg
 
+ggsave(
+  DRR290133_ct_ggg,
+  file = sprintf(
+    "%s/charts/DRR290133_ct3_only_phold_maps.shorter.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 9,
+  height = 7
+)
 ```
+
+longer contigs
+```{r}
+#pal = wes_palette("FantasticFox1", 10, type = "continuous")
+
+DRR290133_ct_l_ggg <-  DRR290133_ct_phold_prod_dt %>%
+  group_by(seq_id) %>%
+  mutate(n_genes = n()) %>%
+  ungroup() %>%
+  filter(n_genes > 200) %>%
+  gggenomes() +
+  geom_seq() +
+  geom_gene(aes(fill=function_cat, stroke=important_virion), size = 3.5, 
+            shape = c(4,1)
+  ) +
+  geom_gene_text(aes(label=gene_lab_imp), nudge_y = 0.11) +
+  #geom_bin_label() +
+  theme(legend.position = "bottom") +
+  scale_fill_manual(values=color_map, na.value="cornsilk3")
+
+DRR290133_ct_l_ggg
+
+ggsave(
+  DRR290133_ct_l_ggg,
+  file = sprintf(
+    "%s/charts/DRR290133_ct3_only_phold_maps.longer.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 9,
+  height = 5
+)
+```
+
 
 ```{r}
 DRR290133_ct_phold_prod_dt %>%
@@ -174,18 +169,18 @@ DRR290133_ct_phold_prod_dt %>%
 
 
 ```{r}
-DRR290133_ct_phold_prod_dt %>%
+DRR290133_ct_struct_p <- DRR290133_ct_phold_prod_dt %>%
   group_by(seq_id) %>%
-  summarize(Major_Capsid = sum(grepl("major head protein", 
+  summarize(MCP = sum(grepl("major head protein", 
                                    evidence_description,
                                    ignore.case = T)),
-            Large_Terminase = sum(grepl("terminase large subunit", 
+            TerL = sum(grepl("terminase large subunit", 
                                    evidence_description,
                                    ignore.case = T)),
             Portal = sum(grepl("portal", 
                                    evidence_description,
                                    ignore.case = T))) %>%
-  pivot_longer(cols = c("Major_Capsid", "Large_Terminase", "Portal"),
+  pivot_longer(cols = c("MCP", "TerL", "Portal"),
                names_to = "structure",
                values_to = "number_annotated") %>%
   
@@ -195,9 +190,23 @@ DRR290133_ct_phold_prod_dt %>%
   scale_fill_gradientn(colours = c('white', "#91D5DE", "#2E8289"),
                        name = "number\nannotated") +
   labs(x = "",
-       y = "Genome Name") +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
-  
+       y = "Genomes") +
+  theme(
+    axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1),
+    axis.text.y = element_blank()
+    )
+
+DRR290133_ct_struct_p
+
+ggsave(
+  DRR290133_ct_struct_p,
+  file = sprintf(
+    "%s/charts/DRR290133_ct3_only_struct_tiles.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 4,
+  height = 5
+)
 ```
 
 ## phold DRR290133 genomad prediction only
@@ -263,19 +272,7 @@ rbind(DRR290133_ct_phold_prod_dt, DRR290133_ct_phold_prod_dt) %>%
   distinct(function_cat)
 ```
 
-```{r}
-color_map = c(
-  "head and packaging" = "#469BEC",
-  "tail" = "#EB8D43",
-  "transcription regulation" = "#DBA662",
-  "DNA, RNA and nucleotide metabolism" = "#F2D56F",
-  "other" = "#DFDED3",
-  "moron, auxiliary metabolic gene and host takeover" = "#A89F8E",
-  "connector" = "#8CBEB1",
-  "lysis" = "#48594E",
-  "integration and excision" = "#9B6981"
-)
-```
+
 
 
 
@@ -292,15 +289,56 @@ DRR290133_gnmd_ggg <-  DRR290133_gnmd_phold_prod_dt %>%
   geom_gene(aes(fill=function_cat, stroke=important_virion), size = 3.5, 
             shape = c(4,1)
   ) +
-  geom_gene_tag(aes(label=gene_lab_imp), nudge_y = 0.1) +
-  geom_bin_label() +
+  geom_gene_text(aes(label=gene_lab_imp)) +
+  #geom_bin_label() +
   theme(legend.position = "bottom") +
   scale_fill_manual(values=color_map, na.value="cornsilk3")
 
 DRR290133_gnmd_ggg
 
+ggsave(
+  DRR290133_gnmd_ggg,
+  file = sprintf(
+    "%s/charts/DRR290133_gnmd_only_phold_maps.shorter.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 9,
+  height = 7
+)
 ```
 
+
+longer contigs
+```{r}
+#pal = wes_palette("FantasticFox1", 10, type = "continuous")
+
+DRR290133_gnmd_l_ggg <-  DRR290133_gnmd_phold_prod_dt %>%
+  group_by(seq_id) %>%
+  mutate(n_genes = n()) %>%
+  ungroup() %>%
+  filter(n_genes > 200) %>%
+  gggenomes() +
+  geom_seq() +
+  geom_gene(aes(fill=function_cat, stroke=important_virion), size = 3.5, 
+            shape = c(4,1)
+  ) +
+  geom_gene_text(aes(label=gene_lab_imp), nudge_y = 0.11) +
+  #geom_bin_label() +
+  theme(legend.position = "bottom") +
+  scale_fill_manual(values=color_map, na.value="cornsilk3")
+
+DRR290133_gnmd_l_ggg
+
+ggsave(
+  DRR290133_gnmd_l_ggg,
+  file = sprintf(
+    "%s/charts/DRR290133_gnmd_only_phold_maps.longer.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 9,
+  height = 5
+)
+```
 
 ```{r}
 DRR290133_gnmd_phold_prod_dt %>%
@@ -314,18 +352,18 @@ DRR290133_gnmd_phold_prod_dt %>%
 ```
 
 ```{r}
-DRR290133_gnmd_phold_prod_dt %>%
+DRR290133_gnmd_struct_p <- DRR290133_gnmd_phold_prod_dt %>%
   group_by(seq_id) %>%
-  summarize(Major_Capsid = sum(grepl("major head protein", 
+  summarize(MCP = sum(grepl("major head protein", 
                                    evidence_description,
                                    ignore.case = T)),
-            Large_Terminase = sum(grepl("terminase large subunit", 
+            TerL = sum(grepl("terminase large subunit", 
                                    evidence_description,
                                    ignore.case = T)),
             Portal = sum(grepl("portal", 
                                    evidence_description,
                                    ignore.case = T))) %>%
-  pivot_longer(cols = c("Major_Capsid", "Large_Terminase", "Portal"),
+  pivot_longer(cols = c("MCP", "TerL", "Portal"),
                names_to = "structure",
                values_to = "number_annotated") %>%
   
@@ -335,8 +373,23 @@ DRR290133_gnmd_phold_prod_dt %>%
   scale_fill_gradientn(colours = c('white', "#91D5DE", "#2E8289"),
                        name = "number\nannotated") +
   labs(x = "",
-       y = "Genome Name") +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+       y = "Genomes") +
+  theme(
+    axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1),
+    axis.text.y = element_blank()
+    )
+
+DRR290133_gnmd_struct_p
+
+ggsave(
+  DRR290133_gnmd_struct_p,
+  file = sprintf(
+    "%s/charts/DRR290133_gnmd_only_struct_tiles.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 4,
+  height = 5
+)
   
 ```
 

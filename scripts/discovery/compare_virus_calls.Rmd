@@ -16,6 +16,7 @@ library(tidyr)
 library(ggplot2)
 library(forcats)
 library(rprojroot)
+library(ggupset)
 ```
 
 ## Functions
@@ -285,6 +286,73 @@ DRR290133_view2_dt %>%
          )
 ```
 
+upset plot
+```{r}
+
+DRR290133_upset_ct_dt <- assign_overlap_id(
+  DRR290133_view_dt,
+  contig_col = "input_name",
+  start_col = "chunk_start",
+  stop_col = "chunk_stop"
+) %>%
+  group_by(ovl_id) %>%
+  summarize(
+    hit = sum(!is.na(organism)),
+  ) %>%
+  ungroup() %>%
+  filter(hit >= 1) %>%
+  mutate(software = "Cenote-Taker 3")
+
+DRR290133_upset_gnmd_dt <- assign_overlap_id(
+  DRR290133_view_dt,
+  contig_col = "input_name",
+  start_col = "chunk_start",
+  stop_col = "chunk_stop"
+) %>%
+  group_by(ovl_id) %>%
+  summarize(
+    hit = sum(!is.na(marker_enrichment)),
+  ) %>%
+  ungroup() %>%
+  filter(hit >= 1) %>%
+  mutate(software = "geNomad")
+
+
+DRR290133_upset_dt <- rbind(
+  DRR290133_upset_ct_dt,
+  DRR290133_upset_gnmd_dt
+) %>%
+  group_by(ovl_id) %>%
+  summarize(softwares = list(software))
+
+DRR290133_up_p <- DRR290133_upset_dt %>%
+  ggplot(aes(x= softwares)) +
+  geom_bar(color = "black", fill = "lightgrey") +
+  scale_x_upset() +
+  geom_text(stat='count', aes(label=after_stat(count)), vjust=+1.1) +
+  labs(
+    x = "Software",
+    y = "Predicted Viruses"
+  ) +
+  theme_bw()
+
+DRR290133_up_p
+
+ggsave(
+  DRR290133_up_p,
+  file = sprintf(
+    "%s/charts/DRR290133_disc_upset1.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 3,
+  height = 4
+)
+
+```
+
+
+
+
 ## ERR10905741
 
 load tables
@@ -480,7 +548,69 @@ ERR10905741_view2_dt %>%
          )
 ```
 
+upset plot
+```{r}
 
+ERR10905741_upset_ct_dt <- assign_overlap_id(
+  ERR10905741_view_dt,
+  contig_col = "input_name",
+  start_col = "chunk_start",
+  stop_col = "chunk_stop"
+) %>%
+  group_by(ovl_id) %>%
+  summarize(
+    hit = sum(!is.na(organism)),
+  ) %>%
+  ungroup() %>%
+  filter(hit >= 1) %>%
+  mutate(software = "Cenote-Taker 3")
+
+ERR10905741_upset_gnmd_dt <- assign_overlap_id(
+  ERR10905741_view_dt,
+  contig_col = "input_name",
+  start_col = "chunk_start",
+  stop_col = "chunk_stop"
+) %>%
+  group_by(ovl_id) %>%
+  summarize(
+    hit = sum(!is.na(marker_enrichment)),
+  ) %>%
+  ungroup() %>%
+  filter(hit >= 1) %>%
+  mutate(software = "geNomad")
+
+
+ERR10905741_upset_dt <- rbind(
+  ERR10905741_upset_ct_dt,
+  ERR10905741_upset_gnmd_dt
+) %>%
+  group_by(ovl_id) %>%
+  summarize(softwares = list(software))
+
+ERR10905741_up_p <- ERR10905741_upset_dt %>%
+  ggplot(aes(x= softwares)) +
+  geom_bar(color = "black", fill = "lightgrey") +
+  scale_x_upset() +
+  geom_text(stat='count', aes(label=after_stat(count)), vjust=+1.1) +
+  labs(
+    x = "Software",
+    y = "Predicted Viruses"
+  ) +
+  theme_bw()
+
+ERR10905741_up_p
+
+ggsave(
+  ERR10905741_up_p,
+  file = sprintf(
+    "%s/charts/ERR10905741_disc_upset1.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 3,
+  height = 4
+)
+
+```
 
 
 

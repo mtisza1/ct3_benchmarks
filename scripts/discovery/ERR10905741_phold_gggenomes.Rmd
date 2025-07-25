@@ -104,7 +104,7 @@ ERR10905741_ct_ggg <-  ERR10905741_ct_phold_prod_dt %>%
   geom_gene(aes(fill=function_cat, stroke=important_virion), size = 3.5, 
             shape = c(4,1)
   ) +
-  geom_gene_tag(aes(label=gene_lab_imp), nudge_y = 0.1) +
+  geom_gene_text(aes(label=gene_lab_imp)) +
   #geom_bin_label() +
   theme(legend.position = "bottom") +
   scale_fill_manual(values=color_map, na.value="cornsilk3")
@@ -119,6 +119,38 @@ ggsave(
   ),
   width = 9,
   height = 7
+)
+
+```
+
+longer contigs
+```{r}
+
+ERR10905741_ct_l_ggg <-  ERR10905741_ct_phold_prod_dt %>%
+  group_by(seq_id) %>%
+  mutate(n_genes = n()) %>%
+  ungroup() %>%
+  filter(n_genes > 200) %>%
+  gggenomes() +
+  geom_seq() +
+  geom_gene(aes(fill=function_cat, stroke=important_virion), size = 3.5, 
+            shape = c(4,1)
+  ) +
+  geom_gene_text(aes(label=gene_lab_imp), nudge_y = 0.21) +
+  #geom_bin_label() +
+  theme(legend.position = "bottom") +
+  scale_fill_manual(values=color_map, na.value="cornsilk3")
+
+ERR10905741_ct_l_ggg
+
+ggsave(
+  ERR10905741_ct_l_ggg,
+  file = sprintf(
+    "%s/charts/ERR10905741_ct3_only_phold_maps.longer.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 9,
+  height = 5
 )
 
 ```
@@ -138,16 +170,16 @@ ERR10905741_ct_phold_prod_dt %>%
 ```{r}
 ERR10905741_ct_struct_p <- ERR10905741_ct_phold_prod_dt %>%
   group_by(seq_id) %>%
-  summarize(Major_Capsid = sum(grepl("major head protein", 
+  summarize(MCP = sum(grepl("major head protein", 
                                    evidence_description,
                                    ignore.case = T)),
-            Large_Terminase = sum(grepl("terminase large subunit", 
+            TerL = sum(grepl("terminase large subunit", 
                                    evidence_description,
                                    ignore.case = T)),
             Portal = sum(grepl("portal", 
                                    evidence_description,
                                    ignore.case = T))) %>%
-  pivot_longer(cols = c("Major_Capsid", "Large_Terminase", "Portal"),
+  pivot_longer(cols = c("MCP", "TerL", "Portal"),
                names_to = "structure",
                values_to = "number_annotated") %>%
   
@@ -158,7 +190,10 @@ ERR10905741_ct_struct_p <- ERR10905741_ct_phold_prod_dt %>%
                        name = "number\nannotated") +
   labs(x = "",
        y = "Genome Name") +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+  theme(
+    axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1),
+    axis.text.y = element_blank()
+    )
 
 ERR10905741_ct_struct_p
 
@@ -245,7 +280,7 @@ ERR10905741_gnmd_ggg <-  ERR10905741_gnmd_phold_prod_dt %>%
   geom_gene(aes(fill=function_cat, stroke=important_virion), size = 2, 
             shape = c(4,1)
   ) +
-  geom_gene_tag(aes(label=gene_lab_imp), nudge_y = 0.1) +
+  geom_gene_text(aes(label=gene_lab_imp)) +
   #geom_bin_label() +
   theme(legend.position = "bottom") +
   scale_fill_manual(values=color_map, na.value="cornsilk3")
@@ -259,7 +294,38 @@ ggsave(
     find_rstudio_root_file()
   ),
   width = 9,
-  height = 12
+  height = 16
+)
+
+```
+
+```{r}
+
+ERR10905741_gnmd_l_ggg <-  ERR10905741_gnmd_phold_prod_dt %>%
+  group_by(seq_id) %>%
+  mutate(n_genes = n()) %>%
+  ungroup() %>%
+  filter(n_genes > 50) %>%
+  gggenomes() +
+  geom_seq() +
+  geom_gene(aes(fill=function_cat, stroke=important_virion), size = 3.5, 
+            shape = c(4,1)
+  ) +
+  geom_gene_text(aes(label=gene_lab_imp), nudge_y = 0.31) +
+  #geom_bin_label() +
+  theme(legend.position = "bottom") +
+  scale_fill_manual(values=color_map, na.value="cornsilk3")
+
+ERR10905741_gnmd_l_ggg
+
+ggsave(
+  ERR10905741_gnmd_l_ggg,
+  file = sprintf(
+    "%s/charts/ERR10905741_gnmd_only_phold_maps.longer.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 9,
+  height = 6
 )
 
 ```
@@ -279,16 +345,16 @@ ERR10905741_gnmd_phold_prod_dt %>%
 ```{r}
 ERR10905741_gnmd_struct_p <- ERR10905741_gnmd_phold_prod_dt %>%
   group_by(seq_id) %>%
-  summarize(Major_Capsid = sum(grepl("major head protein", 
+  summarize(MCP = sum(grepl("major head protein", 
                                    evidence_description,
                                    ignore.case = T)),
-            Large_Terminase = sum(grepl("terminase large subunit", 
+            TerL = sum(grepl("terminase large subunit", 
                                    evidence_description,
                                    ignore.case = T)),
             Portal = sum(grepl("portal", 
                                    evidence_description,
                                    ignore.case = T))) %>%
-  pivot_longer(cols = c("Major_Capsid", "Large_Terminase", "Portal"),
+  pivot_longer(cols = c("MCP", "TerL", "Portal"),
                names_to = "structure",
                values_to = "number_annotated") %>%
   
@@ -299,7 +365,10 @@ ERR10905741_gnmd_struct_p <- ERR10905741_gnmd_phold_prod_dt %>%
                        name = "number\nannotated") +
   labs(x = "",
        y = "Genome Name") +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+  theme(
+    axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1),
+    axis.text.y = element_blank()
+    )
 
 ERR10905741_gnmd_struct_p
 
@@ -309,7 +378,7 @@ ggsave(
     "%s/charts/ERR10905741_gnmd_only_struct_tiles.pdf",
     find_rstudio_root_file()
   ),
-  width = 8,
+  width = 4,
   height = 5
 )
 ```
