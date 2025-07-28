@@ -1,0 +1,458 @@
+---
+title: "RNA virome of seawater annotation comparison"
+output: html_notebook
+---
+
+```{r}
+library(data.table)
+library(stringr)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(forcats)
+library(rprojroot)
+library(ggpubr)
+library(cowplot)
+```
+
+
+load annotation tables
+```{r}
+metc_gene_dt <- fread(sprintf(
+  "%s/data/annotation/seawater_rna_virome/metc/final_annotation_summary.tsv",
+  find_rstudio_root_file()
+  )
+)
+
+gnmd_gene_dt <- fread(sprintf(
+  "%s/data/annotation/seawater_rna_virome/genomad/hq_complete_genomes.PRJNA605028_genes.tsv",
+  find_rstudio_root_file()
+  )
+)
+
+phar_gene_dt <- fread(sprintf(
+ "%s/data/annotation/seawater_rna_virome/pharokka/pharokka_cds_final_merged_output.tsv",
+  find_rstudio_root_file()
+  )
+)
+ct3_gene_dt<- fread(sprintf(
+  "%s/data/annotation/seawater_rna_virome/ct3/final_genes_to_contigs_annotation_summary.tsv",
+  find_rstudio_root_file()
+  )
+)
+
+ct3_sum_dt<- fread(sprintf(
+  "%s/data/annotation/seawater_rna_virome/ct3/ct3_PRJNA605028_a_virus_summary.tsv",
+  find_rstudio_root_file()
+  )
+)
+
+phold_gene_dt <- fread(sprintf(
+  "%s/data/annotation/seawater_rna_virome/phold/phold_per_cds_predictions.tsv",
+  find_rstudio_root_file()
+  )
+)
+
+```
+
+```{r}
+ct3_merge_dt <- merge(ct3_gene_dt, ct3_sum_dt %>% 
+                        select(c(contig, input_name, 
+                                 virion_hallmark_genes,
+                                 virion_hallmark_count)),
+                      by = "contig")
+
+```
+
+make annotation frequency tables to manually pull out annotation names for RDRP and capsid
+```{r}
+ct3_gene_freq <- ct3_merge_dt %>%
+  group_by(evidence_description) %>%
+  summarize(n = n()) %>%
+  arrange(desc(n))
+```
+
+```{r}
+gnmd_gene_freq <- gnmd_gene_dt %>%
+  group_by(annotation_description) %>%
+  summarize(n = n()) %>%
+  arrange(desc(n))
+```
+
+```{r}
+phar_gene_freq <- phar_gene_dt %>%
+  group_by(annot) %>%
+  summarize(n = n()) %>%
+  arrange(desc(n))
+```
+
+```{r}
+metc_gene_freq <- metc_gene_dt %>%
+  group_by(product) %>%
+  summarize(n = n()) %>%
+  arrange(desc(n))
+```
+
+```{r}
+phold_gene_freq <- phold_gene_dt %>%
+  group_by(product) %>%
+  summarize(n = n()) %>%
+  arrange(desc(n))
+```
+
+compare non-hypothetical annotation rate
+```{r}
+ct3_annot_rate_dt <- ct3_merge_dt %>%
+  filter(!grepl("tRNA-", gene_name)) %>%
+  group_by(input_name) %>%
+  summarize(gene_count = n(),
+            hypo_annotations = n_distinct(gene_name[evidence_description == "hypothetical protein"])) %>%
+  mutate(software = "Cenote-Taker 3") %>%
+  ungroup() %>%
+  rename(contigID = input_name)
+
+```
+
+```{r}
+phar_annot_rate_dt <- phar_gene_dt %>%
+  group_by(contig) %>%
+  summarize(gene_count = n(),
+            hypo_annotations = n_distinct(gene[annot == "hypothetical protein"])) %>%
+  mutate(software = "Pharokka") %>%
+  ungroup() %>%
+  rename(contigID = contig)
+
+```
+
+```{r}
+metc_info_dt <- merge(metc_gene_dt %>%
+  mutate(contigID = sub("_[^_]+$", "", target)), 
+                       ct3_sum_dt %>% select(c(contig, input_name)),
+                       by.x = "contigID",
+                       by.y = "input_name",
+  all = T)
+
+metc_annot_rate_dt <- metc_info_dt %>%
+  group_by(contigID) %>%
+  summarize(gene_count = n(),
+            hypo_annotations = 
+              n_distinct(target[grepl("hypothetical|no_annotation", 
+                                         product, 
+                                         ignore.case = T)])) %>%
+  mutate(software = "Metacerberus") %>%
+  ungroup() 
+```
+
+```{r}
+gnmd_annot_rate_dt <- gnmd_gene_dt %>%
+  mutate(contigID = sub("_[^_]+$", "", gene )) %>%
+  group_by(contigID) %>%
+  summarize(gene_count = n(),
+            hypo_annotations = 
+              n_distinct(gene[is.na(annotation_description)])) %>%
+  mutate(software = "geNomad")
+```
+
+```{r}
+phold_annot_rate_dt <- phold_gene_dt %>%
+  rename(contigID = contig_id) %>%
+  group_by(contigID) %>%
+  summarize(gene_count = n(),
+            hypo_annotations = 
+              n_distinct(cds_id[grepl("hypothetical", 
+                                         product, 
+                                         ignore.case = T)])) %>%
+  mutate(software = "phold")
+```
+
+```{r}
+sum_hypol <- list(ct3_annot_rate_dt, gnmd_annot_rate_dt, 
+                  metc_annot_rate_dt, phar_annot_rate_dt,
+                  phold_annot_rate_dt
+                  )
+
+hypo_all_dt <- rbindlist(sum_hypol) %>%
+  mutate(hypo_prop = hypo_annotations/gene_count,
+         software = fct_relevel(software,  "geNomad",
+                                           "Metacerberus", 
+                                           "Pharokka", 
+                                           "Cenote-Taker 3",
+                                           "phold"
+                                )
+         )
+```
+
+```{r}
+hypo_rate_p <- hypo_all_dt %>%
+  ggplot(aes(x = software, y = 1 - hypo_prop,
+             fill = software)) +
+  geom_violin(width = 1.2, draw_quantiles = c(0.25, 0.5, 0.75)) +
+  geom_point(color = "grey30",
+             position = position_jitterdodge(0.2, dodge.width = .1),
+             alpha = 0.6
+             ) +
+  scale_fill_manual(values = 
+                      c("#0A9F9D", "#CEB175", 
+                        "#E54E21", "#6C8645", #"#C18748", 
+                        "#591f6e")) + 
+  stat_compare_means(
+    method = "wilcox.test",
+    label = "p.signif",
+    comparisons = list(
+      c("Cenote-Taker 3", "geNomad"),
+      c("Cenote-Taker 3", "Metacerberus"),
+      c("Cenote-Taker 3", "Pharokka"),
+      c("Cenote-Taker 3", "phold")
+    )
+  ) +
+  theme_bw() +
+  scale_y_continuous(labels = scales::percent) +
+  labs(y = "Percentage of genes with\nnon-hypothetical annotation",
+       x = "",
+       ) +
+  theme(
+    legend.position = "none",
+    axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)
+    )
+
+hypo_rate_p
+
+ggsave(
+  hypo_rate_p,
+  file = sprintf("%s/charts/seawater_rna_virome_annotation_rate.pdf",
+                 find_rstudio_root_file())
+)
+
+ggsave(
+  hypo_rate_p,
+  file = sprintf("%s/charts/seawater_rna_virome_annotation_rate.png",
+                 find_rstudio_root_file())
+)
+```
+
+
+```{r}
+
+ct3_struct_dt <- ct3_merge_dt %>%
+  rename(contigID = input_name) %>%
+  filter(grepl("capsid|coat|RNA-dependent-RNA-polymerase",
+               evidence_description,
+               ignore.case = T),
+         !grepl("minor|small",
+               evidence_description,
+               ignore.case = T)
+) %>%
+  select(c(contigID, evidence_description)) %>%
+  mutate(software = "Cenote-Taker 3") %>%
+  group_by(contigID, software) %>%
+  summarize(n_capsid = sum(grepl("capsid|coat", 
+                                   evidence_description,
+                                   ignore.case = T)),
+            n_rdrp = sum(grepl("RNA-dependent-RNA-polymerase", 
+                                   evidence_description,
+                                   ignore.case = T))
+            )
+
+```
+
+```{r}
+
+gnmd_struct_dt <- gnmd_gene_dt %>%
+  mutate(contigID = sub("_[^_]+$", "", gene)) %>%
+  filter(grepl("capsid|coat|RNA replicase|RNA dependent RNA polymerase|RNA-dependent RNA polymerase",
+               annotation_description,
+               ignore.case = T),
+         !grepl("minor|small",
+               annotation_description,
+               ignore.case = T)
+) %>%
+  select(c(contigID, annotation_description)) %>%
+  mutate(software = "geNomad") %>%
+  group_by(contigID, software) %>%
+  summarize(n_capsid = sum(grepl("capsid|coat", 
+                                   annotation_description,
+                                   ignore.case = T)),
+            n_rdrp = sum(grepl("RNA replicase|RNA dependent RNA polymerase|RNA-dependent RNA polymerase", 
+                                   annotation_description,
+                                   ignore.case = T))
+            )
+
+```
+
+```{r}
+phar_struct_dt <-phar_gene_dt %>%
+  rename(contigID = contig) %>%
+  filter(grepl("head protein|RNA replicase",
+               annot,
+               ignore.case = T),
+         !grepl("minor|small",
+               annot,
+               ignore.case = T)
+) %>%
+  select(c(contigID, annot)) %>%
+  mutate(software = "Pharokka") %>%
+  group_by(contigID, software) %>%
+  summarize(n_capsid = sum(grepl("head protein", 
+                                   annot,
+                                   ignore.case = T)),
+            n_rdrp = sum(grepl("RNA replicase", 
+                                   annot,
+                                   ignore.case = T))
+            )
+
+```
+
+```{r}
+
+
+metc_struct_dt <- metc_info_dt %>%
+  filter(grepl("capsid|coat|Structural polyprotein|Replicase polyprotein|RNA dependent RNA polymerase|RNA-dependent RNA polymerase|RNA-directed RNA polymerase|RNA replicase",
+               product,
+               ignore.case = T),
+         !grepl("minor|small",
+               product,
+               ignore.case = T)
+) %>%
+  select(c(contigID, product)) %>%
+  mutate(software = "Metacerberus") %>%
+  group_by(contigID, software) %>%
+  summarize(n_capsid = sum(grepl("capsid|coat|Structural polyprotein", 
+                                   product,
+                                   ignore.case = T)),
+            n_rdrp = sum(grepl("Replicase polyprotein|RNA dependent RNA polymerase|RNA-dependent RNA polymerase|RNA-directed RNA polymerase|RNA replicase", 
+                                   product,
+                                   ignore.case = T))
+            )
+
+```
+
+```{r}
+phold_struct_dt <- phold_gene_dt %>%
+  mutate(contigID = contig_id) %>%
+  filter(grepl("head protein|RNA replicase|RNA polymerase",
+               product,
+               ignore.case = T),
+         !grepl("minor|small",
+               product,
+               ignore.case = T)
+) %>%
+  select(c(contigID, product)) %>%
+  mutate(software = "phold") %>%
+  group_by(contigID, software) %>%
+  summarize(n_capsid = sum(grepl("head protein", 
+                                   product,
+                                   ignore.case = T)),
+            n_rdrp = sum(grepl("RNA replicase|RNA polymerase", 
+                                   product,
+                                   ignore.case = T))
+            )
+```
+
+combine and complete
+```{r}
+sum_structl <- list(ct3_struct_dt, gnmd_struct_dt, 
+                    metc_struct_dt, phar_struct_dt ,phold_struct_dt
+                    )
+
+struct_all_dt <- rbindlist(sum_structl) %>%
+  complete(contigID, software,
+           fill = list(n_capsid = 0,
+                       n_rdrp = 0
+                       )
+           ) %>%
+  rename(Cap = n_capsid,
+         RDRP = n_rdrp
+         ) %>%
+  pivot_longer(cols = c("Cap", "RDRP"),
+               names_to = "structure",
+               values_to = "number_annotated") 
+```
+
+
+```{r}
+
+
+struct_p <- struct_all_dt %>%
+  mutate(contig_ab = gsub(".*_NODE", "NODE", contigID),
+         contig_ab = gsub("_cov_.*", "", contig_ab),
+         software = fct_relevel(software,  "geNomad",
+                                           "Metacerberus", 
+                                           "Pharokka", 
+                                           "Cenote-Taker 3", 
+                                           "phold")) %>%
+  ggplot(aes(x = structure, y = contig_ab, fill = number_annotated)) +
+  geom_tile() +
+  facet_wrap(~software, 
+             nrow = 1) +
+  theme_bw() +
+  scale_fill_gradientn(
+    colours = c('white', "#91D5DE", "#2E8289"), 
+    name = "number\nannotated"
+    ) +
+  labs(x = "",
+       y = "Genomes",
+       ) +
+  theme(
+    axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1),
+    axis.text.y = element_blank(),
+    legend.position = "bottom"
+    ) 
+
+struct_p
+
+ggsave(
+  struct_p,
+  file = sprintf("%s/charts/seawater_rna_virome_structure_annotation_tile3.pdf",
+                 find_rstudio_root_file())
+)
+
+ggsave(
+  struct_p,
+  file = sprintf("%s/charts/seawater_rna_virome_structure_annotation_tile3.png",
+                 find_rstudio_root_file())
+)
+
+```
+
+```{r}
+struct_count_p <- struct_all_dt %>%
+  ungroup() %>%
+  mutate(contig_ab = gsub(".*_NODE", "NODE", contigID),
+         contig_ab = gsub("_cov_.*", "", contig_ab),
+         software = fct_relevel(software,  "geNomad",
+                                           "Metacerberus", 
+                                           "Pharokka", 
+                                           "Cenote-Taker 3", 
+                                           "phold")) %>%
+  group_by(software, structure) %>%
+  summarize(contigs_w_annotation = sum(number_annotated > 0)) %>%
+  ggplot(aes(x = software, y = contigs_w_annotation, fill = software)) +
+  geom_col(position = "dodge") +
+  facet_wrap(~structure, nrow = 1) +
+  scale_fill_manual(values = 
+                      c("#0A9F9D", "#CEB175", 
+                        "#E54E21", "#6C8645", #"#C18748", 
+                        "#591f6e")) +
+  theme_bw() +
+  theme(
+    axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1),
+    legend.position = "none"
+    ) 
+
+struct_count_p
+
+ggsave(
+  struct_count_p,
+  file = sprintf("%s/charts/seawater_rna_virome_structure_count_bar.pdf",
+                 find_rstudio_root_file())
+)
+
+ggsave(
+  struct_count_p,
+  file = sprintf("%s/charts/seawater_rna_virome_structure_count_bar.png",
+                 find_rstudio_root_file())
+)
+
+```
+
+
