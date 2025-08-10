@@ -1,0 +1,133 @@
+---
+title: "taxonomy classification uhgv100"
+output: html_notebook
+---
+
+
+load packages
+```{r}
+library(ggplot2)
+library(data.table)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(forcats)
+library(rprojroot)
+```
+
+
+load files
+
+```{r}
+
+gnmd_tax_dt <- fread(
+  sprintf(
+    "%s/data/annotation/uhgv/genomad/first_100_uhgv_votus_taxonomy.tsv",
+    find_rstudio_root_file()
+    )
+  ) 
+
+ct3_tax_dt<- fread(
+  sprintf(
+    "%s/data/annotation/uhgv/ct3/ct3_100uhgv_332_virus_summary.tsv",
+    find_rstudio_root_file()
+    )
+  ) 
+
+
+```
+
+```{r}
+gnmd_parse_dt <- gnmd_tax_dt %>%
+  select(c(seq_name, lineage)) %>%
+  rename(input_name = seq_name) %>%
+  separate(lineage, sep = ";",
+           into = c("realm", "domain",
+                    "kingdom", "phylum",
+                    "class",
+                    "order", "family",
+                    "genus")) %>%
+  mutate(tool = "geNomad")
+
+```
+
+```{r}
+ct3_parse_dt <- ct3_tax_dt %>%
+  select(c(input_name, taxonomy_hierarchy)) %>%
+  mutate(
+    realm = str_extract(taxonomy_hierarchy, "(?<=d_).*?(?=;|$)"),
+    domain = str_extract(taxonomy_hierarchy, "(?<=-_).*?(?=;|$)"),
+    kingdom = str_extract(taxonomy_hierarchy, "(?<=k_).*?(?=;|$)"),
+    phylum = str_extract(taxonomy_hierarchy, "(?<=p_).*?(?=;|$)"),
+    class = str_extract(taxonomy_hierarchy, "(?<=c_).*?(?=;|$)"),
+    order = str_extract(taxonomy_hierarchy, "(?<=o_).*?(?=;|$)"),
+    family = str_extract(taxonomy_hierarchy, "(?<=f_).*?(?=;|$)"),
+    genus = str_extract(taxonomy_hierarchy, "(?<=g_).*?(?=;|$)"),
+    tool = "Cenote-Taker 3",
+    input_name = gsub(" .*", "", input_name)
+    ) %>%
+  select(-taxonomy_hierarchy)
+```
+
+
+```{r}
+both_dt <- rbind(ct3_parse_dt,
+                 gnmd_parse_dt) %>%
+  group_by(input_name) %>%
+  mutate(ct3_domain = domain[tool == "Cenote-Taker 3"]) %>%
+  pivot_longer(!c(input_name, tool, ct3_domain),
+               names_to = "tax_level",
+               values_to = "taxon") %>%
+  mutate(taxon = case_when(taxon == "" ~ NA,
+                           TRUE ~ taxon)) %>%
+  mutate(tax_level = fct_relevel(tax_level,
+    c("realm", "domain",
+      "kingdom", "phylum",
+      "class",
+      "order", "family",
+      "genus")
+  )) 
+```
+
+```{r}
+tax_p <- both_dt %>%
+  ggplot(aes(x = tax_level, y = input_name, fill = taxon)) +
+  geom_tile() +
+  facet_grid(rows = vars(ct3_domain), cols = vars(tool), 
+             space = "free",
+             scales = "free_y") +
+  theme(
+    axis.text.x = element_text(angle = 90, vjust=0.5,hjust=1),
+    axis.text.y = element_text(size = 6),
+    strip.text.y.right = element_text(angle = 0)) +
+  labs(
+    x = "taxonomic rank",
+    y = "MAG ID"
+  )
+
+tax_p
+
+ggsave(
+  tax_p,
+  file = sprintf(
+    "%s/charts/uhgv100_taxplot1.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 10,
+  height = 8
+)
+ggsave(
+  tax_p,
+  file = sprintf(
+    "%s/charts/uhgv100_taxplot1.png",
+    find_rstudio_root_file()
+  ),
+  width = 10,
+  height = 8
+)
+
+
+```
+
+
+

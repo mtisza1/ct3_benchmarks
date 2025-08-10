@@ -264,6 +264,21 @@ struct_all_dt <- rbindlist(sum_structl) %>%
 ```
 
 ```{r}
+write.table(
+  struct_all_dt %>% distinct(contigID),
+  file = sprintf(
+    "%s/data/annotation/seawater_dtrs/contigs/sewater_dtr_headtail_contigs.txt",
+    find_rstudio_root_file()
+  ),
+  col.names = F,
+  row.names = F,
+  quote = F
+)
+
+```
+
+
+```{r}
 every_nth = function(n) {
   return(function(x) {x[c(TRUE, rep(FALSE, n - 1))]})
 }
