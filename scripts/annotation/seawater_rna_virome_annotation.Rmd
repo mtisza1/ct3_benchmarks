@@ -379,14 +379,15 @@ struct_p <- struct_all_dt %>%
                                            "Metacerberus", 
                                            "Pharokka", 
                                            "Cenote-Taker 3", 
-                                           "phold")) %>%
+                                           "phold"),
+         number_annotated = as.factor(number_annotated)) %>%
   ggplot(aes(x = structure, y = contig_ab, fill = number_annotated)) +
   geom_tile() +
   facet_wrap(~software, 
              nrow = 1) +
   theme_bw() +
-  scale_fill_gradientn(
-    colours = c('white', "#91D5DE", "#2E8289"), 
+  scale_fill_manual(
+    values = c("0" = 'grey95', "1" = "#91D5DE", "2" = "#2E8289", "3" = "#103326", "4" = "black"), 
     name = "number\nannotated"
     ) +
   labs(x = "",

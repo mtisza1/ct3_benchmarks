@@ -29,7 +29,7 @@ gnmd_tax_dt <- fread(
 
 ct3_tax_dt<- fread(
   sprintf(
-    "%s/data/annotation/uhgv/ct3/ct3_100uhgv_332_virus_summary.tsv",
+    "%s/data/annotation/uhgv/ct3/ct3_uhgv100_1a_virus_summary.tsv",
     find_rstudio_root_file()
     )
   ) 
@@ -42,7 +42,7 @@ gnmd_parse_dt <- gnmd_tax_dt %>%
   select(c(seq_name, lineage)) %>%
   rename(input_name = seq_name) %>%
   separate(lineage, sep = ";",
-           into = c("realm", "domain",
+           into = c("root", "realm",
                     "kingdom", "phylum",
                     "class",
                     "order", "family",
@@ -55,8 +55,8 @@ gnmd_parse_dt <- gnmd_tax_dt %>%
 ct3_parse_dt <- ct3_tax_dt %>%
   select(c(input_name, taxonomy_hierarchy)) %>%
   mutate(
-    realm = str_extract(taxonomy_hierarchy, "(?<=d_).*?(?=;|$)"),
-    domain = str_extract(taxonomy_hierarchy, "(?<=-_).*?(?=;|$)"),
+    root = str_extract(taxonomy_hierarchy, "(?<=-_).*?(?=;|$)"),
+    realm = str_extract(taxonomy_hierarchy, "(?<=;-_).*?(?=;|$)"),
     kingdom = str_extract(taxonomy_hierarchy, "(?<=k_).*?(?=;|$)"),
     phylum = str_extract(taxonomy_hierarchy, "(?<=p_).*?(?=;|$)"),
     class = str_extract(taxonomy_hierarchy, "(?<=c_).*?(?=;|$)"),
@@ -74,14 +74,14 @@ ct3_parse_dt <- ct3_tax_dt %>%
 both_dt <- rbind(ct3_parse_dt,
                  gnmd_parse_dt) %>%
   group_by(input_name) %>%
-  mutate(ct3_domain = domain[tool == "Cenote-Taker 3"]) %>%
-  pivot_longer(!c(input_name, tool, ct3_domain),
+  mutate(ct3_realm = realm[tool == "Cenote-Taker 3"]) %>%
+  pivot_longer(!c(input_name, tool, ct3_realm),
                names_to = "tax_level",
                values_to = "taxon") %>%
   mutate(taxon = case_when(taxon == "" ~ NA,
                            TRUE ~ taxon)) %>%
   mutate(tax_level = fct_relevel(tax_level,
-    c("realm", "domain",
+    c("root", "realm",
       "kingdom", "phylum",
       "class",
       "order", "family",
@@ -93,7 +93,7 @@ both_dt <- rbind(ct3_parse_dt,
 tax_p <- both_dt %>%
   ggplot(aes(x = tax_level, y = input_name, fill = taxon)) +
   geom_tile() +
-  facet_grid(rows = vars(ct3_domain), cols = vars(tool), 
+  facet_grid(rows = vars(ct3_realm), cols = vars(tool), 
              space = "free",
              scales = "free_y") +
   theme(

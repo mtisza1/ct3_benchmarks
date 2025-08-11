@@ -183,12 +183,14 @@ DRR290133_ct_struct_p <- DRR290133_ct_phold_prod_dt %>%
   pivot_longer(cols = c("MCP", "TerL", "Portal"),
                names_to = "structure",
                values_to = "number_annotated") %>%
-  
+  mutate(number_annotated = as.factor(number_annotated)) %>%
   ggplot(aes(x = structure, y = seq_id, fill = number_annotated)) +
   geom_tile() +
   theme_bw() +
-  scale_fill_gradientn(colours = c('white', "#91D5DE", "#2E8289"),
-                       name = "number\nannotated") +
+  scale_fill_manual(
+    values = c("0" = 'grey95', "1" = "#91D5DE", "2" = "#2E8289", "3" = "#103326", "4" = "black"), 
+    name = "number\nannotated"
+    ) +
   labs(x = "",
        y = "Genomes") +
   theme(
@@ -366,12 +368,14 @@ DRR290133_gnmd_struct_p <- DRR290133_gnmd_phold_prod_dt %>%
   pivot_longer(cols = c("MCP", "TerL", "Portal"),
                names_to = "structure",
                values_to = "number_annotated") %>%
-  
+  mutate(number_annotated = as.factor(number_annotated)) %>%
   ggplot(aes(x = structure, y = seq_id, fill = number_annotated)) +
   geom_tile() +
   theme_bw() +
-  scale_fill_gradientn(colours = c('white', "#91D5DE", "#2E8289"),
-                       name = "number\nannotated") +
+  scale_fill_manual(
+    values = c("0" = 'grey95', "1" = "#91D5DE", "2" = "#2E8289", "3" = "#103326", "4" = "black"), 
+    name = "number\nannotated"
+    ) +
   labs(x = "",
        y = "Genomes") +
   theme(

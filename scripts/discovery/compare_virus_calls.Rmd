@@ -350,6 +350,92 @@ ggsave(
 
 ```
 
+DRR290133 genomad only stats
+```{r}
+DRR_gen_hall_p <- merge(
+  DRR290133_genomad_dt,
+  DRR290133_genomad_only_dt %>% mutate(g_only = "geNomad-only"),
+  all.x = T
+) %>%
+  mutate(g_only = case_when(g_only == "geNomad-only" ~ "geNomad-only", TRUE ~ "CT3 and geNomad")) %>%
+  ggplot(aes(x=n_hallmarks)) +
+  geom_histogram() +
+  facet_wrap(~g_only, ncol = 1) +
+  theme_bw() +
+  labs(
+    x = "geNomad hallmark gene count",
+    y = "genome count",
+    title = "geNomad hallmark genes/virus MAG"
+  )
+
+DRR_gen_hall_p
+
+ggsave(
+  DRR_gen_hall_p,
+  file = sprintf(
+    "%s/charts/DRR290133_disc_genomad_halls1.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 4,
+  height = 4
+)
+
+ggsave(
+  DRR_gen_hall_p,
+  file = sprintf(
+    "%s/charts/DRR290133_disc_genomad_halls1.png",
+    find_rstudio_root_file()
+  ),
+  width = 4,
+  height = 4
+)
+```
+
+
+DRR290133 CT3 only stats
+```{r}
+DRR_ct3_hall_p <- merge(
+  DRR290133_ct3_only_dt %>% mutate(c_only = "CT3-only"),
+  DRR290133_ct_merge_dt,
+  all.y = T
+) %>%
+  mutate(
+    c_only = case_when(c_only == "CT3-only" ~ "CT3-only", TRUE ~ "CT3 and geNomad"),
+    n_hallmarks = virion_hallmark_count + rep_hallmark_count
+    ) %>%
+  ggplot(aes(x=n_hallmarks)) +
+  geom_histogram() +
+  facet_wrap(~c_only, ncol = 1) +
+  theme_bw() +
+  labs(
+    x = "CT3 hallmark gene count",
+    y = "CT3 count",
+    title = "CT3 hallmark genes/virus MAG"
+  )
+
+DRR_ct3_hall_p
+
+ggsave(
+  DRR_ct3_hall_p,
+  file = sprintf(
+    "%s/charts/DRR290133_disc_ct3_halls1.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 4,
+  height = 4
+)
+
+ggsave(
+  DRR_ct3_hall_p,
+  file = sprintf(
+    "%s/charts/DRR290133_disc_ct3_halls1.png",
+    find_rstudio_root_file()
+  ),
+  width = 4,
+  height = 4
+)
+
+```
 
 
 
@@ -611,7 +697,98 @@ ggsave(
 )
 
 ```
+ERR1095741 genomad only stats
+```{r}
+ERR_gen_hall_p <- merge(
+  ERR10905741_genomad_dt,
+  ERR10905741_genomad_only_dt %>% mutate(g_only = "geNomad-only"),
+  all.x = T
+) %>%
+  mutate(g_only = case_when(g_only == "geNomad-only" ~ "geNomad-only", TRUE ~ "CT3 and geNomad")) %>%
+  ggplot(aes(x=n_hallmarks)) +
+  geom_histogram() +
+  facet_wrap(~g_only, ncol = 1) +
+  theme_bw() +
+  labs(
+    x = "geNomad hallmark gene count",
+    y = "genome count",
+    title = "geNomad hallmark genes/virus MAG"
+  )
+
+ERR_gen_hall_p
+
+ggsave(
+  ERR_gen_hall_p,
+  file = sprintf(
+    "%s/charts/ERR10905741_disc_genomad_halls1.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 4,
+  height = 4
+)
+
+ggsave(
+  ERR_gen_hall_p,
+  file = sprintf(
+    "%s/charts/ERR10905741_disc_genomad_halls1.png",
+    find_rstudio_root_file()
+  ),
+  width = 4,
+  height = 4
+)
+```
 
 
+ERR1095741 CT3 only stats
+```{r}
+ERR_ct3_hall_p <- merge(
+  ERR10905741_ct3_only_dt %>% mutate(c_only = "CT3-only"),
+  ERR10905741_ct_merge_dt,
+  all.y = T
+) %>%
+  mutate(
+    c_only = case_when(c_only == "CT3-only" ~ "CT3-only", TRUE ~ "CT3 and geNomad"),
+    n_hallmarks = virion_hallmark_count + rep_hallmark_count
+    ) %>%
+  ggplot(aes(x=n_hallmarks)) +
+  geom_histogram() +
+  facet_wrap(~c_only, ncol = 1) +
+  theme_bw() +
+  labs(
+    x = "CT3 hallmark gene count",
+    y = "CT3 count",
+    title = "CT3 hallmark genes/virus MAG"
+  )
 
+ERR_ct3_hall_p
+
+ggsave(
+  ERR_ct3_hall_p,
+  file = sprintf(
+    "%s/charts/ERR10905741_disc_ct3_halls1.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 4,
+  height = 4
+)
+
+ggsave(
+  ERR_ct3_hall_p,
+  file = sprintf(
+    "%s/charts/ERR10905741_disc_ct3_halls1.png",
+    find_rstudio_root_file()
+  ),
+  width = 4,
+  height = 4
+)
+
+```
+
+```{r}
+merge(
+  ERR10905741_genomad_dt,
+  ERR10905741_genomad_only_dt
+) %>%
+  filter(n_hallmarks == 0)
+```
 

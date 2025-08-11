@@ -24,7 +24,7 @@ metc_gene_dt <- fread(sprintf(
 )
 
 gnmd_gene_dt <- fread(sprintf(
-  "%s/data/annotation/gut_dtrs/genomad/gut_scaffolds_gt1500.dtrs_only_genes.tsv",
+  "%s/data/annotation/gut_dtrs/genomad/gut_dtr_head_tail_contigs1_genes.tsv",
   find_rstudio_root_file()
   )
 )
@@ -42,7 +42,7 @@ ct3_gene_dt<- fread(sprintf(
 
 #gut_dtrs_1a_virus_summary.tsv
 ct3_sum_dt<- fread(sprintf(
-  "%s/data/annotation/gut_dtrs/ct3/gut_dtrs_1a_virus_summary.tsv",
+  "%s/data/annotation/gut_dtrs/ct3/ct3_g_dtr_ht_1b_virus_summary.tsv",
   find_rstudio_root_file()
   )
 )
@@ -172,12 +172,8 @@ metc_gene_dt %>%
 
 
 ```{r}
-metc_info_dt <- merge(metc_gene_dt %>%
-  mutate(contigID = sub("_[^_]+$", "", target)), 
-                       ct3_sum_dt %>% select(c(contig, input_name)),
-                       by.x = "contigID",
-                       by.y = "contig",
-  all.x = T)
+metc_info_dt <- metc_gene_dt %>%
+  mutate(contigID = sub("_[^_]+$", "", target))
 
 metc_struct_dt <- metc_info_dt %>%
   filter(grepl("capsid|terminase|portal|major head protein|head to tail connecting protein",
@@ -187,7 +183,6 @@ metc_struct_dt <- metc_info_dt %>%
                product,
                ignore.case = T)
 ) %>%
-  mutate(contigID = input_name) %>%
   select(c(contigID, product)) %>%
   mutate(software = "Metacerberus") %>%
   group_by(contigID, software) %>%
@@ -205,26 +200,8 @@ metc_struct_dt <- metc_info_dt %>%
 
 phold
 ```{r}
-
-phold_info_dt <- merge(phold_gene_dt, 
-                       ct3_sum_dt %>% select(c(contig, input_name)),
-                       by.x = "contig_id",
-                       by.y = "contig")
-
-```
-
-```{r}
-phold_info_dt %>%
-  group_by(product) %>%
-  summarize(n = n()) %>%
-  arrange(desc(n))
-```
-
-
-
-```{r}
-phold_struct_dt <- phold_info_dt %>%
-  mutate(contigID = input_name) %>%
+phold_struct_dt <- phold_gene_dt %>%
+  mutate(contigID = contig_id) %>%
   filter(grepl("capsid|terminase|portal|major head protein",
                product,
                ignore.case = T),
@@ -263,34 +240,12 @@ struct_all_dt <- rbindlist(sum_structl) %>%
          Portal = n_portal) %>%
   pivot_longer(cols = c("MCP", "TerL", "Portal"),
                names_to = "structure",
-               values_to = "number_annotated") %>%
-  filter(!contigID %in% 
-           c("SRR5665058_NODE_264_length_6187_cov_4_032523",
-             "SRR5665150_NODE_106_length_12582_cov_37_339181"))
-```
-
-```{r}
-write.table(
-  struct_all_dt %>% distinct(contigID),
-  file = sprintf(
-    "%s/data/annotation/gut_dtrs/contigs/gut_dtr_head_tail_contigs.txt",
-    find_rstudio_root_file()
-    ),
-  row.names = F,
-  col.names = F,
-  quote = F
-  
-)
-
+               values_to = "number_annotated")
 ```
 
 
-```{r}
-struct_all_dt %>%
-  mutate(number_annotated = as.factor(number_annotated))
-```
 
-
+plot structural genes
 ```{r}
 
 
@@ -433,10 +388,7 @@ phar_annot_rate_dt <- merge(struct_all_dt %>% distinct(contigID),
 
 
 ```{r}
-metc_annot_rate_dt <- merge(struct_all_dt %>% distinct(contigID),
-                           metc_info_dt,
-                           by.x = "contigID", 
-                           by.y = "input_name") %>%
+metc_annot_rate_dt <- metc_info_dt %>%
   group_by(contigID) %>%
   summarize(gene_count = n(),
             hypo_annotations = 
@@ -463,9 +415,9 @@ gnmd_annot_rate_dt <- merge(struct_all_dt %>% distinct(contigID),
 
 ```{r}
 phold_annot_rate_dt <- merge(struct_all_dt %>% distinct(contigID),
-                           phold_info_dt,
-                           by.x = "contigID", 
-                           by.y = "input_name") %>%
+                           phold_gene_dt,
+                           by.x = "contigID",
+                           by.y = "contig_id") %>%
   group_by(contigID) %>%
   summarize(gene_count = n(),
             hypo_annotations = 
@@ -488,7 +440,9 @@ hypo_all_dt <- rbindlist(sum_hypol) %>%
                                            "Metacerberus", 
                                            "Pharokka", 
                                            "Cenote-Taker 3",
-                                           "phold"))
+                                           "phold")) %>%
+  complete(contigID, software,
+           fill = list(hypo_prop = 1))
 ```
 
 ```{r}
