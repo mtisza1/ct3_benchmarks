@@ -4,6 +4,8 @@ data/
 
 **/.DS_Store
 
+.vscode/
+
 # History files
 .Rhistory
 .Rapp.history
