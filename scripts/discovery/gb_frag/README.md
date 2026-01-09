@@ -2,9 +2,11 @@
 
 ### mmseqs2 workflow
 ```bash
-mmseqs createdb --dbtype 1 refseq_virus_AA_20260107.fasta refseq_virus_AA_20260107.mmseqs createdb --dbtype 1 refseq_virus_AA_20260107.fasta refseq_virus_AA_20260107.mmseqs```
+mmseqs createdb --dbtype 1 refseq_virus_AA_20260107.fasta refseq_virus_AA_20260107.mmseqs
+```
 
-mmseqs createdb --dbtype 1  random_4000_gb_AA.faa random_4000_gb_AA.mmseqs createdb --dbtype 1 random_4000_gb_AA.faa random_4000_gb_AA.mmseqs 
+```bash
+mmseqs createdb --dbtype 1  random_4000_gb_AA.faa random_4000_gb_AA.mmseqs 
 ```
 
 ```bash
