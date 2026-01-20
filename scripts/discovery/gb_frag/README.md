@@ -36,10 +36,19 @@ run cenotetaker3 in `-am` mode:
 cenotetaker3 --cenote-dbs /data/tisza/data/ct3_dbs -c random_4000_gb_clean.1k.fasta -r gb_clean_an1 -p F  -am T
 ```
 
+use taxonkit to get NCBI taxonomy:
+```bash
+zcat /data/tisza/data/.taxonkit/acc2taxid.tsv.gz | grep -w -f random_4000_gb_clean.1k.accs.txt > random_4000_gb_clean.1k.acc2taxid.tsv
+```
+
+```bash
+cat random_4000_gb_clean.1k.acc2taxid.tsv | taxonkit reformat2 -I 2 -f "rlm__{realm}\tk__{kingdom}\tp__{phylum}\tc__{class}\to__{order}\tf__{family}\tg__{genus}" --data-dir /data/tisza/data/.taxonkit/ > random_4000_gb_clean.1k.taxonomy.tsv
+```
+
 
 # Gene annotation of RefSeq records
 
 Cenote-Taker 3
 ```bash
-(ct3_test) [u241374@cmp02 refseq]$ cenotetaker3 --cenote-dbs /data/tisza/data/ct3_dbs -c refseq_virus_genomes_20260107.fasta -r ct3_refseq_an1 -p F -am T --wrap F
+cenotetaker3 --cenote-dbs /data/tisza/data/ct3_dbs -c refseq_virus_genomes_20260107.fasta -r ct3_refseq_an1 -p F -am T --wrap F
 ```
