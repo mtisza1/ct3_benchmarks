@@ -1,0 +1,195 @@
+---
+title: "compare cenote-taker 3 taxonomy to NCBI taxonomy of genbank records"
+output: html_notebook
+---
+
+load packages
+```{r}
+library(ggplot2)
+library(data.table)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(forcats)
+library(rprojroot)
+```
+
+load files
+
+```{r}
+ct3_sum_dt <- fread(
+  file = sprintf(
+    "%s/data/annotation/genbank/gb_clean_an1_virus_summary.tsv",
+    find_rstudio_root_file()
+  ),
+  sep = "\t",
+  header = T
+)
+```
+
+```{r}
+ncbi_tax_dt <- fread(
+  file = sprintf(
+    "%s/data/annotation/genbank/random_4000_gb_clean.1k.taxonomy.tsv",
+    find_rstudio_root_file()
+  ),
+  sep = "\t",
+  header = F,
+  col.names = c("Accession", "TaxID", "realm", "kingdom", "phylum", "class", "order", "family", "genus")
+  #rlm__{realm}\tk__{kingdom}\tp__{phylum}\tc__{class}\to__{order}\tf__{family}\tg__{genus}
+)
+```
+
+parse CT3 file for taxonomy
+```{r}
+ct3_parse_dt <- ct3_sum_dt %>%
+  mutate(total_hallmarks = virion_hallmark_count + rep_hallmark_count + RDRP_hallmark_count) %>%
+  select(c(input_name, taxonomy_hierarchy, total_hallmarks)) %>%
+  mutate(
+    root = str_extract(taxonomy_hierarchy, "(?<=-_).*?(?=;|$)"),
+    realm = str_extract(taxonomy_hierarchy, "(?<=;-_).*?(?=;|$)"),
+    kingdom = str_extract(taxonomy_hierarchy, "(?<=k_).*?(?=;|$)"),
+    phylum = str_extract(taxonomy_hierarchy, "(?<=p_).*?(?=;|$)"),
+    class = str_extract(taxonomy_hierarchy, "(?<=c_).*?(?=;|$)"),
+    order = str_extract(taxonomy_hierarchy, "(?<=o_).*?(?=;|$)"),
+    family = str_extract(taxonomy_hierarchy, "(?<=f_).*?(?=;|$)"),
+    genus = str_extract(taxonomy_hierarchy, "(?<=g_).*?(?=;|$)"),
+    tool = "Cenote-Taker 3",
+    Accession = gsub(" .*", "", input_name)
+    ) %>%
+  select(-c(taxonomy_hierarchy, input_name)) %>%
+  mutate(
+    realm = case_when(
+      is.na(realm) ~ "rlm__", TRUE ~ paste0("rlm__", realm)
+    ),
+    kingdom = case_when(
+      is.na(kingdom) ~ "k__", TRUE ~ paste0("k__", kingdom)
+    ),
+    phylum = case_when(
+      is.na(phylum) ~ "p__", TRUE ~ paste0("p__", phylum)
+    ),
+    class = case_when(
+      is.na(class) ~ "c__", TRUE ~ paste0("c__", class)
+    ),
+    order = case_when(
+      is.na(order) ~ "o__", TRUE ~ paste0("o__", order)
+    ),
+    family = case_when(
+      is.na(family) ~ "f__", TRUE ~ paste0("f__", family)
+    ),
+    genus = case_when(
+      is.na(genus) ~ "g__", TRUE ~ paste0("g__", genus)
+    )
+  )
+```
+
+```{r}
+merge_dt <- merge(
+  ncbi_tax_dt,
+  ct3_parse_dt,
+  by = "Accession"
+)
+```
+
+```{r}
+accuracy_dt <- merge_dt %>%
+  summarize(
+    records = n(),
+    realm_acc = sum(realm.x == realm.y) / records,
+    kingdom_acc = sum(kingdom.x == kingdom.y) / records,
+    phylum_acc = sum(phylum.x == phylum.y) / records,
+    class_acc = sum(class.x == class.y) / records,
+    order_acc = sum(order.x == order.y) / records,
+    family_acc = sum(family.x == family.y) / records,
+    genus_acc = sum(genus.x == genus.y) / records
+  ) %>%
+  pivot_longer(everything(), values_to = "count", names_to = "metric")
+```
+
+```{r}
+accuracy_hallmarks_dt <- merge_dt %>%
+  filter(total_hallmarks > 0) %>%
+  summarize(
+    records = n(),
+    realm_acc = sum(realm.x == realm.y) / records,
+    kingdom_acc = sum(kingdom.x == kingdom.y) / records,
+    phylum_acc = sum(phylum.x == phylum.y) / records,
+    class_acc = sum(class.x == class.y) / records,
+    order_acc = sum(order.x == order.y) / records,
+    family_acc = sum(family.x == family.y) / records,
+    genus_acc = sum(genus.x == genus.y) / records
+  ) %>%
+  pivot_longer(everything(), values_to = "count", names_to = "metric")
+```
+
+```{r}
+acc_hall_p <- accuracy_hallmarks_dt %>%
+  filter(metric != "records") %>%
+  ggplot(aes(x = fct_relevel(metric, 
+                             "realm_acc", "kingdom_acc", "phylum_acc", 
+                             "class_acc", "order_acc", "family_acc", 
+                             "genus_acc"
+                             ), y = count)) +
+  geom_col(fill = "orangered") +
+  geom_label(aes(label = scales::percent(count, accuracy = 0.1))) +
+  theme_bw() +
+  labs(
+    x = "Taxonomic Level",
+    y = "Accuracy"
+  ) +
+  theme(
+    axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)
+  )
+
+acc_hall_p
+```
+
+```{r}
+acc_a_p <- accuracy_dt %>%
+  filter(metric != "records") %>%
+  ggplot(aes(x = fct_relevel(metric, 
+                             "realm_acc", "kingdom_acc", "phylum_acc", 
+                             "class_acc", "order_acc", "family_acc", 
+                             "genus_acc"
+                             ), y = count)) +
+  geom_col(fill = "orangered") +
+  geom_label(aes(label = scales::percent(count, accuracy = 0.1))) +
+  theme_bw() +
+  labs(
+    x = "Taxonomic Level",
+    y = "Accuracy"
+  ) +
+  theme(
+    axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)
+  )
+
+acc_a_p
+```
+
+```{r}
+merge_dt %>%
+  filter(total_hallmarks == 0) %>%
+  group_by(class.x) %>%
+  summarize(n = n())
+```
+
+```{r}
+#AB735630.1
+merge_dt %>%
+  filter(Accession == "AB735630.1") %>%
+  summarize(
+    records = n(),
+    realm_acc = sum(realm.x == realm.y) / records,
+    kingdom_acc = sum(kingdom.x == kingdom.y) / records,
+    phylum_acc = sum(phylum.x == phylum.y) / records,
+    class_acc = sum(class.x == class.y) / records,
+    order_acc = sum(order.x == order.y) / records,
+    family_acc = sum(family.x == family.y) / records,
+    genus_acc = sum(genus.x == genus.y) / records
+  )
+
+```
+
+
+
+
