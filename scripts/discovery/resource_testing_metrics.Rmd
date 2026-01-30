@@ -1,0 +1,526 @@
+---
+title: "analyze and plot metrics from geNomad and Cenote-Taker 3 performance tests"
+output: html_notebook
+---
+
+Computational performance comparison of geNomad and Cenote-Taker 3 on a large metagenome dataset.
+Tests were run with varying CPU counts (1, 2, 4, 8, 16, 32) and dataset sizes (full, 30%, 10%, 3%).
+
+```{r}
+library(data.table)
+library(stringr)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(forcats)
+library(rprojroot)
+library(readxl)
+library(scales)
+```
+
+## Load data
+
+```{r}
+metrics_dt <- read_excel(
+  sprintf(
+    "%s/data/discovery/large_metagenome/large_meta_resource_testing_metrics.xlsx",
+    find_rstudio_root_file()
+  )
+) %>%
+  as.data.table()
+
+metrics_dt
+```
+
+## Parse duration to seconds
+
+Excel stores duration as POSIXct with epoch 1899-12-31, extract time components directly.
+
+```{r}
+metrics_dt <- metrics_dt %>%
+  mutate(
+    duration_seconds = as.numeric(difftime(duration, as.POSIXct("1899-12-31 00:00:00", tz = "UTC"), units = "secs")),
+    duration_hours = duration_seconds / 3600,
+    max_mem_gb = max_mem_kilobytes / 1024 / 1024,
+    num_bases_gb = num_bases / 1e9
+  ) %>%
+  mutate(
+    dataset_label = factor(
+      dataset,
+      levels = c("0.03", "0.1", "0.3", "full"),
+      labels = c("3%", "10%", "30%", "100%")
+    ),
+    software = factor(software, levels = c("Cenote-Taker", "geNomad"))
+  )
+
+metrics_dt
+```
+
+## Runtime by CPU count
+
+```{r}
+runtime_cpu_p <- metrics_dt %>%
+  ggplot(aes(x = factor(CPUs), y = duration_hours, fill = software)) +
+  geom_bar(stat = "identity", position = position_dodge(0.9), color = "black") +
+  facet_wrap(~dataset_label, scales = "free_y", nrow = 1) +
+  scale_fill_manual(values = c("Cenote-Taker" = "#4DBEEE", "geNomad" = "#EDB120")) +
+  labs(
+    x = "CPU Threads",
+    y = "Runtime (hours)",
+    fill = "Software",
+    title = "Runtime by CPU Count and Dataset Size"
+  ) +
+  theme_bw() +
+  theme(
+    legend.position = "top",
+    axis.text.x = element_text(angle = 45, hjust = 1)
+  )
+
+runtime_cpu_p
+
+ggsave(
+  runtime_cpu_p,
+  file = sprintf(
+    "%s/charts/resource_runtime_by_cpu.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 10,
+  height = 5
+)
+
+ggsave(
+  runtime_cpu_p,
+  file = sprintf(
+    "%s/charts/resource_runtime_by_cpu.png",
+    find_rstudio_root_file()
+  ),
+  width = 10,
+  height = 5
+)
+```
+
+## Memory usage by CPU count
+
+```{r}
+memory_cpu_p <- metrics_dt %>%
+  ggplot(aes(x = factor(CPUs), y = max_mem_gb, fill = software)) +
+  geom_bar(stat = "identity", position = position_dodge(0.9), color = "black") +
+  facet_wrap(~dataset_label, scales = "free_y", nrow = 1) +
+  scale_fill_manual(values = c("Cenote-Taker" = "#4DBEEE", "geNomad" = "#EDB120")) +
+  labs(
+    x = "CPU Threads",
+    y = "Peak Memory (GB)",
+    fill = "Software",
+    title = "Peak Memory Usage by CPU Count and Dataset Size"
+  ) +
+  theme_bw() +
+  theme(
+    legend.position = "top",
+    axis.text.x = element_text(angle = 45, hjust = 1)
+  )
+
+memory_cpu_p
+
+ggsave(
+  memory_cpu_p,
+  file = sprintf(
+    "%s/charts/resource_memory_by_cpu.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 10,
+  height = 5
+)
+
+ggsave(
+  memory_cpu_p,
+  file = sprintf(
+    "%s/charts/resource_memory_by_cpu.png",
+    find_rstudio_root_file()
+  ),
+  width = 10,
+  height = 5
+)
+```
+
+## Scaling efficiency (speedup)
+
+```{r}
+baseline_dt <- metrics_dt %>%
+  filter(CPUs == 1) %>%
+  select(dataset, software, baseline_time = duration_seconds)
+
+scaling_dt <- metrics_dt %>%
+  left_join(baseline_dt, by = c("dataset", "software")) %>%
+  mutate(
+    speedup = baseline_time / duration_seconds,
+    efficiency = speedup / CPUs * 100
+  )
+
+scaling_dt %>%
+  select(dataset_label, software, CPUs, duration_hours, speedup, efficiency)
+```
+
+```{r}
+speedup_p <- scaling_dt %>%
+  ggplot(aes(x = CPUs, y = speedup, color = software, shape = software)) +
+  geom_line(linewidth = 1) +
+  geom_point(size = 3) +
+  geom_abline(slope = 1, intercept = 0, linetype = "dashed", color = "gray50") +
+  facet_wrap(~dataset_label, nrow = 1) +
+  scale_color_manual(values = c("Cenote-Taker" = "#4DBEEE", "geNomad" = "#EDB120")) +
+  scale_x_continuous(breaks = c(1, 2, 4, 8, 16, 32)) +
+  labs(
+    x = "CPU Threads",
+    y = "Speedup (relative to 1 CPU)",
+    color = "Software",
+    shape = "Software",
+    title = "Parallel Scaling Efficiency",
+    subtitle = "Dashed line = ideal linear scaling"
+  ) +
+  theme_bw() +
+  theme(legend.position = "top")
+
+speedup_p
+
+ggsave(
+  speedup_p,
+  file = sprintf(
+    "%s/charts/resource_speedup.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 10,
+  height = 5
+)
+
+ggsave(
+  speedup_p,
+  file = sprintf(
+    "%s/charts/resource_speedup.png",
+    find_rstudio_root_file()
+  ),
+  width = 10,
+  height = 5
+)
+```
+
+## Runtime vs dataset size
+
+```{r}
+runtime_size_p <- metrics_dt %>%
+  filter(CPUs %in% c(1, 8, 32)) %>%
+  ggplot(aes(x = num_bases_gb, y = duration_hours, color = software, shape = software)) +
+  geom_line(linewidth = 1) +
+  geom_point(size = 3) +
+  facet_wrap(~paste(CPUs, "CPUs"), nrow = 1) +
+  scale_color_manual(values = c("Cenote-Taker" = "#4DBEEE", "geNomad" = "#EDB120")) +
+  labs(
+    x = "Dataset Size (Gb)",
+    y = "Runtime (hours)",
+    color = "Software",
+    shape = "Software",
+    title = "Runtime Scaling with Dataset Size"
+  ) +
+  theme_bw() +
+  theme(legend.position = "top")
+
+runtime_size_p
+
+ggsave(
+  runtime_size_p,
+  file = sprintf(
+    "%s/charts/resource_runtime_by_size.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 9,
+  height = 4
+)
+
+ggsave(
+  runtime_size_p,
+  file = sprintf(
+    "%s/charts/resource_runtime_by_size.png",
+    find_rstudio_root_file()
+  ),
+  width = 9,
+  height = 4
+)
+```
+
+## Memory vs dataset size
+
+```{r}
+memory_size_p <- metrics_dt %>%
+  filter(CPUs %in% c(1, 8, 32)) %>%
+  ggplot(aes(x = num_bases_gb, y = max_mem_gb, color = software, shape = software)) +
+  geom_line(linewidth = 1) +
+  geom_point(size = 3) +
+  facet_wrap(~paste(CPUs, "CPUs"), nrow = 1) +
+  scale_color_manual(values = c("Cenote-Taker" = "#4DBEEE", "geNomad" = "#EDB120")) +
+  labs(
+    x = "Dataset Size (Gb)",
+    y = "Peak Memory (GB)",
+    color = "Software",
+    shape = "Software",
+    title = "Memory Usage Scaling with Dataset Size"
+  ) +
+  theme_bw() +
+  theme(legend.position = "top")
+
+memory_size_p
+
+ggsave(
+  memory_size_p,
+  file = sprintf(
+    "%s/charts/resource_memory_by_size.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 9,
+  height = 4
+)
+
+ggsave(
+  memory_size_p,
+  file = sprintf(
+    "%s/charts/resource_memory_by_size.png",
+    find_rstudio_root_file()
+  ),
+  width = 9,
+  height = 4
+)
+```
+
+## Summary comparison at full dataset
+
+```{r}
+full_comparison_p <- metrics_dt %>%
+  filter(dataset == "full") %>%
+  pivot_longer(
+    cols = c(duration_hours, max_mem_gb),
+    names_to = "metric",
+    values_to = "value"
+  ) %>%
+  mutate(
+    metric = case_when(
+      metric == "duration_hours" ~ "Runtime (hours)",
+      metric == "max_mem_gb" ~ "Peak Memory (GB)"
+    )
+  ) %>%
+  ggplot(aes(x = factor(CPUs), y = value, fill = software)) +
+  geom_bar(stat = "identity", position = position_dodge(0.9), color = "black") +
+  facet_wrap(~metric, scales = "free_y") +
+  scale_fill_manual(values = c("Cenote-Taker" = "#4DBEEE", "geNomad" = "#EDB120")) +
+  labs(
+    x = "CPU Threads",
+    y = "",
+    fill = "Software",
+    title = "Full Dataset (5.2 Gb, 177,667 seqs) Performance Comparison"
+  ) +
+  theme_bw() +
+  theme(legend.position = "top")
+
+full_comparison_p
+
+ggsave(
+  full_comparison_p,
+  file = sprintf(
+    "%s/charts/resource_full_comparison.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 9,
+  height = 5
+)
+
+ggsave(
+  full_comparison_p,
+  file = sprintf(
+    "%s/charts/resource_full_comparison.png",
+    find_rstudio_root_file()
+  ),
+  width = 9,
+  height = 5
+)
+```
+
+## Efficiency metrics: Throughput and Memory Efficiency
+
+```{r}
+metrics2_dt <- metrics_dt %>%
+  mutate(
+    gb_per_hour = num_bases_gb / duration_hours,
+    gb_per_gb_ram = num_bases_gb / max_mem_gb
+  )
+
+cat("=== Throughput (Gb/hour) by Software and CPU Count ===\n\n")
+metrics2_dt %>%
+  filter(dataset == "full") %>%
+  select(c(software, CPUs, duration_hours, gb_per_hour)) %>%
+  arrange(software, CPUs) %>%
+  print()
+```
+
+### Throughput (Gb/hour) by CPU count
+
+```{r}
+throughput_p <- metrics2_dt %>%
+  ggplot(aes(x = factor(CPUs), y = gb_per_hour, fill = software)) +
+  geom_bar(stat = "identity", position = position_dodge(0.9), color = "black") +
+  facet_wrap(~dataset_label, nrow = 1) +
+  scale_fill_manual(values = c("Cenote-Taker" = "#4DBEEE", "geNomad" = "#EDB120")) +
+  labs(
+    x = "CPU Threads",
+    y = "Throughput (Gb/hour)",
+    fill = "Software",
+    title = "Processing Throughput by CPU Count and Dataset Size"
+  ) +
+  theme_bw() +
+  theme(legend.position = "top")
+
+throughput_p
+
+ggsave(
+  throughput_p,
+  file = sprintf(
+    "%s/charts/resource_throughput.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 12,
+  height = 5
+)
+
+ggsave(
+  throughput_p,
+  file = sprintf(
+    "%s/charts/resource_throughput.png",
+    find_rstudio_root_file()
+  ),
+  width = 12,
+  height = 5
+)
+```
+
+### Memory efficiency (Gb processed per GB RAM used)
+
+```{r}
+cat("=== Memory Efficiency (Gb/GB RAM) by Software and CPU Count ===\n\n")
+metrics2_dt %>%
+  filter(dataset == "full") %>%
+  select(software, CPUs, max_mem_gb, gb_per_gb_ram) %>%
+  arrange(software, CPUs) %>%
+  print()
+```
+
+```{r}
+mem_efficiency_p <- metrics2_dt %>%
+  ggplot(aes(x = factor(CPUs), y = gb_per_gb_ram, fill = software)) +
+  geom_bar(stat = "identity", position = position_dodge(0.9), color = "black") +
+  facet_wrap(~dataset_label, nrow = 1) +
+  scale_fill_manual(values = c("Cenote-Taker" = "#4DBEEE", "geNomad" = "#EDB120")) +
+  labs(
+    x = "CPU Threads",
+    y = "Memory Efficiency (Gb/GB RAM)",
+    fill = "Software",
+    title = "Memory Efficiency by CPU Count and Dataset Size"
+  ) +
+  theme_bw() +
+  theme(legend.position = "top")
+
+mem_efficiency_p
+
+ggsave(
+  mem_efficiency_p,
+  file = sprintf(
+    "%s/charts/resource_memory_efficiency.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 12,
+  height = 5
+)
+
+ggsave(
+  mem_efficiency_p,
+  file = sprintf(
+    "%s/charts/resource_memory_efficiency.png",
+    find_rstudio_root_file()
+  ),
+  width = 12,
+  height = 5
+)
+```
+
+### Combined efficiency comparison (full dataset)
+
+```{r}
+efficiency_comparison_p <- metrics2_dt %>%
+  filter(dataset == "full") %>%
+  select(software, CPUs, gb_per_hour, gb_per_gb_ram) %>%
+  pivot_longer(
+    cols = c(gb_per_hour, gb_per_gb_ram),
+    names_to = "metric",
+    values_to = "value"
+  ) %>%
+  mutate(
+    metric = case_when(
+      metric == "gb_per_hour" ~ "Throughput (Gb/hour)",
+      metric == "gb_per_gb_ram" ~ "Memory Efficiency (Gb/GB RAM)"
+    )
+  ) %>%
+  ggplot(aes(x = factor(CPUs), y = value, fill = software)) +
+  geom_bar(stat = "identity", position = position_dodge(0.9), color = "black") +
+  facet_wrap(~metric, scales = "free_y") +
+  scale_fill_manual(values = c("Cenote-Taker" = "#4DBEEE", "geNomad" = "#EDB120")) +
+  labs(
+    x = "CPU Threads",
+    y = "",
+    fill = "Software",
+    title = "Efficiency Metrics on Full Dataset (5.2 Gb)"
+  ) +
+  theme_bw() +
+  theme(legend.position = "top")
+
+efficiency_comparison_p
+
+ggsave(
+  efficiency_comparison_p,
+  file = sprintf(
+    "%s/charts/resource_efficiency_comparison.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 10,
+  height = 5
+)
+
+ggsave(
+  efficiency_comparison_p,
+  file = sprintf(
+    "%s/charts/resource_efficiency_comparison.png",
+    find_rstudio_root_file()
+  ),
+  width = 10,
+  height = 5
+)
+```
+
+## Summary statistics
+
+```{r}
+cat("=== Full Dataset Performance Summary ===\n\n")
+
+full_stats <- metrics_dt %>%
+  filter(dataset == "full") %>%
+  group_by(software) %>%
+  summarize(
+    min_runtime_hrs = min(duration_hours),
+    max_runtime_hrs = max(duration_hours),
+    min_memory_gb = min(max_mem_gb),
+    max_memory_gb = max(max_mem_gb),
+    .groups = "drop"
+  )
+
+print(full_stats)
+
+cat("\n=== Speedup at 32 CPUs (full dataset) ===\n\n")
+scaling_dt %>%
+  filter(dataset == "full", CPUs == 32) %>%
+  select(software, speedup, efficiency) %>%
+  print()
+```

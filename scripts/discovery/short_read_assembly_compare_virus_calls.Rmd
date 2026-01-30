@@ -1,0 +1,2213 @@
+---
+title: "Comparing Cenote-Taker 3 and Genomad Discovery on short read metagenome assemblies"
+output: html_notebook
+---
+
+
+Cenote-Taker 3 and Genomad both can discover viruses in metagenomic data.
+Short read assemblies are still pervasive, so a benchmark on these data is informative.
+
+```{r}
+# load libraries
+library(data.table)
+library(stringr)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(forcats)
+library(rprojroot)
+library(ggupset)
+```
+
+## Functions
+
+```{r}
+#' Tag overlapping windows (≥25 % overlap) with a unique ID
+#' @param df         data.frame / data.table containing window rows
+#' @param contig_col column name holding contig values (default "contig")
+#' @param start_col  column name holding window start (default "start")
+#' @param stop_col   column name holding window stop  (default "stop")
+#' @return           original data with new column `ovl_id`
+assign_overlap_id <- function(df,
+                              contig_col = "contig",
+                              start_col  = "start",
+                              stop_col   = "stop") {
+  stopifnot(contig_col %in% names(df),
+            start_col  %in% names(df),
+            stop_col   %in% names(df))
+  
+  # convert to data.table for efficient in-place ops
+  dt <- as.data.table(df)
+  
+  # standardise working names
+  setnames(dt,
+           c(contig_col, start_col, stop_col),
+           c("contig__", "start__", "stop__"))
+  
+  setorder(dt, contig__, start__, stop__)
+  
+  # helper to tag one contig cluster vectorised over rows
+  tag_one <- function(start_vec, stop_vec) {
+    n <- length(start_vec)
+    grp <- integer(n)
+    cur_tag <- 1L
+    cur_s <- start_vec[1]
+    cur_e <- stop_vec[1]
+    cur_len <- cur_e - cur_s
+    grp[1] <- cur_tag
+    if (n > 1L) {
+      for (i in 2:n) {
+        len_i <- stop_vec[i] - start_vec[i]
+        ovl   <- min(cur_e, stop_vec[i]) - max(cur_s, start_vec[i])
+        if (ovl > 0 &&
+            ovl >= 0.25 * pmin(len_i, cur_len)) {
+          grp[i] <- cur_tag
+          if (stop_vec[i] > cur_e) {
+            cur_e  <- stop_vec[i]
+            cur_len <- cur_e - cur_s
+          }
+        } else {
+          cur_tag <- cur_tag + 1L
+          grp[i]  <- cur_tag
+          cur_s <- start_vec[i]
+          cur_e <- stop_vec[i]
+          cur_len <- cur_e - cur_s
+        }
+      }
+    }
+    grp
+  }
+  
+  dt[, ovl_grp := tag_one(start__, stop__), by = contig__]
+  dt[, ovl_id  := paste0(contig__, "_", ovl_grp)]
+  
+  # restore original column names
+  setnames(dt,
+           c("contig__", "start__", "stop__"),
+           c(contig_col, start_col, stop_col))
+  
+  invisible(dt[])
+}
+
+```
+
+
+## VLP Accessions
+
+ERR8081307, ERR8081362, ERR8081370
+
+
+load tables
+```{r}
+ERR8081307_ct_sum_dt <- fread(
+  sprintf(
+    "%s/data/discovery/short_read_assemblies/VLP_samples/ct3/ERR8081307_ct3_virus_summary.tsv",
+    find_rstudio_root_file()
+  ),
+  header = T
+) %>%
+  mutate(input_name = gsub(" .*", "", input_name))
+
+ERR8081307_ct3_prune_dt <- fread(
+  sprintf(
+    "%s/data/discovery/short_read_assemblies/VLP_samples/ct3/ERR8081307_ct3_prune_summary.tsv",
+    find_rstudio_root_file()
+  ),
+  header = T
+) %>%
+  mutate(chunk_ID = paste(contig, chunk_name, sep = "@")) %>%
+  select(c(chunk_ID, contig_length, chunk_start, chunk_stop))
+
+ERR8081307_ct_merge_dt <- merge(
+  ERR8081307_ct_sum_dt,
+  ERR8081307_ct3_prune_dt,
+  by.x = "contig",
+  by.y = "chunk_ID",
+  all.x = T
+) %>%
+  mutate(
+    chunk_start = case_when(
+      is.na(chunk_start) ~ 0,
+      TRUE ~ chunk_start
+    ),
+    chunk_stop = case_when(
+      is.na(chunk_stop) ~ virus_seq_length,
+      TRUE ~ chunk_stop
+    ),
+    input_name = gsub(" \\(.*", "", input_name)
+  )
+
+```
+
+```{r}
+ERR8081307_genomad_dt <- fread(
+  sprintf(
+    "%s/data/discovery/short_read_assemblies/VLP_samples/genomad/ERR8081307.contigs_virus_summary.tsv",
+    find_rstudio_root_file()
+  ),
+  header = T
+) %>% 
+  separate(seq_name, 
+           sep = "\\|",
+           c("input_name", "provirus")) %>%
+  separate(coordinates, 
+           sep = "-",
+           c("chunk_start", "chunk_stop")) %>%
+  mutate(chunk_start = as.double(chunk_start),
+         chunk_stop = as.double(chunk_stop)) %>%
+  mutate(
+    chunk_start = case_when(
+      is.na(chunk_start) ~ 0,
+      TRUE ~ chunk_start
+    ),
+    chunk_stop = case_when(
+      is.na(chunk_stop) ~ length,
+      TRUE ~ chunk_stop
+    )
+  ) %>%
+  filter(
+    n_hallmarks >= 2,
+    length >= 1000
+    )
+```
+
+```{r}
+ERR8081307_full_dt <- merge(
+  ERR8081307_ct_merge_dt,
+  ERR8081307_genomad_dt,
+  by = c("input_name", "chunk_start", "chunk_stop"),
+  all = T
+)
+```
+
+```{r}
+ERR8081307_view_dt <- ERR8081307_full_dt %>%
+  select(c(input_name, chunk_start, chunk_stop,
+           organism, virion_hallmark_count,
+           n_hallmarks, marker_enrichment))
+```
+
+```{r}
+ERR8081307_view2_dt <- assign_overlap_id(
+  ERR8081307_view_dt,
+  contig_col = "input_name",
+  start_col = "chunk_start",
+  stop_col = "chunk_stop"
+) %>%
+  group_by(ovl_id) %>%
+  summarize(
+    approx_len = max(chunk_stop) - min(chunk_start),
+    min_start = min(chunk_start),
+    max_stop = max(chunk_stop),
+    organism = first(organism, na_rm = T),
+    virion_hallmark_count = first(virion_hallmark_count, na_rm = T),
+    n_hallmarks = first(n_hallmarks, na_rm = T),
+    marker_enrichment = first(marker_enrichment, na_rm = T),
+  )
+```
+
+Cenote-Taker only
+```{r}
+ERR8081307_view2_dt %>%
+  filter(is.na(n_hallmarks))
+```
+
+```{r}
+ERR8081307_ct3_only_dt <- ERR8081307_view2_dt %>%
+  filter(is.na(n_hallmarks)) %>%
+  mutate(
+    input_name = gsub("_[0-9]$", "", ovl_id)
+  ) %>%
+  rename(
+    chunk_start = min_start,
+    chunk_stop = max_stop
+  ) %>%
+  select(c(input_name, chunk_start, chunk_stop))
+
+ERR8081307_ct3_contigs <- merge(
+  ERR8081307_ct3_only_dt,
+  ERR8081307_ct_merge_dt,
+  by = c("input_name", "chunk_start", "chunk_stop")
+) %>%
+  select(c(input_name, contig))
+
+write.table(
+  ERR8081307_ct3_contigs$contig,
+  file = sprintf(
+    "%s/data/discovery/short_read_assemblies/VLP_samples/ERR8081307.ct3_only_contigs.txt",
+    find_rstudio_root_file()
+  ),
+  col.names = F,
+  row.names = F,
+  quote = F
+)
+
+```
+
+Genomad contigs only
+```{r}
+ERR8081307_view2_dt %>%
+  filter(is.na(virion_hallmark_count))
+```
+
+```{r}
+ERR8081307_genomad_only_dt <- ERR8081307_view2_dt %>%
+  filter(is.na(virion_hallmark_count)) %>%
+  mutate(
+    input_name = gsub("_[0-9]$", "", ovl_id)
+  ) %>%
+  rename(
+    chunk_start = min_start,
+    chunk_stop = max_stop
+  ) %>%
+  select(c(input_name, chunk_start, chunk_stop))
+
+ERR8081307_genomad_contigs <- merge(
+  ERR8081307_genomad_only_dt,
+  ERR8081307_genomad_dt,
+  by = c("input_name", "chunk_start", "chunk_stop")
+) %>%
+  select(c(input_name, provirus)) %>%
+  mutate(
+    contig = paste(input_name, provirus, sep = "|"),
+    contig = gsub("\\|NA", "", contig)
+    )
+
+write.table(
+  ERR8081307_genomad_contigs$contig,
+  file = sprintf(
+    "%s/data/discovery/short_read_assemblies/VLP_samples/ERR8081307.gnmd_only_contigs.txt",
+    find_rstudio_root_file()
+  ),
+  col.names = F,
+  row.names = F,
+  quote = F
+)
+
+```
+
+
+
+```{r}
+ERR8081307_view2_dt %>%
+  filter(!is.na(virion_hallmark_count),
+         !is.na(n_hallmarks)
+         )
+```
+
+upset plot
+```{r}
+
+ERR8081307_upset_ct_dt <- assign_overlap_id(
+  ERR8081307_view_dt,
+  contig_col = "input_name",
+  start_col = "chunk_start",
+  stop_col = "chunk_stop"
+) %>%
+  group_by(ovl_id) %>%
+  summarize(
+    hit = sum(!is.na(organism)),
+  ) %>%
+  ungroup() %>%
+  filter(hit >= 1) %>%
+  mutate(software = "Cenote-Taker 3")
+
+ERR8081307_upset_gnmd_dt <- assign_overlap_id(
+  ERR8081307_view_dt,
+  contig_col = "input_name",
+  start_col = "chunk_start",
+  stop_col = "chunk_stop"
+) %>%
+  group_by(ovl_id) %>%
+  summarize(
+    hit = sum(!is.na(marker_enrichment)),
+  ) %>%
+  ungroup() %>%
+  filter(hit >= 1) %>%
+  mutate(software = "geNomad")
+
+
+ERR8081307_upset_dt <- rbind(
+  ERR8081307_upset_ct_dt,
+  ERR8081307_upset_gnmd_dt
+) %>%
+  group_by(ovl_id) %>%
+  summarize(softwares = list(software))
+
+ERR8081307_up_p <- ERR8081307_upset_dt %>%
+  ggplot(aes(x= softwares)) +
+  geom_bar(color = "black", fill = "lightgrey") +
+  scale_x_upset() +
+  geom_text(stat='count', aes(label=after_stat(count)), vjust=+1.1) +
+  labs(
+    x = "Software",
+    y = "Predicted Viruses"
+  ) +
+  theme_bw()
+
+ERR8081307_up_p
+
+ggsave(
+  ERR8081307_up_p,
+  file = sprintf(
+    "%s/charts/ERR8081307_disc_upset1.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 3,
+  height = 4
+)
+
+```
+
+ERR8081307 genomad only stats
+```{r}
+ERR8081307_gen_hall_p <- merge(
+  ERR8081307_genomad_dt,
+  ERR8081307_genomad_only_dt %>% mutate(g_only = "geNomad-only"),
+  all.x = T
+) %>%
+  mutate(g_only = case_when(g_only == "geNomad-only" ~ "geNomad-only", TRUE ~ "CT3 and geNomad")) %>%
+  ggplot(aes(x=n_hallmarks)) +
+  geom_histogram() +
+  facet_wrap(~g_only, ncol = 1) +
+  theme_bw() +
+  labs(
+    x = "geNomad hallmark gene count",
+    y = "genome count",
+    title = "geNomad hallmark genes/virus MAG"
+  )
+
+ERR8081307_gen_hall_p
+
+ggsave(
+  ERR8081307_gen_hall_p,
+  file = sprintf(
+    "%s/charts/ERR8081307_disc_genomad_halls1.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 4,
+  height = 4
+)
+
+ggsave(
+  ERR8081307_gen_hall_p,
+  file = sprintf(
+    "%s/charts/ERR8081307_disc_genomad_halls1.png",
+    find_rstudio_root_file()
+  ),
+  width = 4,
+  height = 4
+)
+```
+
+
+ERR8081307 CT3 only stats
+```{r}
+ERR8081307_ct3_hall_p <- merge(
+  ERR8081307_ct3_only_dt %>% mutate(c_only = "CT3-only"),
+  ERR8081307_ct_merge_dt,
+  all.y = T
+) %>%
+  mutate(
+    c_only = case_when(c_only == "CT3-only" ~ "CT3-only", TRUE ~ "CT3 and geNomad"),
+    n_hallmarks = virion_hallmark_count + rep_hallmark_count
+    ) %>%
+  ggplot(aes(x=n_hallmarks)) +
+  geom_histogram() +
+  facet_wrap(~c_only, ncol = 1) +
+  theme_bw() +
+  labs(
+    x = "CT3 hallmark gene count",
+    y = "CT3 count",
+    title = "CT3 hallmark genes/virus MAG"
+  )
+
+ERR8081307_ct3_hall_p
+
+ggsave(
+  ERR8081307_ct3_hall_p,
+  file = sprintf(
+    "%s/charts/ERR8081307_disc_ct3_halls1.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 4,
+  height = 4
+)
+
+ggsave(
+  ERR8081307_ct3_hall_p,
+  file = sprintf(
+    "%s/charts/ERR8081307_disc_ct3_halls1.png",
+    find_rstudio_root_file()
+  ),
+  width = 4,
+  height = 4
+)
+
+```
+
+
+### ERR8081362
+
+load tables
+```{r}
+ERR8081362_ct_sum_dt <- fread(
+  sprintf(
+    "%s/data/discovery/short_read_assemblies/VLP_samples/ct3/ERR8081362_ct3_virus_summary.tsv",
+    find_rstudio_root_file()
+  ),
+  header = T
+) %>%
+  mutate(input_name = gsub(" .*", "", input_name))
+
+ERR8081362_ct3_prune_dt <- fread(
+  sprintf(
+    "%s/data/discovery/short_read_assemblies/VLP_samples/ct3/ERR8081362_ct3_prune_summary.tsv",
+    find_rstudio_root_file()
+  ),
+  header = T
+) %>%
+  mutate(chunk_ID = paste(contig, chunk_name, sep = "@")) %>%
+  select(c(chunk_ID, contig_length, chunk_start, chunk_stop))
+
+ERR8081362_ct_merge_dt <- merge(
+  ERR8081362_ct_sum_dt,
+  ERR8081362_ct3_prune_dt,
+  by.x = "contig",
+  by.y = "chunk_ID",
+  all.x = T
+) %>%
+  mutate(
+    chunk_start = case_when(
+      is.na(chunk_start) ~ 0,
+      TRUE ~ chunk_start
+    ),
+    chunk_stop = case_when(
+      is.na(chunk_stop) ~ virus_seq_length,
+      TRUE ~ chunk_stop
+    ),
+    input_name = gsub(" \\(.*", "", input_name)
+  )
+
+```
+
+```{r}
+ERR8081362_genomad_dt <- fread(
+  sprintf(
+    "%s/data/discovery/short_read_assemblies/VLP_samples/genomad/ERR8081362.contigs_virus_summary.tsv",
+    find_rstudio_root_file()
+  ),
+  header = T
+) %>% 
+  separate(seq_name, 
+           sep = "\\|",
+           c("input_name", "provirus")) %>%
+  separate(coordinates, 
+           sep = "-",
+           c("chunk_start", "chunk_stop")) %>%
+  mutate(chunk_start = as.double(chunk_start),
+         chunk_stop = as.double(chunk_stop)) %>%
+  mutate(
+    chunk_start = case_when(
+      is.na(chunk_start) ~ 0,
+      TRUE ~ chunk_start
+    ),
+    chunk_stop = case_when(
+      is.na(chunk_stop) ~ length,
+      TRUE ~ chunk_stop
+    )
+  ) %>%
+  filter(
+    n_hallmarks >= 2,
+    length >= 1000
+    )
+```
+
+```{r}
+ERR8081362_full_dt <- merge(
+  ERR8081362_ct_merge_dt,
+  ERR8081362_genomad_dt,
+  by = c("input_name", "chunk_start", "chunk_stop"),
+  all = T
+)
+```
+
+```{r}
+ERR8081362_view_dt <- ERR8081362_full_dt %>%
+  select(c(input_name, chunk_start, chunk_stop,
+           organism, virion_hallmark_count,
+           n_hallmarks, marker_enrichment))
+```
+
+```{r}
+ERR8081362_view2_dt <- assign_overlap_id(
+  ERR8081362_view_dt,
+  contig_col = "input_name",
+  start_col = "chunk_start",
+  stop_col = "chunk_stop"
+) %>%
+  group_by(ovl_id) %>%
+  summarize(
+    approx_len = max(chunk_stop) - min(chunk_start),
+    min_start = min(chunk_start),
+    max_stop = max(chunk_stop),
+    organism = first(organism, na_rm = T),
+    virion_hallmark_count = first(virion_hallmark_count, na_rm = T),
+    n_hallmarks = first(n_hallmarks, na_rm = T),
+    marker_enrichment = first(marker_enrichment, na_rm = T),
+  )
+```
+
+Cenote-Taker only
+```{r}
+ERR8081362_view2_dt %>%
+  filter(is.na(n_hallmarks))
+```
+
+```{r}
+ERR8081362_ct3_only_dt <- ERR8081362_view2_dt %>%
+  filter(is.na(n_hallmarks)) %>%
+  mutate(
+    input_name = gsub("_[0-9]$", "", ovl_id)
+  ) %>%
+  rename(
+    chunk_start = min_start,
+    chunk_stop = max_stop
+  ) %>%
+  select(c(input_name, chunk_start, chunk_stop))
+
+ERR8081362_ct3_contigs <- merge(
+  ERR8081362_ct3_only_dt,
+  ERR8081362_ct_merge_dt,
+  by = c("input_name", "chunk_start", "chunk_stop")
+) %>%
+  select(c(input_name, contig))
+
+write.table(
+  ERR8081362_ct3_contigs$contig,
+  file = sprintf(
+    "%s/data/discovery/short_read_assemblies/VLP_samples/ERR8081362.ct3_only_contigs.txt",
+    find_rstudio_root_file()
+  ),
+  col.names = F,
+  row.names = F,
+  quote = F
+)
+
+```
+
+Genomad contigs only
+```{r}
+ERR8081362_view2_dt %>%
+  filter(is.na(virion_hallmark_count))
+```
+
+```{r}
+ERR8081362_genomad_only_dt <- ERR8081362_view2_dt %>%
+  filter(is.na(virion_hallmark_count)) %>%
+  mutate(
+    input_name = gsub("_[0-9]$", "", ovl_id)
+  ) %>%
+  rename(
+    chunk_start = min_start,
+    chunk_stop = max_stop
+  ) %>%
+  select(c(input_name, chunk_start, chunk_stop))
+
+ERR8081362_genomad_contigs <- merge(
+  ERR8081362_genomad_only_dt,
+  ERR8081362_genomad_dt,
+  by = c("input_name", "chunk_start", "chunk_stop")
+) %>%
+  select(c(input_name, provirus)) %>%
+  mutate(
+    contig = paste(input_name, provirus, sep = "|"),
+    contig = gsub("\\|NA", "", contig)
+    )
+
+write.table(
+  ERR8081362_genomad_contigs$contig,
+  file = sprintf(
+    "%s/data/discovery/short_read_assemblies/VLP_samples/ERR8081362.gnmd_only_contigs.txt",
+    find_rstudio_root_file()
+  ),
+  col.names = F,
+  row.names = F,
+  quote = F
+)
+
+```
+
+
+
+```{r}
+ERR8081362_view2_dt %>%
+  filter(!is.na(virion_hallmark_count),
+         !is.na(n_hallmarks)
+         )
+```
+
+upset plot
+```{r}
+
+ERR8081362_upset_ct_dt <- assign_overlap_id(
+  ERR8081362_view_dt,
+  contig_col = "input_name",
+  start_col = "chunk_start",
+  stop_col = "chunk_stop"
+) %>%
+  group_by(ovl_id) %>%
+  summarize(
+    hit = sum(!is.na(organism)),
+  ) %>%
+  ungroup() %>%
+  filter(hit >= 1) %>%
+  mutate(software = "Cenote-Taker 3")
+
+ERR8081362_upset_gnmd_dt <- assign_overlap_id(
+  ERR8081362_view_dt,
+  contig_col = "input_name",
+  start_col = "chunk_start",
+  stop_col = "chunk_stop"
+) %>%
+  group_by(ovl_id) %>%
+  summarize(
+    hit = sum(!is.na(marker_enrichment)),
+  ) %>%
+  ungroup() %>%
+  filter(hit >= 1) %>%
+  mutate(software = "geNomad")
+
+
+ERR8081362_upset_dt <- rbind(
+  ERR8081362_upset_ct_dt,
+  ERR8081362_upset_gnmd_dt
+) %>%
+  group_by(ovl_id) %>%
+  summarize(softwares = list(software))
+
+ERR8081362_up_p <- ERR8081362_upset_dt %>%
+  ggplot(aes(x= softwares)) +
+  geom_bar(color = "black", fill = "lightgrey") +
+  scale_x_upset() +
+  geom_text(stat='count', aes(label=after_stat(count)), vjust=+1.1) +
+  labs(
+    x = "Software",
+    y = "Predicted Viruses"
+  ) +
+  theme_bw()
+
+ERR8081362_up_p
+
+ggsave(
+  ERR8081362_up_p,
+  file = sprintf(
+    "%s/charts/ERR8081362_disc_upset1.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 3,
+  height = 4
+)
+
+```
+
+ERR8081362 genomad only stats
+```{r}
+ERR8081362_gen_hall_p <- merge(
+  ERR8081362_genomad_dt,
+  ERR8081362_genomad_only_dt %>% mutate(g_only = "geNomad-only"),
+  all.x = T
+) %>%
+  mutate(g_only = case_when(g_only == "geNomad-only" ~ "geNomad-only", TRUE ~ "CT3 and geNomad")) %>%
+  ggplot(aes(x=n_hallmarks)) +
+  geom_histogram() +
+  facet_wrap(~g_only, ncol = 1) +
+  theme_bw() +
+  labs(
+    x = "geNomad hallmark gene count",
+    y = "genome count",
+    title = "geNomad hallmark genes/virus MAG"
+  )
+
+ERR8081362_gen_hall_p
+
+ggsave(
+  ERR8081362_gen_hall_p,
+  file = sprintf(
+    "%s/charts/ERR8081362_disc_genomad_halls1.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 4,
+  height = 4
+)
+
+ggsave(
+  ERR8081362_gen_hall_p,
+  file = sprintf(
+    "%s/charts/ERR8081362_disc_genomad_halls1.png",
+    find_rstudio_root_file()
+  ),
+  width = 4,
+  height = 4
+)
+```
+
+
+ERR8081362 CT3 only stats
+```{r}
+ERR8081362_ct3_hall_p <- merge(
+  ERR8081362_ct3_only_dt %>% mutate(c_only = "CT3-only"),
+  ERR8081362_ct_merge_dt,
+  all.y = T
+) %>%
+  mutate(
+    c_only = case_when(c_only == "CT3-only" ~ "CT3-only", TRUE ~ "CT3 and geNomad"),
+    n_hallmarks = virion_hallmark_count + rep_hallmark_count
+    ) %>%
+  ggplot(aes(x=n_hallmarks)) +
+  geom_histogram() +
+  facet_wrap(~c_only, ncol = 1) +
+  theme_bw() +
+  labs(
+    x = "CT3 hallmark gene count",
+    y = "CT3 count",
+    title = "CT3 hallmark genes/virus MAG"
+  )
+
+ERR8081362_ct3_hall_p
+
+ggsave(
+  ERR8081362_ct3_hall_p,
+  file = sprintf(
+    "%s/charts/ERR8081362_disc_ct3_halls1.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 4,
+  height = 4
+)
+
+ggsave(
+  ERR8081362_ct3_hall_p,
+  file = sprintf(
+    "%s/charts/ERR8081362_disc_ct3_halls1.png",
+    find_rstudio_root_file()
+  ),
+  width = 4,
+  height = 4
+)
+
+```
+
+
+### ERR8081370
+
+load tables
+```{r}
+ERR8081370_ct_sum_dt <- fread(
+  sprintf(
+    "%s/data/discovery/short_read_assemblies/VLP_samples/ct3/ERR8081370_ct3_virus_summary.tsv",
+    find_rstudio_root_file()
+  ),
+  header = T
+) %>%
+  mutate(input_name = gsub(" .*", "", input_name))
+
+ERR8081370_ct3_prune_dt <- fread(
+  sprintf(
+    "%s/data/discovery/short_read_assemblies/VLP_samples/ct3/ERR8081370_ct3_prune_summary.tsv",
+    find_rstudio_root_file()
+  ),
+  header = T
+) %>%
+  mutate(chunk_ID = paste(contig, chunk_name, sep = "@")) %>%
+  select(c(chunk_ID, contig_length, chunk_start, chunk_stop))
+
+ERR8081370_ct_merge_dt <- merge(
+  ERR8081370_ct_sum_dt,
+  ERR8081370_ct3_prune_dt,
+  by.x = "contig",
+  by.y = "chunk_ID",
+  all.x = T
+) %>%
+  mutate(
+    chunk_start = case_when(
+      is.na(chunk_start) ~ 0,
+      TRUE ~ chunk_start
+    ),
+    chunk_stop = case_when(
+      is.na(chunk_stop) ~ virus_seq_length,
+      TRUE ~ chunk_stop
+    ),
+    input_name = gsub(" \\(.*", "", input_name)
+  )
+
+```
+
+```{r}
+ERR8081370_genomad_dt <- fread(
+  sprintf(
+    "%s/data/discovery/short_read_assemblies/VLP_samples/genomad/ERR8081370.contigs_virus_summary.tsv",
+    find_rstudio_root_file()
+  ),
+  header = T
+) %>% 
+  separate(seq_name, 
+           sep = "\\|",
+           c("input_name", "provirus")) %>%
+  separate(coordinates, 
+           sep = "-",
+           c("chunk_start", "chunk_stop")) %>%
+  mutate(chunk_start = as.double(chunk_start),
+         chunk_stop = as.double(chunk_stop)) %>%
+  mutate(
+    chunk_start = case_when(
+      is.na(chunk_start) ~ 0,
+      TRUE ~ chunk_start
+    ),
+    chunk_stop = case_when(
+      is.na(chunk_stop) ~ length,
+      TRUE ~ chunk_stop
+    )
+  ) %>%
+  filter(
+    n_hallmarks >= 2,
+    length >= 1000
+    )
+```
+
+```{r}
+ERR8081370_full_dt <- merge(
+  ERR8081370_ct_merge_dt,
+  ERR8081370_genomad_dt,
+  by = c("input_name", "chunk_start", "chunk_stop"),
+  all = T
+)
+```
+
+```{r}
+ERR8081370_view_dt <- ERR8081370_full_dt %>%
+  select(c(input_name, chunk_start, chunk_stop,
+           organism, virion_hallmark_count,
+           n_hallmarks, marker_enrichment))
+```
+
+```{r}
+ERR8081370_view2_dt <- assign_overlap_id(
+  ERR8081370_view_dt,
+  contig_col = "input_name",
+  start_col = "chunk_start",
+  stop_col = "chunk_stop"
+) %>%
+  group_by(ovl_id) %>%
+  summarize(
+    approx_len = max(chunk_stop) - min(chunk_start),
+    min_start = min(chunk_start),
+    max_stop = max(chunk_stop),
+    organism = first(organism, na_rm = T),
+    virion_hallmark_count = first(virion_hallmark_count, na_rm = T),
+    n_hallmarks = first(n_hallmarks, na_rm = T),
+    marker_enrichment = first(marker_enrichment, na_rm = T),
+  )
+```
+
+Cenote-Taker only
+```{r}
+ERR8081370_view2_dt %>%
+  filter(is.na(n_hallmarks))
+```
+
+```{r}
+ERR8081370_ct3_only_dt <- ERR8081370_view2_dt %>%
+  filter(is.na(n_hallmarks)) %>%
+  mutate(
+    input_name = gsub("_[0-9]$", "", ovl_id)
+  ) %>%
+  rename(
+    chunk_start = min_start,
+    chunk_stop = max_stop
+  ) %>%
+  select(c(input_name, chunk_start, chunk_stop))
+
+ERR8081370_ct3_contigs <- merge(
+  ERR8081370_ct3_only_dt,
+  ERR8081370_ct_merge_dt,
+  by = c("input_name", "chunk_start", "chunk_stop")
+) %>%
+  select(c(input_name, contig))
+
+write.table(
+  ERR8081370_ct3_contigs$contig,
+  file = sprintf(
+    "%s/data/discovery/short_read_assemblies/VLP_samples/ERR8081370.ct3_only_contigs.txt",
+    find_rstudio_root_file()
+  ),
+  col.names = F,
+  row.names = F,
+  quote = F
+)
+
+```
+
+Genomad contigs only
+```{r}
+ERR8081370_view2_dt %>%
+  filter(is.na(virion_hallmark_count))
+```
+
+```{r}
+ERR8081370_genomad_only_dt <- ERR8081370_view2_dt %>%
+  filter(is.na(virion_hallmark_count)) %>%
+  mutate(
+    input_name = gsub("_[0-9]$", "", ovl_id)
+  ) %>%
+  rename(
+    chunk_start = min_start,
+    chunk_stop = max_stop
+  ) %>%
+  select(c(input_name, chunk_start, chunk_stop))
+
+ERR8081370_genomad_contigs <- merge(
+  ERR8081370_genomad_only_dt,
+  ERR8081370_genomad_dt,
+  by = c("input_name", "chunk_start", "chunk_stop")
+) %>%
+  select(c(input_name, provirus)) %>%
+  mutate(
+    contig = paste(input_name, provirus, sep = "|"),
+    contig = gsub("\\|NA", "", contig)
+    )
+
+write.table(
+  ERR8081370_genomad_contigs$contig,
+  file = sprintf(
+    "%s/data/discovery/short_read_assemblies/VLP_samples/ERR8081370.gnmd_only_contigs.txt",
+    find_rstudio_root_file()
+  ),
+  col.names = F,
+  row.names = F,
+  quote = F
+)
+
+```
+
+
+
+```{r}
+ERR8081370_view2_dt %>%
+  filter(!is.na(virion_hallmark_count),
+         !is.na(n_hallmarks)
+         )
+```
+
+upset plot
+```{r}
+
+ERR8081370_upset_ct_dt <- assign_overlap_id(
+  ERR8081370_view_dt,
+  contig_col = "input_name",
+  start_col = "chunk_start",
+  stop_col = "chunk_stop"
+) %>%
+  group_by(ovl_id) %>%
+  summarize(
+    hit = sum(!is.na(organism)),
+  ) %>%
+  ungroup() %>%
+  filter(hit >= 1) %>%
+  mutate(software = "Cenote-Taker 3")
+
+ERR8081370_upset_gnmd_dt <- assign_overlap_id(
+  ERR8081370_view_dt,
+  contig_col = "input_name",
+  start_col = "chunk_start",
+  stop_col = "chunk_stop"
+) %>%
+  group_by(ovl_id) %>%
+  summarize(
+    hit = sum(!is.na(marker_enrichment)),
+  ) %>%
+  ungroup() %>%
+  filter(hit >= 1) %>%
+  mutate(software = "geNomad")
+
+
+ERR8081370_upset_dt <- rbind(
+  ERR8081370_upset_ct_dt,
+  ERR8081370_upset_gnmd_dt
+) %>%
+  group_by(ovl_id) %>%
+  summarize(softwares = list(software))
+
+ERR8081370_up_p <- ERR8081370_upset_dt %>%
+  ggplot(aes(x= softwares)) +
+  geom_bar(color = "black", fill = "lightgrey") +
+  scale_x_upset() +
+  geom_text(stat='count', aes(label=after_stat(count)), vjust=+1.1) +
+  labs(
+    x = "Software",
+    y = "Predicted Viruses"
+  ) +
+  theme_bw()
+
+ERR8081370_up_p
+
+ggsave(
+  ERR8081370_up_p,
+  file = sprintf(
+    "%s/charts/ERR8081370_disc_upset1.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 3,
+  height = 4
+)
+
+```
+
+ERR8081370 genomad only stats
+```{r}
+ERR8081370_gen_hall_p <- merge(
+  ERR8081370_genomad_dt,
+  ERR8081370_genomad_only_dt %>% mutate(g_only = "geNomad-only"),
+  all.x = T
+) %>%
+  mutate(g_only = case_when(g_only == "geNomad-only" ~ "geNomad-only", TRUE ~ "CT3 and geNomad")) %>%
+  ggplot(aes(x=n_hallmarks)) +
+  geom_histogram() +
+  facet_wrap(~g_only, ncol = 1) +
+  theme_bw() +
+  labs(
+    x = "geNomad hallmark gene count",
+    y = "genome count",
+    title = "geNomad hallmark genes/virus MAG"
+  )
+
+ERR8081370_gen_hall_p
+
+ggsave(
+  ERR8081370_gen_hall_p,
+  file = sprintf(
+    "%s/charts/ERR8081370_disc_genomad_halls1.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 4,
+  height = 4
+)
+
+ggsave(
+  ERR8081370_gen_hall_p,
+  file = sprintf(
+    "%s/charts/ERR8081370_disc_genomad_halls1.png",
+    find_rstudio_root_file()
+  ),
+  width = 4,
+  height = 4
+)
+```
+
+
+ERR8081370 CT3 only stats
+```{r}
+ERR8081370_ct3_hall_p <- merge(
+  ERR8081370_ct3_only_dt %>% mutate(c_only = "CT3-only"),
+  ERR8081370_ct_merge_dt,
+  all.y = T
+) %>%
+  mutate(
+    c_only = case_when(c_only == "CT3-only" ~ "CT3-only", TRUE ~ "CT3 and geNomad"),
+    n_hallmarks = virion_hallmark_count + rep_hallmark_count
+    ) %>%
+  ggplot(aes(x=n_hallmarks)) +
+  geom_histogram() +
+  facet_wrap(~c_only, ncol = 1) +
+  theme_bw() +
+  labs(
+    x = "CT3 hallmark gene count",
+    y = "CT3 count",
+    title = "CT3 hallmark genes/virus MAG"
+  )
+
+ERR8081370_ct3_hall_p
+
+ggsave(
+  ERR8081370_ct3_hall_p,
+  file = sprintf(
+    "%s/charts/ERR8081370_disc_ct3_halls1.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 4,
+  height = 4
+)
+
+ggsave(
+  ERR8081370_ct3_hall_p,
+  file = sprintf(
+    "%s/charts/ERR8081370_disc_ct3_halls1.png",
+    find_rstudio_root_file()
+  ),
+  width = 4,
+  height = 4
+)
+
+```
+
+
+## WGS Accessions
+
+ERR13455686, SRR36807671, SRR36931851
+
+### ERR13455686
+
+load tables
+```{r}
+ERR13455686_ct_sum_dt <- fread(
+  sprintf(
+    "%s/data/discovery/short_read_assemblies/bulk_wgs_samples/ct3/ERR13455686_ct3_virus_summary.tsv",
+    find_rstudio_root_file()
+  ),
+  header = T
+) %>%
+  mutate(input_name = gsub(" .*", "", input_name))
+
+ERR13455686_ct3_prune_dt <- fread(
+  sprintf(
+    "%s/data/discovery/short_read_assemblies/bulk_wgs_samples/ct3/ERR13455686_ct3_prune_summary.tsv",
+    find_rstudio_root_file()
+  ),
+  header = T
+) %>%
+  mutate(chunk_ID = paste(contig, chunk_name, sep = "@")) %>%
+  select(c(chunk_ID, contig_length, chunk_start, chunk_stop))
+
+ERR13455686_ct_merge_dt <- merge(
+  ERR13455686_ct_sum_dt,
+  ERR13455686_ct3_prune_dt,
+  by.x = "contig",
+  by.y = "chunk_ID",
+  all.x = T
+) %>%
+  mutate(
+    chunk_start = case_when(
+      is.na(chunk_start) ~ 0,
+      TRUE ~ chunk_start
+    ),
+    chunk_stop = case_when(
+      is.na(chunk_stop) ~ virus_seq_length,
+      TRUE ~ chunk_stop
+    ),
+    input_name = gsub(" \\(.*", "", input_name)
+  )
+
+```
+
+```{r}
+ERR13455686_genomad_dt <- fread(
+  sprintf(
+    "%s/data/discovery/short_read_assemblies/bulk_wgs_samples/genomad/ERR13455686.contigs_virus_summary.tsv",
+    find_rstudio_root_file()
+  ),
+  header = T
+) %>% 
+  separate(seq_name, 
+           sep = "\\|",
+           c("input_name", "provirus")) %>%
+  separate(coordinates, 
+           sep = "-",
+           c("chunk_start", "chunk_stop")) %>%
+  mutate(chunk_start = as.double(chunk_start),
+         chunk_stop = as.double(chunk_stop)) %>%
+  mutate(
+    chunk_start = case_when(
+      is.na(chunk_start) ~ 0,
+      TRUE ~ chunk_start
+    ),
+    chunk_stop = case_when(
+      is.na(chunk_stop) ~ length,
+      TRUE ~ chunk_stop
+    )
+  ) %>%
+  filter(
+    n_hallmarks >= 2,
+    length >= 1000
+    )
+```
+
+```{r}
+ERR13455686_full_dt <- merge(
+  ERR13455686_ct_merge_dt,
+  ERR13455686_genomad_dt,
+  by = c("input_name", "chunk_start", "chunk_stop"),
+  all = T
+)
+```
+
+```{r}
+ERR13455686_view_dt <- ERR13455686_full_dt %>%
+  select(c(input_name, chunk_start, chunk_stop,
+           organism, virion_hallmark_count,
+           n_hallmarks, marker_enrichment))
+```
+
+```{r}
+ERR13455686_view2_dt <- assign_overlap_id(
+  ERR13455686_view_dt,
+  contig_col = "input_name",
+  start_col = "chunk_start",
+  stop_col = "chunk_stop"
+) %>%
+  group_by(ovl_id) %>%
+  summarize(
+    approx_len = max(chunk_stop) - min(chunk_start),
+    min_start = min(chunk_start),
+    max_stop = max(chunk_stop),
+    organism = first(organism, na_rm = T),
+    virion_hallmark_count = first(virion_hallmark_count, na_rm = T),
+    n_hallmarks = first(n_hallmarks, na_rm = T),
+    marker_enrichment = first(marker_enrichment, na_rm = T),
+  )
+```
+
+Cenote-Taker only
+```{r}
+ERR13455686_view2_dt %>%
+  filter(is.na(n_hallmarks))
+```
+
+```{r}
+ERR13455686_ct3_only_dt <- ERR13455686_view2_dt %>%
+  filter(is.na(n_hallmarks)) %>%
+  mutate(
+    input_name = gsub("_[0-9]$", "", ovl_id)
+  ) %>%
+  rename(
+    chunk_start = min_start,
+    chunk_stop = max_stop
+  ) %>%
+  select(c(input_name, chunk_start, chunk_stop))
+
+ERR13455686_ct3_contigs <- merge(
+  ERR13455686_ct3_only_dt,
+  ERR13455686_ct_merge_dt,
+  by = c("input_name", "chunk_start", "chunk_stop")
+) %>%
+  select(c(input_name, contig))
+
+write.table(
+  ERR13455686_ct3_contigs$contig,
+  file = sprintf(
+    "%s/data/discovery/short_read_assemblies/bulk_wgs_samples/ERR13455686.ct3_only_contigs.txt",
+    find_rstudio_root_file()
+  ),
+  col.names = F,
+  row.names = F,
+  quote = F
+)
+
+```
+
+Genomad contigs only
+```{r}
+ERR13455686_view2_dt %>%
+  filter(is.na(virion_hallmark_count))
+```
+
+```{r}
+ERR13455686_genomad_only_dt <- ERR13455686_view2_dt %>%
+  filter(is.na(virion_hallmark_count)) %>%
+  mutate(
+    input_name = gsub("_[0-9]$", "", ovl_id)
+  ) %>%
+  rename(
+    chunk_start = min_start,
+    chunk_stop = max_stop
+  ) %>%
+  select(c(input_name, chunk_start, chunk_stop))
+
+ERR13455686_genomad_contigs <- merge(
+  ERR13455686_genomad_only_dt,
+  ERR13455686_genomad_dt,
+  by = c("input_name", "chunk_start", "chunk_stop")
+) %>%
+  select(c(input_name, provirus)) %>%
+  mutate(
+    contig = paste(input_name, provirus, sep = "|"),
+    contig = gsub("\\|NA", "", contig)
+    )
+
+write.table(
+  ERR13455686_genomad_contigs$contig,
+  file = sprintf(
+    "%s/data/discovery/short_read_assemblies/bulk_wgs_samples/ERR13455686.gnmd_only_contigs.txt",
+    find_rstudio_root_file()
+  ),
+  col.names = F,
+  row.names = F,
+  quote = F
+)
+
+```
+
+
+
+```{r}
+ERR13455686_view2_dt %>%
+  filter(!is.na(virion_hallmark_count),
+         !is.na(n_hallmarks)
+         )
+```
+
+upset plot
+```{r}
+
+ERR13455686_upset_ct_dt <- assign_overlap_id(
+  ERR13455686_view_dt,
+  contig_col = "input_name",
+  start_col = "chunk_start",
+  stop_col = "chunk_stop"
+) %>%
+  group_by(ovl_id) %>%
+  summarize(
+    hit = sum(!is.na(organism)),
+  ) %>%
+  ungroup() %>%
+  filter(hit >= 1) %>%
+  mutate(software = "Cenote-Taker 3")
+
+ERR13455686_upset_gnmd_dt <- assign_overlap_id(
+  ERR13455686_view_dt,
+  contig_col = "input_name",
+  start_col = "chunk_start",
+  stop_col = "chunk_stop"
+) %>%
+  group_by(ovl_id) %>%
+  summarize(
+    hit = sum(!is.na(marker_enrichment)),
+  ) %>%
+  ungroup() %>%
+  filter(hit >= 1) %>%
+  mutate(software = "geNomad")
+
+
+ERR13455686_upset_dt <- rbind(
+  ERR13455686_upset_ct_dt,
+  ERR13455686_upset_gnmd_dt
+) %>%
+  group_by(ovl_id) %>%
+  summarize(softwares = list(software))
+
+ERR13455686_up_p <- ERR13455686_upset_dt %>%
+  ggplot(aes(x= softwares)) +
+  geom_bar(color = "black", fill = "lightgrey") +
+  scale_x_upset() +
+  geom_text(stat='count', aes(label=after_stat(count)), vjust=+1.1) +
+  labs(
+    x = "Software",
+    y = "Predicted Viruses"
+  ) +
+  theme_bw()
+
+ERR13455686_up_p
+
+ggsave(
+  ERR13455686_up_p,
+  file = sprintf(
+    "%s/charts/ERR13455686_disc_upset1.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 3,
+  height = 4
+)
+
+```
+
+ERR13455686 genomad only stats
+```{r}
+ERR13455686_gen_hall_p <- merge(
+  ERR13455686_genomad_dt,
+  ERR13455686_genomad_only_dt %>% mutate(g_only = "geNomad-only"),
+  all.x = T
+) %>%
+  mutate(g_only = case_when(g_only == "geNomad-only" ~ "geNomad-only", TRUE ~ "CT3 and geNomad")) %>%
+  ggplot(aes(x=n_hallmarks)) +
+  geom_histogram() +
+  facet_wrap(~g_only, ncol = 1) +
+  theme_bw() +
+  labs(
+    x = "geNomad hallmark gene count",
+    y = "genome count",
+    title = "geNomad hallmark genes/virus MAG"
+  )
+
+ERR13455686_gen_hall_p
+
+ggsave(
+  ERR13455686_gen_hall_p,
+  file = sprintf(
+    "%s/charts/ERR13455686_disc_genomad_halls1.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 4,
+  height = 4
+)
+
+ggsave(
+  ERR13455686_gen_hall_p,
+  file = sprintf(
+    "%s/charts/ERR13455686_disc_genomad_halls1.png",
+    find_rstudio_root_file()
+  ),
+  width = 4,
+  height = 4
+)
+```
+
+
+ERR13455686 CT3 only stats
+```{r}
+ERR13455686_ct3_hall_p <- merge(
+  ERR13455686_ct3_only_dt %>% mutate(c_only = "CT3-only"),
+  ERR13455686_ct_merge_dt,
+  all.y = T
+) %>%
+  mutate(
+    c_only = case_when(c_only == "CT3-only" ~ "CT3-only", TRUE ~ "CT3 and geNomad"),
+    n_hallmarks = virion_hallmark_count + rep_hallmark_count
+    ) %>%
+  ggplot(aes(x=n_hallmarks)) +
+  geom_histogram() +
+  facet_wrap(~c_only, ncol = 1) +
+  theme_bw() +
+  labs(
+    x = "CT3 hallmark gene count",
+    y = "CT3 count",
+    title = "CT3 hallmark genes/virus MAG"
+  )
+
+ERR13455686_ct3_hall_p
+
+ggsave(
+  ERR13455686_ct3_hall_p,
+  file = sprintf(
+    "%s/charts/ERR13455686_disc_ct3_halls1.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 4,
+  height = 4
+)
+
+ggsave(
+  ERR13455686_ct3_hall_p,
+  file = sprintf(
+    "%s/charts/ERR13455686_disc_ct3_halls1.png",
+    find_rstudio_root_file()
+  ),
+  width = 4,
+  height = 4
+)
+
+```
+
+
+### SRR36807671
+
+load tables
+```{r}
+SRR36807671_ct_sum_dt <- fread(
+  sprintf(
+    "%s/data/discovery/short_read_assemblies/bulk_wgs_samples/ct3/SRR36807671_ct3_virus_summary.tsv",
+    find_rstudio_root_file()
+  ),
+  header = T
+) %>%
+  mutate(input_name = gsub(" .*", "", input_name))
+
+SRR36807671_ct3_prune_dt <- fread(
+  sprintf(
+    "%s/data/discovery/short_read_assemblies/bulk_wgs_samples/ct3/SRR36807671_ct3_prune_summary.tsv",
+    find_rstudio_root_file()
+  ),
+  header = T
+) %>%
+  mutate(chunk_ID = paste(contig, chunk_name, sep = "@")) %>%
+  select(c(chunk_ID, contig_length, chunk_start, chunk_stop))
+
+SRR36807671_ct_merge_dt <- merge(
+  SRR36807671_ct_sum_dt,
+  SRR36807671_ct3_prune_dt,
+  by.x = "contig",
+  by.y = "chunk_ID",
+  all.x = T
+) %>%
+  mutate(
+    chunk_start = case_when(
+      is.na(chunk_start) ~ 0,
+      TRUE ~ chunk_start
+    ),
+    chunk_stop = case_when(
+      is.na(chunk_stop) ~ virus_seq_length,
+      TRUE ~ chunk_stop
+    ),
+    input_name = gsub(" \\(.*", "", input_name)
+  )
+
+```
+
+```{r}
+SRR36807671_genomad_dt <- fread(
+  sprintf(
+    "%s/data/discovery/short_read_assemblies/bulk_wgs_samples/genomad/SRR36807671.contigs_virus_summary.tsv",
+    find_rstudio_root_file()
+  ),
+  header = T
+) %>% 
+  separate(seq_name, 
+           sep = "\\|",
+           c("input_name", "provirus")) %>%
+  separate(coordinates, 
+           sep = "-",
+           c("chunk_start", "chunk_stop")) %>%
+  mutate(chunk_start = as.double(chunk_start),
+         chunk_stop = as.double(chunk_stop)) %>%
+  mutate(
+    chunk_start = case_when(
+      is.na(chunk_start) ~ 0,
+      TRUE ~ chunk_start
+    ),
+    chunk_stop = case_when(
+      is.na(chunk_stop) ~ length,
+      TRUE ~ chunk_stop
+    )
+  ) %>%
+  filter(
+    n_hallmarks >= 2,
+    length >= 1000
+    )
+```
+
+```{r}
+SRR36807671_full_dt <- merge(
+  SRR36807671_ct_merge_dt,
+  SRR36807671_genomad_dt,
+  by = c("input_name", "chunk_start", "chunk_stop"),
+  all = T
+)
+```
+
+```{r}
+SRR36807671_view_dt <- SRR36807671_full_dt %>%
+  select(c(input_name, chunk_start, chunk_stop,
+           organism, virion_hallmark_count,
+           n_hallmarks, marker_enrichment))
+```
+
+```{r}
+SRR36807671_view2_dt <- assign_overlap_id(
+  SRR36807671_view_dt,
+  contig_col = "input_name",
+  start_col = "chunk_start",
+  stop_col = "chunk_stop"
+) %>%
+  group_by(ovl_id) %>%
+  summarize(
+    approx_len = max(chunk_stop) - min(chunk_start),
+    min_start = min(chunk_start),
+    max_stop = max(chunk_stop),
+    organism = first(organism, na_rm = T),
+    virion_hallmark_count = first(virion_hallmark_count, na_rm = T),
+    n_hallmarks = first(n_hallmarks, na_rm = T),
+    marker_enrichment = first(marker_enrichment, na_rm = T),
+  )
+```
+
+Cenote-Taker only
+```{r}
+SRR36807671_view2_dt %>%
+  filter(is.na(n_hallmarks))
+```
+
+```{r}
+SRR36807671_ct3_only_dt <- SRR36807671_view2_dt %>%
+  filter(is.na(n_hallmarks)) %>%
+  mutate(
+    input_name = gsub("_[0-9]$", "", ovl_id)
+  ) %>%
+  rename(
+    chunk_start = min_start,
+    chunk_stop = max_stop
+  ) %>%
+  select(c(input_name, chunk_start, chunk_stop))
+
+SRR36807671_ct3_contigs <- merge(
+  SRR36807671_ct3_only_dt,
+  SRR36807671_ct_merge_dt,
+  by = c("input_name", "chunk_start", "chunk_stop")
+) %>%
+  select(c(input_name, contig))
+
+write.table(
+  SRR36807671_ct3_contigs$contig,
+  file = sprintf(
+    "%s/data/discovery/short_read_assemblies/bulk_wgs_samples/SRR36807671.ct3_only_contigs.txt",
+    find_rstudio_root_file()
+  ),
+  col.names = F,
+  row.names = F,
+  quote = F
+)
+
+```
+
+Genomad contigs only
+```{r}
+SRR36807671_view2_dt %>%
+  filter(is.na(virion_hallmark_count))
+```
+
+```{r}
+SRR36807671_genomad_only_dt <- SRR36807671_view2_dt %>%
+  filter(is.na(virion_hallmark_count)) %>%
+  mutate(
+    input_name = gsub("_[0-9]$", "", ovl_id)
+  ) %>%
+  rename(
+    chunk_start = min_start,
+    chunk_stop = max_stop
+  ) %>%
+  select(c(input_name, chunk_start, chunk_stop))
+
+SRR36807671_genomad_contigs <- merge(
+  SRR36807671_genomad_only_dt,
+  SRR36807671_genomad_dt,
+  by = c("input_name", "chunk_start", "chunk_stop")
+) %>%
+  select(c(input_name, provirus)) %>%
+  mutate(
+    contig = paste(input_name, provirus, sep = "|"),
+    contig = gsub("\\|NA", "", contig)
+    )
+
+write.table(
+  SRR36807671_genomad_contigs$contig,
+  file = sprintf(
+    "%s/data/discovery/short_read_assemblies/bulk_wgs_samples/SRR36807671.gnmd_only_contigs.txt",
+    find_rstudio_root_file()
+  ),
+  col.names = F,
+  row.names = F,
+  quote = F
+)
+
+```
+
+
+
+```{r}
+SRR36807671_view2_dt %>%
+  filter(!is.na(virion_hallmark_count),
+         !is.na(n_hallmarks)
+         )
+```
+
+upset plot
+```{r}
+
+SRR36807671_upset_ct_dt <- assign_overlap_id(
+  SRR36807671_view_dt,
+  contig_col = "input_name",
+  start_col = "chunk_start",
+  stop_col = "chunk_stop"
+) %>%
+  group_by(ovl_id) %>%
+  summarize(
+    hit = sum(!is.na(organism)),
+  ) %>%
+  ungroup() %>%
+  filter(hit >= 1) %>%
+  mutate(software = "Cenote-Taker 3")
+
+SRR36807671_upset_gnmd_dt <- assign_overlap_id(
+  SRR36807671_view_dt,
+  contig_col = "input_name",
+  start_col = "chunk_start",
+  stop_col = "chunk_stop"
+) %>%
+  group_by(ovl_id) %>%
+  summarize(
+    hit = sum(!is.na(marker_enrichment)),
+  ) %>%
+  ungroup() %>%
+  filter(hit >= 1) %>%
+  mutate(software = "geNomad")
+
+
+SRR36807671_upset_dt <- rbind(
+  SRR36807671_upset_ct_dt,
+  SRR36807671_upset_gnmd_dt
+) %>%
+  group_by(ovl_id) %>%
+  summarize(softwares = list(software))
+
+SRR36807671_up_p <- SRR36807671_upset_dt %>%
+  ggplot(aes(x= softwares)) +
+  geom_bar(color = "black", fill = "lightgrey") +
+  scale_x_upset() +
+  geom_text(stat='count', aes(label=after_stat(count)), vjust=+1.1) +
+  labs(
+    x = "Software",
+    y = "Predicted Viruses"
+  ) +
+  theme_bw()
+
+SRR36807671_up_p
+
+ggsave(
+  SRR36807671_up_p,
+  file = sprintf(
+    "%s/charts/SRR36807671_disc_upset1.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 3,
+  height = 4
+)
+
+```
+
+SRR36807671 genomad only stats
+```{r}
+SRR36807671_gen_hall_p <- merge(
+  SRR36807671_genomad_dt,
+  SRR36807671_genomad_only_dt %>% mutate(g_only = "geNomad-only"),
+  all.x = T
+) %>%
+  mutate(g_only = case_when(g_only == "geNomad-only" ~ "geNomad-only", TRUE ~ "CT3 and geNomad")) %>%
+  ggplot(aes(x=n_hallmarks)) +
+  geom_histogram() +
+  facet_wrap(~g_only, ncol = 1) +
+  theme_bw() +
+  labs(
+    x = "geNomad hallmark gene count",
+    y = "genome count",
+    title = "geNomad hallmark genes/virus MAG"
+  )
+
+SRR36807671_gen_hall_p
+
+ggsave(
+  SRR36807671_gen_hall_p,
+  file = sprintf(
+    "%s/charts/SRR36807671_disc_genomad_halls1.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 4,
+  height = 4
+)
+
+ggsave(
+  SRR36807671_gen_hall_p,
+  file = sprintf(
+    "%s/charts/SRR36807671_disc_genomad_halls1.png",
+    find_rstudio_root_file()
+  ),
+  width = 4,
+  height = 4
+)
+```
+
+
+SRR36807671 CT3 only stats
+```{r}
+SRR36807671_ct3_hall_p <- merge(
+  SRR36807671_ct3_only_dt %>% mutate(c_only = "CT3-only"),
+  SRR36807671_ct_merge_dt,
+  all.y = T
+) %>%
+  mutate(
+    c_only = case_when(c_only == "CT3-only" ~ "CT3-only", TRUE ~ "CT3 and geNomad"),
+    n_hallmarks = virion_hallmark_count + rep_hallmark_count
+    ) %>%
+  ggplot(aes(x=n_hallmarks)) +
+  geom_histogram() +
+  facet_wrap(~c_only, ncol = 1) +
+  theme_bw() +
+  labs(
+    x = "CT3 hallmark gene count",
+    y = "CT3 count",
+    title = "CT3 hallmark genes/virus MAG"
+  )
+
+SRR36807671_ct3_hall_p
+
+ggsave(
+  SRR36807671_ct3_hall_p,
+  file = sprintf(
+    "%s/charts/SRR36807671_disc_ct3_halls1.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 4,
+  height = 4
+)
+
+ggsave(
+  SRR36807671_ct3_hall_p,
+  file = sprintf(
+    "%s/charts/SRR36807671_disc_ct3_halls1.png",
+    find_rstudio_root_file()
+  ),
+  width = 4,
+  height = 4
+)
+
+```
+
+
+### SRR36931851
+
+load tables
+```{r}
+SRR36931851_ct_sum_dt <- fread(
+  sprintf(
+    "%s/data/discovery/short_read_assemblies/bulk_wgs_samples/ct3/SRR36931851_ct3_virus_summary.tsv",
+    find_rstudio_root_file()
+  ),
+  header = T
+) %>%
+  mutate(input_name = gsub(" .*", "", input_name))
+
+SRR36931851_ct3_prune_dt <- fread(
+  sprintf(
+    "%s/data/discovery/short_read_assemblies/bulk_wgs_samples/ct3/SRR36931851_ct3_prune_summary.tsv",
+    find_rstudio_root_file()
+  ),
+  header = T
+) %>%
+  mutate(chunk_ID = paste(contig, chunk_name, sep = "@")) %>%
+  select(c(chunk_ID, contig_length, chunk_start, chunk_stop))
+
+SRR36931851_ct_merge_dt <- merge(
+  SRR36931851_ct_sum_dt,
+  SRR36931851_ct3_prune_dt,
+  by.x = "contig",
+  by.y = "chunk_ID",
+  all.x = T
+) %>%
+  mutate(
+    chunk_start = case_when(
+      is.na(chunk_start) ~ 0,
+      TRUE ~ chunk_start
+    ),
+    chunk_stop = case_when(
+      is.na(chunk_stop) ~ virus_seq_length,
+      TRUE ~ chunk_stop
+    ),
+    input_name = gsub(" \\(.*", "", input_name)
+  )
+
+```
+
+```{r}
+SRR36931851_genomad_dt <- fread(
+  sprintf(
+    "%s/data/discovery/short_read_assemblies/bulk_wgs_samples/genomad/SRR36931851.contigs_virus_summary.tsv",
+    find_rstudio_root_file()
+  ),
+  header = T
+) %>% 
+  separate(seq_name, 
+           sep = "\\|",
+           c("input_name", "provirus")) %>%
+  separate(coordinates, 
+           sep = "-",
+           c("chunk_start", "chunk_stop")) %>%
+  mutate(chunk_start = as.double(chunk_start),
+         chunk_stop = as.double(chunk_stop)) %>%
+  mutate(
+    chunk_start = case_when(
+      is.na(chunk_start) ~ 0,
+      TRUE ~ chunk_start
+    ),
+    chunk_stop = case_when(
+      is.na(chunk_stop) ~ length,
+      TRUE ~ chunk_stop
+    )
+  ) %>%
+  filter(
+    n_hallmarks >= 2,
+    length >= 1000
+    )
+```
+
+```{r}
+SRR36931851_full_dt <- merge(
+  SRR36931851_ct_merge_dt,
+  SRR36931851_genomad_dt,
+  by = c("input_name", "chunk_start", "chunk_stop"),
+  all = T
+)
+```
+
+```{r}
+SRR36931851_view_dt <- SRR36931851_full_dt %>%
+  select(c(input_name, chunk_start, chunk_stop,
+           organism, virion_hallmark_count,
+           n_hallmarks, marker_enrichment))
+```
+
+```{r}
+SRR36931851_view2_dt <- assign_overlap_id(
+  SRR36931851_view_dt,
+  contig_col = "input_name",
+  start_col = "chunk_start",
+  stop_col = "chunk_stop"
+) %>%
+  group_by(ovl_id) %>%
+  summarize(
+    approx_len = max(chunk_stop) - min(chunk_start),
+    min_start = min(chunk_start),
+    max_stop = max(chunk_stop),
+    organism = first(organism, na_rm = T),
+    virion_hallmark_count = first(virion_hallmark_count, na_rm = T),
+    n_hallmarks = first(n_hallmarks, na_rm = T),
+    marker_enrichment = first(marker_enrichment, na_rm = T),
+  )
+```
+
+Cenote-Taker only
+```{r}
+SRR36931851_view2_dt %>%
+  filter(is.na(n_hallmarks))
+```
+
+```{r}
+SRR36931851_ct3_only_dt <- SRR36931851_view2_dt %>%
+  filter(is.na(n_hallmarks)) %>%
+  mutate(
+    input_name = gsub("_[0-9]$", "", ovl_id)
+  ) %>%
+  rename(
+    chunk_start = min_start,
+    chunk_stop = max_stop
+  ) %>%
+  select(c(input_name, chunk_start, chunk_stop))
+
+SRR36931851_ct3_contigs <- merge(
+  SRR36931851_ct3_only_dt,
+  SRR36931851_ct_merge_dt,
+  by = c("input_name", "chunk_start", "chunk_stop")
+) %>%
+  select(c(input_name, contig))
+
+write.table(
+  SRR36931851_ct3_contigs$contig,
+  file = sprintf(
+    "%s/data/discovery/short_read_assemblies/bulk_wgs_samples/SRR36931851.ct3_only_contigs.txt",
+    find_rstudio_root_file()
+  ),
+  col.names = F,
+  row.names = F,
+  quote = F
+)
+
+```
+
+Genomad contigs only
+```{r}
+SRR36931851_view2_dt %>%
+  filter(is.na(virion_hallmark_count))
+```
+
+```{r}
+SRR36931851_genomad_only_dt <- SRR36931851_view2_dt %>%
+  filter(is.na(virion_hallmark_count)) %>%
+  mutate(
+    input_name = gsub("_[0-9]$", "", ovl_id)
+  ) %>%
+  rename(
+    chunk_start = min_start,
+    chunk_stop = max_stop
+  ) %>%
+  select(c(input_name, chunk_start, chunk_stop))
+
+SRR36931851_genomad_contigs <- merge(
+  SRR36931851_genomad_only_dt,
+  SRR36931851_genomad_dt,
+  by = c("input_name", "chunk_start", "chunk_stop")
+) %>%
+  select(c(input_name, provirus)) %>%
+  mutate(
+    contig = paste(input_name, provirus, sep = "|"),
+    contig = gsub("\\|NA", "", contig)
+    )
+
+write.table(
+  SRR36931851_genomad_contigs$contig,
+  file = sprintf(
+    "%s/data/discovery/short_read_assemblies/bulk_wgs_samples/SRR36931851.gnmd_only_contigs.txt",
+    find_rstudio_root_file()
+  ),
+  col.names = F,
+  row.names = F,
+  quote = F
+)
+
+```
+
+
+
+```{r}
+SRR36931851_view2_dt %>%
+  filter(!is.na(virion_hallmark_count),
+         !is.na(n_hallmarks)
+         )
+```
+
+upset plot
+```{r}
+
+SRR36931851_upset_ct_dt <- assign_overlap_id(
+  SRR36931851_view_dt,
+  contig_col = "input_name",
+  start_col = "chunk_start",
+  stop_col = "chunk_stop"
+) %>%
+  group_by(ovl_id) %>%
+  summarize(
+    hit = sum(!is.na(organism)),
+  ) %>%
+  ungroup() %>%
+  filter(hit >= 1) %>%
+  mutate(software = "Cenote-Taker 3")
+
+SRR36931851_upset_gnmd_dt <- assign_overlap_id(
+  SRR36931851_view_dt,
+  contig_col = "input_name",
+  start_col = "chunk_start",
+  stop_col = "chunk_stop"
+) %>%
+  group_by(ovl_id) %>%
+  summarize(
+    hit = sum(!is.na(marker_enrichment)),
+  ) %>%
+  ungroup() %>%
+  filter(hit >= 1) %>%
+  mutate(software = "geNomad")
+
+
+SRR36931851_upset_dt <- rbind(
+  SRR36931851_upset_ct_dt,
+  SRR36931851_upset_gnmd_dt
+) %>%
+  group_by(ovl_id) %>%
+  summarize(softwares = list(software))
+
+SRR36931851_up_p <- SRR36931851_upset_dt %>%
+  ggplot(aes(x= softwares)) +
+  geom_bar(color = "black", fill = "lightgrey") +
+  scale_x_upset() +
+  geom_text(stat='count', aes(label=after_stat(count)), vjust=+1.1) +
+  labs(
+    x = "Software",
+    y = "Predicted Viruses"
+  ) +
+  theme_bw()
+
+SRR36931851_up_p
+
+ggsave(
+  SRR36931851_up_p,
+  file = sprintf(
+    "%s/charts/SRR36931851_disc_upset1.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 3,
+  height = 4
+)
+
+```
+
+SRR36931851 genomad only stats
+```{r}
+SRR36931851_gen_hall_p <- merge(
+  SRR36931851_genomad_dt,
+  SRR36931851_genomad_only_dt %>% mutate(g_only = "geNomad-only"),
+  all.x = T
+) %>%
+  mutate(g_only = case_when(g_only == "geNomad-only" ~ "geNomad-only", TRUE ~ "CT3 and geNomad")) %>%
+  ggplot(aes(x=n_hallmarks)) +
+  geom_histogram() +
+  facet_wrap(~g_only, ncol = 1) +
+  theme_bw() +
+  labs(
+    x = "geNomad hallmark gene count",
+    y = "genome count",
+    title = "geNomad hallmark genes/virus MAG"
+  )
+
+SRR36931851_gen_hall_p
+
+ggsave(
+  SRR36931851_gen_hall_p,
+  file = sprintf(
+    "%s/charts/SRR36931851_disc_genomad_halls1.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 4,
+  height = 4
+)
+
+ggsave(
+  SRR36931851_gen_hall_p,
+  file = sprintf(
+    "%s/charts/SRR36931851_disc_genomad_halls1.png",
+    find_rstudio_root_file()
+  ),
+  width = 4,
+  height = 4
+)
+```
+
+
+SRR36931851 CT3 only stats
+```{r}
+SRR36931851_ct3_hall_p <- merge(
+  SRR36931851_ct3_only_dt %>% mutate(c_only = "CT3-only"),
+  SRR36931851_ct_merge_dt,
+  all.y = T
+) %>%
+  mutate(
+    c_only = case_when(c_only == "CT3-only" ~ "CT3-only", TRUE ~ "CT3 and geNomad"),
+    n_hallmarks = virion_hallmark_count + rep_hallmark_count
+    ) %>%
+  ggplot(aes(x=n_hallmarks)) +
+  geom_histogram() +
+  facet_wrap(~c_only, ncol = 1) +
+  theme_bw() +
+  labs(
+    x = "CT3 hallmark gene count",
+    y = "CT3 count",
+    title = "CT3 hallmark genes/virus MAG"
+  )
+
+SRR36931851_ct3_hall_p
+
+ggsave(
+  SRR36931851_ct3_hall_p,
+  file = sprintf(
+    "%s/charts/SRR36931851_disc_ct3_halls1.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 4,
+  height = 4
+)
+
+ggsave(
+  SRR36931851_ct3_hall_p,
+  file = sprintf(
+    "%s/charts/SRR36931851_disc_ct3_halls1.png",
+    find_rstudio_root_file()
+  ),
+  width = 4,
+  height = 4
+)
+
+```
+
+
