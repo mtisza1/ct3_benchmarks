@@ -1,0 +1,223 @@
+---
+title: "Comparing annotation of RefSeq virus genomes"
+output: html_notebook
+---
+
+"ground truth" refseq?
+
+```{r}
+library(data.table)
+library(stringr)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(forcats)
+library(rprojroot)
+library(ggpubr)
+library(cowplot)
+```
+
+
+```{r}
+metc_gene_dt <- fread(sprintf(
+  "%s/data/annotation/refseq/metc/final_annotation_summary.tsv",
+  find_rstudio_root_file()
+  )
+)  %>%
+  mutate(contigID = sub("_[^_]+$", "", target))
+
+gnmd_gene_dt <- fread(sprintf(
+  "%s/data/annotation/refseq/genomad/refseq_virus_genomes_20260107_genes.tsv",
+  find_rstudio_root_file()
+  )
+) %>%
+  mutate(contigID = sub("_[^_]+$", "", gene))
+
+#phar_gene_dt <- fread(sprintf(
+# "%s/data/annotation/gut_dtrs/pharokka/pharokka_cds_final_merged_output.tsv",
+#  find_rstudio_root_file()
+#  )
+#) %>%
+#  rename(contigID = contig)
+
+ct3_gene_dt<- fread(sprintf(
+  "%s/data/annotation/refseq/ct3/final_genes_to_contigs_annotation_summary.tsv",
+  find_rstudio_root_file()
+  )
+)
+
+ct3_sum_dt<- fread(sprintf(
+  "%s/data/annotation/refseq/ct3/ct3_refseq_an2_virus_summary.tsv",
+  find_rstudio_root_file()
+  )
+)
+
+
+
+```
+
+```{r}
+ct3_merge_dt <- merge(ct3_gene_dt, ct3_sum_dt %>% 
+                        select(c(contig, input_name, 
+                                 virion_hallmark_genes,
+                                 virion_hallmark_count)),
+                      by = "contig") %>%
+  mutate(contigID = gsub(" .*", "", input_name))
+```
+
+
+```{r}
+contig_ids <- rbindlist(
+  list(
+    ct3_merge_dt %>% distinct(contigID),
+    metc_gene_dt %>% distinct(contigID),
+    gnmd_gene_dt %>% distinct(contigID)
+  )
+) %>% distinct()
+```
+
+
+compare non-hypothetical annotation rate
+```{r}
+ct3_annot_rate_dt <- merge(contig_ids,
+                           ct3_merge_dt,
+                           by = "contigID") %>%
+  filter(!grepl("tRNA-", gene_name)) %>%
+  group_by(gene_name) %>%
+  slice_head(n=1) %>%
+  ungroup() %>%
+  group_by(contigID) %>%
+  summarize(gene_count = n(),
+            hypo_annotations = n_distinct(gene_name[evidence_description == "hypothetical protein"])) %>%
+  mutate(software = "Cenote-Taker 3")
+```
+
+```{r}
+#phar_annot_rate_dt <- merge(contig_ids,
+#                           phar_gene_dt,
+#                           by = "contigID") %>%
+#  group_by(contigID) %>%
+#  summarize(gene_count = n(),
+#            hypo_annotations = n_distinct(gene[annot == "hypothetical protein"])) %>%
+#  mutate(software = "Pharokka")
+```
+
+
+```{r}
+metc_annot_rate_dt <- merge(
+  ct3_annot_rate_dt %>% select(c(contigID, gene_count)),
+  metc_info_dt,
+  by = "contigID",
+  all.x = T
+) %>%
+  group_by(contigID, gene_count) %>%
+  summarize(non_hypo_annotations = 
+              n_distinct(target[!grepl("hypothetical|no_annotation", 
+                                         product, 
+                                         ignore.case = T)])) %>%
+  mutate(
+    software = "Metacerberus",
+    hypo_annotations = case_when(
+      gene_count - non_hypo_annotations >=0 ~ gene_count - non_hypo_annotations,
+      TRUE ~ 0
+    )
+    ) %>%
+  select(-non_hypo_annotations)
+```
+
+
+```{r}
+gnmd_annot_rate_dt <- merge(contig_ids,
+                           gnmd_gene_dt %>%
+                             mutate(contigID = 
+                                      sub("_[^_]+$", "", gene)),
+                           by.x = "contigID", 
+                           by.y = "contigID") %>%
+  group_by(contigID) %>%
+  summarize(gene_count = n(),
+            hypo_annotations = 
+              n_distinct(gene[is.na(annotation_description)])) %>%
+  mutate(software = "geNomad")
+```
+
+combine hypo
+```{r}
+sum_hypol <- list(
+  ct3_annot_rate_dt, 
+  gnmd_annot_rate_dt, 
+  metc_annot_rate_dt
+#  phar_annot_rate_dt,
+  )
+
+hypo_all_dt <- rbindlist(sum_hypol, use.names=TRUE) %>%
+  mutate(hypo_prop = hypo_annotations/gene_count,
+         software = fct_relevel(software,  "geNomad",
+                                           "Metacerberus", 
+                                           #"Pharokka", 
+                                           "Cenote-Taker 3"
+                                           )) %>%
+  complete(contigID, software,
+           fill = list(hypo_prop = 1))
+```
+
+```{r}
+hypo_all_dt %>%
+  group_by(software) %>%
+  summarize(n = n())
+```
+
+```{r}
+hypo_all_dt %>%
+  filter(is.na(hypo_annotations))
+```
+
+```{r}
+hypo_rate_p <- hypo_all_dt %>%
+  ggplot(aes(x = software, y = 1 - hypo_prop,
+             fill = software)) +
+  geom_boxplot() + 
+  geom_point(color = "grey30") +
+  scale_fill_manual(values = 
+                      c("#0A9F9D", "#CEB175", 
+                        "#E54E21", "#6C8645", #"#C18748", 
+                        "#591f6e")) + 
+  stat_compare_means(
+    method = "wilcox.test",
+    label = "p.signif",
+    comparisons = list(
+      c("Cenote-Taker 3", "geNomad"),
+      c("Cenote-Taker 3", "Metacerberus")
+      #c("Cenote-Taker 3", "Pharokka"),
+    )
+  ) +
+  theme_bw() +
+  scale_y_continuous(labels = scales::percent) +
+  labs(y = "Percentage of genes with\nnon-hypothetical annotation",
+       x = "",
+       title = "RefSeq Virus"
+       ) +
+  theme(
+    legend.position = "none",
+    axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)
+    )
+
+hypo_rate_p
+
+ggsave(
+  hypo_rate_p,
+  file = sprintf("%s/charts/refseq_nonhypo_box2.pdf",
+                 find_rstudio_root_file())
+)
+
+ggsave(
+  hypo_rate_p,
+  file = sprintf("%s/charts/refseq_nonhypo_box2.png",
+                 find_rstudio_root_file())
+)
+
+
+```
+
+
+
+

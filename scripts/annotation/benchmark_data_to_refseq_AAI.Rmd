@@ -1,0 +1,245 @@
+---
+title: "analyze AA distance between refseq and annotation benchmarking genomes"
+output: html_notebook
+---
+
+
+```{r}
+library(data.table)
+library(stringr)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(forcats)
+library(rprojroot)
+library(ggpubr)
+library(cowplot)
+```
+
+Load seawater rna AA names table
+```{r}
+sea_rna_names_dt <- fread(
+    sprintf(
+        "%s/data/annotation/seawater_rna_virome/AAs/PRJNA605028.AA.lengths.tsv",
+        find_rstudio_root_file()
+    ),
+    sep = "\t",
+    header = F,
+    col.names = c("query", "length")
+) 
+```
+
+compare seawater rna and refseq AA seqs
+```{r}
+sea_rna_vs_refseq_dt <- fread(
+    sprintf(
+        "%s/data/annotation/seawater_rna_virome/AAs/PRJNA605028.AA.VS.refseq_virus_AA_20260107.tsv",
+        find_rstudio_root_file()
+    ),
+    sep = "\t",
+    header = T
+)
+```
+
+distribution of % ID from mmseqs
+```{r}
+sea_rna_expand_dt <- merge(
+    sea_rna_names_dt,
+    sea_rna_vs_refseq_dt %>% group_by(query) %>% slice_min(evalue, with_ties = F),
+    by = "query",
+    all.x = T
+) %>%
+  mutate(
+    pident = case_when(
+        is.na(pident)~ 0, TRUE ~ pident
+    )
+  )
+```
+
+```{r}
+sea_rna_id_p <- sea_rna_expand_dt %>%
+  ggplot(aes(pident)) +
+  geom_histogram(bins=100) +
+  theme_bw() +
+  labs(
+    x = "% ID to closest RefSeq AA"
+  )
+
+sea_rna_id_p
+```
+
+```{r}
+ggsave(
+  sea_rna_id_p,
+  file = sprintf(
+    "%s/charts/seawater_rna_refseq_percID.png",
+    find_rstudio_root_file()
+  ),
+  height = 5,
+  width = 4
+)
+
+ggsave(
+  sea_rna_id_p,
+  file = sprintf(
+    "%s/charts/seawater_rna_refseq_percID.pdf",
+    find_rstudio_root_file()
+  ),
+  height = 5,
+  width = 4
+)
+```
+
+
+Load seawater DTR AA names table
+```{r}
+sea_dtr_names_dt <- fread(
+    sprintf(
+        "%s/data/annotation/seawater_dtrs/AAs/seawater_dtr_headtail_AA.lengths.tsv",
+        find_rstudio_root_file()
+    ),
+    sep = "\t",
+    header = F,
+    col.names = c("query", "length")
+) 
+```
+
+compare seawater DTR and refseq AA seqs
+```{r}
+sea_dtr_vs_refseq_dt <- fread(
+    sprintf(
+        "%s/data/annotation/seawater_dtrs/AAs/seawater_dtr_headtail_AA.VS.refseq_virus_AA_20260107.tsv",
+        find_rstudio_root_file()
+    ),
+    sep = "\t",
+    header = T
+)
+```
+
+distribution of % ID from mmseqs
+```{r}
+sea_dtr_expand_dt <- merge(
+    sea_dtr_names_dt,
+    sea_dtr_vs_refseq_dt %>% group_by(query) %>% slice_min(evalue, with_ties = F),
+    by = "query",
+    all.x = T
+) %>%
+  mutate(
+    pident = case_when(
+        is.na(pident)~ 0, TRUE ~ pident
+    )
+  )
+```
+
+```{r}
+sea_dtr_id_p <- sea_dtr_expand_dt %>%
+  ggplot(aes(pident)) +
+  geom_histogram(bins=100) +
+  theme_bw() +
+  labs(
+    x = "% ID to closest RefSeq AA"
+  )
+
+sea_dtr_id_p
+```
+
+```{r}
+ggsave(
+  sea_dtr_id_p,
+  file = sprintf(
+    "%s/charts/seawater_DTR_refseq_percID.png",
+    find_rstudio_root_file()
+  ),
+  height = 5,
+  width = 4
+)
+
+ggsave(
+  sea_dtr_id_p,
+  file = sprintf(
+    "%s/charts/seawater_DTR_refseq_percID.pdf",
+    find_rstudio_root_file()
+  ),
+  height = 5,
+  width = 4
+)
+```
+
+Load gut DTR AA names table
+```{r}
+gut_dtr_names_dt <- fread(
+    sprintf(
+        "%s/data/annotation/gut_dtrs/AAs/gut_dtr_head_tail_AA.lengths.tsv",
+        find_rstudio_root_file()
+    ),
+    sep = "\t",
+    header = F,
+    col.names = c("query", "length")
+) 
+```
+
+compare gut DTR and refseq AA seqs
+```{r}
+gut_dtr_vs_refseq_dt <- fread(
+    sprintf(
+        "%s/data/annotation/gut_dtrs/AAs/gut_dtr_head_tail_AA.VS.refseq_virus_AA_20260107.tsv",
+        find_rstudio_root_file()
+    ),
+    sep = "\t",
+    header = T
+)
+```
+
+distribution of % ID from mmseqs
+```{r}
+gut_dtr_expand_dt <- merge(
+    gut_dtr_names_dt,
+    gut_dtr_vs_refseq_dt %>% group_by(query) %>% slice_min(evalue, with_ties = F),
+    by = "query",
+    all.x = T
+) %>%
+  mutate(
+    pident = case_when(
+        is.na(pident)~ 0, TRUE ~ pident
+    )
+  )
+```
+
+```{r}
+gut_dtr_id_p <- gut_dtr_expand_dt %>%
+  ggplot(aes(pident)) +
+  geom_histogram(bins=100) +
+  theme_bw() +
+  labs(
+    x = "% ID to closest RefSeq AA"
+  )
+
+gut_dtr_id_p
+```
+
+```{r}
+ggsave(
+  gut_dtr_id_p,
+  file = sprintf(
+    "%s/charts/gut_DTR_refseq_percID.png",
+    find_rstudio_root_file()
+  ),
+  height = 5,
+  width = 4
+)
+
+ggsave(
+  gut_dtr_id_p,
+  file = sprintf(
+    "%s/charts/gut_DTR_refseq_percID.pdf",
+    find_rstudio_root_file()
+  ),
+  height = 5,
+  width = 4
+)
+```
+
+
+
+
+
