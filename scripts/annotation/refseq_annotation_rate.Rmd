@@ -33,12 +33,12 @@ gnmd_gene_dt <- fread(sprintf(
 ) %>%
   mutate(contigID = sub("_[^_]+$", "", gene))
 
-#phar_gene_dt <- fread(sprintf(
-# "%s/data/annotation/gut_dtrs/pharokka/pharokka_cds_final_merged_output.tsv",
-#  find_rstudio_root_file()
-#  )
-#) %>%
-#  rename(contigID = contig)
+phar_gene_dt <- fread(sprintf(
+ "%s/data/annotation/refseq/pharokka/pharokka_cds_final_merged_output.tsv",
+  find_rstudio_root_file()
+  )
+) %>%
+  rename(contigID = contig)
 
 ct3_gene_dt<- fread(sprintf(
   "%s/data/annotation/refseq/ct3/final_genes_to_contigs_annotation_summary.tsv",
@@ -71,7 +71,8 @@ contig_ids <- rbindlist(
   list(
     ct3_merge_dt %>% distinct(contigID),
     metc_gene_dt %>% distinct(contigID),
-    gnmd_gene_dt %>% distinct(contigID)
+    gnmd_gene_dt %>% distinct(contigID),
+    phar_gene_dt %>% distinct(contigID)
   )
 ) %>% distinct()
 ```
@@ -93,20 +94,20 @@ ct3_annot_rate_dt <- merge(contig_ids,
 ```
 
 ```{r}
-#phar_annot_rate_dt <- merge(contig_ids,
-#                           phar_gene_dt,
-#                           by = "contigID") %>%
-#  group_by(contigID) %>%
-#  summarize(gene_count = n(),
-#            hypo_annotations = n_distinct(gene[annot == "hypothetical protein"])) %>%
-#  mutate(software = "Pharokka")
+phar_annot_rate_dt <- merge(contig_ids,
+                           phar_gene_dt,
+                           by = "contigID") %>%
+  group_by(contigID) %>%
+  summarize(gene_count = n(),
+            hypo_annotations = n_distinct(gene[annot == "hypothetical protein"])) %>%
+  mutate(software = "Pharokka")
 ```
 
 
 ```{r}
 metc_annot_rate_dt <- merge(
   ct3_annot_rate_dt %>% select(c(contigID, gene_count)),
-  metc_info_dt,
+  metc_gene_dt,
   by = "contigID",
   all.x = T
 ) %>%
@@ -145,15 +146,15 @@ combine hypo
 sum_hypol <- list(
   ct3_annot_rate_dt, 
   gnmd_annot_rate_dt, 
-  metc_annot_rate_dt
-#  phar_annot_rate_dt,
+  metc_annot_rate_dt,
+  phar_annot_rate_dt
   )
 
 hypo_all_dt <- rbindlist(sum_hypol, use.names=TRUE) %>%
   mutate(hypo_prop = hypo_annotations/gene_count,
          software = fct_relevel(software,  "geNomad",
                                            "Metacerberus", 
-                                           #"Pharokka", 
+                                           "Pharokka", 
                                            "Cenote-Taker 3"
                                            )) %>%
   complete(contigID, software,
@@ -186,8 +187,8 @@ hypo_rate_p <- hypo_all_dt %>%
     label = "p.signif",
     comparisons = list(
       c("Cenote-Taker 3", "geNomad"),
-      c("Cenote-Taker 3", "Metacerberus")
-      #c("Cenote-Taker 3", "Pharokka"),
+      c("Cenote-Taker 3", "Metacerberus"),
+      c("Cenote-Taker 3", "Pharokka")
     )
   ) +
   theme_bw() +

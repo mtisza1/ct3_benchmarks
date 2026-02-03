@@ -62,16 +62,13 @@ metc_missing_p <- missing_categories_ct3_metc %>%
   mutate(
     f_annotation = str_to_title(gsub("-", " ", annotation))
   ) %>%
-  ggplot(aes(x = forcats::fct_reorder(f_annotation, n), y = n)) +
+  ggplot(aes(y = forcats::fct_reorder(f_annotation, n), x = n)) +
   geom_col(fill = "black") +
   theme_bw() +
   labs(
     x = "functional annotation category",
     y = "HMMs in CT3 DB,\nno similar HMM in Metacerberus DB"
-  ) +
-  theme(
-    axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)
-  )
+  ) 
 
 metc_missing_p
 ```
@@ -83,8 +80,18 @@ ggsave(
     "%s/charts/hmm_compare_metc_top10_missing.png",
     find_rstudio_root_file()
   ),
-  height = 5,
-  width = 3
+  height = 3,
+  width = 5
+)
+
+ggsave(
+  metc_missing_p,
+  file = sprintf(
+    "%s/charts/hmm_compare_metc_top10_missing.pdf",
+    find_rstudio_root_file()
+  ),
+  height = 3,
+  width = 5
 )
 ```
 
@@ -122,8 +129,17 @@ ggsave(
     "%s/charts/hmm_compare_metc_percID.png",
     find_rstudio_root_file()
   ),
-  height = 5,
-  width = 4
+  height = 3,
+  width = 5
+)
+ggsave(
+  ct3_metc_id_p,
+  file = sprintf(
+    "%s/charts/hmm_compare_metc_percID.pdf",
+    find_rstudio_root_file()
+  ),
+  height = 3,
+  width = 5
 )
 ```
 
@@ -158,16 +174,13 @@ phar_missing_p <- missing_categories_ct3_phar %>%
   mutate(
     f_annotation = str_to_title(gsub("-", " ", annotation))
   ) %>%
-  ggplot(aes(x = forcats::fct_reorder(f_annotation, n), y = n)) +
+  ggplot(aes(y = forcats::fct_reorder(f_annotation, n), x = n)) +
   geom_col(fill = "black") +
   theme_bw() +
   labs(
     x = "functional annotation category",
     y = "HMMs in CT3 DB,\nno similar HMM in Pharokka DB"
-  ) +
-  theme(
-    axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)
-  )
+  ) 
 
 phar_missing_p
 ```
@@ -179,8 +192,17 @@ ggsave(
     "%s/charts/hmm_compare_phar_top10_missing.png",
     find_rstudio_root_file()
   ),
-  height = 5,
-  width = 3
+  height = 3,
+  width = 5
+)
+ggsave(
+  phar_missing_p,
+  file = sprintf(
+    "%s/charts/hmm_compare_phar_top10_missing.pdf",
+    find_rstudio_root_file()
+  ),
+  height = 3,
+  width = 5
 )
 ```
 
@@ -218,8 +240,17 @@ ggsave(
     "%s/charts/hmm_compare_phar_percID.png",
     find_rstudio_root_file()
   ),
-  height = 5,
-  width = 4
+  height = 3,
+  width = 5
+)
+ggsave(
+  ct3_phar_id_p,
+  file = sprintf(
+    "%s/charts/hmm_compare_phar_percID.pdf",
+    find_rstudio_root_file()
+  ),
+  height = 3,
+  width = 5
 )
 ```
 
@@ -255,16 +286,13 @@ ct2_missing_p <- missing_categories_ct3_ct2 %>%
   mutate(
     f_annotation = str_to_title(gsub("-", " ", annotation))
   ) %>%
-  ggplot(aes(x = forcats::fct_reorder(f_annotation, n), y = n)) +
+  ggplot(aes(y = forcats::fct_reorder(f_annotation, n), x = n)) +
   geom_col(fill = "black") +
   theme_bw() +
   labs(
     x = "functional annotation category",
     y = "HMMs in CT3 DB,\nno similar HMM in CT2 DB"
-  ) +
-  theme(
-    axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)
-  )
+  ) 
 
 ct2_missing_p
 ```
@@ -276,8 +304,17 @@ ggsave(
     "%s/charts/hmm_compare_ct2_top10_missing.png",
     find_rstudio_root_file()
   ),
-  height = 5,
-  width = 3
+  height = 3,
+  width = 5
+)
+ggsave(
+  ct2_missing_p,
+  file = sprintf(
+    "%s/charts/hmm_compare_ct2_top10_missing.pdf",
+    find_rstudio_root_file()
+  ),
+  height = 3,
+  width = 5
 )
 ```
 
@@ -315,8 +352,17 @@ ggsave(
     "%s/charts/hmm_compare_ct2_percID.png",
     find_rstudio_root_file()
   ),
-  height = 5,
-  width = 4
+  height = 3,
+  width = 5
+)
+ggsave(
+  ct3_ct2_id_p,
+  file = sprintf(
+    "%s/charts/hmm_compare_ct2_percID.pdf",
+    find_rstudio_root_file()
+  ),
+  height = 3,
+  width = 5
 )
 ```
 
@@ -352,16 +398,13 @@ gnmd_missing_p <- missing_categories_ct3_gnmd %>%
   mutate(
     f_annotation = str_to_title(gsub("-", " ", annotation))
   ) %>%
-  ggplot(aes(x = forcats::fct_reorder(f_annotation, n), y = n)) +
+  ggplot(aes(y = forcats::fct_reorder(f_annotation, n), x = n)) +
   geom_col(fill = "black") +
   theme_bw() +
   labs(
     x = "functional annotation category",
     y = "HMMs in CT3 DB,\nno similar HMM in geNomad DB"
-  ) +
-  theme(
-    axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)
-  )
+  ) 
 
 gnmd_missing_p
 ```
@@ -373,8 +416,17 @@ ggsave(
     "%s/charts/hmm_compare_gnmd_top10_missing.png",
     find_rstudio_root_file()
   ),
-  height = 5,
-  width = 3
+  height = 3,
+  width = 5
+)
+ggsave(
+  gnmd_missing_p,
+  file = sprintf(
+    "%s/charts/hmm_compare_gnmd_top10_missing.pdf",
+    find_rstudio_root_file()
+  ),
+  height = 3,
+  width = 5
 )
 ```
 
@@ -412,8 +464,17 @@ ggsave(
     "%s/charts/hmm_compare_gnmd_percID.png",
     find_rstudio_root_file()
   ),
-  height = 5,
-  width = 4
+  height = 3,
+  width = 5
+)
+ggsave(
+  ct3_gnmd_id_p,
+  file = sprintf(
+    "%s/charts/hmm_compare_gnmd_percID.pdf",
+    find_rstudio_root_file()
+  ),
+  height = 3,
+  width = 5
 )
 ```
 

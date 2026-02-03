@@ -88,7 +88,7 @@ merge_dt <- merge(
   ncbi_tax_dt,
   ct3_parse_dt,
   by = "Accession"
-)
+) 
 ```
 
 ```{r}
@@ -123,6 +123,12 @@ accuracy_hallmarks_dt <- merge_dt %>%
 ```
 
 ```{r}
+hallmarks_dt <- merge_dt %>%
+  filter(total_hallmarks > 0)
+```
+
+
+```{r}
 acc_hall_p <- accuracy_hallmarks_dt %>%
   filter(metric != "records") %>%
   ggplot(aes(x = fct_relevel(metric, 
@@ -133,9 +139,11 @@ acc_hall_p <- accuracy_hallmarks_dt %>%
   geom_col(fill = "orangered") +
   geom_label(aes(label = scales::percent(count, accuracy = 0.1))) +
   theme_bw() +
+  scale_y_continuous(labels = scales::percent, limits = c(0,1)) +
   labs(
     x = "Taxonomic Level",
-    y = "Accuracy"
+    y = "Accuracy",
+    title = "Cenote-Taker 3 taxonomy accuracy: contigs with hallmark genes"
   ) +
   theme(
     axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)
@@ -152,12 +160,14 @@ acc_a_p <- accuracy_dt %>%
                              "class_acc", "order_acc", "family_acc", 
                              "genus_acc"
                              ), y = count)) +
-  geom_col(fill = "orangered") +
+  geom_col(fill = "purple") +
   geom_label(aes(label = scales::percent(count, accuracy = 0.1))) +
   theme_bw() +
+  scale_y_continuous(labels = scales::percent, limits = c(0,1)) +
   labs(
     x = "Taxonomic Level",
-    y = "Accuracy"
+    y = "Accuracy",
+    title = "Cenote-Taker 3 taxonomy accuracy: all contigs"
   ) +
   theme(
     axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)
@@ -169,26 +179,41 @@ acc_a_p
 ```{r}
 merge_dt %>%
   filter(total_hallmarks == 0) %>%
-  group_by(class.x) %>%
+  group_by(phylum.x) %>%
   summarize(n = n())
 ```
 
 ```{r}
-#AB735630.1
-merge_dt %>%
-  filter(Accession == "AB735630.1") %>%
-  summarize(
-    records = n(),
-    realm_acc = sum(realm.x == realm.y) / records,
-    kingdom_acc = sum(kingdom.x == kingdom.y) / records,
-    phylum_acc = sum(phylum.x == phylum.y) / records,
-    class_acc = sum(class.x == class.y) / records,
-    order_acc = sum(order.x == order.y) / records,
-    family_acc = sum(family.x == family.y) / records,
-    genus_acc = sum(genus.x == genus.y) / records
+cow_p <- cowplot::plot_grid(
+  plotlist = list(acc_hall_p, acc_a_p),
+  nrow = 2
   )
 
+cow_p
 ```
+
+```{r}
+ggsave(
+  cow_p,
+  file = sprintf(
+    "%s/charts/genbank_taxonomy_accuracy1.pdf",
+    find_rstudio_root_file()
+  ),
+  height = 6,
+  width = 6
+)
+
+ggsave(
+  cow_p,
+  file = sprintf(
+    "%s/charts/genbank_taxonomy_accuracy1.png",
+    find_rstudio_root_file()
+  ),
+  height = 6,
+  width = 6
+)
+```
+
 
 
 
