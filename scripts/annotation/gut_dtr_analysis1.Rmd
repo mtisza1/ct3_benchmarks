@@ -361,6 +361,148 @@ ggsave(
 )
 ```
 
+## Per-gene and combined statistics
+
+```{r}
+total_genomes <- 27
+
+per_gene_stats_dt <- rbindlist(sum_structl) %>%
+  complete(contigID, software,
+           fill = list(n_capsid = 0,
+                       n_terminase = 0,
+                       n_portal = 0)) %>%
+  rename(MCP = n_capsid,
+         TerL = n_terminase,
+         Portal = n_portal) %>%
+  pivot_longer(cols = c("MCP", "TerL", "Portal"),
+               names_to = "gene",
+               values_to = "count") %>%
+  mutate(
+    annotation_status = case_when(
+      count == 0 ~ "under_annotated",
+      count == 1 ~ "correct",
+      count > 1 ~ "over_annotated"
+    )
+  ) %>%
+  group_by(software, gene, annotation_status) %>%
+  summarize(n_genomes = n(), .groups = "drop") %>%
+  complete(software, gene, annotation_status,
+           fill = list(n_genomes = 0)) %>%
+  pivot_wider(names_from = annotation_status,
+              values_from = n_genomes,
+              values_fill = 0) %>%
+  mutate(
+    detection_rate = (correct + over_annotated) / total_genomes,
+    accuracy_rate = correct / total_genomes,
+    under_annotation_rate = under_annotated / total_genomes,
+    over_annotation_rate = over_annotated / total_genomes
+  )
+
+per_gene_stats_dt
+```
+
+Combined "perfect" metric with 95% CI
+```{r}
+perfect_stats_dt <- rbindlist(sum_structl) %>%
+  complete(contigID, software,
+           fill = list(n_capsid = 0,
+                       n_terminase = 0,
+                       n_portal = 0)) %>%
+  rename(MCP = n_capsid,
+         TerL = n_terminase,
+         Portal = n_portal) %>%
+  mutate(perfect = MCP == 1 & TerL == 1 & Portal == 1) %>%
+  group_by(software) %>%
+  summarize(
+    n_perfect = sum(perfect),
+    n_imperfect = sum(!perfect),
+    .groups = "drop"
+  ) %>%
+  rowwise() %>%
+  mutate(
+    perfect_rate = n_perfect / total_genomes,
+    ci_lower = binom.test(n_perfect, total_genomes)$conf.int[1],
+    ci_upper = binom.test(n_perfect, total_genomes)$conf.int[2]
+  ) %>%
+  ungroup()
+
+perfect_stats_dt
+```
+
+Pairwise Fisher's exact tests between tools for "perfect" annotation
+```{r}
+software_list <- unique(perfect_stats_dt$software)
+pairwise_results <- list()
+
+for (i in 1:(length(software_list) - 1)) {
+  for (j in (i + 1):length(software_list)) {
+    sw1 <- software_list[i]
+    sw2 <- software_list[j]
+    
+    n1_perfect <- perfect_stats_dt$n_perfect[perfect_stats_dt$software == sw1]
+    n1_imperfect <- perfect_stats_dt$n_imperfect[perfect_stats_dt$software == sw1]
+    n2_perfect <- perfect_stats_dt$n_perfect[perfect_stats_dt$software == sw2]
+    n2_imperfect <- perfect_stats_dt$n_imperfect[perfect_stats_dt$software == sw2]
+    
+    contingency <- matrix(c(n1_perfect, n1_imperfect,
+                            n2_perfect, n2_imperfect),
+                          nrow = 2, byrow = TRUE)
+    
+    test_result <- fisher.test(contingency)
+    
+    pairwise_results[[length(pairwise_results) + 1]] <- data.table(
+      software_1 = sw1,
+      software_2 = sw2,
+      odds_ratio = test_result$estimate,
+      p_value = test_result$p.value
+    )
+  }
+}
+
+pairwise_fisher_dt <- rbindlist(pairwise_results) %>%
+  mutate(
+    p_adjusted = p.adjust(p_value, method = "BH"),
+    significant = p_adjusted < 0.05
+  )
+
+pairwise_fisher_dt
+```
+
+Write results to CSV
+```{r}
+write.csv(
+  per_gene_stats_dt,
+  file = sprintf(
+    "%s/data/annotation/gut_dtrs/gut_dtr_per_gene_stats.csv",
+    find_rstudio_root_file()
+  ),
+  row.names = FALSE
+)
+
+write.csv(
+  perfect_stats_dt,
+  file = sprintf(
+    "%s/data/annotation/gut_dtrs/gut_dtr_perfect_stats.csv",
+    find_rstudio_root_file()
+  ),
+  row.names = FALSE
+)
+
+write.csv(
+  pairwise_fisher_dt,
+  file = sprintf(
+    "%s/data/annotation/gut_dtrs/gut_dtr_pairwise_fisher.csv",
+    find_rstudio_root_file()
+  ),
+  row.names = FALSE
+)
+
+cat("CSV files written to data/annotation/gut_dtrs/:\n")
+cat("  - gut_dtr_per_gene_stats.csv\n")
+cat("  - gut_dtr_perfect_stats.csv\n")
+cat("  - gut_dtr_pairwise_fisher.csv\n")
+```
+
 
 compare non-hypothetical annotation rate
 ```{r}
@@ -520,4 +662,6 @@ ggsave(
 ```
 
 
+```{r}
 
+```

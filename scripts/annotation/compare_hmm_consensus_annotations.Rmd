@@ -1,0 +1,480 @@
+---
+title: "compare database HMMs, CT3, pharokka, metacerberus, genomad, CT2"
+output: html_notebook
+---
+
+```{r}
+library(data.table)
+library(stringr)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(forcats)
+library(rprojroot)
+library(ggpubr)
+library(cowplot)
+```
+
+Load CT3 consensus table
+```{r}
+ct3_names_dt <- fread(
+    sprintf(
+        "%s/data/annotation/hmms/all_ct3_consensus.names.tsv",
+        find_rstudio_root_file()
+    ),
+    sep = "\t",
+    header = F,
+    col.names = c("query", "length")
+) %>%
+  separate(col = query, into = c("query", "annotation"), sep = " ")
+```
+
+compare CT3 and metacerberus consensus seqs
+```{r}
+ct3_vs_metc_dt <- fread(
+    sprintf(
+        "%s/data/annotation/hmms/all_ct3_consensus.VS.metc.tsv",
+        find_rstudio_root_file()
+    ),
+    sep = "\t",
+    header = T
+)
+```
+
+
+models/annotations with no hits from mmseqs search
+```{r}
+missing_categories_ct3_metc <- anti_join(
+    ct3_names_dt,
+    ct3_vs_metc_dt,
+    by = "query",
+) %>%
+  group_by(annotation) %>%
+  summarize(n = n())
+```
+
+
+
+```{r}
+metc_missing_p <- missing_categories_ct3_metc %>%
+  arrange(desc(n)) %>%
+  head(n = 10) %>%
+  mutate(
+    f_annotation = str_to_title(gsub("-", " ", annotation))
+  ) %>%
+  ggplot(aes(y = forcats::fct_reorder(f_annotation, n), x = n)) +
+  geom_col(fill = "black") +
+  theme_bw() +
+  labs(
+    x = "functional annotation category",
+    y = "HMMs in CT3 DB,\nno similar HMM in Metacerberus DB"
+  ) 
+
+metc_missing_p
+```
+
+```{r}
+ggsave(
+  metc_missing_p,
+  file = sprintf(
+    "%s/charts/hmm_compare_metc_top10_missing.png",
+    find_rstudio_root_file()
+  ),
+  height = 3,
+  width = 5
+)
+
+ggsave(
+  metc_missing_p,
+  file = sprintf(
+    "%s/charts/hmm_compare_metc_top10_missing.pdf",
+    find_rstudio_root_file()
+  ),
+  height = 3,
+  width = 5
+)
+```
+
+distribution of % ID from mmseqs
+```{r}
+ct3_vs_metc_expand_dt <- merge(
+    ct3_names_dt,
+    ct3_vs_metc_dt %>% group_by(query) %>% slice_min(evalue, with_ties = F),
+    by = "query",
+    all.x = T
+) %>%
+  mutate(
+    pident = case_when(
+        is.na(pident)~ 0, TRUE ~ pident
+    )
+  )
+```
+
+```{r}
+ct3_metc_id_p <- ct3_vs_metc_expand_dt %>%
+  ggplot(aes(pident)) +
+  geom_histogram(bins=100) +
+  theme_bw() +
+  labs(
+    x = "% ID to closest Metacerberus HMM consensus"
+  )
+
+ct3_metc_id_p
+```
+
+```{r}
+ggsave(
+  ct3_metc_id_p,
+  file = sprintf(
+    "%s/charts/hmm_compare_metc_percID.png",
+    find_rstudio_root_file()
+  ),
+  height = 3,
+  width = 5
+)
+ggsave(
+  ct3_metc_id_p,
+  file = sprintf(
+    "%s/charts/hmm_compare_metc_percID.pdf",
+    find_rstudio_root_file()
+  ),
+  height = 3,
+  width = 5
+)
+```
+
+Comparison of CT3 and pharokka consensus seqs
+```{r}
+ct3_vs_phar_dt <- fread(
+    sprintf(
+        "%s/data/annotation/hmms/all_ct3_consensus.VS.pharokka.tsv",
+        find_rstudio_root_file()
+    ),
+    sep = "\t",
+    header = T
+)
+```
+
+```{r}
+missing_categories_ct3_phar <- anti_join(
+    ct3_names_dt,
+    ct3_vs_phar_dt,
+    by = "query",
+) %>%
+  group_by(annotation) %>%
+  summarize(n = n())
+```
+
+
+
+```{r}
+phar_missing_p <- missing_categories_ct3_phar %>%
+  arrange(desc(n)) %>%
+  head(n = 10) %>%
+  mutate(
+    f_annotation = str_to_title(gsub("-", " ", annotation))
+  ) %>%
+  ggplot(aes(y = forcats::fct_reorder(f_annotation, n), x = n)) +
+  geom_col(fill = "black") +
+  theme_bw() +
+  labs(
+    x = "functional annotation category",
+    y = "HMMs in CT3 DB,\nno similar HMM in Pharokka DB"
+  ) 
+
+phar_missing_p
+```
+
+```{r}
+ggsave(
+  phar_missing_p,
+  file = sprintf(
+    "%s/charts/hmm_compare_phar_top10_missing.png",
+    find_rstudio_root_file()
+  ),
+  height = 3,
+  width = 5
+)
+ggsave(
+  phar_missing_p,
+  file = sprintf(
+    "%s/charts/hmm_compare_phar_top10_missing.pdf",
+    find_rstudio_root_file()
+  ),
+  height = 3,
+  width = 5
+)
+```
+
+```{r}
+ct3_vs_phar_expand_dt <- merge(
+    ct3_names_dt,
+    ct3_vs_phar_dt %>% group_by(query) %>% slice_min(evalue, with_ties = F),
+    by = "query",
+    all.x = T
+) %>%
+  mutate(
+    pident = case_when(
+        is.na(pident)~ 0, TRUE ~ pident
+    )
+  )
+```
+
+
+```{r}
+ct3_phar_id_p <- ct3_vs_phar_expand_dt %>%
+  ggplot(aes(pident)) +
+  geom_histogram(bins=100) +
+  theme_bw() +
+  labs(
+    x = "% ID to closest Pharokka HMM consensus"
+  )
+
+ct3_phar_id_p
+```
+
+```{r}
+ggsave(
+  ct3_phar_id_p,
+  file = sprintf(
+    "%s/charts/hmm_compare_phar_percID.png",
+    find_rstudio_root_file()
+  ),
+  height = 3,
+  width = 5
+)
+ggsave(
+  ct3_phar_id_p,
+  file = sprintf(
+    "%s/charts/hmm_compare_phar_percID.pdf",
+    find_rstudio_root_file()
+  ),
+  height = 3,
+  width = 5
+)
+```
+
+
+Comparison of CT3 and CT2 consensus seqs
+```{r}
+ct3_vs_ct2_dt <- fread(
+    sprintf(
+        "%s/data/annotation/hmms/all_ct3_consensus.VS.ct2_all.mmseqs1.tsv",
+        find_rstudio_root_file()
+    ),
+    sep = "\t",
+    header = T
+)
+```
+
+```{r}
+missing_categories_ct3_ct2 <- anti_join(
+    ct3_names_dt,
+    ct3_vs_ct2_dt,
+    by = "query",
+) %>%
+  group_by(annotation) %>%
+  summarize(n = n())
+```
+
+
+
+```{r}
+ct2_missing_p <- missing_categories_ct3_ct2 %>%
+  arrange(desc(n)) %>%
+  head(n = 10) %>%
+  mutate(
+    f_annotation = str_to_title(gsub("-", " ", annotation))
+  ) %>%
+  ggplot(aes(y = forcats::fct_reorder(f_annotation, n), x = n)) +
+  geom_col(fill = "black") +
+  theme_bw() +
+  labs(
+    x = "functional annotation category",
+    y = "HMMs in CT3 DB,\nno similar HMM in CT2 DB"
+  ) 
+
+ct2_missing_p
+```
+
+```{r}
+ggsave(
+  ct2_missing_p,
+  file = sprintf(
+    "%s/charts/hmm_compare_ct2_top10_missing.png",
+    find_rstudio_root_file()
+  ),
+  height = 3,
+  width = 5
+)
+ggsave(
+  ct2_missing_p,
+  file = sprintf(
+    "%s/charts/hmm_compare_ct2_top10_missing.pdf",
+    find_rstudio_root_file()
+  ),
+  height = 3,
+  width = 5
+)
+```
+
+```{r}
+ct3_vs_ct2_expand_dt <- merge(
+    ct3_names_dt,
+    ct3_vs_ct2_dt %>% group_by(query) %>% slice_min(evalue, with_ties = F),
+    by = "query",
+    all.x = T
+) %>%
+  mutate(
+    pident = case_when(
+        is.na(pident)~ 0, TRUE ~ pident
+    )
+  )
+```
+
+
+```{r}
+ct3_ct2_id_p <- ct3_vs_ct2_expand_dt %>%
+  ggplot(aes(pident)) +
+  geom_histogram(bins=100) +
+  theme_bw() +
+  labs(
+    x = "% ID to closest CT2 HMM consensus"
+  )
+
+ct3_ct2_id_p
+```
+
+```{r}
+ggsave(
+  ct3_ct2_id_p,
+  file = sprintf(
+    "%s/charts/hmm_compare_ct2_percID.png",
+    find_rstudio_root_file()
+  ),
+  height = 3,
+  width = 5
+)
+ggsave(
+  ct3_ct2_id_p,
+  file = sprintf(
+    "%s/charts/hmm_compare_ct2_percID.pdf",
+    find_rstudio_root_file()
+  ),
+  height = 3,
+  width = 5
+)
+```
+
+
+Comparison of CT3 and genomad consensus seqs
+```{r}
+ct3_vs_gnmd_dt <- fread(
+    sprintf(
+        "%s/data/annotation/hmms/all_ct3_consensus.VS.genomad.mmseqs1.tsv",
+        find_rstudio_root_file()
+    ),
+    sep = "\t",
+    header = T
+)
+```
+
+```{r}
+missing_categories_ct3_gnmd <- anti_join(
+    ct3_names_dt,
+    ct3_vs_gnmd_dt,
+    by = "query",
+) %>%
+  group_by(annotation) %>%
+  summarize(n = n())
+```
+
+
+
+```{r}
+gnmd_missing_p <- missing_categories_ct3_gnmd %>%
+  arrange(desc(n)) %>%
+  head(n = 10) %>%
+  mutate(
+    f_annotation = str_to_title(gsub("-", " ", annotation))
+  ) %>%
+  ggplot(aes(y = forcats::fct_reorder(f_annotation, n), x = n)) +
+  geom_col(fill = "black") +
+  theme_bw() +
+  labs(
+    x = "functional annotation category",
+    y = "HMMs in CT3 DB,\nno similar HMM in geNomad DB"
+  ) 
+
+gnmd_missing_p
+```
+
+```{r}
+ggsave(
+  gnmd_missing_p,
+  file = sprintf(
+    "%s/charts/hmm_compare_gnmd_top10_missing.png",
+    find_rstudio_root_file()
+  ),
+  height = 3,
+  width = 5
+)
+ggsave(
+  gnmd_missing_p,
+  file = sprintf(
+    "%s/charts/hmm_compare_gnmd_top10_missing.pdf",
+    find_rstudio_root_file()
+  ),
+  height = 3,
+  width = 5
+)
+```
+
+```{r}
+ct3_vs_gnmd_expand_dt <- merge(
+    ct3_names_dt,
+    ct3_vs_gnmd_dt %>% group_by(query) %>% slice_min(evalue, with_ties = F),
+    by = "query",
+    all.x = T
+) %>%
+  mutate(
+    pident = case_when(
+        is.na(pident)~ 0, TRUE ~ pident
+    )
+  )
+```
+
+
+```{r}
+ct3_gnmd_id_p <- ct3_vs_gnmd_expand_dt %>%
+  ggplot(aes(pident)) +
+  geom_histogram(bins=100) +
+  theme_bw() +
+  labs(
+    x = "% ID to closest geNomad HMM consensus"
+  )
+
+ct3_gnmd_id_p
+```
+
+```{r}
+ggsave(
+  ct3_gnmd_id_p,
+  file = sprintf(
+    "%s/charts/hmm_compare_gnmd_percID.png",
+    find_rstudio_root_file()
+  ),
+  height = 3,
+  width = 5
+)
+ggsave(
+  ct3_gnmd_id_p,
+  file = sprintf(
+    "%s/charts/hmm_compare_gnmd_percID.pdf",
+    find_rstudio_root_file()
+  ),
+  height = 3,
+  width = 5
+)
+```
+

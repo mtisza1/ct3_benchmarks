@@ -1,0 +1,113 @@
+---
+title: "calculate total similarity of genbank AA to refseq AA"
+output: html_notebook
+---
+
+```{r}
+library(data.table)
+library(stringr)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(forcats)
+library(rprojroot)
+library(ggpubr)
+library(cowplot)
+```
+
+
+```{r}
+mmseqs_dt <- fread(
+  file = sprintf(
+    "%s/data/discovery/gb_frag/random_4000_gb_AA.VS.refseq_virus_AA_20260107.mmseqs1.tsv",
+    find_rstudio_root_file()
+    ),
+  header = T,
+  sep = "\t"
+)
+```
+
+```{r}
+AA_dt <- fread(
+  file = sprintf(
+    "%s/data/discovery/gb_frag/random_4000_gb_AA.lengths.tsv",
+    find_rstudio_root_file()
+    ),
+  header = F,
+  sep = "\t",
+  col.names = c("query", "length")
+)
+```
+
+```{r}
+genome_dt <- fread(
+  file = sprintf(
+    "%s/data/discovery/gb_frag/random_4000_gb_genomes.lengths.tsv",
+    find_rstudio_root_file()
+    ),
+  header = F,
+  sep = "\t",
+  col.names = c("genome", "length")
+)
+```
+
+```{r}
+mmseqs_sum_dt <- mmseqs_dt %>%
+  group_by(query) %>%
+  slice_min(evalue) %>%
+  slice_max(pident, with_ties = F) %>%
+  ungroup() %>%
+  mutate(
+    f_res_match = (fident * (alnlen/qlen))
+    )
+```
+
+```{r}
+merge_aa_dt <- merge(
+  mmseqs_sum_dt,
+  AA_dt,
+  by = "query",
+  all.y = T
+) %>%
+  mutate(
+    f_res_match = case_when(is.na(f_res_match) ~ 0, TRUE ~ f_res_match),
+    genome = gsub("_.*?$", "", query)
+    )
+```
+
+
+```{r}
+merge_aa_dt %>%
+  group_by(genome) %>%
+  summarise(genome_avg_aa = mean(f_res_match)) %>%
+  ggplot(aes(x = genome_avg_aa)) +
+  geom_histogram()
+```
+
+```{r}
+genome_aa_dt <- merge_aa_dt %>%
+  group_by(genome) %>%
+  summarise(genome_avg_aa = mean(f_res_match))
+```
+
+```{r}
+write.table(
+  genome_aa_dt,
+  file = sprintf(
+    "%s/data/discovery/gb_frag/random_4000_gb_genomes.AA_id_to_RefSeq.tsv",
+    find_rstudio_root_file()
+  ),
+  quote = F,
+  row.names = F,
+  sep = "\t"
+)
+```
+
+
+
+
+
+
+
+
+

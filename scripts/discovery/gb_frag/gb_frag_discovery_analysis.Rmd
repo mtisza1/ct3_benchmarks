@@ -1,0 +1,779 @@
+---
+title: "GenBank Fragmented Virus Discovery: CT3 vs geNomad"
+output: html_notebook
+---
+
+Comparing Cenote-Taker 3 and geNomad discovery performance on fragmented virus genomes.
+Fragments were generated at varying levels (10%, 20%, 50% of original genome length) plus complete genomes.
+All input sequences are known viruses from GenBank, so true positive rate = detected / total input.
+
+```{r}
+library(data.table)
+library(stringr)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(forcats)
+library(rprojroot)
+library(ggpubr)
+library(cowplot)
+```
+
+## Load metadata
+
+```{r}
+frag_meta_dt <- fread(
+  sprintf(
+    "%s/data/discovery/gb_frag/gb_fragment_metadata.tsv.txt",
+    find_rstudio_root_file()
+  ),
+  header = T
+)
+
+frag_meta_dt
+```
+
+## Load AA divergence data
+
+```{r}
+aa_div_dt <- fread(
+  sprintf(
+    "%s/data/discovery/gb_frag/random_4000_gb_genomes.AA_id_to_RefSeq.tsv",
+    find_rstudio_root_file()
+  ),
+  header = T
+)
+
+head(aa_div_dt)
+```
+
+## Load CT3 results
+
+```{r}
+ct3_files <- list.files(
+  sprintf("%s/data/discovery/gb_frag/ct3_out", find_rstudio_root_file()),
+  pattern = "virus_summary.tsv",
+  full.names = TRUE
+)
+
+ct3_list <- lapply(ct3_files, function(f) {
+  dt <- fread(f, header = T)
+  fname <- basename(f)
+  dataset <- gsub("_virus_summary.tsv", "", fname)
+  dataset <- gsub("ct3_", "", dataset)
+  dt$dataset <- dataset
+  dt
+})
+
+ct3_dt <- rbindlist(ct3_list, fill = TRUE)
+```
+
+```{r}
+ct3_dt <- ct3_dt %>%
+  mutate(
+    source_genome = case_when(
+      grepl("_frag", input_name) ~ gsub("^([A-Z0-9]+\\.[0-9]+)_frag.*$", "\\1", input_name),
+      TRUE ~ gsub(" \\|.*$", "", input_name)
+    ),
+    fragmentation = case_when(
+      grepl("^frags_01", dataset) ~ 0.1,
+      grepl("^frags_02", dataset) ~ 0.2,
+      grepl("^frags_05", dataset) ~ 0.5,
+      TRUE ~ 1.0
+    ),
+    replicate = case_when(
+      grepl("_311$", dataset) ~ "rep1",
+      grepl("_312$", dataset) ~ "rep2",
+      grepl("_313$", dataset) ~ "rep3",
+      TRUE ~ "rep1"
+    ),
+    software = "CT3"
+  )
+
+head(ct3_dt)
+```
+
+## Load geNomad results
+
+```{r}
+genomad_files <- list.files(
+  sprintf("%s/data/discovery/gb_frag/genomad_out", find_rstudio_root_file()),
+  pattern = "virus_summary.tsv",
+  full.names = TRUE
+)
+
+genomad_list <- lapply(genomad_files, function(f) {
+  dt <- fread(f, header = T)
+  fname <- basename(f)
+  dataset <- gsub("_virus_summary.tsv", "", fname)
+  dt$dataset <- dataset
+  dt
+})
+
+genomad_dt <- rbindlist(genomad_list, fill = TRUE)
+```
+
+```{r}
+genomad_dt <- genomad_dt %>%
+  mutate(
+    source_genome = case_when(
+      grepl("_frag", seq_name) ~ gsub("^([A-Z0-9]+\\.[0-9]+)_frag.*$", "\\1", seq_name),
+      TRUE ~ gsub("\\|.*$", "", seq_name)
+    ),
+    fragmentation = case_when(
+      grepl("^frags_01", dataset) ~ 0.1,
+      grepl("^frags_02", dataset) ~ 0.2,
+      grepl("^frags_05", dataset) ~ 0.5,
+      TRUE ~ 1.0
+    ),
+    replicate = case_when(
+      grepl("_311$", dataset) ~ "rep1",
+      grepl("_312$", dataset) ~ "rep2",
+      grepl("_313$", dataset) ~ "rep3",
+      TRUE ~ "rep1"
+    ),
+    software = "geNomad"
+  )
+
+head(genomad_dt)
+```
+
+## Calculate True Positive Rate by fragmentation level
+
+For each dataset, count unique source genomes detected.
+
+```{r}
+ct3_tpr_dt <- ct3_dt %>%
+  group_by(dataset, fragmentation, replicate) %>%
+  summarize(
+    detected_genomes = n_distinct(source_genome),
+    total_calls = n(),
+    .groups = "drop"
+  ) %>%
+  left_join(frag_meta_dt, by = "dataset") %>%
+  mutate(
+    total_input = record_count,
+    tpr = total_calls / total_input,
+    software = "CT3"
+  )
+
+ct3_tpr_dt
+```
+
+```{r}
+genomad_tpr_dt <- genomad_dt %>%
+  group_by(dataset, fragmentation, replicate) %>%
+  summarize(
+    detected_genomes = n_distinct(source_genome),
+    total_calls = n(),
+    .groups = "drop"
+  ) %>%
+  left_join(
+    frag_meta_dt %>% mutate(dataset = gsub("^frags", "frags", dataset)),
+    by = "dataset"
+  ) %>%
+  mutate(
+    total_input = case_when(
+      dataset == "random_4000_gb_clean.1k" ~ 3698L,
+      TRUE ~ record_count
+    ),
+    tpr = total_calls / total_input,
+    software = "geNomad"
+  )
+
+genomad_tpr_dt
+```
+
+```{r}
+combined_tpr_dt <- rbind(
+  ct3_tpr_dt %>% select(dataset, fragmentation.x, replicate, detected_genomes, total_calls, total_input, tpr, software),
+  genomad_tpr_dt %>% select(dataset, fragmentation.x, replicate, detected_genomes, total_calls, total_input, tpr, software)
+) %>%
+  rename(fragmentation = fragmentation.x)
+
+combined_tpr_dt
+```
+
+## Plot TPR by fragmentation level
+
+```{r}
+tpr_summary_dt <- combined_tpr_dt %>%
+  group_by(fragmentation, software) %>%
+  summarize(
+    mean_tpr = mean(tpr),
+    sd_tpr = sd(tpr),
+    n = n(),
+    se_tpr = sd_tpr / sqrt(n),
+    .groups = "drop"
+  )
+
+tpr_summary_dt
+```
+
+```{r}
+tpr_frag_p <- combined_tpr_dt %>%
+  mutate(
+    fragmentation_label = factor(
+      fragmentation,
+      levels = c(0.1, 0.2, 0.5, 1.0),
+      labels = c("10%", "20%", "50%", "100%")
+    )
+  ) %>%
+  ggplot(aes(x = fragmentation_label, y = tpr, fill = software)) +
+  geom_bar(stat = "summary", fun = "mean", position = position_dodge(0.9), color = "black") +
+  geom_errorbar(
+    stat = "summary",
+    fun.data = mean_se,
+    position = position_dodge(0.9),
+    width = 0.25
+  ) +
+  geom_point(
+    position = position_dodge(0.9),
+    size = 2,
+    alpha = 0.5
+  ) +
+  scale_fill_manual(values = c("CT3" = "#4DBEEE", "geNomad" = "#EDB120")) +
+  scale_y_continuous(limits = c(0, 1), labels = scales::percent) +
+  labs(
+    x = "Genome Fragment Size (% of original)",
+    y = "True Positive Rate",
+    fill = "Software",
+    title = "Virus Discovery Performance by Fragmentation Level"
+  ) +
+  theme_bw() +
+  theme(
+    legend.position = "top"
+  )
+
+tpr_frag_p
+
+ggsave(
+  tpr_frag_p,
+  file = sprintf(
+    "%s/charts/gb_frag_tpr_by_fragmentation.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 6,
+  height = 5
+)
+
+ggsave(
+  tpr_frag_p,
+  file = sprintf(
+    "%s/charts/gb_frag_tpr_by_fragmentation.png",
+    find_rstudio_root_file()
+  ),
+  width = 6,
+  height = 5
+)
+```
+
+## Calculate per-genome detection with AA divergence
+
+For complete genomes, link detection status to AA divergence.
+
+```{r}
+ct3_complete_dt <- ct3_dt %>%
+  filter(fragmentation == 1.0) %>%
+  select(source_genome, software) %>%
+  distinct() %>%
+  mutate(ct3_detected = TRUE)
+
+genomad_complete_dt <- genomad_dt %>%
+  filter(fragmentation == 1.0) %>%
+  select(source_genome, software) %>%
+  distinct() %>%
+  mutate(genomad_detected = TRUE)
+```
+
+```{r}
+detection_aa_dt <- aa_div_dt %>%
+  rename(source_genome = genome) %>%
+  left_join(ct3_complete_dt %>% select(source_genome, ct3_detected), by = "source_genome") %>%
+  left_join(genomad_complete_dt %>% select(source_genome, genomad_detected), by = "source_genome") %>%
+  mutate(
+    ct3_detected = case_when(is.na(ct3_detected) ~ FALSE, TRUE ~ ct3_detected),
+    genomad_detected = case_when(is.na(genomad_detected) ~ FALSE, TRUE ~ genomad_detected)
+  )
+
+detection_aa_dt
+```
+
+## Plot detection rate by AA divergence bins
+
+```{r}
+detection_aa_long_dt <- detection_aa_dt %>%
+  pivot_longer(
+    cols = c(ct3_detected, genomad_detected),
+    names_to = "software",
+    values_to = "detected"
+  ) %>%
+  mutate(
+    software = case_when(
+      software == "ct3_detected" ~ "CT3",
+      TRUE ~ "geNomad"
+    ),
+    aa_bin = cut(
+      genome_avg_aa,
+      breaks = c(0, 0.2, 0.4, 0.6, 0.8, 1.0),
+      labels = c("0-20%", "20-40%", "40-60%", "60-80%", "80-100%"),
+      include.lowest = TRUE
+    )
+  )
+```
+
+```{r}
+aa_tpr_summary_dt <- detection_aa_long_dt %>%
+  group_by(aa_bin, software) %>%
+  summarize(
+    detected_count = sum(detected),
+    total_count = n(),
+    tpr = detected_count / total_count,
+    .groups = "drop"
+  )
+
+aa_tpr_summary_dt
+```
+
+```{r}
+aa_tpr_p <- aa_tpr_summary_dt %>%
+  ggplot(aes(x = aa_bin, y = tpr, fill = software)) +
+  geom_bar(stat = "identity", position = position_dodge(0.9), color = "black") +
+  geom_text(
+    aes(label = sprintf("%d/%d", detected_count, total_count)),
+    position = position_dodge(0.9),
+    vjust = -0.5,
+    size = 3
+  ) +
+  scale_fill_manual(values = c("CT3" = "#4DBEEE", "geNomad" = "#EDB120")) +
+  scale_y_continuous(limits = c(0, 1.1), labels = scales::percent) +
+  labs(
+    x = "AA Identity to RefSeq (genome average)",
+    y = "True Positive Rate",
+    fill = "Software",
+    title = "Detection Rate by Divergence from RefSeq"
+  ) +
+  theme_bw() +
+  theme(
+    legend.position = "top",
+    axis.text.x = element_text(angle = 45, hjust = 1)
+  )
+
+aa_tpr_p
+
+ggsave(
+  aa_tpr_p,
+  file = sprintf(
+    "%s/charts/gb_frag_tpr_by_aa_divergence.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 7,
+  height = 5
+)
+
+ggsave(
+  aa_tpr_p,
+  file = sprintf(
+    "%s/charts/gb_frag_tpr_by_aa_divergence.png",
+    find_rstudio_root_file()
+  ),
+  width = 7,
+  height = 5
+)
+```
+
+## Density plot of AA identity by detection status
+
+```{r}
+aa_density_p <- detection_aa_long_dt %>%
+  ggplot(aes(x = genome_avg_aa, fill = detected)) +
+  geom_density(alpha = 0.6) +
+  facet_wrap(~software, ncol = 1) +
+  scale_fill_manual(
+    values = c("TRUE" = "#77AC30", "FALSE" = "#A2142F"),
+    labels = c("TRUE" = "Detected", "FALSE" = "Not Detected")
+  ) +
+  labs(
+    x = "AA Identity to RefSeq (genome average)",
+    y = "Density",
+    fill = "Status",
+    title = "Distribution of AA Divergence by Detection Status"
+  ) +
+  theme_bw() +
+  theme(
+    legend.position = "top"
+  )
+
+aa_density_p
+
+ggsave(
+  aa_density_p,
+  file = sprintf(
+    "%s/charts/gb_frag_aa_density_by_detection.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 6,
+  height = 6
+)
+
+ggsave(
+  aa_density_p,
+  file = sprintf(
+    "%s/charts/gb_frag_aa_density_by_detection.png",
+    find_rstudio_root_file()
+  ),
+  width = 6,
+  height = 6
+)
+```
+
+## Combined fragmentation and AA divergence analysis
+
+```{r}
+ct3_frag_genomes_dt <- ct3_dt %>%
+  group_by(source_genome, fragmentation, replicate) %>%
+  summarize(
+    ct3_detected = TRUE,
+    .groups = "drop"
+  )
+
+genomad_frag_genomes_dt <- genomad_dt %>%
+  group_by(source_genome, fragmentation, replicate) %>%
+  summarize(
+    genomad_detected = TRUE,
+    .groups = "drop"
+  )
+```
+
+```{r}
+frag_aa_dt <- expand.grid(
+  source_genome = unique(aa_div_dt$genome),
+  fragmentation = c(0.1, 0.2, 0.5, 1.0),
+  replicate = c("rep1", "rep2", "rep3"),
+  stringsAsFactors = FALSE
+) %>%
+  filter(!(fragmentation == 1.0 & replicate != "rep1")) %>%
+  left_join(aa_div_dt %>% rename(source_genome = genome), by = "source_genome") %>%
+  left_join(ct3_frag_genomes_dt, by = c("source_genome", "fragmentation", "replicate")) %>%
+  left_join(genomad_frag_genomes_dt, by = c("source_genome", "fragmentation", "replicate")) %>%
+  mutate(
+    ct3_detected = case_when(is.na(ct3_detected) ~ FALSE, TRUE ~ ct3_detected),
+    genomad_detected = case_when(is.na(genomad_detected) ~ FALSE, TRUE ~ genomad_detected),
+    aa_bin = cut(
+      genome_avg_aa,
+      breaks = c(0, 0.4, 0.7, 1.0),
+      labels = c("Low (<40%)", "Medium (40-70%)", "High (>70%)"),
+      include.lowest = TRUE
+    )
+  )
+```
+
+```{r}
+frag_aa_long_dt <- frag_aa_dt %>%
+  pivot_longer(
+    cols = c(ct3_detected, genomad_detected),
+    names_to = "software",
+    values_to = "detected"
+  ) %>%
+  mutate(
+    software = case_when(
+      software == "ct3_detected" ~ "CT3",
+      TRUE ~ "geNomad"
+    ),
+    fragmentation_label = factor(
+      fragmentation,
+      levels = c(0.1, 0.2, 0.5, 1.0),
+      labels = c("10%", "20%", "50%", "100%")
+    )
+  )
+```
+
+```{r}
+frag_aa_summary_dt <- frag_aa_long_dt %>%
+  group_by(fragmentation_label, aa_bin, software) %>%
+  summarize(
+    detected_count = sum(detected),
+    total_count = n(),
+    tpr = detected_count / total_count,
+    .groups = "drop"
+  )
+
+frag_aa_summary_dt
+```
+
+```{r}
+frag_aa_p <- frag_aa_summary_dt %>%
+  ggplot(aes(x = fragmentation_label, y = tpr, fill = software)) +
+  geom_bar(stat = "identity", position = position_dodge(0.9), color = "black") +
+  facet_wrap(~aa_bin, nrow = 1) +
+  scale_fill_manual(values = c("CT3" = "#4DBEEE", "geNomad" = "#EDB120")) +
+  scale_y_continuous(limits = c(0, 1), labels = scales::percent) +
+  labs(
+    x = "Fragment Size (% of original)",
+    y = "True Positive Rate",
+    fill = "Software",
+    title = "Detection Rate by Fragmentation and AA Divergence"
+  ) +
+  theme_bw() +
+  theme(
+    legend.position = "top",
+    axis.text.x = element_text(angle = 45, hjust = 1)
+  )
+
+frag_aa_p
+
+ggsave(
+  frag_aa_p,
+  file = sprintf(
+    "%s/charts/gb_frag_tpr_by_frag_and_aa.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 10,
+  height = 5
+)
+
+ggsave(
+  frag_aa_p,
+  file = sprintf(
+    "%s/charts/gb_frag_tpr_by_frag_and_aa.png",
+    find_rstudio_root_file()
+  ),
+  width = 10,
+  height = 5
+)
+```
+
+## Marker Genes
+
+CT3 reports `virion_hallmark_count`, `rep_hallmark_count`, and `RDRP_hallmark_count`.
+geNomad reports `n_hallmarks`.
+
+```{r}
+ct3_markers_dt <- ct3_dt %>%
+  mutate(
+    total_hallmarks = virion_hallmark_count + rep_hallmark_count + RDRP_hallmark_count,
+    fragmentation_label = factor(
+      fragmentation,
+      levels = c(0.1, 0.2, 0.5, 1.0),
+      labels = c("10%", "20%", "50%", "100%")
+    )
+  )
+
+genomad_markers_dt <- genomad_dt %>%
+  mutate(
+    fragmentation_label = factor(
+      fragmentation,
+      levels = c(0.1, 0.2, 0.5, 1.0),
+      labels = c("10%", "20%", "50%", "100%")
+    )
+  )
+```
+
+```{r}
+ct3_marker_summary_dt <- ct3_markers_dt %>%
+  group_by(fragmentation_label) %>%
+  summarize(
+    mean_virion = mean(virion_hallmark_count, na.rm = T),
+    mean_rep = mean(rep_hallmark_count, na.rm = T),
+    mean_rdrp = mean(RDRP_hallmark_count, na.rm = T),
+    mean_total = mean(total_hallmarks, na.rm = T),
+    median_total = median(total_hallmarks, na.rm = T),
+    n = n(),
+    .groups = "drop"
+  ) %>%
+  mutate(software = "CT3")
+
+genomad_marker_summary_dt <- genomad_markers_dt %>%
+  group_by(fragmentation_label) %>%
+  summarize(
+    mean_hallmarks = mean(n_hallmarks, na.rm = T),
+    median_hallmarks = median(n_hallmarks, na.rm = T),
+    n = n(),
+    .groups = "drop"
+  ) %>%
+  mutate(software = "geNomad")
+
+ct3_marker_summary_dt
+genomad_marker_summary_dt
+```
+
+```{r}
+ct3_marker_box_p <- ct3_markers_dt %>%
+  ggplot(aes(x = fragmentation_label, y = total_hallmarks)) +
+  geom_boxplot(fill = "#4DBEEE", outlier.size = 0.5) +
+  stat_summary(fun = mean, geom = "point", shape = 18, size = 3, color = "darkblue") +
+  labs(
+    x = "Fragment Size (% of original)",
+    y = "Total Hallmark Genes",
+    title = "CT3: Hallmark Genes per Detection by Fragmentation"
+  ) +
+  theme_bw()
+
+ct3_marker_box_p
+```
+
+```{r}
+genomad_marker_box_p <- genomad_markers_dt %>%
+  ggplot(aes(x = fragmentation_label, y = n_hallmarks)) +
+  geom_boxplot(fill = "#EDB120", outlier.size = 0.5) +
+  stat_summary(fun = mean, geom = "point", shape = 18, size = 3, color = "darkorange4") +
+  labs(
+    x = "Fragment Size (% of original)",
+    y = "Hallmark Genes (n_hallmarks)",
+    title = "geNomad: Hallmark Genes per Detection by Fragmentation"
+  ) +
+  theme_bw()
+
+genomad_marker_box_p
+```
+
+```{r}
+combined_markers_dt <- rbind(
+  ct3_markers_dt %>%
+    select(fragmentation_label, total_hallmarks) %>%
+    rename(hallmarks = total_hallmarks) %>%
+    mutate(software = "CT3"),
+  genomad_markers_dt %>%
+    select(fragmentation_label, n_hallmarks) %>%
+    rename(hallmarks = n_hallmarks) %>%
+    mutate(software = "geNomad")
+)
+
+marker_combined_p <- combined_markers_dt %>%
+  ggplot(aes(x = fragmentation_label, y = hallmarks, fill = software)) +
+  geom_boxplot(outlier.size = 0.5) +
+  scale_fill_manual(values = c("CT3" = "#4DBEEE", "geNomad" = "#EDB120")) +
+  labs(
+    x = "Fragment Size (% of original)",
+    y = "Hallmark Genes per Detection",
+    fill = "Software",
+    title = "Marker Genes per Detection by Fragmentation"
+  ) +
+  theme_bw() +
+  theme(legend.position = "top")
+
+marker_combined_p
+
+ggsave(
+  marker_combined_p,
+  file = sprintf(
+    "%s/charts/gb_frag_marker_genes_by_frag.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 7,
+  height = 5
+)
+
+ggsave(
+  marker_combined_p,
+  file = sprintf(
+    "%s/charts/gb_frag_marker_genes_by_frag.png",
+    find_rstudio_root_file()
+  ),
+  width = 7,
+  height = 5
+)
+```
+
+```{r}
+marker_hist_p <- combined_markers_dt %>%
+  ggplot(aes(x = hallmarks, fill = software)) +
+  geom_histogram(binwidth = 1, position = "dodge", color = "black", alpha = 0.8) +
+  facet_wrap(~fragmentation_label, scales = "free_y") +
+  scale_fill_manual(values = c("CT3" = "#4DBEEE", "geNomad" = "#EDB120")) +
+  labs(
+    x = "Hallmark Genes per Detection",
+    y = "Count",
+    fill = "Software",
+    title = "Distribution of Marker Genes by Fragmentation Level"
+  ) +
+  theme_bw() +
+  theme(legend.position = "top")
+
+marker_hist_p
+
+ggsave(
+  marker_hist_p,
+  file = sprintf(
+    "%s/charts/gb_frag_marker_genes_histogram.pdf",
+    find_rstudio_root_file()
+  ),
+  width = 9,
+  height = 7
+)
+
+ggsave(
+  marker_hist_p,
+  file = sprintf(
+    "%s/charts/gb_frag_marker_genes_histogram.png",
+    find_rstudio_root_file()
+  ),
+  width = 9,
+  height = 7
+)
+```
+
+```{r}
+cat("=== CT3 Marker Gene Summary by Fragmentation ===\n")
+ct3_marker_summary_dt %>% print()
+
+cat("\n=== geNomad Marker Gene Summary by Fragmentation ===\n")
+genomad_marker_summary_dt %>% print()
+```
+
+### geNomad percent 0 marker
+```{r}
+genomad_markers_dt %>%
+  group_by(fragmentation) %>%
+  summarize(
+    nomarker_fract = sum(n_hallmarks == 0)/n(),
+    n = n())
+
+```
+
+## Statistical summary
+
+```{r}
+cat("=== Overall TPR Summary ===\n")
+combined_tpr_dt %>%
+  group_by(software) %>%
+  summarize(
+    mean_tpr = mean(tpr),
+    sd_tpr = sd(tpr),
+    .groups = "drop"
+  ) %>%
+  print()
+
+cat("\n=== TPR by Fragmentation Level ===\n")
+tpr_summary_dt %>%
+  arrange(fragmentation, software) %>%
+  print()
+
+cat("\n=== Complete Genomes: Detection by AA Divergence ===\n")
+aa_tpr_summary_dt %>%
+  arrange(aa_bin, software) %>%
+  print()
+```
+
+## Summary statistics for manuscript
+
+```{r}
+cat("\n=== Key Findings ===\n\n")
+
+complete_stats <- combined_tpr_dt %>%
+  filter(fragmentation == 1.0)
+
+cat(sprintf("Complete genomes:\n"))
+cat(sprintf("  CT3: %.1f%% TPR\n", complete_stats$tpr[complete_stats$software == "CT3"] * 100))
+cat(sprintf("  geNomad: %.1f%% TPR\n", complete_stats$tpr[complete_stats$software == "geNomad"] * 100))
+
+frag_10_stats <- combined_tpr_dt %>%
+  filter(fragmentation == 0.1) %>%
+  group_by(software) %>%
+  summarize(mean_tpr = mean(tpr), .groups = "drop")
+
+cat(sprintf("\n10%% fragments (mean across replicates):\n"))
+cat(sprintf("  CT3: %.1f%% TPR\n", frag_10_stats$mean_tpr[frag_10_stats$software == "CT3"] * 100))
+cat(sprintf("  geNomad: %.1f%% TPR\n", frag_10_stats$mean_tpr[frag_10_stats$software == "geNomad"] * 100))
+```
+
