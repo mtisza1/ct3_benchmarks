@@ -11,7 +11,7 @@ See Zenodo [repo](https://zenodo.org/records/16807783)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16807783.svg)](https://doi.org/10.5281/zenodo.16807783)
 
 
-To download, navigate to the Zenodo repo click the `download` button next to **ct3_benchmark_data.tar.gz**. 
+To download, navigate to the Zenodo repo. Make sure you're on the latest data version. Click the `download` button next to **ct3_benchmark_data.tar.gz**. 
 
 Move the tarball to this repo's main directory.
 
